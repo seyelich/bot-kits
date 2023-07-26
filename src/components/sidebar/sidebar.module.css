@@ -1,0 +1,13 @@
+.sidebar {
+  position:absolute;
+  top: 5px;
+  left: 5px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
