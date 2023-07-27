@@ -1,3 +1,11 @@
+import FacebookIcon from '../icons/facebook';
+
 export default function AddBot() {
-  return <h1>Добавить бота</h1>;
+  return (
+    <div>
+      <FacebookIcon type="blue" />
+      <FacebookIcon type="common" />
+      <FacebookIcon type="disabled" />
+    </div>
+  );
 }

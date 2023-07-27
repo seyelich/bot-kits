@@ -1,0 +1,22 @@
+.icon {
+  cursor: pointer;
+  color: #435cdb;
+}
+
+.icon_blue {
+  color: #435cdb;
+}
+
+.icon_blue:hover {
+  color: green;
+}
+
+/* .icon_common {
+  color: blue;
+  transition: color 0.2s linear;
+} */
+/*
+
+/* .icon_disabled {
+  color: grey;
+} */
