@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  padding-left: 40px;
+  border-top: 1px solid #D7DEEA;
+}
+
+.text {
+  font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
