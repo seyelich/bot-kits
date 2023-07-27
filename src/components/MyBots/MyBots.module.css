@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 1268px;
+  height: 238px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.header {
+  font-family: 'IBM Plex Mono';
+  font-size: 32px;
+  line-height: 41.6px;
+  letter-spacing: -0.2px;
+}
