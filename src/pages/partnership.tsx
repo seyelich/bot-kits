@@ -1,5 +1,3 @@
 export default function Partnership() {
-  return (
-    <h1>Партнерская программа</h1>
-  );
+  return <h1>Партнерская программа</h1>;
 }

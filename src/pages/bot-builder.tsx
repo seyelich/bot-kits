@@ -1,5 +1,3 @@
 export default function BotBuilder() {
-  return (
-    <h1>Bot builder</h1>
-  );
+  return <h1>Bot builder</h1>;
 }

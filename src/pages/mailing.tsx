@@ -1,5 +1,3 @@
 export default function Mailing() {
-  return (
-    <h1>Рассылки</h1>
-  );
+  return <h1>Рассылки</h1>;
 }

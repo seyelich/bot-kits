@@ -1,5 +1,3 @@
 export default function Share() {
-  return (
-    <h1>Пользователи</h1>
-  );
+  return <h1>Пользователи</h1>;
 }

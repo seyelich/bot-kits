@@ -1,5 +1,3 @@
 export default function Chat() {
-  return (
-    <h1>Диалоги</h1>
-  );
+  return <h1>Диалоги</h1>;
 }

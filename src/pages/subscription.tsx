@@ -1,5 +1,3 @@
 export default function Subscription() {
-  return (
-    <h1>Подписка и платежи</h1>
-  );
+  return <h1>Подписка и платежи</h1>;
 }

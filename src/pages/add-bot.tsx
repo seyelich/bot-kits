@@ -1,5 +1,3 @@
 export default function AddBot() {
-  return (
-    <h1>Добавить бота</h1>
-  );
+  return <h1>Добавить бота</h1>;
 }

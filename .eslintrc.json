@@ -7,7 +7,8 @@
         "plugin:react/recommended",
         "airbnb",
         "airbnb-typescript",
-        "plugin:storybook/recommended"
+        "plugin:storybook/recommended",
+        "prettier"
     ],
     "overrides": [
     ],
@@ -17,9 +18,13 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
+    "ignorePatterns": ["src/stories/*"],
     "rules": {
-      "react/react-in-jsx-scope": 0
+      "react/react-in-jsx-scope": 0,
+      "prettier/prettier": ["error"],
+      "react/jsx-wrap-multilines": "off"
     }
 }
