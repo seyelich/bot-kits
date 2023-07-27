@@ -18,7 +18,7 @@ function App() {
       <div>
         <Sidebar />
         <div className={styles.content}>
-          <header></header>
+          <header />
           <main>
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -32,7 +32,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <footer></footer>
+          <footer />
         </div>
       </div>
     </BrowserRouter>

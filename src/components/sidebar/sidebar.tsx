@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import styles from "./sidebar.module.css";
+import styles from './sidebar.module.css';
 
 export default function Sidebar() {
   return (
@@ -17,5 +17,5 @@ export default function Sidebar() {
         <Link to="/partnership">Партнёрская программа</Link>
       </nav>
     </div>
-  )
+  );
 }
