@@ -4,11 +4,17 @@ interface IFacebookIcon {
   width?: number;
   height?: number;
   type: 'blue' | 'common' | 'disabled';
+  onClick?: VoidFunction;
 }
 
-export default function FacebookIcon({ width, height, type }: IFacebookIcon) {
+export default function FacebookIcon({
+  width,
+  height,
+  type,
+  onClick,
+}: IFacebookIcon) {
   return (
-    <SocialIcon type={type}>
+    <SocialIcon type={type} width={width} color="#2D88FF" onClick={onClick}>
       <svg
         width={width}
         height={height}
@@ -29,4 +35,5 @@ export default function FacebookIcon({ width, height, type }: IFacebookIcon) {
 FacebookIcon.defaultProps = {
   width: 40,
   height: 40,
+  onClick: () => {},
 };

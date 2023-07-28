@@ -1,22 +1,13 @@
-.icon {
+.icon_blue {
+  color: #243cbb;
+  transition: color 0.2s linear;
+}
+
+.icon_blue:hover {
   cursor: pointer;
   color: #435cdb;
 }
 
-.icon_blue {
-  color: #435cdb;
+.icon_disabled {
+  color: #ccd4e0;
 }
-
-.icon_blue:hover {
-  color: green;
-}
-
-/* .icon_common {
-  color: blue;
-  transition: color 0.2s linear;
-} */
-/*
-
-/* .icon_disabled {
-  color: grey;
-} */
