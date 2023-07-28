@@ -1,17 +1,17 @@
-import AlisaIcon from '../icons/alisa';
-import FacebookIcon from '../icons/facebook';
-import GoogleIcon from '../icons/google';
-import InstagramIcon from '../icons/instagram';
-import MailruIcon from '../icons/mailru';
-import OdnoklassnikiIcon from '../icons/odnoklassniki';
-import TelegramIcon from '../icons/telegram';
-import TwitterIcon from '../icons/twitter';
-import ViberIcon from '../icons/viber';
-import VKIcon from '../icons/vk';
-import WebIcon from '../icons/web';
-import WhatsappIcon from '../icons/whatsapp';
-import YandexIcon from '../icons/yandex';
-import YoutubeIcon from '../icons/youtube';
+import AlisaIcon from '../icons/social/alisa';
+import FacebookIcon from '../icons/social/facebook';
+import GoogleIcon from '../icons/social/google';
+import InstagramIcon from '../icons/social/instagram';
+import MailruIcon from '../icons/social/mailru';
+import OdnoklassnikiIcon from '../icons/social/odnoklassniki';
+import TelegramIcon from '../icons/social/telegram';
+import TwitterIcon from '../icons/social/twitter';
+import ViberIcon from '../icons/social/viber';
+import VKIcon from '../icons/social/vk';
+import WebIcon from '../icons/social/web';
+import WhatsappIcon from '../icons/social/whatsapp';
+import YandexIcon from '../icons/social/yandex';
+import YoutubeIcon from '../icons/social/youtube';
 
 export default function AddBot() {
   return (
