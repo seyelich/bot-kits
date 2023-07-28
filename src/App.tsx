@@ -11,6 +11,7 @@ import Partnership from './pages/partnership';
 import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <footer />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
