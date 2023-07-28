@@ -11,3 +11,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.icon-path {
+  stroke: #ccd4e0;
+}
+
+.icon-path:hover {
+  stroke: #243cbb;
+}
