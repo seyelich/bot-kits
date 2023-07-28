@@ -1,0 +1,65 @@
+.container {
+  max-width: 1268px;
+  margin-bottom: 63px;
+}
+
+.container__dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.text {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(166, 179, 201, 1);
+}
+
+.button {
+  width: 26px;
+  height: 26;
+  cursor: pointer;
+}
+
+.botton_default {
+  rotate: 0;
+}
+
+.button_active {
+  rotate: 180deg;
+  transition: all 0.5s linear;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  font-family: 'IBM Plex Mono';
+  font-size: 32px;
+  line-height: 41.6px;
+  letter-spacing: -0.2px;
+}
+
+.templates {
+  display: grid;
+  grid-template-columns: repeat(6, 188px);
+  column-gap: 28px;
+  row-gap: 20px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.templates_default {
+  height: 125px;
+}
+
+.templates_active {
+  height: 282px;
+}
