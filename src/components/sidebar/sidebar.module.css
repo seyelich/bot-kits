@@ -12,10 +12,14 @@
   flex-direction: column;
 }
 
-.icon-path {
+.navlink {
+  display: flex;
+  align-items: center;
   stroke: #ccd4e0;
+  text-decoration: none;
+  color: inherit;
 }
 
-.icon-path:hover {
+.navlink:hover {
   stroke: #243cbb;
 }
