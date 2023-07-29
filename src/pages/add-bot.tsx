@@ -12,6 +12,8 @@ import WebIcon from '../icons/social/web';
 import WhatsappIcon from '../icons/social/whatsapp';
 import YandexIcon from '../icons/social/yandex';
 import YoutubeIcon from '../icons/social/youtube';
+import { AddBotButton } from '../components/AddBotButton/AddBotButton';
+import { PlusButton } from '../components/PlusButton/PlusButton';
 
 export default function AddBot() {
   return (
@@ -72,6 +74,17 @@ export default function AddBot() {
       <AlisaIcon type="blue" onClick={() => console.log('click')} />
       <AlisaIcon type="common" />
       <AlisaIcon type="disabled" />
+
+      <AddBotButton type="blue" onClick={() => console.log('click')} />
+      <AddBotButton type="green" onClick={() => console.log('click')} />
+      <PlusButton onClick={() => console.log('click')} />
+      <PlusButton onClick={() => console.log('click')} />
+      <AddBotButton type="blue" disabled onClick={() => console.log('click')} />
+      <AddBotButton
+        type="green"
+        disabled
+        onClick={() => console.log('click')}
+      />
     </div>
   );
 }
