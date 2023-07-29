@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const FoodDelivery: FC = () => {
+interface IFoodDelivery {
+  size: 'desktop' | 'mobile';
+}
+
+export const FoodDelivery: FC<IFoodDelivery> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="44" cy="44" rx="44" ry="44" fill="#22FFAA"/>
     <ellipse cx="42.3054" cy="41.3204" rx="30.2216" ry="30.2216" fill="#00E98F"/>
     <mask id="mask0_3832_95248" style={{maskType: 'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="89" height="88">

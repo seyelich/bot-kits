@@ -1,9 +1,14 @@
 import { FC } from 'react';
 
-export const PrivateClub: FC = () => {
+interface IPrivateClub {
+  size: 'desktop' | 'mobile';
+}
+
+
+export const PrivateClub: FC<IPrivateClub> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="43.984" cy="43.984" r="43.984" fill="#314DD8" />
       <circle cx="43.984" cy="43.984" r="43.984" fill="#22FFAA" />
       <circle cx="38.5482" cy="48.6024" r="33.3478" fill="#00E98F" />

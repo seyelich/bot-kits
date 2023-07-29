@@ -7,6 +7,12 @@
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex: none;
+    width: 235px;
+    height: 177px;
+  }
 }
 
 .icons {
@@ -15,6 +21,10 @@
   justify-content: space-between;
   padding: 24px 12px 0 32px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 18px 12px 0 25px;
+  }
 }
 
 .container {
@@ -25,10 +35,12 @@
 }
 
 .text {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 20.8px;
   letter-spacing: 0.5px;
   padding-left: 32px;
   padding-right: 32px;
+  color: rgba(6, 12, 35, 1);
 }

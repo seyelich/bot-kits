@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const Beauty: FC = () => {
+interface IBeauty {
+  size: 'desktop' | 'mobile';
+}
+
+export const Beauty: FC<IBeauty> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="44" cy="44" rx="44" ry="44" fill="#243CBB" />
       <ellipse cx="52.3839" cy="52.3716" rx="27.8473" ry="27.8473" fill="#22FFAA" />
       <mask id="mask0_3832_23979" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="88" height="88">

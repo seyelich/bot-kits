@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import styles from './BotTemplates.module.css';
 import { BotTemplateElement } from './BotTemplateElement/BotTemplateElement';
 import { AnsweringMachine } from '../icons/bot-templates/AnsweringMachine/AnsweringMachine';
@@ -21,45 +21,55 @@ export const BotTemplates: FC = () => {
   const toggle = () => {
     setIsActive(isActive => !isActive);
   }
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 768px)").matches
+  )
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 768px)")
+      .addEventListener('change', e => setMatches(e.matches));
+  }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.title}>Шаблоны</h1>
         <div className={styles.container__dropdown}>
-          <p className={styles.text}>Все шаблоны</p>
+          <p className={styles.text} onClick={toggle}>Все шаблоны</p>
           <span className={`${styles.button} ${!isActive ? styles.button_default : styles.button_active}`} onClick={toggle}><Arrow24x24 /></span>
         </div>
       </div>
-      <div className={`${styles.templates} ${!isActive ? styles.templates_default : styles.templates_active}`}>
+      <div className={`${styles.track} ${!isActive ? styles.track_default : styles.track_active}`}>
         <BotTemplateElement
-          icon={<AnsweringMachine />}
+          icon={<AnsweringMachine size={matches ? 'mobile' : 'desktop'} />}
           text={'Бот автоответчик'}
         />
-        <BotTemplateElement icon={<FoodDelivery />} text={'Доставка еды'} />
-        <BotTemplateElement icon={<DemoBot />} text={'Демо бот'} />
-        <BotTemplateElement icon={<Poll />} text={'Опрос'} />
+        <BotTemplateElement icon={<FoodDelivery size={matches ? 'mobile' : 'desktop'} />} text={'Доставка еды'} />
+        <BotTemplateElement icon={<DemoBot size={matches ? 'mobile' : 'desktop'} />} text={'Демо бот'} />
+        <BotTemplateElement icon={<Poll size={matches ? 'mobile' : 'desktop'} />} text={'Опрос'} />
         <BotTemplateElement
-          icon={<LeadGeneration />}
+          icon={<LeadGeneration size={matches ? 'mobile' : 'desktop'} />}
           text={'Лидогенерация/HR ре...'}
         />
         <BotTemplateElement
-          icon={<ELearning />}
+          icon={<ELearning size={matches ? 'mobile' : 'desktop'} />}
           text={'Онлайн школа/Вебинар'}
         />
         <BotTemplateElement
-          icon={<PrivateClub />}
+          icon={<PrivateClub size={matches ? 'mobile' : 'desktop'} />}
           text={'Закрытый клуб по под...'}
         />
         <BotTemplateElement
-          icon={<RealEstate />}
+          icon={<RealEstate size={matches ? 'mobile' : 'desktop'} />}
           text={'Агентство по недвиж...'}
         />
-        <BotTemplateElement icon={<Entertainment />} text={'Развлечения'} />
-        <BotTemplateElement icon={<Beauty />} text={'Салон красоты'} />
-        <BotTemplateElement icon={<ECommerce />} text={'Онлайн-покупки'} />
-        <BotTemplateElement icon={<Questions />} text={'Вопрос/ответ'} />
+        <BotTemplateElement icon={<Entertainment size={matches ? 'mobile' : 'desktop'} />} text={'Развлечения'} />
+        <BotTemplateElement icon={<Beauty size={matches ? 'mobile' : 'desktop'} />} text={'Салон красоты'} />
+        <BotTemplateElement icon={<ECommerce size={matches ? 'mobile' : 'desktop'} />} text={'Онлайн-покупки'} />
+        <BotTemplateElement icon={<Questions size={matches ? 'mobile' : 'desktop'} />} text={'Вопрос/ответ'} />
       </div>
+      <p className={styles.text_mobile} onClick={toggle}>Все</p>
     </div>
 
   );
