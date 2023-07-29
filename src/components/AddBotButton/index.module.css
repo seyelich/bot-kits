@@ -1,0 +1,39 @@
+.button {
+  width: 180px;
+  height: 46px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 10px;
+font-family: IBM Plex Mono;
+
+  transition: background-color 0.1s linear;
+}
+
+.button_blue {
+  color: #fff;
+  background-color: #243cbb;
+}
+.button_green {
+  color: #060C23;
+  background-color: #22FFAA;
+}
+
+.button_blue:hover {
+  background-color: #435cdb;
+}
+
+.button_blue:active {
+  background-color: #2743ce;
+}
+
+.button_green:hover {
+  background-color: #70FFC8;
+}
+
+.button_green:active {
+  background-color: #22FFAA;
+}
