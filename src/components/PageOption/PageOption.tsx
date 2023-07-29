@@ -13,6 +13,8 @@ interface PageOptionProps {
   avatar?: string;
 }
 
+// TODO Внимание!!! Данный компонент необходимо помещать во flex-контейнер
+
 function PageOption({
   id,
   onClick,
