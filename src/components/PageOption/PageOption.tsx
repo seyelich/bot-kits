@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import Styles from './PageOption.module.css';
 import checkImg from './img/check.svg';
 import plusImg from './img/plus.svg';
