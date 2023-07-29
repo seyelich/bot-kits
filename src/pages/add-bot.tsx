@@ -15,6 +15,7 @@ import YoutubeIcon from '../icons/social/youtube';
 import { PlusButton } from '../components/PlusButton/PlusButton';
 import { Button } from '../components/Button/Button';
 import { IconButton } from '../components/CopyButton/CopyButton';
+import { CopyIcon } from '../components/icons/Copy/Copy';
 
 export default function AddBot() {
   return (
