@@ -14,7 +14,7 @@ import YandexIcon from '../icons/social/yandex';
 import YoutubeIcon from '../icons/social/youtube';
 import { PlusButton } from '../components/PlusButton/PlusButton';
 import { Button } from '../components/Button/Button';
-import { IconButton } from '../components/CopyButton/CopyButton';
+import { IconButton } from '../components/IconButton/IconButton';
 import { CopyIcon } from '../components/icons/Copy/Copy';
 
 export default function AddBot() {
@@ -96,7 +96,7 @@ export default function AddBot() {
       <Button
         type="green"
         onClick={() => console.log('click')}
-        text="ЗЕЛЁНАЯ КНОПКА"
+        text="ДОБАВИТЬ БОТА"
         width={180}
         height={46}
       />
