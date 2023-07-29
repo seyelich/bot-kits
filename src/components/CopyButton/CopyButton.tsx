@@ -1,21 +1,30 @@
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
-import { Plus } from '../icons/Plus/Plus';
 
-interface IPlusButton {
+interface IIconButton {
   onClick?: VoidFunction;
   disabled?: boolean;
+  width: number;
+  height: number;
+  icon: React.ReactNode;
 }
 
-export const PlusButton: FC<IPlusButton> = ({ onClick, disabled }) => {
+export const IconButton: FC<IIconButton> = ({
+  onClick,
+  disabled,
+  width,
+  height,
+  icon,
+}) => {
   return (
     <button
       className={`${styles.button} ${disabled && styles.button_disabled}`}
       onClick={onClick}
       disabled={disabled}
+      style={{ width, height }}
     >
-      <Plus color="#fff" />
+      {icon}
     </button>
   );
 };
