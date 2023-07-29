@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const RealEstate: FC = () => {
+interface IRealEstate {
+  size: 'desktop' | 'mobile';
+}
+
+export const RealEstate: FC<IRealEstate> = ({size}) => {
 
   return (
-    <svg width="88" height="92" viewBox="0 0 88 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 92" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="43.984" cy="43.984" r="43.984" fill="#314DD8" />
       <circle cx="43.984" cy="43.984" r="43.984" fill="#060C23" />
       <circle cx="52.0692" cy="39.2419" r="33.3478" fill="#2E293D" />

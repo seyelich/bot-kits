@@ -1,0 +1,16 @@
+.wrapper {
+  max-width: 1268px;
+  height: 283px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(242, 244, 248, 1);
+  border-radius: 30px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (max-width: 992px) {
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
