@@ -4,11 +4,10 @@ import { Play } from '../../../icons/Play/Play';
 import styles from './VideoElement.module.css';
 
 import video from '../../../../video/testVideo.mp4';
-import { any } from 'prop-types';
 
 interface IVideoElement {
   text: string;
-  preview: any
+  preview: string;
 }
 
 export const VideoElement: FC<IVideoElement> = ({ text, preview }) => {

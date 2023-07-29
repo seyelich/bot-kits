@@ -21,7 +21,7 @@
 }
 
 .text {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', sans-serif;
   font-size: 16px;
   line-height: 20.8px;
   letter-spacing: 0.5px;

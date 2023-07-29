@@ -1,6 +1,5 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './Bot.module.css';
-import { Telegram } from '../../icons/Telegram/Telegram';
 import { Dots } from '../../icons/Dots/Dots';
 import TelegramIcon from '../../../icons/social/telegram';
 
