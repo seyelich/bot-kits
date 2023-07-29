@@ -1,6 +1,12 @@
 .container {
   max-width: 1268px;
   margin-bottom: 63px;
+  margin-top: 21px;
+
+  @media (max-width: 414px) {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .container__dropdown {
@@ -8,14 +14,38 @@
   flex-direction: row;
   align-items: center;
   gap: 15px;
+
+  @media (max-width: 414px) {
+    display: none;
+  }
 }
 
 .text {
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  color: rgba(166, 179, 201, 1);
+  color: rgba(131, 146, 171, 1);
+}
+
+.text_mobile {
+  display: none;
+
+  @media (max-width: 414px) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    display: block;
+    float: right;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 19.5px;
+    letter-spacing: 0.3px;
+    color: rgba(131, 146, 171, 1);
+    cursor: pointer;
+    padding-right: 20px;
+    margin-top: 48px;
+  }
 }
 
 .button {
@@ -41,25 +71,53 @@
 }
 
 .title {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 600;
   font-size: 32px;
   line-height: 41.6px;
   letter-spacing: -0.2px;
+
+  @media (max-width: 414px) {
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 25px;
+  }
 }
 
-.templates {
+.track {
   display: grid;
   grid-template-columns: repeat(6, 188px);
   column-gap: 28px;
   row-gap: 20px;
   overflow: hidden;
   transition: all 0.5s linear;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(6, 134px);
+    column-gap: 17px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+  }
 }
 
-.templates_default {
+.track::-webkit-scrollbar {
+  height: 3px;
+}
+
+.track::-webkit-scrollbar-track {
+  background: white;
+}
+
+.track::-webkit-scrollbar-thumb {
+  background: white;
+  width: 30%;
+}
+
+.track_default {
   height: 125px;
 }
 
-.templates_active {
+.track_active {
   height: 282px;
 }

@@ -4,14 +4,43 @@
 }
 
 .container {
+  width: 100%;
+}
+.track {
   display: flex;
   flex-direction: row;
   gap: 25px;
+
+  @media (max-width: 768px) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+  }
+}
+
+.track::-webkit-scrollbar {
+  height: 3px;
+}
+
+.track::-webkit-scrollbar-track {
+  background: white;
+}
+
+.track::-webkit-scrollbar-thumb {
+  background: white;
+  width: 10%;
 }
 
 .header {
   font-family: 'IBM Plex Mono';
+  font-weight: 600;
   font-size: 32px;
   line-height: 41.6px;
   letter-spacing: -0.2px;
+
+  @media (max-width: 414px) {
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 25px;
+  }
 }
