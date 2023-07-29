@@ -9,7 +9,7 @@
   flex-direction: column;
   background-color: #fff;
   overflow-x: hidden;
-  transition: 1s;
+  transition: .2s;
 }
 
 .sidebar:hover {
@@ -21,14 +21,54 @@
   visibility: visible;
 }
 
+.sidebar:hover .addbutton {
+  width: 182px;
+  height: 48px;
+  border-radius: 10px;
+  background-image: none;
+}
+
+.sidebar:hover .addtext {
+  opacity: 1;
+  visibility: visible;
+}
+
 .title {
-  margin-left: 12px;
+  display: flex;
+  width: max-content;
+  overflow-x: hidden;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.addbutton {
+  box-sizing: border-box;
+  width: 46px;
+  height: 46px;
+  padding: 13px;
+  border-radius: 50%;
+  background-color: #243cbb;
+  background-image: url("./add-button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .3s;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+}
+
+.addtext {
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: all .4s;
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  color: #fff;
 }
 
 .navlink {

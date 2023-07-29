@@ -10,7 +10,7 @@ import botkitsLogo from './icons/botkits-logo';
 
 import styles from './sidebar.module.css';
 
-const addButton = (
+/* const addButton = (
   <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="none">
     <circle cx="23" cy="23" r="23" fill="#243CBB" />
     <path
@@ -21,17 +21,19 @@ const addButton = (
       d="M23 17v12M17 23h12"
     />
   </svg>
-);
+); */
 
 export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
-      <div>
+      <div className={styles.title}>
         {botkitsLogo}
         {botKitsTitle}
       </div>
       <nav className={styles.navigation}>
-        <NavLink to="/add-bot">{addButton}</NavLink>
+        <NavLink to="/add-bot" className={styles.addbutton}>
+          <span className={styles.addtext}>ДОБАВИТЬ БОТА</span>
+        </NavLink>
         <NavLink to="/" className={styles.navlink}>
           {dashboardIcon}
           <span className={styles.navtext}>Дашборд</span>
