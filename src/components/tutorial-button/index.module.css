@@ -1,0 +1,109 @@
+.button {
+  box-sizing: border-box;
+  width: 579px;
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+  padding: 0;
+  border-radius: 10px;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  border: 2px solid #e4e9f1;
+  color: #060c23;
+  background-color: transparent;
+  position: relative;
+}
+
+.button:hover {
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 6px 16px 0px #15123314;
+}
+
+.button_disabled:hover {
+  cursor: not-allowed;
+  border: 2px solid #e4e9f1;
+  box-shadow: none;
+}
+
+.main__icon {
+  position: absolute;
+  left: 30px;
+  top: 16px;
+}
+
+.button:hover .main__icon {
+  color: #22ffaa;
+  left: 32px;
+  top: 18px;
+}
+
+.button_disabled .main__icon {
+  color: #CCD4E0;
+}
+
+.button_disabled:hover .main__icon {
+  color: #CCD4E0;
+  left: 30px;
+  top: 16px;
+}
+
+.circle {
+  color: #e4e9f1;
+  top: 0px;
+  left: -2px;
+}
+
+.button:hover .circle {
+  color: #85ffd0;
+  opacity: 0.5;
+  top: 2px;
+  left: 0px;
+}
+
+.button_disabled:hover .circle {
+  color: #e4e9f1;
+  opacity: 1;
+  top: 0px;
+  left: -2px;
+}
+
+.ellipse {
+  position: absolute;
+  color: #e4e9f1;
+  left: 54px;
+  top: 5px;
+}
+
+.button:hover .ellipse {
+  left: 56px;
+  top: 7px;
+}
+
+.button_disabled:hover .ellipse {
+  color: #e4e9f1;
+  left: 54px;
+  top: 5px;
+}
+
+.text {
+  margin-left: 201px;
+}
+
+.text_disabled {
+  color: #CCD4E0;
+}
+
+.button:hover .text {
+  margin-left: 203px;
+}
+
+.button_disabled:hover .text {
+  margin-left: 201px;
+}
