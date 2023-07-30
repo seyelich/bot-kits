@@ -16,6 +16,7 @@ import { PlusButton } from '../components/PlusButton/PlusButton';
 import { Button } from '../components/Button/Button';
 import { IconButton } from '../components/IconButton/IconButton';
 import { CopyIcon } from '../components/icons/Copy/Copy';
+import { AddBotButton } from '../components/add-bot-button/AddBotButton';
 
 export default function AddBot() {
   return (
@@ -136,6 +137,8 @@ export default function AddBot() {
         height={40}
         icon={<CopyIcon width={40} height={40} />}
       />
+      <AddBotButton onClick={() => console.log('click')} />
+      <AddBotButton onClick={() => console.log('click')} disabled />
     </div>
   );
 }
