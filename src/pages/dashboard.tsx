@@ -1,5 +1,5 @@
-import { BotTemplates } from "../components/BotTemplates/BotTemplates";
-import { MyBots } from "../components/MyBots/MyBots";
+import { BotTemplates } from '../components/BotTemplates/BotTemplates';
+import { MyBots } from '../components/MyBots/MyBots';
 
 export default function Dashboard() {
   return (
