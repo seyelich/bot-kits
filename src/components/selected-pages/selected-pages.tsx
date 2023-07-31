@@ -3,7 +3,11 @@ import Styles from './selected-pages.module.css';
 import PageOption from '../PageOption/PageOption';
 import fakeData from './selected-pages.fakedata';
 
-function SelectedPages() {
+interface SelectedPagesProps {
+  isDisabled?: boolean;
+}
+
+function SelectedPages({ isDisabled = false }: SelectedPagesProps) {
   const [pages, setPages] = useState<typeof fakeData>([]);
 
   let count = 0;
@@ -23,7 +27,12 @@ function SelectedPages() {
   return (
     <div className={classNames.join(' ')}>
       {isEmpty && (
-        <button className={defaultButton} type="button" onClick={addPage}>
+        <button
+          className={defaultButton}
+          type="button"
+          onClick={addPage}
+          disabled={isDisabled}
+        >
           <div className={plusImg} />
           <p>Загрузить страницу</p>
         </button>

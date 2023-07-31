@@ -16,8 +16,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedIn: Story = {
-  args: {},
-};
+export const Default: Story = {};
 
-export const LoggedOut: Story = {};
+export const Disable: Story = {
+  args: {
+    isDisabled: true,
+  },
+};

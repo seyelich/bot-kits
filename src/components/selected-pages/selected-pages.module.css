@@ -55,8 +55,12 @@
   color: #8392AB;
 }
 
-.defaultButton:hover .plusImg {
+.defaultButton:hover:not(.defaultButton:disabled) .plusImg {
   background-color: #A6B3C9;
+}
+
+.defaultButton:disabled {
+  color: #CCD4E0;
 }
 
 .plusImg {
