@@ -103,6 +103,7 @@ import { FullScreenIcon } from '../icons/others/FullScreen';
 import { PageIcon } from '../icons/others/Page';
 import { ButtonIcon } from '../icons/others/Button';
 import { UploadIcon } from '../icons/others/Upload';
+import { NotificationsIcon } from '../icons/others/Notifications/Notifications';
 
 export default function AddBot() {
   return (
@@ -308,22 +309,25 @@ export default function AddBot() {
         <AskPhoneIcon color="blue" />
         <UrlIcon color="blue" />
         <PlusCircleIcon color="blue" />
-        <ArrowUpCircleIcon color="blue" />
-        <DeleteIcon color="blue" />
-        <VideoIcon color="blue" />
-        <ImageIcon color="blue" />
-        <FileIcon color="blue" />
-        <MusicIcon color="blue" />
-        <BoldIcon color="blue" />
-        <ItalicIcon color="blue" />
-        <CodeIcon color="blue" />
-        <PlusIcon color="blue" />
-        <MinusIcon color="blue" />
-        <FitIcon color="blue" />
-        <FullScreenIcon color="blue" />
-        <PageIcon color="blue" />
-        <ButtonIcon color="blue" />
-        <UploadIcon color="blue" />
+        <div style={{ color: 'red' }}>
+          <ArrowUpCircleIcon />
+          <DeleteIcon />
+          <VideoIcon />
+          <ImageIcon />
+          <FileIcon />
+          <MusicIcon />
+          <BoldIcon />
+          <ItalicIcon />
+          <CodeIcon />
+          <PlusIcon />
+          <MinusIcon />
+          <FitIcon />
+          <FullScreenIcon />
+          <PageIcon />
+          <ButtonIcon />
+          <UploadIcon />
+          <NotificationsIcon counter={72} />
+        </div>
       </div>
     </div>
   );
