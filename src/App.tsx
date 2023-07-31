@@ -1,22 +1,25 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar';
-import Dashboard from './pages/dashboard';
-import AddBot from './pages/add-bot';
+import { BrowserRouter } from 'react-router-dom';
+import Register from './pages/register/register';
+// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Sidebar from './components/sidebar/sidebar';
+// import Dashboard from './pages/dashboard';
+// import AddBot from './pages/add-bot';
 
-import styles from './App.module.css';
-import BotBuilder from './pages/bot-builder';
-import Chat from './pages/chat';
-import Mailing from './pages/mailing';
-import Partnership from './pages/partnership';
-import Share from './pages/share';
-import Subscription from './pages/subscription';
-import NotFound from './pages/not-found';
-import Footer from './components/footer/footer';
+// import styles from './App.module.css';
+// import BotBuilder from './pages/bot-builder';
+// import Chat from './pages/chat';
+// import Mailing from './pages/mailing';
+// import Partnership from './pages/partnership';
+// import Share from './pages/share';
+// import Subscription from './pages/subscription';
+// import NotFound from './pages/not-found';
+// import Footer from './components/footer/footer';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
+    <Register></Register>
+      {/* <div>
         <Sidebar />
         <div className={styles.content}>
           <header />
@@ -35,7 +38,7 @@ function App() {
           </main>
           <Footer />
         </div>
-      </div>
+      </div> */}
     </BrowserRouter>
   );
 }
