@@ -1,4 +1,5 @@
-.wrapper{
+.wrapper {
+  padding: 40px 0 104px 0;
   margin: 0 auto;
   max-width: 1440px;
   height: 900px;
@@ -6,6 +7,34 @@
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  font-family: 'IBM Plex Mono';
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52.8px;
+  margin: 0;
+  padding: 20px 0 30px 0;
+}
+
+
+
+
+
+
+
+.authForm {
+  width: 770px;
+  height: 619px;
+  border-radius: 30px;
+  background: var(--primary-persian-blue-hover, #2743CE);
 }
