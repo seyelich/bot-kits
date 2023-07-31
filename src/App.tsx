@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
-import Dashboard from './pages/Dashboard/dashboard';
+import Dashboard from './pages/dashboard';
 import AddBot from './pages/add-bot';
 
 import styles from './App.module.css';
@@ -11,32 +11,31 @@ import Partnership from './pages/partnership';
 import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
-import { Layout } from './components/Layout/Layout';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
     <BrowserRouter>
-    <Register></Register>
-      {/* <div>
+      <div>
         <Sidebar />
         <div className={styles.content}>
+          <header />
           <main>
             <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="add-bot" element={<AddBot />} />
-                <Route path="bot-builder" element={<BotBuilder />} />
-                <Route path="chat" element={<Chat />} />
-                <Route path="mailing" element={<Mailing />} />
-                <Route path="partnership" element={<Partnership />} />
-                <Route path="share" element={<Share />} />
-                <Route path="subscription" element={<Subscription />} />
-                <Route path="*" element={<NotFound />} />
-              </Route>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="add-bot" element={<AddBot />} />
+              <Route path="bot-builder" element={<BotBuilder />} />
+              <Route path="chat" element={<Chat />} />
+              <Route path="mailing" element={<Mailing />} />
+              <Route path="partnership" element={<Partnership />} />
+              <Route path="share" element={<Share />} />
+              <Route path="subscription" element={<Subscription />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
+          <Footer />
         </div>
-      </div> */}
+      </div>
     </BrowserRouter>
   );
 }
