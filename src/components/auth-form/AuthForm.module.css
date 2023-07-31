@@ -3,4 +3,8 @@
   height: 619px;
   border-radius: 30px;
   background: var(--primary-persian-blue-hover, #2743CE);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
