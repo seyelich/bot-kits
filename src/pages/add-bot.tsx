@@ -104,6 +104,10 @@ import { PageIcon } from '../icons/others/Page';
 import { ButtonIcon } from '../icons/others/Button';
 import { UploadIcon } from '../icons/others/Upload';
 import { NotificationsIcon } from '../icons/others/Notifications/Notifications';
+import { TutorialButton } from '../components/tutorial-button/TutorialButton';
+import { AddBotButton } from '../components/add-bot-button/AddBotButton';
+import { AddBlockButton } from '../components/add-block-button/AddBlockButton';
+import { CreditCardIcon } from '../components/icons/add-block-button/CreditCard';
 
 export default function AddBot() {
   return (
@@ -180,10 +184,14 @@ export default function AddBot() {
           width={180}
           height={46}
         />
-        <PlusButton type='blue' onClick={() => console.log('click')} />
-        <PlusButton type='blue' onClick={() => console.log('click')} disabled />
-        <PlusButton type='green' onClick={() => console.log('click')} />
-        <PlusButton type='green' onClick={() => console.log('click')} disabled />
+        <PlusButton type="blue" onClick={() => console.log('click')} />
+        <PlusButton type="blue" onClick={() => console.log('click')} disabled />
+        <PlusButton type="green" onClick={() => console.log('click')} />
+        <PlusButton
+          type="green"
+          onClick={() => console.log('click')}
+          disabled
+        />
         <Button
           type="green"
           onClick={() => console.log('click')}
@@ -227,6 +235,32 @@ export default function AddBot() {
           height={40}
           icon={<CopyIcon width={24} height={24} />}
         />
+        <TutorialButton type="instruction" />
+        <TutorialButton type="instruction" disabled />
+        <TutorialButton type="video" />
+        <TutorialButton type="video" disabled />
+        <AddBotButton />
+        <AddBotButton disabled />
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          rowGap: '20px',
+          marginTop: '50px',
+        }}
+      >
+        <AddBlockButton text="Блок сообщений" icon={<ApiIcon />} />
+        <AddBlockButton text="Блок сообщений" icon={<ApiIcon />} disabled />
+        <AddBlockButton text="Условный блок" icon={<GitBranchIcon />} />
+        <AddBlockButton text="Управление переменными" icon={<SlidersIcon />} />
+        <AddBlockButton text="Сохранение данных в CRM" icon={<TableIcon />} />
+        <AddBlockButton text="Перевод на оператора" icon={<HeadPhonesIcon />} />
+        <AddBlockButton text="API" icon={<ApiIcon />} />
+        <AddBlockButton text="DeepLink" icon={<DeepLinkIcon />} />
+        <AddBlockButton text="Оплата" icon={<CreditCardIcon />} />
+        <AddBlockButton text="Координаты" icon={<MapPinIcon />} />
       </div>
       <div
         style={{
