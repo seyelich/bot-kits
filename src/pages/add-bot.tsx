@@ -12,9 +12,9 @@ import WebIcon from '../icons/social/web';
 import WhatsappIcon from '../icons/social/whatsapp';
 import YandexIcon from '../icons/social/yandex';
 import YoutubeIcon from '../icons/social/youtube';
-import { PlusButton } from '../components/PlusButton/PlusButton';
+import { PlusButton } from '../components/plus-button/PlusButton';
 import { Button } from '../components/Button/Button';
-import { IconButton } from '../components/IconButton/IconButton';
+import { IconButton } from '../components/icon-button/IconButton';
 import { PointingHandIcon } from '../icons/others/PointingHand';
 import { DownIcon } from '../icons/others/Down';
 import { UpIcon } from '../icons/others/Up';
@@ -180,8 +180,10 @@ export default function AddBot() {
           width={180}
           height={46}
         />
-        <PlusButton onClick={() => console.log('click')} />
-        <PlusButton onClick={() => console.log('click')} disabled />
+        <PlusButton type='blue' onClick={() => console.log('click')} />
+        <PlusButton type='blue' onClick={() => console.log('click')} disabled />
+        <PlusButton type='green' onClick={() => console.log('click')} />
+        <PlusButton type='green' onClick={() => console.log('click')} disabled />
         <Button
           type="green"
           onClick={() => console.log('click')}
