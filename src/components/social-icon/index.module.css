@@ -1,0 +1,13 @@
+.icon_blue {
+  color: #243cbb;
+  transition: color 0.2s linear;
+}
+
+.icon_blue:hover {
+  cursor: pointer;
+  color: #435cdb;
+}
+
+.icon_disabled {
+  color: #ccd4e0;
+}

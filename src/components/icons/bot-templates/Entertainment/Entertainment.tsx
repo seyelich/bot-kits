@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const Entertainment: FC = () => {
+interface IEntertainment {
+  size: 'desktop' | 'mobile';
+}
+
+export const Entertainment: FC<IEntertainment> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="43.984" cy="43.984" r="43.984" fill="#314DD8" />
       <circle cx="43.984" cy="43.984" r="43.984" fill="#22FFAA" />
       <circle cx="40.2816" cy="45.8288" r="33.3478" fill="#00E98F" />

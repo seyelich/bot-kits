@@ -1,8 +1,12 @@
 import { FC } from 'react';
 
-export const ECommerce: FC = () => {
+interface IECommerce {
+  size: 'desktop' | 'mobile';
+}
+
+export const ECommerce: FC<IECommerce> = ({size}) => {
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M84.3759 44.345C84.3759 48.2227 83.8299 51.973 82.8105 55.5233C82.366 57.0715 81.8315 58.5817 81.2129 60.0478M26.5773 7.76544C18.2169 11.7233 11.4299 18.4588 7.41001 26.7792M4.14062 36.6267C4.47456 34.8994 4.91845 33.2113 5.46473 31.5699" stroke="white" strokeWidth="1.83542" strokeLinecap="round" />
       <circle cx="37.011" cy="52.5414" r="32.8706" fill="#00E98F" />
       <circle cx="44" cy="44" r="44" fill="#314DD8" />

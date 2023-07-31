@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const LeadGeneration: FC = () => {
+interface ILeadGeneration {
+  size: 'desktop' | 'mobile';
+}
+
+export const LeadGeneration: FC<ILeadGeneration> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="44" cy="44" rx="44" ry="44" fill="#060C23" />
       <path d="M71.96 69.4996C76.0184 65.465 78.9988 60.7563 80.9002 55.7315M82.3615 50.9605C82.7571 49.2922 83.041 47.6027 83.2132 45.9041C83.3412 44.6412 83.4075 43.3732 83.412 42.105" stroke="white" strokeWidth="2.08014" strokeLinecap="round" />
       <ellipse cx="43.6207" cy="32.5632" rx="27.8473" ry="27.8473" fill="#2E293D" />

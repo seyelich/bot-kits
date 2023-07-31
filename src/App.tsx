@@ -1,19 +1,17 @@
-import { BrowserRouter } from 'react-router-dom';
-import Register from './pages/register/register';
-// import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import Sidebar from './components/sidebar/sidebar';
-// import Dashboard from './pages/dashboard';
-// import AddBot from './pages/add-bot';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/sidebar/sidebar';
+import Dashboard from './pages/Dashboard/dashboard';
+import AddBot from './pages/add-bot';
 
-// import styles from './App.module.css';
-// import BotBuilder from './pages/bot-builder';
-// import Chat from './pages/chat';
-// import Mailing from './pages/mailing';
-// import Partnership from './pages/partnership';
-// import Share from './pages/share';
-// import Subscription from './pages/subscription';
-// import NotFound from './pages/not-found';
-// import Footer from './components/footer/footer';
+import styles from './App.module.css';
+import BotBuilder from './pages/bot-builder';
+import Chat from './pages/chat';
+import Mailing from './pages/mailing';
+import Partnership from './pages/partnership';
+import Share from './pages/share';
+import Subscription from './pages/subscription';
+import NotFound from './pages/not-found';
+import { Layout } from './components/Layout/Layout';
 
 function App() {
   return (
@@ -22,21 +20,21 @@ function App() {
       {/* <div>
         <Sidebar />
         <div className={styles.content}>
-          <header />
           <main>
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="add-bot" element={<AddBot />} />
-              <Route path="bot-builder" element={<BotBuilder />} />
-              <Route path="chat" element={<Chat />} />
-              <Route path="mailing" element={<Mailing />} />
-              <Route path="partnership" element={<Partnership />} />
-              <Route path="share" element={<Share />} />
-              <Route path="subscription" element={<Subscription />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<Layout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="add-bot" element={<AddBot />} />
+                <Route path="bot-builder" element={<BotBuilder />} />
+                <Route path="chat" element={<Chat />} />
+                <Route path="mailing" element={<Mailing />} />
+                <Route path="partnership" element={<Partnership />} />
+                <Route path="share" element={<Share />} />
+                <Route path="subscription" element={<Subscription />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
             </Routes>
           </main>
-          <Footer />
         </div>
       </div> */}
     </BrowserRouter>

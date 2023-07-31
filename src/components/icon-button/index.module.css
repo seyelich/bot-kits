@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #a6b3c9;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    background-color 0.1s linear,
+    color 0.1s linear;
+}
+
+.button:hover {
+  color: #243cbb;
+}
+
+.button:active {
+  background-color: #ecefff;
+}
+
+.button_disabled {
+  color: #d7deea;
+  cursor: not-allowed;
+}
+
+.button_disabled:hover {
+  color: #d7deea;
+}
+
+.button_disabled:active {
+  background: transparent;
+}

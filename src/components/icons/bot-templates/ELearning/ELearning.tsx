@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const ELearning: FC = () => {
+interface IELearning {
+  size: 'desktop' | 'mobile';
+}
+
+export const ELearning: FC<IELearning> = ({size}) => {
   return (
 
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="44" cy="44" rx="44" ry="44" fill="#243CBB" />
       <path d="M82.9038 52.6121C84.0118 46.9978 83.8491 41.4274 82.6151 36.1986M81.1583 31.4262C80.5532 29.822 79.8437 28.2627 79.0364 26.7582C78.4363 25.6397 77.7821 24.5515 77.0766 23.4976" stroke="white" strokeWidth="2.08014" strokeLinecap="round" />
       <ellipse cx="51.7971" cy="51.4915" rx="27.8473" ry="27.8473" fill="#22FFAA" />

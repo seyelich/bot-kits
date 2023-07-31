@@ -1,10 +1,15 @@
 import { FC } from 'react';
 
-export const AnsweringMachine: FC = () => {
+interface IAnsweringMachine {
+  size: 'desktop' | 'mobile';
+}
+
+
+export const AnsweringMachine: FC<IAnsweringMachine> = ({size}) => {
 
   return (
 
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M84.6123 44.345C84.6123 48.2227 84.0662 51.973 83.0469 55.5233C82.6024 57.0715 82.0678 58.5817 81.4493 60.0478M26.8137 7.76544C18.4532 11.7233 11.6663 18.4588 7.64634 26.7792M4.37695 36.6267C4.71089 34.8994 5.15478 33.2113 5.70106 31.5699" stroke="white" strokeWidth="1.23684" strokeLinecap="round" />
       <ellipse cx="44" cy="44" rx="44" ry="44" fill="#314DD8" />
       <mask id="mask0_3821_96726" style={{maskType: 'alpha'}} maskUnits="userSpaceOnUse" x="0" y="-1" width="89" height="89">

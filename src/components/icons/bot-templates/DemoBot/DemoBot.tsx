@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const DemoBot: FC = () => {
+interface IDemoBot {
+  size: 'desktop' | 'mobile';
+}
+
+export const DemoBot: FC<IDemoBot> = ({size}) => {
 
   return (
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_3832_87678)">
         <ellipse cx="44" cy="44" rx="44" ry="44" fill="#060C23" />
         <mask id="mask0_3832_87678" style = {{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="88" height="88">

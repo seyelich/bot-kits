@@ -1,9 +1,13 @@
 import { FC } from 'react';
 
-export const Questions: FC = () => {
+interface IQuestions {
+  size: 'desktop' | 'mobile';
+}
+
+export const Questions: FC<IQuestions> = ({size}) => {
   return (
 
-    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size === 'desktop' ? 88 : 80} height={size === 'desktop' ? 88 : 80} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="43.984" cy="43.984" r="43.984" fill="#314DD8" />
       <circle cx="43.984" cy="43.984" r="43.984" fill="#060C23" />
       <ellipse cx="35.2579" cy="50.8058" rx="28.2174" ry="28.2174" fill="#2E293D" />
