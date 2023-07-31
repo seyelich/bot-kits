@@ -12,11 +12,25 @@ import WebIcon from '../icons/social/web';
 import WhatsappIcon from '../icons/social/whatsapp';
 import YandexIcon from '../icons/social/yandex';
 import YoutubeIcon from '../icons/social/youtube';
-import { PlusButton } from '../components/PlusButton/PlusButton';
+import { PlusButton } from '../components/plus-button/PlusButton';
 import { Button } from '../components/Button/Button';
-import { IconButton } from '../components/IconButton/IconButton';
+import { IconButton } from '../components/icon-button/IconButton';
 import { CopyIcon } from '../components/icons/Copy/Copy';
+<<<<<<< HEAD
 import { AddBotButton } from '../components/add-bot-button/AddBotButton';
+=======
+import { TutorialButton } from '../components/tutorial-button/TutorialButton';
+import { AddBlockButton } from '../components/add-block-button/AddBlockButton';
+import { MessageIcon } from '../components/icons/add-block-button/Message';
+import { CrmIcon } from '../components/icons/add-block-button/Crm';
+import { GitBranchIcon } from '../components/icons/add-block-button/GitBranch';
+import { SlidersIcon } from '../components/icons/add-block-button/Sliders';
+import { HeadPhonesIcon } from '../components/icons/add-block-button/HeadPhones';
+import { ApiIcon } from '../components/icons/add-block-button/Api';
+import { DeepLinkIcon } from '../components/icons/add-block-button/DeepLink';
+import { CreditCardIcon } from '../components/icons/add-block-button/CreditCard';
+import { MapPinIcon } from '../components/icons/add-block-button/MapPin';
+>>>>>>> develop
 
 export default function AddBot() {
   return (
@@ -92,8 +106,10 @@ export default function AddBot() {
         width={180}
         height={46}
       />
-      <PlusButton onClick={() => console.log('click')} />
-      <PlusButton onClick={() => console.log('click')} disabled />
+      <PlusButton type='blue' onClick={() => console.log('click')} />
+      <PlusButton type='blue' onClick={() => console.log('click')} disabled />
+      <PlusButton type='green' onClick={() => console.log('click')} />
+      <PlusButton type='green' onClick={() => console.log('click')} disabled />
       <Button
         type="green"
         onClick={() => console.log('click')}
@@ -137,8 +153,32 @@ export default function AddBot() {
         height={40}
         icon={<CopyIcon width={40} height={40} />}
       />
+<<<<<<< HEAD
       <AddBotButton onClick={() => console.log('click')} />
       <AddBotButton onClick={() => console.log('click')} disabled />
+=======
+      <TutorialButton type='instruction' />
+      <TutorialButton type='instruction' disabled />
+      <TutorialButton type='video' />
+      <TutorialButton type='video' disabled />
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '8px' }}>
+        <h3>Элемент AddBlockButton</h3>
+        <AddBlockButton text="Блок сообщений" icon={<MessageIcon />} />
+        <AddBlockButton
+          text="Блок сообщений"
+          icon={<MessageIcon />}
+          disabled={true}
+        />
+        <AddBlockButton text="Условный блок" icon={<GitBranchIcon />} />
+        <AddBlockButton text="Управление переменными" icon={<SlidersIcon />} />
+        <AddBlockButton text="Сохранение данных в CRM" icon={<CrmIcon />} />
+        <AddBlockButton text="Перевод на оператора" icon={<HeadPhonesIcon />} />
+        <AddBlockButton text="API" icon={<ApiIcon />} />
+        <AddBlockButton text="DeepLink" icon={<DeepLinkIcon />} />
+        <AddBlockButton text="Оплата" icon={<CreditCardIcon />} />
+        <AddBlockButton text="Координаты" icon={<MapPinIcon />} />
+      </div>
+>>>>>>> develop
     </div>
   );
 }
