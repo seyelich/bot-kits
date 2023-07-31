@@ -16,6 +16,7 @@ import { PlusButton } from '../components/plus-button/PlusButton';
 import { Button } from '../components/Button/Button';
 import { IconButton } from '../components/icon-button/IconButton';
 import { CopyIcon } from '../components/icons/Copy/Copy';
+import { AddBotButton } from '../components/add-bot-button/AddBotButton';
 import { TutorialButton } from '../components/tutorial-button/TutorialButton';
 import { AddBlockButton } from '../components/add-block-button/AddBlockButton';
 import { MessageIcon } from '../components/icons/add-block-button/Message';
@@ -102,10 +103,10 @@ export default function AddBot() {
         width={180}
         height={46}
       />
-      <PlusButton type='blue' onClick={() => console.log('click')} />
-      <PlusButton type='blue' onClick={() => console.log('click')} disabled />
-      <PlusButton type='green' onClick={() => console.log('click')} />
-      <PlusButton type='green' onClick={() => console.log('click')} disabled />
+      <PlusButton type="blue" onClick={() => console.log('click')} />
+      <PlusButton type="blue" onClick={() => console.log('click')} disabled />
+      <PlusButton type="green" onClick={() => console.log('click')} />
+      <PlusButton type="green" onClick={() => console.log('click')} disabled />
       <Button
         type="green"
         onClick={() => console.log('click')}
@@ -149,10 +150,12 @@ export default function AddBot() {
         height={40}
         icon={<CopyIcon width={40} height={40} />}
       />
-      <TutorialButton type='instruction' />
-      <TutorialButton type='instruction' disabled />
-      <TutorialButton type='video' />
-      <TutorialButton type='video' disabled />
+      <AddBotButton onClick={() => console.log('click')} />
+      <AddBotButton onClick={() => console.log('click')} disabled />
+      <TutorialButton type="instruction" />
+      <TutorialButton type="instruction" disabled />
+      <TutorialButton type="video" />
+      <TutorialButton type="video" disabled />
       <div style={{ display: 'flex', flexDirection: 'column', rowGap: '8px' }}>
         <h3>Элемент AddBlockButton</h3>
         <AddBlockButton text="Блок сообщений" icon={<MessageIcon />} />
