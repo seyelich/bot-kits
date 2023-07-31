@@ -7,6 +7,8 @@
 
   background-color: #F8F9FB;
 
+  border-radius: 10px;
+
   display: flex;
   gap: 10px 8px;
   flex-wrap: wrap;
