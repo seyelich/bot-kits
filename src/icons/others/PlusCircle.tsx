@@ -1,0 +1,39 @@
+import React, { FC } from 'react';
+
+interface IPlusCircleIcon {
+  color?: string;
+}
+
+export const PlusCircleIcon: FC<IPlusCircleIcon> = ({ color }) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        stroke={color ? color : 'currentColor'}
+        stroke-width="2"
+      />
+      <path
+        d="M12 8.49997V15.5"
+        stroke={color ? color : 'currentColor'}
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M8.5 11.9999H15.5"
+        stroke={color ? color : 'currentColor'}
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
