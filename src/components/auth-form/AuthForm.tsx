@@ -3,11 +3,23 @@ import { NavLink } from 'react-router-dom';
 import styles from './AuthForm.module.css'
 
 
+const countries: { code: string; name: string }[] = [
+  { code: "+375", name: "Беларусь" },
+  { code: "+7", name: "Россия" },
+  { code: "+375", name: "Неизвестно" },
+
+];
+
 const AuthForm = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [countryCode, setCountryCode] = useState('+375');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const options = countries.map((country) => (
+    <option key={country.code} value={country.code}>
+      {country.code} {country.name}
+    </option>
+  ));
 
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -51,8 +63,9 @@ const AuthForm = () => {
             value={countryCode}
             onChange={handleCountryCodeChange}
           >
-            <option value="+375">+375 (Беларусь)</option>
-            <option value="+375">+7 (Россия)</option>
+            {options}
+            {/* <option value="+375">+375 (Беларусь)</option>
+            <option value="+7">+7 (Россия)</option> */}
           </select>
           <input
             type="text"
