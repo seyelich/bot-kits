@@ -3,7 +3,7 @@ import Styles from './message-input.module.css';
 import IconButton from '../icon-button/IconButton';
 import EmojiIcon from '../../icons/others/Emoji';
 import PlusIcon from '../../icons/others/Plus';
-import { TagIcon } from '../../icons/others/Tag';
+import FileIcon from '../../icons/others/File';
 
 interface MessageInputProps {
   placeholder: string;
@@ -34,7 +34,7 @@ function MessageInput({ placeholder, onChange }: MessageInputProps) {
       <IconButton
         width={iconSize}
         height={iconSize}
-        icon={TagIcon({ color: iconColor })}
+        icon={FileIcon({ color: iconColor })}
       />
       <IconButton
         width={iconSize}
@@ -42,6 +42,7 @@ function MessageInput({ placeholder, onChange }: MessageInputProps) {
         icon={EmojiIcon({ color: iconColor })}
         onClick={smilesHandle}
       />
+      {/* TODO PlusIcon должен выглядеть по другому */}
       <IconButton
         width={iconSize}
         height={iconSize}
