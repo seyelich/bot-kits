@@ -62,14 +62,18 @@
   margin-bottom: 43px;
   padding: 13px;
   border-radius: 50%;
-  background-color: #243cbb;
-  background-image: url("./add-button.svg");
+  background-color: var(--default-blue-color);
+  background-image: url("./icons/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: all .3s;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
+}
+
+.addbutton:hover {
+  background-color: var(--hover-blue-color);
 }
 
 .addtext {
@@ -90,18 +94,18 @@
   min-width: 100%;
   margin-left: 8px;
   margin-bottom: 15px;
-  stroke: #ccd4e0;
+  stroke: var(--disabled-grey-color);
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 16px;
   text-decoration: none;
   color: inherit;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .navlink:hover {
-  stroke: #243cbb;
-  color: #243cbb;
+  stroke: var(--hover-blue-color);
+  color: var(--hover-blue-color);
 }
 
 .navtext {
@@ -109,5 +113,5 @@
   visibility: hidden;
   transition: all .2s;
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
 }
