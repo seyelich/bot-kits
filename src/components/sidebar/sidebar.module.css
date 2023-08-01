@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 28px;
   background-color: #fff;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   transition: .2s;
 }
 
@@ -41,12 +41,20 @@
 
 .title {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 12px;
   width: max-content;
   margin-left: 4px;
   overflow-x: hidden;
   transition: all .3s;
+}
+
+.expand-button {
+  position: absolute;
+  right: -45px;
+  top: 25px;
+  border: none;
+  background-color: inherit;
 }
 
 .navigation {
@@ -101,6 +109,11 @@
   text-decoration: none;
   color: inherit;
   overflow: hidden;
+}
+
+.navlink-active {
+  stroke: var(--default-blue-color);
+  color: var(--default-blue-color);
 }
 
 .navlink:hover {
