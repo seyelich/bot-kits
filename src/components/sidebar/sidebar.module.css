@@ -5,38 +5,41 @@
   left: 16px;
   width: 70px;
   height: 100%;
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
   background-color: #fff;
-  /* overflow-x: hidden; */
   transition: .2s;
 }
 
-.sidebar:hover {
-  width: 240px;
+.sidebar-expanded {
+  width: 250px;
 }
 
-.sidebar:hover .navtext {
+.sidebar-expanded .navtext {
   opacity: 1;
   visibility: visible;
 }
 
-.sidebar:hover .title {
+.sidebar-expanded .title {
   margin-left: 0;
 }
 
-.sidebar:hover .addbutton {
+.sidebar-expanded .addbutton {
   width: 182px;
   height: 48px;
   border-radius: 10px;
   background-image: none;
 }
 
-.sidebar:hover .addtext {
+.sidebar-expanded .addtext {
   opacity: 1;
   visibility: visible;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 18px;
+  overflow: hidden;
 }
 
 .title {
@@ -51,10 +54,11 @@
 
 .expand-button {
   position: absolute;
-  right: -45px;
-  top: 25px;
+  right: -85px;
+  top: 5px;
   border: none;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .navigation {
