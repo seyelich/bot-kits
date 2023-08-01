@@ -1,9 +1,13 @@
 .footer {
   display: flex;
+  max-width: 1268px;
   padding-top: 15px;
   padding-bottom: 14px;
   padding-left: 40px;
   border-top: 1px solid #D7DEEA;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .text {

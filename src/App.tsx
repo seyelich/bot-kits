@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
+import Subscription from './pages/Subscription/subscription';
 import AddBot from './pages/add-bot';
 
 import styles from './App.module.css';
@@ -9,7 +10,6 @@ import Chat from './pages/chat';
 import Mailing from './pages/mailing';
 import Partnership from './pages/partnership';
 import Share from './pages/share';
-import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
 import { Layout } from './components/Layout/Layout';
 
