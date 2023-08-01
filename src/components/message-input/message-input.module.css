@@ -1,0 +1,91 @@
+.inputFrame {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  position: relative;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: var(--default-grey-color);
+
+  /* temp */
+  width: 500px;
+}
+
+.input {
+  border: none;
+
+  flex-grow: 1;
+
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+
+  background-color: inherit;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+.input:-moz-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+
+.smiles {
+  padding: 8px 12px;
+  position: absolute;
+  top: -32px;
+  right: 18px;
+
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+
+  display: flex;
+  gap: 12px;
+
+  background-color: #fff;
+
+  font-size: var(--h4-font-size);
+}
+
+.smile {
+  cursor: pointer;
+}
+
+.square {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  bottom: -4.24px;
+  right: 38px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 360px) {
+  .inputFrame {
+    height: 40px;
+    border-radius: 8px;
+    gap: 4px;
+  }
+}
