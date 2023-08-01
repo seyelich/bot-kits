@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, ChangeEventHandler } from 'react';
 import Styles from './message-input.module.css';
 import IconButton from '../icon-button/IconButton';
 import EmojiIcon from '../../icons/others/Emoji';
@@ -7,7 +7,7 @@ import FileIcon from '../../icons/others/File';
 
 interface MessageInputProps {
   placeholder: string;
-  onChange: () => void;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 function MessageInput({ placeholder, onChange }: MessageInputProps) {
