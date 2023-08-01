@@ -11,10 +11,10 @@ interface MessageInputProps {
 }
 
 function MessageInput({ placeholder, onChange }: MessageInputProps) {
-  const [smilesView, setSmilesView] = useState(false);
+  const [isShowSmiles, setShowSmiles] = useState(false);
 
   const smilesHandle = () => {
-    setSmilesView(!smilesView);
+    setShowSmiles(!isShowSmiles);
   };
 
   const iconColor = '#A6B3C9';
@@ -48,7 +48,7 @@ function MessageInput({ placeholder, onChange }: MessageInputProps) {
         height={iconSize}
         icon={PlusIcon({ color: iconColor })}
       />
-      {smilesView && (
+      {isShowSmiles && (
         <div className={Styles.smiles}>
           <span className={Styles.smile}>&#128524;</span>
           <span className={Styles.smile}>&#128077;</span>
