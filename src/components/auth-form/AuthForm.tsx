@@ -8,6 +8,7 @@ import TelegramIcon from '../../icons/social/telegram';
 import VKIcon from '../../icons/social/vk';
 import YandexIcon from '../../icons/social/yandex';
 import { Button } from '../Button/Button';
+import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
 
 const countries: { code: string; name: string }[] = [
@@ -51,54 +52,7 @@ const AuthForm = () => {
         <p className={styles.authForm__socialContainer__title}>
           Создай аккаунт с помощью
         </p>
-        <div className={styles.authForm__socialContainer__menuContainer}>
-          <nav className={styles.authForm__socialContainer__menu}>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <GoogleIcon width={40} height={40} type="blue" />
-            </NavLink>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <YandexIcon width={40} height={40} type="blue" />
-            </NavLink>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <MailruIcon width={40} height={40} type="blue" />
-            </NavLink>
-          </nav>
-          <nav className={styles.authForm__socialContainer__menu}>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <VKIcon width={40} height={40} type="blue" />
-            </NavLink>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <OdnoklassnikiIcon width={40} height={40} type="blue" />
-            </NavLink>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <FacebookIcon width={40} height={40} type="blue" />
-            </NavLink>
-            <NavLink
-              className={styles.authForm__socialContainer__menuItem}
-              to="#"
-            >
-              <TelegramIcon width={40} height={40} type="blue" />
-            </NavLink>
-          </nav>
-        </div>
+        <NavLinkBar/>
         <p className={styles.authForm__socialContainer__footer}>или</p>
       </div>
       <div className={styles.authForm__wrapper}>
