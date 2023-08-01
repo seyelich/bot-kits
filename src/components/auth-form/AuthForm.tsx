@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { Button } from '../Button/Button';
 import styles from './AuthForm.module.css'
 
 
@@ -74,7 +75,7 @@ const AuthForm = () => {
             onChange={handlePhoneNumberChange}
           />
         </div>
-        <button type="submit">Создать аккаунт</button>
+        <Button type="green" text="СОЗДАТЬ АККАУНТ" width={260} height={64}/>
       </form>
 
       <div className={styles.authForm__footer}>
