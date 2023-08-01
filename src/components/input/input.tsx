@@ -1,13 +1,14 @@
+import { ChangeEvent } from 'react';
 import styles from './input.module.css';
 
 type TTextInput = {
-  placeholder: string;
-  disabled: boolean;
+  placeholder?: string;
+  disabled?: boolean;
   name: string;
-  onChahge: () => {};
+  onChahge: (event: ChangeEvent<HTMLInputElement>) => void;
   value: string;
-  errorMessage: string;
-  isValid: boolean;
+  errorMessage?: string;
+  isInvalid?: boolean;
 };
 
 export default function TextInput({
@@ -17,20 +18,20 @@ export default function TextInput({
   onChahge,
   value,
   errorMessage,
-  isValid,
+  isInvalid,
 }: TTextInput) {
   return (
     <>
       <input
         placeholder={placeholder}
-        className={`${styles.input} ${!isValid && styles.input_incorrect}`}
+        className={`${styles.input} ${isInvalid && styles.input_incorrect}`}
         type="text"
         disabled={disabled}
         name={name}
         onChange={onChahge}
         value={value}
       />
-      {!isValid && <p className={styles.errorMessage}>{errorMessage}</p>}
+      {isInvalid && <p className={styles.errorMessage}>{errorMessage}</p>}
     </>
   );
 }
