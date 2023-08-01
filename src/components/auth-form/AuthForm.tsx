@@ -77,30 +77,29 @@ const AuthForm = () => {
               className={styles.authForm__socialContainer__menuItem}
               to="#"
             >
-              <VKIcon width={40} height={40} type="blue"/>
+              <VKIcon width={40} height={40} type="blue" />
             </NavLink>
             <NavLink
               className={styles.authForm__socialContainer__menuItem}
               to="#"
             >
-              <OdnoklassnikiIcon width={40} height={40} type="blue"/>
-
+              <OdnoklassnikiIcon width={40} height={40} type="blue" />
             </NavLink>
             <NavLink
               className={styles.authForm__socialContainer__menuItem}
               to="#"
             >
-              <FacebookIcon width={40} height={40} type="blue"/>
-
+              <FacebookIcon width={40} height={40} type="blue" />
             </NavLink>
             <NavLink
               className={styles.authForm__socialContainer__menuItem}
               to="#"
             >
-              <TelegramIcon width={40} height={40} type="blue"/>
+              <TelegramIcon width={40} height={40} type="blue" />
             </NavLink>
           </nav>
         </div>
+        <p className={styles.authForm__socialContainer__footer}>или</p>
       </div>
       <div className={styles.authForm__wrapper}>
         <form className={styles.authForm__form} onSubmit={handleSubmit}>
