@@ -2,11 +2,70 @@
   width: 770px;
   height: 619px;
   border-radius: 30px;
-  background: var(--primary-persian-blue-hover, #2743CE);
+  border-radius: 30px;
+  background: #2743CE;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
+
+
+.authForm__socialContainer{
+
+}
+.authForm__socialContainer__menuContainer{
+  display: flex;
+  width: 100%;
+
+}
+.authForm__socialContainer__title {
+  color:#fff;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 50px 0 15px 0;
+}
+.authForm__socialContainer__menu{
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  background:#314DD8;
+  max-width: 300px;
+  max-height: 60px;
+  height: 100%;
+  display: flex;
+  margin-right: 20px;
+}
+.authForm__socialContainer__menu:last-child {
+  margin-right: 0px;
+}
+
+.authForm__socialContainer__menuItem{
+  margin: 10px 30px 10px 10px ;
+}
+.authForm__socialContainer__menuItem:last-child {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+.authForm__wrapper{
+  width: 100%;
+  max-height: 428px;
+  height: 100%;
+  border-radius: 30px;
+  background: var(--primary-persian-blue-default, #243CBB);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
