@@ -9,7 +9,13 @@ interface IVKIcon {
 
 export default function VKIcon({ width, height, type, onClick }: IVKIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#2787F5" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#2787F5"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}

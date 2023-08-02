@@ -14,7 +14,13 @@ export default function ViberIcon({
   onClick,
 }: IViberIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#7360F2" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#7360F2"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}
