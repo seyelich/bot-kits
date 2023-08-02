@@ -1,15 +1,14 @@
 import { FC } from 'react';
-import { Header } from '../Header/Header';
-import Footer from '../footer/footer';
 import { Outlet } from 'react-router';
+import Header from '../Header/Header';
+import Footer from '../footer/footer';
 
+const Layout: FC = () => (
+  <>
+    <Header />
+    <Outlet />
+    <Footer />
+  </>
+);
 
-export const Layout: FC = () => {
-  return (
-    <>
-      <Header />
-      <Outlet/>
-      <Footer />
-    </>
-  );
-};
+export default Layout;

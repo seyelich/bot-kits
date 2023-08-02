@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
-import { Plus } from '../icons/Plus/Plus';
+import Plus from '../icons/Plus/Plus';
 import { BlackPlus } from '../icons/black-plus/BlackPlus';
 
 interface IPlusButton {

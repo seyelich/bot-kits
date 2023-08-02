@@ -1,17 +1,17 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './Header.module.css';
-import { Menu24px } from '../icons/Menu24px/Menu24px';
-import { Help } from '../icons/Help/Help';
-import { Notifications } from '../icons/Notifications/Notifications';
+import Menu24px from '../icons/Menu24px/Menu24px';
+import Help from '../icons/Help/Help';
+import Notifications from '../icons/Notifications/Notifications';
 import avatar from '../../images/avatar.svg';
-import { ArrowSmall } from '../icons/ArrowSmall/ArrowSmall';
-import { Logo } from '../Logo/Logo';
-import { MenuMobile } from '../icons/MenuMobile/MenuMobile';
+import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
+import Logo from '../Logo/Logo';
+import MenuMobile from '../icons/MenuMobile/MenuMobile';
 
-export const Header: FC = () => {
+const Header: FC = () => {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
-    setIsActive((isActive) => !isActive);
+    setIsActive(!isActive);
   };
 
   const [matches, setMatches] = useState(
@@ -43,11 +43,16 @@ export const Header: FC = () => {
         </span>
         <p className={styles.text}>User Name</p>
         <span
-          className={`${styles.button} ${!isActive ? styles.button_default : styles.button_active}`}
-          onClick={toggle}>
+          className={`${styles.button} ${
+            !isActive ? styles.button_default : styles.button_active
+          }`}
+          onClick={toggle}
+        >
           <ArrowSmall />
         </span>
       </div>
     </header>
   );
 };
+
+export default Header;
