@@ -16,7 +16,7 @@ export default function AlisaIcon({
   switch (type) {
     case 'common':
       return (
-        <SocialIcon type={type} width={width} onClick={onClick}>
+        <SocialIcon type={type} width={width} height={height} onClick={onClick}>
           <svg
             width={width}
             height={height}
@@ -54,7 +54,7 @@ export default function AlisaIcon({
       );
     default:
       return (
-        <SocialIcon type={type} width={width} onClick={onClick}>
+        <SocialIcon type={type} width={width} height={height} onClick={onClick}>
           <svg
             width={width}
             height={height}

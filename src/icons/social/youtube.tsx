@@ -14,7 +14,7 @@ export default function YoutubeIcon({
   onClick,
 }: IYoutubeIcon) {
   return (
-    <SocialIcon type={type} width={width} color="#FF0000" onClick={onClick}>
+    <SocialIcon type={type} width={width} height={height} color="#FF0000" onClick={onClick}>
       <svg
         width={width}
         height={height}

@@ -2,13 +2,15 @@ import React, { FC } from 'react';
 
 interface IZapIcon {
   color?: string;
+  width?: number;
+  height?: number;
 }
 
-export const ZapIcon: FC<IZapIcon> = ({ color }) => {
+export const ZapIcon: FC<IZapIcon> = ({ color, width=20, height=20 }) => {
   return (
     <svg
-      width="20"
-      height="20"
+      width={width}
+      height={height}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

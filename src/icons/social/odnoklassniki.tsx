@@ -14,7 +14,7 @@ export default function OdnoklassnikiIcon({
   onClick,
 }: IOdnoklassnikiIcon) {
   return (
-    <SocialIcon type={type} width={width} color="#EE8208" onClick={onClick}>
+    <SocialIcon type={type} width={width} height={height} color="#EE8208" onClick={onClick}>
       <svg
         width={width}
         height={height}

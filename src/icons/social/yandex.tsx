@@ -14,7 +14,7 @@ export default function YandexIcon({
   onClick,
 }: IYandexIcon) {
   return (
-    <SocialIcon type={type} width={width} color="#FC3F1D" onClick={onClick}>
+    <SocialIcon type={type} width={width} height={height} color="#FC3F1D" onClick={onClick}>
       <svg
         width={width}
         height={height}
