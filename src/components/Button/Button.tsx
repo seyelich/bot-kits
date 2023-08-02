@@ -9,9 +9,10 @@ interface IButton {
   text: string;
   width: number;
   height: number;
+  isRegister?: boolean;
 }
 
-export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height }) => {
+export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isRegister }) => {
   return (
     <button
       className={`${styles.button} ${
@@ -20,6 +21,8 @@ export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, heig
           : type === 'grey'
           ? `${styles.button_grey} ${disabled ? styles.button_grey_disabled : ''}`
           : `${styles.button_green} ${disabled ? styles.button_green_disabled : ''}`
+      } ${
+        isRegister && `${styles.regiser_button}`
       }  `}
       onClick={onClick}
       style={{

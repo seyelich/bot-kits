@@ -22,7 +22,7 @@ const AuthForm = () => {
   const [countryCode, setCountryCode] = useState('+375');
   const [phoneNumber, setPhoneNumber] = useState('');
   const options = countries.map((country) => (
-    <option key={country.code} value={country.code}>
+    <option className={styles.authForm__phoneOption} key={country.code} value={country.code}>
       {country.code} {country.name}
     </option>
   ));
@@ -77,8 +77,6 @@ const AuthForm = () => {
             <div className={styles.authForm__phoneContainer}>
               <select value={countryCode} onChange={handleCountryCodeChange}>
                 {options}
-                {/* <option value="+375">+375 (Беларусь)</option>
-            <option value="+7">+7 (Россия)</option> */}
               </select>
               <input
                 type="text"
@@ -88,7 +86,7 @@ const AuthForm = () => {
               />
             </div>
           </div>
-          <Button type="green" text="СОЗДАТЬ АККАУНТ" width={260} height={64} />
+          <Button type="green" text="СОЗДАТЬ АККАУНТ" width={260} height={64} isRegister={true} />
         </form>
 
         <div className={styles.authForm__footer}>
