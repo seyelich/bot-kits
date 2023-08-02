@@ -1,0 +1,58 @@
+.popup {
+  align-items: center;
+  background-color: rgba(191,201,217,.5);
+  /* background-color: #BFC9D9; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  /* opacity: 0;
+  transition: visibility .8s,opacity .8s linear;
+  visibility: hidden; */
+}
+
+.container {
+  width: 400px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 37px;
+  border-radius: 30px;
+  background-color: #FFF;
+  box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+}
+
+.title {
+  font-family: IBM Plex Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin: 0;
+}
+
+.button_close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
