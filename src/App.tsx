@@ -15,9 +15,9 @@ import Layout from './components/Layout/Layout';
 function App() {
   return (
     <BrowserRouter>
-      <Sidebar />
       <div className={styles.content}>
-        <main className="app-container">
+        <Sidebar />
+        <main>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
