@@ -2,13 +2,15 @@ import React, { FC } from 'react';
 
 interface ILinkIcon {
   color?: string;
+  width?: number;
+  height?: number;
 }
 
-export const LinkIcon: FC<ILinkIcon> = ({ color }) => {
+export const LinkIcon: FC<ILinkIcon> = ({ color, width = 24, height = 24 }) => {
   return (
     <svg
-      width="25"
-      height="24"
+      width={width}
+      height={height}
       viewBox="0 0 25 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

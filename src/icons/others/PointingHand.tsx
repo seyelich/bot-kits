@@ -2,13 +2,19 @@ import React, { FC } from 'react';
 
 interface IPointingHandIcon {
   color?: string;
+  width?: number;
+  height?: number;
 }
 
-export const PointingHandIcon: FC<IPointingHandIcon> = ({ color }) => {
+export const PointingHandIcon: FC<IPointingHandIcon> = ({
+  color,
+  width = 16,
+  height = 17,
+}) => {
   return (
     <svg
-      width="16"
-      height="17"
+      width={width}
+      height={height}
       viewBox="0 0 16 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

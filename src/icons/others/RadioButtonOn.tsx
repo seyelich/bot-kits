@@ -1,15 +1,17 @@
 import React, { FC } from 'react';
 
 interface IRadioButtonOnIcon {
-  color?: string;
   circleColor?: string;
+  color?: string;
+  width?: number;
+  height?: number;
 }
 
-export const RadioButtonOnIcon: FC<IRadioButtonOnIcon> = ({ color, circleColor }) => {
+export const RadioButtonOnIcon: FC<IRadioButtonOnIcon> = ({ color, circleColor, width=20, height=20 }) => {
   return (
     <svg
-      width="20"
-      height="20"
+      width={width}
+      height={height}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

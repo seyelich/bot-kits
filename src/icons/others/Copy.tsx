@@ -6,11 +6,11 @@ interface ICopyIcon {
   color?: string;
 }
 
-export const CopyIcon: FC<ICopyIcon> = ({ width, height, color }) => {
+export const CopyIcon: FC<ICopyIcon> = ({ width = 24, height = 24, color }) => {
   return (
     <svg
-      width={width ? width : '24'}
-      height={height ? height : '24'}
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
