@@ -1,12 +1,11 @@
 import { useState, ChangeEventHandler } from 'react';
 import Styles from './message-input.module.css';
-// поменять импорты
-import { IconButton } from '../icon-button/IconButton';
-import { EmojiIcon } from '../../icons/others/Emoji';
-import { XCircleIcon } from '../../icons/others/XCircle';
-import { FileIcon } from '../../icons/others/File';
-import { SlashIcon } from '../../icons/others/Slash';
-import { ZapIcon } from '../../icons/others/Zap';
+import IconButton from '../icon-button/IconButton';
+import EmojiIcon from '../../icons/others/Emoji';
+import XCircleIcon from '../../icons/others/XCircle';
+import FileIcon from '../../icons/others/File';
+import SlashIcon from '../../icons/others/Slash';
+import ZapIcon from '../../icons/others/Zap';
 
 interface MessageInputProps {
   placeholder: string;
