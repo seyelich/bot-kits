@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC, useEffect, useState } from 'react';
 import styles from './BotTemplates.module.css';
 import BotTemplateElement from './BotTemplateElement/BotTemplateElement';
@@ -18,7 +19,7 @@ import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
 const BotTemplates: FC = () => {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
-    setIsActive((isActive) => !isActive);
+    setIsActive(!isActive);
   };
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 768px)').matches
