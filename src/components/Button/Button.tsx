@@ -9,9 +9,10 @@ interface IButton {
   text: string;
   width: number;
   height: number;
+  extraClass?: string;
 }
 
-export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height }) => {
+export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, extraClass }) => {
   return (
     <button
       className={`${styles.button} ${
@@ -20,7 +21,7 @@ export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, heig
           : type === 'grey'
           ? `${styles.button_grey} ${disabled ? styles.button_grey_disabled : ''}`
           : `${styles.button_green} ${disabled ? styles.button_green_disabled : ''}`
-      }  `}
+      } ${extraClass} `}
       onClick={onClick}
       style={{
         width,

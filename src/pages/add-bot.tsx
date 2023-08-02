@@ -108,7 +108,7 @@ import { TutorialButton } from '../components/tutorial-button/TutorialButton';
 import { AddBotButton } from '../components/add-bot-button/AddBotButton';
 import { AddBlockButton } from '../components/add-block-button/AddBlockButton';
 import { CreditCardIcon } from '../components/icons/add-block-button/CreditCard';
-
+import styles from "./add-bot.module.css"
 export default function AddBot() {
   return (
     <div>
@@ -175,6 +175,7 @@ export default function AddBot() {
           text="СИНЯЯ КНОПКА"
           width={180}
           height={46}
+          extraClass={styles.button}
         />
         <Button
           type="blue"
@@ -183,6 +184,7 @@ export default function AddBot() {
           text="СИНЯЯ КНОПКА"
           width={180}
           height={46}
+          extraClass={styles.button}
         />
         <PlusButton type="blue" onClick={() => console.log('click')} />
         <PlusButton type="blue" onClick={() => console.log('click')} disabled />
