@@ -43,7 +43,9 @@ const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
           src={video}
           controls
           ref={vidRef}
-        />
+        >
+          <track kind="captions" />
+        </video>
       </div>
       <p className={styles.text}>{text}</p>
     </div>
