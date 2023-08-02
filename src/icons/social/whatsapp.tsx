@@ -14,7 +14,7 @@ export default function WhatsappIcon({
   onClick,
 }: IWhatsappIcon) {
   return (
-    <SocialIcon type={type} width={width} color="#3CBB28" onClick={onClick}>
+    <SocialIcon type={type} width={width} height={height} color="#3CBB28" onClick={onClick}>
       <svg
         width={width}
         height={height}

@@ -9,7 +9,7 @@ interface IWebIcon {
 
 export default function WebIcon({ width, height, type, onClick }: IWebIcon) {
   return (
-    <SocialIcon type={type} width={width} color="#435CDB" onClick={onClick}>
+    <SocialIcon type={type} width={width} height={height} color="#435CDB" onClick={onClick}>
       <svg
         width={width}
         height={height}
