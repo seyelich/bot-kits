@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 191px;
+  max-height: 192px;
 
 }
 
@@ -29,7 +29,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
-  margin: 50px 0 15px 0;
+  margin: 50px 0 14px 0;
 }
 
 .authForm__socialContainer__footer{
@@ -38,8 +38,7 @@
   color: #fff;
   max-width: 80px;
   width: 100%;
-  max-height: 30px;
-  height: 100%;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,6 +67,54 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+
+.authForm__form {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+margin-top: 55px;
+}
+
+.authForm__inputContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 670px;
+  max-height: 140px;
+  margin-bottom: 50px;
+}
+
+.authForm__passwordContainer{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+.authForm__footer{
+  max-width: 670px;
+  width: 100%;
+  max-height: 24px;
+  margin: 50px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authForm__footer__text {
+  color:#FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
 }
 
 

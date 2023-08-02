@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import FacebookIcon from '../../icons/social/facebook';
-import GoogleIcon from '../../icons/social/google';
-import MailruIcon from '../../icons/social/mailru';
-import OdnoklassnikiIcon from '../../icons/social/odnoklassniki';
-import TelegramIcon from '../../icons/social/telegram';
-import VKIcon from '../../icons/social/vk';
-import YandexIcon from '../../icons/social/yandex';
 import { Button } from '../Button/Button';
+import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
 
@@ -58,17 +52,10 @@ const AuthForm = () => {
       <div className={styles.authForm__wrapper}>
         <form className={styles.authForm__form} onSubmit={handleSubmit}>
           <div className={styles.authForm__inputContainer}>
-            <input
-              className={styles.authForm__defautInput}
-              type="text"
-              placeholder="Имя"
-            />
-            <input type="email" placeholder="Email" />
+          <AuthInput type="text" placeholder="Имя" width={325} height={60} marginRight={20}/>
+          <AuthInput type="email" placeholder="Email" width={325} height={60}/>
             <div className={styles.authForm__passwordContainer}>
-              <input
-                type={showPassword ? 'text' : 'password'}
-                placeholder="Пароль"
-              />
+            <AuthInput type={showPassword ? 'text' : 'password'} placeholder="Пароль" width={325} height={60} marginRight={20}/>
               <button type="button" onClick={handlePasswordVisibility}>
                 {showPassword ? 'Скрыть' : 'Показать'}
               </button>
