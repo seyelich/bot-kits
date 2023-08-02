@@ -4,16 +4,25 @@ import styles from './index.module.css';
 
 interface INotificationsIcon {
   color?: string;
+  width?: number;
+  height?: number;
   counter?: number;
 }
 
-export const NotificationsIcon: FC<INotificationsIcon> = ({ color, counter }) => {
+export const NotificationsIcon: FC<INotificationsIcon> = ({
+  color,
+  counter,
+  width = 25,
+  height = 29,
+}) => {
   return (
     <div className={styles.notification}>
-      {counter && counter > 0 ? <div className={styles.circle}>{counter}</div> : null}
+      {counter && counter > 0 ? (
+        <div className={styles.circle}>{counter}</div>
+      ) : null}
       <svg
-        width="25"
-        height="28.999999999999996"
+        width={width}
+        height={height}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
       >

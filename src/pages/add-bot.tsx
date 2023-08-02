@@ -273,96 +273,101 @@ export default function AddBot() {
           marginTop: '50px',
         }}
       >
-        <PointingHandIcon color="blue" />
-        <DownIcon color="blue" />
-        <UpIcon color="blue" />
-        <DoneIcon color="blue" />
-        <UpdateIcon color="blue" />
-        <LinkSIcon color="blue" />
-        <AddLInkLIcon color="blue" />
-        <RadioButtonOnIcon color="blue" circleColor="red" />
-        <RadioButtonOffIcon color="blue" />
-        <HelpIcon color="blue" />
-        <CloseIcon color="blue" />
-        <EllipsisIcon color="blue" />
-        <ChevronBigIcon color="blue" />
-        <UserIcon color="blue" />
-        <CheckIcon color="blue" />
-        <CopyIcon color="blue" />
-        <SearchIcon color="blue" />
-        <PlayIcon color="blue" />
-        <PauseIcon color="blue" />
-        <SlashIcon color="blue" />
-        <ZapIcon color="blue" />
-        <XCircleIcon color="blue" />
-        <DashBoardIcon color="blue" />
-        <ConstructorIcon color="blue" />
-        <MailingIcon color="blue" />
-        <ListsIcon color="blue" />
-        <ChartsIcon color="blue" />
-        <DialogueIcon color="blue" />
-        <AccessIcon color="blue" />
-        <MinilandingIcon color="blue" />
-        <CrmIcon color="blue" />
-        <ExitIcon color="blue" />
-        <TrashIcon color="blue" />
-        <EditIcon color="blue" />
-        <ShareIcon color="blue" />
-        <CopyBotIcon color="blue" />
-        <SettingsIcon color="blue" />
-        <PaymentIcon color="blue" />
-        <CloseSmallIcon color="blue" />
-        <NotificationSettingsIcon color="blue" />
-        <InfoIcon color="blue" />
-        <LinkIcon color="blue" />
-        <CloudIcon color="blue" />
-        <EqualIcon color="blue" />
-        <EqualNotIcon color="blue" />
-        <MoreIcon color="blue" />
-        <LessIcon color="blue" />
-        <MoreOrEqualIcon color="blue" />
-        <LessOrEqualIcon color="blue" />
-        <EqualWithoutCaseIcon color="blue" />
-        <InLineIcon color="blue" />
-        <InLineWithoutCaseIcon color="blue" />
-        <NotInLineIcon color="blue" />
-        <NotInLineWithoutCaseIcon color="blue" />
-        <MessageSquareIcon color="blue" />
-        <SlidersIcon color="blue" />
-        <DeepLinkIcon color="blue" />
-        <TableIcon color="blue" />
-        <HeadPhonesIcon color="blue" />
-        <ApiIcon color="blue" />
-        <CreaditCardIcon color="blue" />
-        <MapPinIcon color="blue" />
-        <GitBranchIcon color="blue" />
-        <TagIcon color="blue" />
-        <MenuIcon color="blue" />
-        <BracketIcon color="blue" />
-        <EmojiIcon color="blue" />
-        <VerticalIcon color="blue" />
-        <HorizontalIcon color="blue" />
-        <AskPhoneIcon color="blue" />
-        <UrlIcon color="blue" />
-        <PlusCircleIcon color="blue" />
+        <PointingHandIcon color="blue" width={50} height={50} />
+        <DownIcon color="blue" width={50} height={50} />
+        <UpIcon color="blue" width={50} height={50} />
+        <DoneIcon color="blue" width={50} height={50} />
+        <UpdateIcon color="blue" width={50} height={50} />
+        <LinkSIcon color="blue" width={50} height={50} />
+        <AddLInkLIcon color="blue" width={50} height={50} />
+        <RadioButtonOnIcon
+          color="blue"
+          circleColor="red"
+          width={50}
+          height={50}
+        />
+        <RadioButtonOffIcon color="blue" width={50} height={50} />
+        <HelpIcon color="blue" width={50} height={50} />
+        <CloseIcon color="blue" width={50} height={50} />
+        <EllipsisIcon color="blue" width={50} height={50} />
+        <ChevronBigIcon color="blue" width={50} height={50} />
+        <UserIcon color="blue" width={50} height={50} />
+        <CheckIcon color="blue" width={50} height={50} />
+        <CopyIcon color="blue" width={50} height={50} />
+        <SearchIcon color="blue" width={50} height={50} />
+        <PlayIcon color="blue" width={50} height={50} />
+        <PauseIcon color="blue" width={50} height={50} />
+        <SlashIcon color="blue" width={50} height={50} />
+        <ZapIcon color="blue" width={50} height={50} />
+        <XCircleIcon color="blue" width={50} height={50} />
+        <DashBoardIcon color="blue" width={50} height={50} />
+        <ConstructorIcon color="blue" width={50} height={50} />
+        <MailingIcon color="blue" width={50} height={50} />
+        <ListsIcon color="blue" width={50} height={50} />
+        <ChartsIcon color="blue" width={50} height={50} />
+        <DialogueIcon color="blue" width={50} height={50} />
+        <AccessIcon color="blue" width={50} height={50} />
+        <MinilandingIcon color="blue" width={50} height={50} />
+        <CrmIcon color="blue" width={50} height={50} />
+        <ExitIcon color="blue" width={50} height={50} />
+        <TrashIcon color="blue" width={50} height={50} />
+        <EditIcon color="blue" width={50} height={50} />
+        <ShareIcon color="blue" width={50} height={50} />
+        <CopyBotIcon color="blue" width={50} height={50} />
+        <SettingsIcon color="blue" width={100} height={100} />
+        <PaymentIcon color="blue" width={100} height={100} />
+        <CloseSmallIcon color="blue" width={100} height={100} />
+        <NotificationSettingsIcon color="blue" width={100} height={100} />
+        <InfoIcon color="blue" width={100} height={100} />
+        <LinkIcon color="blue" width={100} height={100} />
+        <CloudIcon color="blue" width={100} height={100} />
+        <EqualIcon color="blue" width={100} height={100} />
+        <EqualNotIcon color="blue" width={100} height={100} />
+        <MoreIcon color="blue" width={100} height={100} />
+        <LessIcon color="blue" width={100} height={100} />
+        <MoreOrEqualIcon color="blue" width={100} height={100} />
+        <LessOrEqualIcon color="blue" width={100} height={100} />
+        <EqualWithoutCaseIcon color="blue" width={100} height={100} />
+        <InLineIcon color="blue" width={100} height={100} />
+        <InLineWithoutCaseIcon color="blue" width={100} height={100} />
+        <NotInLineIcon color="blue" width={100} height={100} />
+        <NotInLineWithoutCaseIcon color="blue" width={100} height={100} />
+        <MessageSquareIcon color="blue" width={100} height={100} />
+        <SlidersIcon color="blue" width={100} height={100} />
+        <DeepLinkIcon color="blue" width={100} height={100} />
+        <TableIcon color="blue" width={100} height={100} />
+        <HeadPhonesIcon color="blue" width={100} height={100} />
+        <ApiIcon color="blue" width={100} height={100} />
+        <CreaditCardIcon color="blue" width={100} height={100} />
+        <MapPinIcon color="blue" width={100} height={100} />
+        <GitBranchIcon color="blue" width={100} height={100} />
+        <TagIcon color="blue" width={100} height={100} />
+        <MenuIcon color="blue" width={100} height={100} />
+        <BracketIcon color="blue" width={100} height={100} />
+        <EmojiIcon color="blue" width={100} height={100} />
+        <VerticalIcon color="blue" width={100} height={100} />
+        <HorizontalIcon color="blue" width={100} height={100} />
+        <AskPhoneIcon color="blue" width={100} height={100} />
+        <UrlIcon color="blue" width={100} height={100} />
+        <PlusCircleIcon color="blue" width={100} height={100} />
         <div style={{ color: 'red' }}>
-          <ArrowUpCircleIcon />
-          <DeleteIcon />
-          <VideoIcon />
-          <ImageIcon />
-          <FileIcon />
-          <MusicIcon />
-          <BoldIcon />
-          <ItalicIcon />
-          <CodeIcon />
-          <PlusIcon />
-          <MinusIcon />
-          <FitIcon />
-          <FullScreenIcon />
-          <PageIcon />
-          <ButtonIcon />
-          <UploadIcon />
-          <NotificationsIcon counter={72} />
+          <ArrowUpCircleIcon width={30} height={30} />
+          <DeleteIcon width={30} height={30} />
+          <VideoIcon width={30} height={30} />
+          <ImageIcon width={30} height={30} />
+          <FileIcon width={30} height={30} />
+          <MusicIcon width={30} height={30} />
+          <BoldIcon width={30} height={30} />
+          <ItalicIcon width={30} height={30} />
+          <CodeIcon width={30} height={30} />
+          <PlusIcon width={30} height={30} />
+          <MinusIcon width={30} height={30} />
+          <FitIcon width={30} height={30} />
+          <FullScreenIcon width={30} height={30} />
+          <PageIcon width={30} height={30} />
+          <ButtonIcon width={30} height={30} />
+          <UploadIcon width={30} height={30} />
+          <NotificationsIcon counter={72} width={30} height={30} />
         </div>
       </div>
     </div>
