@@ -1,20 +1,39 @@
 import { useState, ChangeEventHandler } from 'react';
 import Styles from './message-input.module.css';
-import IconButton from '../icon-button/IconButton';
-import EmojiIcon from '../../icons/others/Emoji';
-import PlusIcon from '../../icons/others/Plus';
-import FileIcon from '../../icons/others/File';
+// поменять импорты
+import { IconButton } from '../icon-button/IconButton';
+import { EmojiIcon } from '../../icons/others/Emoji';
+import { XCircleIcon } from '../../icons/others/XCircle';
+import { FileIcon } from '../../icons/others/File';
+import { SlashIcon } from '../../icons/others/Slash';
+import { ZapIcon } from '../../icons/others/Zap';
 
 interface MessageInputProps {
   placeholder: string;
+  width?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  onFileClick: VoidFunction;
+  onSlashClick: VoidFunction;
+  onZapClick: VoidFunction;
 }
 
-function MessageInput({ placeholder, onChange }: MessageInputProps) {
+function MessageInput({
+  placeholder,
+  width = '100%',
+  onChange,
+  onFileClick,
+  onSlashClick,
+  onZapClick,
+}: MessageInputProps) {
   const [isShowSmiles, setShowSmiles] = useState(false);
+  const [isShowOtherButtons, setShowOtherButtons] = useState(false);
 
   const smilesHandle = () => {
     setShowSmiles(!isShowSmiles);
+  };
+
+  const otherButtonsHandle = () => {
+    setShowOtherButtons(!isShowOtherButtons);
   };
 
   const iconColor = '#A6B3C9';
@@ -24,7 +43,7 @@ function MessageInput({ placeholder, onChange }: MessageInputProps) {
   const iconSize = screenWidth <= 320 ? 16 : 24;
 
   return (
-    <div className={Styles.inputFrame}>
+    <div className={Styles.inputFrame} style={{ width: `${width}` }}>
       <input
         className={Styles.input}
         type="text"
@@ -35,21 +54,49 @@ function MessageInput({ placeholder, onChange }: MessageInputProps) {
         width={iconSize}
         height={iconSize}
         icon={FileIcon({ color: iconColor })}
+        onClick={onFileClick}
       />
-      <IconButton
-        width={iconSize}
-        height={iconSize}
-        icon={EmojiIcon({ color: iconColor })}
-        onClick={smilesHandle}
-      />
-      {/* TODO PlusIcon должен выглядеть по другому */}
-      <IconButton
-        width={iconSize}
-        height={iconSize}
-        icon={PlusIcon({ color: iconColor })}
-      />
+      <div className={isShowSmiles ? Styles.smilesButton : undefined}>
+        <IconButton
+          width={iconSize}
+          height={iconSize}
+          icon={EmojiIcon({ color: iconColor })}
+          onClick={smilesHandle}
+        />
+      </div>
+      {isShowOtherButtons && (
+        <>
+          <IconButton
+            width={iconSize}
+            height={iconSize}
+            icon={SlashIcon({ color: iconColor })}
+            onClick={onSlashClick}
+          />
+          <IconButton
+            width={iconSize}
+            height={iconSize}
+            icon={ZapIcon({ color: iconColor })}
+            onClick={onZapClick}
+          />
+        </>
+      )}
+      {/* TODO Иконка крестика сделана из компонента XCircle, что, может быть, не совсем правильно.
+          Визуально разницы нет */}
+      <div
+        className={`
+          ${Styles.xCircleCnt}
+          ${isShowOtherButtons && Styles.xCircleCntOpened}`}
+      >
+        <IconButton
+          width={iconSize}
+          height={iconSize}
+          icon={XCircleIcon({ color: iconColor })}
+          onClick={otherButtonsHandle}
+        />
+      </div>
       {isShowSmiles && (
         <div className={Styles.smiles}>
+          {/* TODO Смайлы пока сделаны так. В будущем надо доработать либо переделать */}
           <span className={Styles.smile}>&#128524;</span>
           <span className={Styles.smile}>&#128077;</span>
           <span className={Styles.smile}>&#128516;</span>
