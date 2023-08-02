@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import dashboardIcon from './icons/dashboard-icon';
 import mailingIcon from './icons/mailing-icon';
@@ -11,6 +11,7 @@ import botkitsLogo from './icons/botkits-logo';
 import menuExpandIcon from './icons/menu-expand';
 
 import styles from './sidebar.module.css';
+import menuCollapseIcon from './icons/menu-collapse';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
   isActive
@@ -19,6 +20,11 @@ const linkStyle = ({ isActive }: { isActive: boolean }) =>
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [pathname]);
 
   function menuExpandHandler() {
     setExpanded((value) => !value);
@@ -37,7 +43,7 @@ export default function Sidebar() {
         onClick={menuExpandHandler}
         className={styles['expand-button']}
       >
-        {menuExpandIcon}
+        {expanded ? menuCollapseIcon : menuExpandIcon}
       </button>
       <div className={styles.content}>
         <div className={styles.title}>
@@ -46,7 +52,7 @@ export default function Sidebar() {
         </div>
         <nav className={styles.navigation}>
           <NavLink to="/add-bot" className={styles.addbutton}>
-            <span className={styles.addtext}>ДОБАВИТЬ БОТА</span>
+            <span className={styles.addtext}>Добавить бота</span>
           </NavLink>
           <NavLink to="/" className={linkStyle}>
             {dashboardIcon}
