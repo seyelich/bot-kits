@@ -65,12 +65,8 @@ const AuthForm = () => {
               <select value={countryCode} onChange={handleCountryCodeChange}>
                 {options}
               </select>
-              <input
-                type="text"
-                placeholder="Телефон"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
-              />
+          <AuthInput type="text" placeholder="Телефон" value={phoneNumber} width={325} height={60} onChange={handlePhoneNumberChange}/>
+
             </div>
           </div>
           <Button type="green" text="СОЗДАТЬ АККАУНТ" width={260} height={64} isRegister={true} />
