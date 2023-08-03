@@ -20,6 +20,8 @@ import InputSelect from '../../../../components/input-select/input-select';
 import RobotIcon from '../../../../icons/others/Robot';
 import BotLogoIcon from '../../../../icons/others/BotLogo';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
+import DownloadButtons from '../../../../components/download-button/DownloadButtons';
+import InlineButtons from '../inline-button/InlineButton';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Список 1', 'Список 2', 'Список 3'];
@@ -161,6 +163,11 @@ const CreateMailing: FC = () => {
                 icon={<ButtonIcon color="#fff" />}
               />
             </div>
+            {buttonActive ? (
+              <InlineButtons />
+            ) : photoActive || videoActive || musicActive ? (
+              <DownloadButtons size="large" />
+            ) : null}
           </div>
           <div className={styles.block}>
             <h5 className={styles.block__title}>Активировать воронку</h5>
