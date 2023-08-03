@@ -1,9 +1,9 @@
 import AuthForm from '../../components/auth-form/AuthForm'
 import Logo from '../../components/Logo/Logo'
-import styles from './register.module.css'
+import styles from './auth.module.css'
 
 
-export default function Register () {
+export default function Auth () {
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerContainer}>
