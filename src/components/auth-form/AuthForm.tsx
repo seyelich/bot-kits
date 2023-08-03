@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../Button/Button';
-import IconButton from '../icon-button/IconButton';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
+import belarus from '../../images/belarus.png';
+import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 
-const countries: { code: string; name: string }[] = [
-  { code: '+375', name: 'Беларусь' },
-  { code: '+7', name: 'Россия' },
-  { code: '+375', name: 'Неизвестно' },
+
+const countries: { code: string; name: string; flag: string }[] = [
+  { code: '+375', name: 'Беларусь', flag: belarus },
+  { code: '+7', name: 'Россия', flag: belarus },
+  { code: '+375', name: 'Неизвестно', flag: belarus},
 ];
 
 const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState('+375');
+  const [countryCode, setCountryCode] = useState("");
   const [phoneNumber, setPhoneNumber] = useState('');
   const options = countries.map((country) => (
     <option
@@ -23,8 +25,9 @@ const AuthForm = () => {
       key={country.code}
       value={country.code}
     >
-      {country.code} {country.name}
+      {country.code} {country.flag && <img src={country.flag} alt="qwe" />}
     </option>
+
   ));
 
   const handlePasswordVisibility = () => {
@@ -82,13 +85,8 @@ const AuthForm = () => {
             </div>
 
             <div className={styles.authForm__phoneContainer}>
-              <select
-                className={styles.authForm__phoneSelector}
-                value={countryCode}
-                onChange={handleCountryCodeChange}
-              >
-                {options}
-              </select>
+
+              <SelectCodeNumber/>
               <AuthInput
                 type="text"
                 placeholder="Телефон"

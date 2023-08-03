@@ -1,0 +1,75 @@
+.selectCodeNumber {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.selectCodeNumberSelector {
+  position: relative;
+  width: 110px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.selectCodeNumberSelectedItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.selectCodeNumberOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 268px;
+  max-height: 245px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: black rgba(0, 0, 0, 0.5);
+}
+.selectCodeNumberOptions::-webkit-scrollbar {
+  width: 4px;
+}
+
+.selectCodeNumberOptions::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 4px;
+  opacity: 0.5;
+  margin-right: 3px;
+}
+
+.selectCodeNumberOption {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #000;
+}
+
+.selectCodeNumberFlag {
+  margin-right: 8px;
+  max-width: 16px;
+  max-height: 9px;
+}
+
+.optionCodeNumberFlag{
+  margin: 15px;
+  max-width: 32px;
+  max-height: 16px;
+}
+
+.optionCodeNumberCountry{
+
+}
+
+.optionCodeNumberCode{
+
+}
