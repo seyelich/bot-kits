@@ -14,7 +14,13 @@ export default function MailruIcon({
   onClick,
 }: IMailruIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#005FF9" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#005FF9"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}

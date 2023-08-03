@@ -9,20 +9,21 @@ interface IAddBlockButton {
   disabled?: boolean;
 }
 
-export const AddBlockButton: FC<IAddBlockButton> = ({
+const AddBlockButton: FC<IAddBlockButton> = ({
   icon,
   text,
   onClick,
   disabled,
-}) => {
-  return (
-    <button
-      className={`${styles.button} ${disabled ? styles.button_disabled : ''}`}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {icon}
-      <p style={{ margin: '0' }}>{text}</p>
-    </button>
-  );
-};
+}) => (
+  <button
+    className={`${styles.button} ${disabled ? styles.button_disabled : ''}`}
+    onClick={onClick}
+    disabled={disabled}
+    type="button"
+  >
+    {icon}
+    <p style={{ margin: '0' }}>{text}</p>
+  </button>
+);
+
+export default AddBlockButton;

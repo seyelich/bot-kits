@@ -11,7 +11,7 @@ import Partnership from './pages/partnership';
 import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
-import { Layout } from './components/Layout/Layout';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
