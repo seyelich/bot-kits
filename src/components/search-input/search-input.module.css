@@ -45,11 +45,9 @@
   line-height: var(--s-line-height);
   letter-spacing: var(--m-letter-space);
 }
-/*temp*/
 .input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-
-.searchIconCnt {
-  height: fit-content;
+.input:focus:-moz-placeholder {
+  opacity: 0;
 }
