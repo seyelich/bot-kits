@@ -1,19 +1,14 @@
 @import url('./vendor/fonts.css');
 
 body {
-  display: f;
   box-sizing: border-box;
   max-width: 1440px;
   height: 100%;
   margin: 0 auto;
-  padding: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @media (max-width: 670px) {
-    padding: 0;
-  }
 }
 
 main {
