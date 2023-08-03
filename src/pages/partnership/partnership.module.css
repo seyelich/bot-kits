@@ -1,0 +1,18 @@
+.title {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 41.6px;
+  letter-spacing: -0.2px;
+
+  @media (max-width: 414px) {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+}
+
+.partnershipContainer {
+  display: grid;
+  grid-template-areas: "title button" "link copy-link" "states";
+}

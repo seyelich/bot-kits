@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC, useEffect, useState } from 'react';
 import styles from './BotTemplates.module.css';
 import BotTemplateElement from './BotTemplateElement/BotTemplateElement';
