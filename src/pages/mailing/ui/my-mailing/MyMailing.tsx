@@ -5,8 +5,8 @@ import React, { FC, useState } from 'react';
 
 import styles from './index.module.css';
 
-import { ChevronBigIcon } from '../../../../icons/others/ChevronBig';
-import { TutorialButton } from '../../../../components/tutorial-button/TutorialButton';
+import ChevronBigIcon from '../../../../icons/others/ChevronBig';
+import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
 
 const data = [
   {

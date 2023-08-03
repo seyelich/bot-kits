@@ -4,7 +4,7 @@
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
-import { Button } from '../../components/Button/Button';
+import Button from '../../components/Button/Button';
 import { FirstMailing } from './ui/first-mailing/FirstMailing';
 import { MyMailing } from './ui/my-mailing/MyMailing';
 
