@@ -90,6 +90,33 @@ margin-top: 55px;
 
 .authForm__passwordContainer{
   margin-top: 20px;
+  position: relative;
+}
+.authForm__passwordHide{
+  position: absolute;
+  right: 28px;
+  top:15px;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+.authForm__passwordHide:hover{
+  transition: all 0.2ms ease-in-out;
+  opacity: 0.8;
+}
+
+
+.authForm__phoneContainer{
+  margin-top: 20px;
+  position: relative;
+}
+.authForm__phoneSelector{
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top:18px
 }
 
 

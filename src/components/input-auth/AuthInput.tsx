@@ -8,7 +8,6 @@ interface IAuthInput {
   height: number;
   value?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  marginRight?: number;
 }
 
 const AuthInput: FC<IAuthInput> = ({
@@ -17,8 +16,7 @@ const AuthInput: FC<IAuthInput> = ({
   width,
   height,
   value,
-  onChange,
-  marginRight
+  onChange
 }) => {
   return (
     <div className={styles.authInput__container}>
@@ -27,7 +25,6 @@ const AuthInput: FC<IAuthInput> = ({
         style={{
           width,
           height,
-          marginRight,
         }}
         type={type}
         placeholder={placeholder}

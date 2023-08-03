@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../Button/Button';
+import IconButton from '../icon-button/IconButton';
+import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
@@ -16,7 +18,7 @@ const AuthForm = () => {
   const [countryCode, setCountryCode] = useState('+375');
   const [phoneNumber, setPhoneNumber] = useState('');
   const options = countries.map((country) => (
-    <option className={styles.authForm__phoneOption} key={country.code} value={country.code}>
+    <option  className={styles.authForm__phoneOption} key={country.code} value={country.code}>
       {country.code} {country.name}
     </option>
   ));
@@ -52,17 +54,17 @@ const AuthForm = () => {
       <div className={styles.authForm__wrapper}>
         <form className={styles.authForm__form} onSubmit={handleSubmit}>
           <div className={styles.authForm__inputContainer}>
-          <AuthInput type="text" placeholder="Имя" width={325} height={60} marginRight={20}/>
+          <AuthInput type="text" placeholder="Имя" width={325} height={60} />
           <AuthInput type="email" placeholder="Email" width={325} height={60}/>
             <div className={styles.authForm__passwordContainer}>
-            <AuthInput type={showPassword ? 'text' : 'password'} placeholder="Пароль" width={325} height={60} marginRight={20}/>
-              <button type="button" onClick={handlePasswordVisibility}>
-                {showPassword ? 'Скрыть' : 'Показать'}
+            <AuthInput type={showPassword ? 'text' : 'password'} placeholder="Пароль" width={325} height={60}/>
+              <button className={styles.authForm__passwordHide} type="button" onClick={handlePasswordVisibility}>
+                <HidePasswordIcon/>
               </button>
             </div>
 
             <div className={styles.authForm__phoneContainer}>
-              <select value={countryCode} onChange={handleCountryCodeChange}>
+              <select className={styles.authForm__phoneSelector} value={countryCode} onChange={handleCountryCodeChange}>
                 {options}
               </select>
           <AuthInput type="text" placeholder="Телефон" value={phoneNumber} width={325} height={60} onChange={handlePhoneNumberChange}/>
