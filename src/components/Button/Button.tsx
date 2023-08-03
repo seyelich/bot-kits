@@ -12,7 +12,7 @@ interface IButton {
   isRegister?: boolean;
 }
 
-export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isRegister }) => {
+const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isRegister }) => {
   return (
     <button
       className={`${styles.button} ${
@@ -38,3 +38,5 @@ export const Button: FC<IButton> = ({ type, onClick, disabled, text, width, heig
     </button>
   );
 };
+
+export default Button;

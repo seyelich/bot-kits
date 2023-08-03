@@ -4,7 +4,7 @@ interface LogoBotKitsProps {
   register?: boolean;
 }
 
-export const Logo: FC<LogoBotKitsProps> = ({register}) => {
+const Logo: FC<LogoBotKitsProps> = ({register}) => {
   const width = register ? '149' : '128';
   const height = register ? '35' : '30';
 
@@ -27,3 +27,5 @@ export const Logo: FC<LogoBotKitsProps> = ({register}) => {
 
   )
 };
+
+export default Logo;

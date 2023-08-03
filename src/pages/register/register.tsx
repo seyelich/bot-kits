@@ -1,5 +1,5 @@
 import AuthForm from '../../components/auth-form/AuthForm'
-import { Logo } from '../../components/Logo/Logo'
+import Logo from '../../components/Logo/Logo'
 import styles from './register.module.css'
 
 
