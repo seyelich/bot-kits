@@ -1,11 +1,12 @@
 .header {
   max-width: 1268px;
+  width: 100%;
   height: 72px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 32px;
+  justify-content: flex-end;
+  padding-left: 46px;
 
   @media (max-width: 670px) {
     padding-left: 20px;
@@ -18,7 +19,8 @@
 }
 
 .container {
-  display: flex;
+  /* Временный костыль, надо разобраться с кнопкой. */
+  display: none;
   flex-direction: row;
   align-items: center;
   gap: 15px;
