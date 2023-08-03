@@ -9,7 +9,6 @@ import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 import { items } from '../../utils/itemsForRegister';
 import robot from '../../images/registerRobot.png';
 
-
 const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -71,7 +70,7 @@ const AuthForm = () => {
             text="создать аккаунт"
             width={260}
             height={64}
-            isRegister={true}
+            isRegister
           />
         </form>
 
@@ -80,10 +79,14 @@ const AuthForm = () => {
             Уже прошли регистрацию?
           </span>
           <NavLink to="#">
-           <span className={styles.authForm__footer__link}>Войти</span>
+            <span className={styles.authForm__footer__link}>Войти</span>
           </NavLink>
         </div>
-        <img className={styles.authForm__authImage} src={robot} alt="Картинка" />
+        <img
+          className={styles.authForm__authImage}
+          src={robot}
+          alt="register-robot"
+        />
       </div>
     </div>
   );
