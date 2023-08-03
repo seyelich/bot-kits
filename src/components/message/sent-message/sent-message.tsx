@@ -2,7 +2,8 @@ import ChatAvatarSent from '../../../icons/others/ChatAvatarSent';
 import styles from './sent-message.module.css';
 
 type TSendMessage = {
-  message: {
+  // Когда будет бек, нужно будет убрать оператор "?"
+  message?: {
     text: string;
     sendTime: string;
     status: {

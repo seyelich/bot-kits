@@ -3,7 +3,8 @@ import styles from './received-message.module.css';
 import ChatAvatarReceived from '../../../icons/others/ChatAvatarReceived';
 
 type TReceivedMessage = {
-  message: {
+  // Когда будет бек, нужно будет убрать оператор "?"
+  message?: {
     text: string;
     sendTime: string;
     status: {
