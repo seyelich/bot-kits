@@ -1,4 +1,5 @@
 import Calendar from '../components/calendar/calendar';
+import TimePickerInput from '../components/time-picker/time-picker';
 
 export default function Mailing() {
   return (
@@ -6,6 +7,7 @@ export default function Mailing() {
       {' '}
       <h1>Рассылки</h1>
       <Calendar />
+      <TimePickerInput />
     </>
   );
 }
