@@ -39,7 +39,7 @@
   background-color: rgba(36, 60, 187, 1);
 }
 
-.container::before {
+.container:before {
   content: '';
   position: absolute;
   right: -7px;

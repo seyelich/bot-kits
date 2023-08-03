@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: row;
-  position: relative;
   width: 264px;
   position: relative;
   margin-top: 15px;

@@ -17,7 +17,7 @@
 .input {
   border: none;
   flex-grow: 1;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);
@@ -31,7 +31,7 @@
 
 .input::-webkit-input-placeholder {
   color: var(--default-dark-grey-color);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);
@@ -39,7 +39,7 @@
 }
 .input:-moz-placeholder {
   color: var(--default-dark-grey-color);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);

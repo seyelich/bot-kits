@@ -40,7 +40,7 @@
   background-color: rgba(248, 249, 251, 1);
 }
 
-.container::before {
+.container:before {
   content: '';
   position: absolute;
   bottom: 0px;

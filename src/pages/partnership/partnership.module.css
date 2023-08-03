@@ -14,5 +14,8 @@
 
 .partnershipContainer {
   display: grid;
-  grid-template-areas: "title button" "link copy-link" "states";
+  grid-template-areas:
+    "title button"
+    "link copy-link"
+    "states states";
 }
