@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable arrow-body-style */
 /* eslint-disable import/prefer-default-export */
@@ -37,6 +38,7 @@ const data = [
 
 export const MyMailing: FC = () => {
   const [arrowRotate, setArrowRotate] = useState(false);
+  const [mailings, setMailings] = useState(data);
 
   return (
     <div className={styles.section}>
@@ -53,6 +55,38 @@ export const MyMailing: FC = () => {
             >
               <ChevronBigIcon color="#A6B3C9" width={26} height={26} />
             </div>
+
+            {arrowRotate && (
+              <div className={styles.filter__list}>
+                <p
+                  className={styles.filter__listText}
+                  onClick={() => {
+                    setArrowRotate(false);
+                    setMailings(data);
+                  }}
+                >
+                  Все
+                </p>
+                <p
+                  className={styles.filter__listText}
+                  onClick={() => {
+                    setArrowRotate(false);
+                    setMailings(data.filter((el) => el.status === 'Запущено'));
+                  }}
+                >
+                  Запущены
+                </p>
+                <p
+                  className={styles.filter__listText}
+                  onClick={() => {
+                    setArrowRotate(false);
+                    setMailings(data.filter((el) => el.status === 'Отклонено'));
+                  }}
+                >
+                  Отклонены
+                </p>
+              </div>
+            )}
           </div>
         </div>
         <table className={styles.table}>
@@ -64,7 +98,7 @@ export const MyMailing: FC = () => {
             <th style={{ width: '132px' }}>Конверсия</th>
             <th style={{ width: '122px' }}>Статус запуска</th>
           </tr>
-          {data.map((el) => {
+          {mailings.map((el) => {
             return (
               <tr key={el.id}>
                 <td>{el.id}</td>

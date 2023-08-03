@@ -31,6 +31,7 @@
 }
 
 .filter {
+  position: relative;
   display: flex;
   flex-direction: row;
   column-gap: 12px;
@@ -110,4 +111,42 @@ td {
   letter-spacing: 0.30000001192092896px;
   text-align: left;
   color: #060c23;
+}
+
+.filter__list {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 12px 24px 0px #15123321;
+  animation: show_filter_list 0.2s ease;
+}
+
+@keyframes show_filter_list {
+  from {
+    height: 0;
+  }
+  to {
+    height: 110px;
+  }
+}
+
+.filter__listText {
+  margin: 0;
+  padding: 9px 44px 9px 16px;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #2e293d;
+}
+
+.filter__listText:hover {
+  background-color: #f8f9fb;
+  cursor: pointer;
 }

@@ -117,25 +117,45 @@ const CreateMailing: FC = () => {
               <SocialButton
                 text="Фото"
                 active={photoActive}
-                onClick={() => setPhotoActive(true)}
+                onClick={(arg: boolean) => {
+                  setPhotoActive(arg);
+                  setVideoActive(false);
+                  setMusicActive(false);
+                  setButtonActive(false);
+                }}
                 icon={<ImageIcon color="#fff" />}
               />
               <SocialButton
                 text="Видео"
                 active={videoActive}
-                onClick={() => setVideoActive(true)}
+                onClick={(arg: boolean) => {
+                  setPhotoActive(false);
+                  setVideoActive(arg);
+                  setMusicActive(false);
+                  setButtonActive(false);
+                }}
                 icon={<VideoIcon color="#fff" />}
               />
               <SocialButton
                 text="Аудио"
                 active={musicActive}
-                onClick={() => setMusicActive(true)}
+                onClick={(arg: boolean) => {
+                  setPhotoActive(false);
+                  setVideoActive(false);
+                  setMusicActive(arg);
+                  setButtonActive(false);
+                }}
                 icon={<MusicIcon color="#fff" />}
               />
               <SocialButton
                 text="Кнопка"
                 active={buttonActive}
-                onClick={() => setButtonActive(true)}
+                onClick={(arg: boolean) => {
+                  setPhotoActive(false);
+                  setVideoActive(false);
+                  setMusicActive(false);
+                  setButtonActive(arg);
+                }}
                 icon={<ButtonIcon color="#fff" />}
               />
             </div>

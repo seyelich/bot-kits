@@ -4,7 +4,7 @@ import styles from './index.module.css';
 
 interface ISocialButton {
   icon: React.ReactNode;
-  onClick: VoidFunction;
+  onClick: (arg: boolean) => void;
   active: boolean;
   text: string;
 }
@@ -12,12 +12,29 @@ interface ISocialButton {
 const SocialButton: FC<ISocialButton> = ({ icon, onClick, active, text }) => (
   <button
     type="button"
-    onClick={onClick}
-    disabled={!active}
-    className={styles.button}
+    onClick={() => onClick(!active)}
+    className={
+      active ? `${styles.button} ${styles.button_active}` : styles.button
+    }
   >
-    <div className={styles.button__icon}>{icon}</div>
-    <p className={styles.button__text}>{text}</p>
+    <div
+      className={
+        active
+          ? `${styles.button__icon} ${styles.button__icon_active}`
+          : styles.button__icon
+      }
+    >
+      {icon}
+    </div>
+    <p
+      className={
+        active
+          ? `${styles.button__text} ${styles.button__text_active}`
+          : styles.button__text
+      }
+    >
+      {text}
+    </p>
   </button>
 );
 

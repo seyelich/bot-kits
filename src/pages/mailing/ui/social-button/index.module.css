@@ -8,8 +8,13 @@
   height: 124px;
   color: #ccd4e0;
   border-radius: 30px;
-  background-color: #F8F9FB;
+  background-color: #f8f9fb;
   border: none;
+  cursor: pointer;
+}
+
+.button_active {
+  background-color: #fff;
 }
 
 .button__icon {
@@ -18,8 +23,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #CCD4E0;
+  background-color: #ccd4e0;
   border-radius: 59px;
+}
+
+.button__icon_active {
+  background-color: #243cbb;
 }
 
 .button__text {
@@ -31,4 +40,8 @@
   letter-spacing: 0.30000001192092896px;
   text-align: center;
   color: #a6b3c9;
+}
+
+.button__text_active {
+  color: #060c23;
 }
