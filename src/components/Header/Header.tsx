@@ -3,7 +3,13 @@ import styles from './Header.module.css';
 import Menu24px from '../icons/Menu24px/Menu24px';
 import Help from '../icons/Help/Help';
 import Notifications from '../icons/Notifications/Notifications';
+import Menu24px from '../icons/Menu24px/Menu24px';
+import Help from '../icons/Help/Help';
+import Notifications from '../icons/Notifications/Notifications';
 import avatar from '../../images/avatar.svg';
+import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
+import Logo from '../Logo/Logo';
+import MenuMobile from '../icons/MenuMobile/MenuMobile';
 import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
 import Logo from '../Logo/Logo';
 import MenuMobile from '../icons/MenuMobile/MenuMobile';
@@ -11,7 +17,7 @@ import MenuMobile from '../icons/MenuMobile/MenuMobile';
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
-    setIsActive((isActive) => !isActive);
+    setIsActive(!isActive);
   };
 
   const [matches, setMatches] = useState(

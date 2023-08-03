@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import styles from './BotTemplateElement.module.css';
 import Plus from '../../icons/Plus/Plus';
+import Plus from '../../icons/Plus/Plus';
 
 interface IBotTemplate {
   icon: JSX.Element;

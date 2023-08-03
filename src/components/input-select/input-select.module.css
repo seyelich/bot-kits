@@ -1,0 +1,159 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+}
+
+.input {
+  box-sizing: border-box;
+  width: inherit;
+  height: 40px;
+  margin-top: 4px;
+  padding-right: 35px;
+  padding-left: 16px;
+ font-family: 'Open sans', sans-serif;
+  font-size: 13px;
+  font-weight:400;
+  line-height:19.5px;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s linear;
+
+}
+
+.input_default {
+  background-color: rgba(248, 249, 251, 1);
+  color: rgba(6, 12, 35, 1);
+  cursor: pointer;
+}
+.input_disabled {
+  background-color: rgba(242, 244, 248, 1);
+  color: rgba(191, 201, 217, 1);
+  cursor: auto;
+}
+
+.input__label {
+  width: inherit;
+  color: rgba(6, 12, 35, 1);
+}
+
+.input__label_regular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+}
+
+.input__label_bold {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+.input__button {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.input__button_default {
+  top: 15px;
+  rotate: 0deg;
+
+}
+
+.input__button_active {
+  top: 13px;
+  rotate: 180deg;
+
+}
+.wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
+  box-sizing: border-box;
+  background-color: white;
+
+  transition: all 0.2s linear;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 42px;
+    background: var(--placeholder);
+    border-radius: 3px;
+  }
+
+
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+.list__option {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  height: 36px;
+
+  padding: 3px 0 3px 15px;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  color: rgba(46, 41, 61, 1);
+
+  transition: all 0.2s linear;
+}
+
+.list__option:first-of-type {
+  margin-top: 10px;
+}
+
+.list__option:hover {
+  background-color: rgba(248, 249, 251, 1);
+}
+
+.input::placeholder {
+color: rgba(6, 12, 35, 1);
+}
+
+  .input::-webkit-input-placeholder {
+   color: rgba(6, 12, 35, 1);
+}
+
+.input::-ms-input-placeholder {
+  color: rgba(6, 12, 35, 1);
+}
+
+.input:-moz-placeholder {
+  color: rgba(6, 12, 35, 1);
+}
+
+

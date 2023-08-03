@@ -14,11 +14,26 @@ import ECommerce from '../icons/bot-templates/ECommerce/ECommerce';
 import ELearning from '../icons/bot-templates/ELearning/ELearning';
 import Questions from '../icons/bot-templates/Questions/Questions';
 import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
+import BotTemplateElement from './BotTemplateElement/BotTemplateElement';
+import AnsweringMachine from '../icons/bot-templates/AnsweringMachine/AnsweringMachine';
+import FoodDelivery from '../icons/bot-templates/FoodDelivery/FoodDelivery';
+import DemoBot from '../icons/bot-templates/DemoBot/DemoBot';
+import Poll from '../icons/bot-templates/Poll/Poll';
+import LeadGeneration from '../icons/bot-templates/LeadGeneration/LeadGeneration';
+import PrivateClub from '../icons/bot-templates/PrivateClub/PrivateClub';
+import RealEstate from '../icons/bot-templates/RealEstate/RealEstate';
+import Entertainment from '../icons/bot-templates/Entertainment/Entertainment';
+import Beauty from '../icons/bot-templates/Beauty/Beauty';
+import ECommerce from '../icons/bot-templates/ECommerce/ECommerce';
+import ELearning from '../icons/bot-templates/ELearning/ELearning';
+import Questions from '../icons/bot-templates/Questions/Questions';
+import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
 
+const BotTemplates: FC = () => {
 const BotTemplates: FC = () => {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
-    setIsActive((isActive) => !isActive);
+    setIsActive(!isActive);
   };
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 768px)').matches
@@ -35,9 +50,9 @@ const BotTemplates: FC = () => {
       <div className={styles.header}>
         <h1 className={styles.title}>Шаблоны</h1>
         <div className={styles.container__dropdown}>
-          <p className={styles.text} onClick={toggle}>
+          <button className={styles.text} onClick={toggle} type="button">
             Все шаблоны
-          </p>
+          </button>
           <span
             className={`${styles.button} ${
               !isActive ? styles.button_default : styles.button_active
@@ -102,9 +117,9 @@ const BotTemplates: FC = () => {
           text="Вопрос/ответ"
         />
       </div>
-      <p className={styles.text_mobile} onClick={toggle}>
+      <button className={styles.text_mobile} onClick={toggle} type="button">
         Все
-      </p>
+      </button>
     </div>
   );
 };
