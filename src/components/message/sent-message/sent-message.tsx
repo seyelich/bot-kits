@@ -27,8 +27,8 @@ function SentMessage({
       <ChatAvatarSent />
       <p className={styles.status}>
         {status && status.delivered
-          ? `Просмотрено: ${status!.time}}`
-          : `Отправлено: ${status!.time}`}
+          ? `Просмотрено в ${status!.time}`
+          : `Отправлено в ${status!.time}`}
       </p>
     </div>
   );

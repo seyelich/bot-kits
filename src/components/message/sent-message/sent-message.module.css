@@ -1,11 +1,12 @@
 .block {
   display: grid;
+  grid-template-columns: 1fr min-content;
   grid-template-areas: 'container avatar' 'status .';
   align-items: end;
-  column-gap: 12px;
   row-gap: 10px;
+  column-gap: 12px;
   box-sizing: border-box;
-  min-width: 300px;
+  min-width: 288px;
   max-width: 362px;
   height: fit-content;
   min-height: 90px;
@@ -20,16 +21,18 @@
 }
 
 .container {
-  display: grid;
-  grid-area: container;
   position: relative;
+  display: grid;
   grid-template-areas: 'name .' 'message sendTime';
+  grid-area: container;
   align-items: end;
   row-gap: 6px;
   column-gap: 21px;
   float: right;
   clear: both;
   box-sizing: border-box;
+  min-width: 232px;
+  max-width: 310px;
   border-radius: 10px;
   border-bottom-right-radius: 0px;
   padding: 16px;
@@ -39,12 +42,12 @@
 .container::before {
   content: '';
   position: absolute;
-  right: -10px;
+  right: -7px;
   bottom: 0px;
   display: block;
   width: 0px;
   height: 0px;
-  border-top: 5px solid transparent;
+  border-top: 15px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 5px solid rgba(36, 60, 187, 1);
   border-left: 5px solid rgba(36, 60, 187, 1);
@@ -86,4 +89,6 @@
   grid-area: sendTime;
   margin: 0;
   color: rgba(166, 179, 201, 1);
+  text-align: end;
+  white-space: nowrap;
 }
