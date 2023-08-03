@@ -37,13 +37,16 @@ const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
         >
           <Play />
         </span>
+
         <video
           className={styles.video}
           style={{ opacity: isVideoRunning ? 1 : 0 }}
           src={video}
           controls
           ref={vidRef}
-        />
+        >
+          <track kind="captions" />
+        </video>
       </div>
       <p className={styles.text}>{text}</p>
     </div>

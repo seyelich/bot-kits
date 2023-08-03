@@ -11,7 +11,7 @@ import MenuMobile from '../icons/MenuMobile/MenuMobile';
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
-    setIsActive((isActive) => !isActive);
+    setIsActive(!isActive);
   };
 
   const [matches, setMatches] = useState(
