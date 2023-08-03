@@ -21,6 +21,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: all 0.4ms ease-in-out;
+}
+.selectCodeNumber__Selector:hover {
+  opacity: 0.9;
 }
 
 .selectCodeNumber__SelectedItem {

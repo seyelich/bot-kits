@@ -7,6 +7,7 @@ import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 import { items } from '../../utils/itemsForRegister';
+import robot from '../../images/registerRobot.png';
 
 
 const AuthForm = () => {
@@ -67,7 +68,7 @@ const AuthForm = () => {
           </div>
           <Button
             type="green"
-            text="СОЗДАТЬ АККАУНТ"
+            text="создать аккаунт"
             width={260}
             height={64}
             isRegister={true}
@@ -78,10 +79,11 @@ const AuthForm = () => {
           <span className={styles.authForm__footer__text}>
             Уже прошли регистрацию?
           </span>
-          <NavLink className={styles.authForm__footer__link} to="#">
-            Войти
+          <NavLink to="#">
+           <span className={styles.authForm__footer__link}>Войти</span>
           </NavLink>
         </div>
+        <img className={styles.authForm__authImage} src={robot} alt="Картинка" />
       </div>
     </div>
   );
