@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import belarus from '../../images/belarus.png';
 import ArrowRegister from '../icons/arrow-register/ArrowRegister';
 import styles from './SelectCodeNumber.module.css';
 
@@ -10,53 +9,10 @@ interface Item {
   code: string;
 }
 
-const SelectCodeNumber: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+const SelectCodeNumber: React.FC<{ items: Item[] }> = ({items}) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
-  const items: Item[] = [
-    {
-      id: 1,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-    {
-      id: 2,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+376',
-    },
-    {
-      id: 3,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-    {
-      id: 4,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-    {
-      id: 5,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-    {
-      id: 6,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-    {
-      id: 7,
-      image: belarus,
-      country: 'Беларусь',
-      code: '+375',
-    },
-  ];
+
 
   useEffect(() => {
     if (items.length > 0 && !selectedItem) {
@@ -99,7 +55,8 @@ const SelectCodeNumber: React.FC = () => {
                 key={item.id}
                 onClick={() => handleItemClick(item)}
               >
-                <img
+               <div className={styles.selectCodeNumber__OptionContainer}>
+               <img
                   src={item.image}
                   alt="Flag"
                   className={styles.selectCodeNumber__Option__Flag}
@@ -107,6 +64,7 @@ const SelectCodeNumber: React.FC = () => {
                 <span className={styles.selectCodeNumber__Option__Country}>
                   {item.country}
                 </span>
+               </div>
                 <span className={styles.selectCodeNumber__Option__Code}>{item.code}</span>
               </div>
             ))}

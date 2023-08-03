@@ -5,44 +5,15 @@ import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './AuthForm.module.css';
-import belarus from '../../images/belarus.png';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
+import { items } from '../../utils/itemsForRegister';
 
-
-const countries: { code: string; name: string; flag: string }[] = [
-  { code: '+375', name: 'Беларусь', flag: belarus },
-  { code: '+7', name: 'Россия', flag: belarus },
-  { code: '+375', name: 'Неизвестно', flag: belarus},
-];
 
 const AuthForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [countryCode, setCountryCode] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const options = countries.map((country) => (
-    <option
-      className={styles.authForm__phoneOption}
-      key={country.code}
-      value={country.code}
-    >
-      {country.code} {country.flag && <img src={country.flag} alt="qwe" />}
-    </option>
-
-  ));
 
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
-  };
-  const handleCountryCodeChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    setCountryCode(event.target.value);
-  };
-
-  const handlePhoneNumberChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setPhoneNumber(event.target.value);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -85,15 +56,12 @@ const AuthForm = () => {
             </div>
 
             <div className={styles.authForm__phoneContainer}>
-
-              <SelectCodeNumber/>
+              <SelectCodeNumber items={items} />
               <AuthInput
                 type="text"
                 placeholder="Телефон"
-                value={phoneNumber}
                 width={200}
                 height={60}
-                onChange={handlePhoneNumberChange}
               />
             </div>
           </div>
