@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
-import Arrow from '../../icons/others/arrow';
-import ArrowUpCircleIcon from '../../icons/others/ArrowUpCircle';
 import belarus from '../../images/belarus.png';
 import ArrowRegister from '../icons/arrow-register/ArrowRegister';
-import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
-import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
 import styles from './SelectCodeNumber.module.css';
 
 interface Item {
@@ -76,18 +72,18 @@ const SelectCodeNumber: React.FC = () => {
   return (
     <div className={styles.selectCodeNumber}>
       <div
-        className={styles.selectCodeNumberSelector}
+        className={styles.selectCodeNumber__Selector}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className={styles.selectCodeNumberSelectedItem}>
+        <div className={styles.selectCodeNumber__SelectedItem}>
           <ArrowRegister/>
           {selectedItem && (
             <>
-              <span className={styles.selectCodeNumberCode}>
+              <span className={styles.selectCodeNumber__SelectedItem__Code}>
                 {selectedItem.code}
               </span>
               <img
-                className={styles.selectCodeNumberFlag}
+                className={styles.selectCodeNumber__SelectedItem__Flag}
                 src={selectedItem.image}
                 alt="Flag"
               />
@@ -96,22 +92,22 @@ const SelectCodeNumber: React.FC = () => {
           )}
         </div>
         {isOpen && (
-          <div className={styles.selectCodeNumberOptions}>
+          <div className={styles.selectCodeNumber__Options}>
             {items.map((item) => (
               <div
-                className={styles.selectCodeNumberOption}
+                className={styles.selectCodeNumber__Option}
                 key={item.id}
                 onClick={() => handleItemClick(item)}
               >
                 <img
                   src={item.image}
                   alt="Flag"
-                  className={styles.optionCodeNumberFlag}
+                  className={styles.selectCodeNumber__Option__Flag}
                 />
-                <span className={styles.optionCodeNumberCountry}>
+                <span className={styles.selectCodeNumber__Option__Country}>
                   {item.country}
                 </span>
-                <span className={styles.optionCodeNumberCode}>{item.code}</span>
+                <span className={styles.selectCodeNumber__Option__Code}>{item.code}</span>
               </div>
             ))}
           </div>
