@@ -12,13 +12,11 @@ import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
 import Footer from './components/footer/footer';
-import Register from './pages/register/register';
 
 function App() {
   return (
     <BrowserRouter>
-    <Register/>
-      {/* <div>
+      <div>
         <Sidebar />
         <div className={styles.content}>
           <header />
@@ -37,7 +35,7 @@ function App() {
           </main>
           <Footer />
         </div>
-      </div> */}
+      </div>
     </BrowserRouter>
   );
 }
