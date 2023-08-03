@@ -27,10 +27,15 @@
   line-height: 24px;
   letter-spacing: 0.3px;
   color: rgba(131, 146, 171, 1);
+  border: none;
+  background-color: white;
+  cursor: pointer;
 }
 
 .text_mobile {
   display: none;
+  border: none;
+  background-color: white;
 
   @media (max-width: 414px) {
     font-family: 'Open Sans', sans-serif;

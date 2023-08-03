@@ -99,9 +99,15 @@
   letter-spacing: 0.3px;
   color: rgba(6, 12, 35, 1);
   margin-bottom: 7px;
+  text-decoration: none;
+  transition: all 0.2s linear;
 
   @media (max-width: 768px) {
  margin-top: 5px;
  margin-bottom: 18px;
   }
+}
+
+.text:hover {
+  color: #243CBB;
 }
