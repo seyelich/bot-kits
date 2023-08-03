@@ -3,7 +3,6 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ServiceBasics.module.css';
 import Arrow24x24 from '../../icons/Arrow24x24/Arrow24x24';
-import Arrow24x24 from '../../icons/Arrow24x24/Arrow24x24';
 
 const ServiceBasics: FC = () => (
   <div className={styles.wrapper}>

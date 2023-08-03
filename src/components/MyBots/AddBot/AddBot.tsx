@@ -10,8 +10,6 @@ export default function AddBot() {
   const addBot = () => {
     setIsClicked(true);
   };
-    setIsClicked(true);
-  };
   return (
     <div
       className={`${styles.wrapper} ${

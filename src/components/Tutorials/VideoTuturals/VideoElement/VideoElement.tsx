@@ -1,7 +1,6 @@
 import { FC, useRef, useState } from 'react';
 
 import Play from '../../../icons/Play/Play';
-import Play from '../../../icons/Play/Play';
 import styles from './VideoElement.module.css';
 
 import video from '../../../../video/testVideo.mp4';
@@ -11,7 +10,6 @@ interface IVideoElement {
   preview: string;
 }
 
-const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
 const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
   const [isVideoRunning, setIsVideoRunning] = useState(false);
   const vidRef = useRef<any>(null);

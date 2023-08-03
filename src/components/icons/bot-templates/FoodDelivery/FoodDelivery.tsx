@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-interface IEntertainment {
+interface IFoodDelivery {
   size: 'desktop' | 'mobile';
 }
 

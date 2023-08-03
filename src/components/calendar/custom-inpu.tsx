@@ -6,7 +6,7 @@ import CalendarIcon from '../../icons/others/calendarIcon';
 const CustomInput = forwardRef<
   unknown,
   { value?: string; onClick?: VoidFunction }
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(({ value, onClick }, ref) => (
   <div className={styles.container_input}>
     <div onClick={onClick} className={styles.icon}>
