@@ -3,9 +3,6 @@ import { Outlet, useNavigate } from 'react-router';
 
 import styles from './index.module.css';
 import Button from '../../components/Button/Button';
-// import FirstMailing from './ui/first-mailing/FirstMailing';
-// import { MyMailing } from './ui/my-mailing/MyMailing';
-// import CreateMailing from './ui/create-mailing/CreateMailing';
 
 const Mailing: FC = () => {
   const navigate = useNavigate();

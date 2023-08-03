@@ -19,6 +19,7 @@ import ButtonIcon from '../../../../icons/others/Button';
 import InputSelect from '../../../../components/input-select/input-select';
 import RobotIcon from '../../../../icons/others/Robot';
 import BotLogoIcon from '../../../../icons/others/BotLogo';
+import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Список 1', 'Список 2', 'Список 3'];
@@ -36,6 +37,7 @@ const CreateMailing: FC = () => {
   const [videoActive, setVideoActive] = useState(false);
   const [musicActive, setMusicActive] = useState(false);
   const [buttonActive, setButtonActive] = useState(false);
+  const [showWidget, setShowWidget] = useState(false);
 
   const useOutsideAlerter = (ref: any) => {
     useEffect(() => {
@@ -223,27 +225,50 @@ const CreateMailing: FC = () => {
         </div>
       </div>
       <div className={styles.widget}>
-        <div className={styles.widget__header}>
-          <p className={styles.widget__type}>Тестовый виджет</p>
-          <p className={styles.widget__name}>{name}</p>
-        </div>
-        <div className={styles.widget__chat}>
-          <RobotIcon width={32} height={32} />
-          <p
+        <button
+          type="button"
+          className={styles.arrow}
+          onClick={() => setShowWidget(!showWidget)}
+        >
+          <div
             className={
-              text.length > 0
-                ? styles.widget__chatText
-                : `${styles.widget__chatText} ${styles.widget__chatText_short}`
+              showWidget
+                ? `${styles.arrow__rotate} ${styles.arrow__rotate_rotated}`
+                : styles.arrow__rotate
             }
           >
-            {text.length > 0 ? text : '...'}
-          </p>
-        </div>
-        <div className={styles.widget__footer}>
-          <p className={styles.widget__footerText}>Powered by</p>
-          <BotLogoIcon color="#243CBB" />
-          <p className={styles.widget__footerText}>BotKits</p>
-        </div>
+            <ChevronBigIcon width={16} height={16} />
+          </div>
+        </button>
+        {showWidget ? (
+          <div className={styles.widget__block}>
+            <div className={styles.widget__header}>
+              <p className={styles.widget__type}>Тестовый виджет</p>
+              <p className={styles.widget__name}>{name}</p>
+            </div>
+            <div className={styles.widget__chat}>
+              <RobotIcon width={32} height={32} />
+              <p
+                className={
+                  text.length > 0
+                    ? styles.widget__chatText
+                    : `${styles.widget__chatText} ${styles.widget__chatText_short}`
+                }
+              >
+                {text.length > 0 ? text : '...'}
+              </p>
+            </div>
+            <div className={styles.widget__footer}>
+              <p className={styles.widget__footerText}>Powered by</p>
+              <BotLogoIcon color="#243CBB" />
+              <p className={styles.widget__footerText}>BotKits</p>
+            </div>
+          </div>
+        ) : (
+          <div className={styles.widget__bot}>
+            <BotLogoIcon color="#fff" width={44} height={40} />
+          </div>
+        )}
       </div>
     </div>
   );
