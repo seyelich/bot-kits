@@ -11,6 +11,19 @@
   background-color: #f8f9fb;
   border: none;
   cursor: pointer;
+  transition: background-color .1s linear;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.button:hover .button__text {
+  color: #060c23;
+}
+
+.button:hover .button__icon {
+  background-color: #243cbb;
 }
 
 .button_active {
@@ -25,6 +38,7 @@
   align-items: center;
   background-color: #ccd4e0;
   border-radius: 59px;
+  transition: background-color .1s linear;
 }
 
 .button__icon_active {
@@ -40,6 +54,7 @@
   letter-spacing: 0.30000001192092896px;
   text-align: center;
   color: #a6b3c9;
+  transition: color .1s linear;
 }
 
 .button__text_active {
