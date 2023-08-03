@@ -5,7 +5,7 @@ type TTextInput = {
   placeholder?: string;
   disabled?: boolean;
   name: string;
-  onChahge: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   value: string;
   errorMessage?: string;
   isInvalid?: boolean;
@@ -15,7 +15,7 @@ export default function TextInput({
   placeholder,
   name,
   disabled,
-  onChahge,
+  onChange,
   value,
   errorMessage,
   isInvalid,
@@ -28,7 +28,7 @@ export default function TextInput({
         type="text"
         disabled={disabled}
         name={name}
-        onChange={onChahge}
+        onChange={onChange}
         value={value}
       />
       {isInvalid && <p className={styles.errorMessage}>{errorMessage}</p>}

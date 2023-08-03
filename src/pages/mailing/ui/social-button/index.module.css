@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 124px;
+  height: 124px;
+  color: #ccd4e0;
+  border-radius: 30px;
+  background-color: #F8F9FB;
+  border: none;
+}
+
+.button__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CCD4E0;
+  border-radius: 59px;
+}
+
+.button__text {
+  margin: 0;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: center;
+  color: #a6b3c9;
+}
