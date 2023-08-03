@@ -6,6 +6,7 @@
 
 .selectCodeNumberSelector {
   position: relative;
+  border: none;
   width: 110px;
   height: 40px;
   background-color: #000;

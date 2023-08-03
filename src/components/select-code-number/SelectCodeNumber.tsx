@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
+import Arrow from '../../icons/others/arrow';
+import ArrowUpCircleIcon from '../../icons/others/ArrowUpCircle';
 import belarus from '../../images/belarus.png';
+import ArrowRegister from '../icons/arrow-register/ArrowRegister';
+import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
+import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
 import styles from './SelectCodeNumber.module.css';
 
 interface Item {
@@ -75,6 +80,7 @@ const SelectCodeNumber: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className={styles.selectCodeNumberSelectedItem}>
+          <ArrowRegister/>
           {selectedItem && (
             <>
               <span className={styles.selectCodeNumberCode}>
