@@ -116,6 +116,7 @@ td {
 .filter__list {
   position: absolute;
   top: 50px;
+  right: -25px;
   display: flex;
   flex-direction: column;
   padding: 8px 0;
