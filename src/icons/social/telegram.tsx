@@ -14,7 +14,13 @@ export default function TelegramIcon({
   onClick,
 }: ITelegramIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#2AABEE" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#2AABEE"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}

@@ -14,7 +14,13 @@ export default function FacebookIcon({
   onClick,
 }: IFacebookIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#2D88FF" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#2D88FF"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}
