@@ -42,7 +42,9 @@ function SearchInput({
       style={propsStyle}
     >
       {!hasFocus && (
-        <SearchIcon color={iconColor} width={iconSize} height={iconSize} />
+        <div style={{ flexBasis: '18px' }}>
+          <SearchIcon color={iconColor} width={iconSize} height={iconSize} />
+        </div>
       )}
       <input
         className={Styles.input}

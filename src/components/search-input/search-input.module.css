@@ -8,6 +8,8 @@
   align-items: center;
   gap: 8px;
   background-color: var(--default-grey-color);
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .inputFrameFocus {
@@ -23,6 +25,7 @@
   line-height: var(--s-line-height);
   letter-spacing: var(--m-letter-space);
   background-color: inherit;
+  cursor: text;
 }
 
 .input:focus {
