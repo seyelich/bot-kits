@@ -11,7 +11,7 @@ interface Item {
 }
 
 const SelectCodeNumber: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const items: Item[] = [
     {
