@@ -34,7 +34,7 @@
   padding: 30px 0 30px 0;
 }
 
-.registerOnEmail {
+.noticePage {
   max-width: 1440px;
   box-sizing: border-box;
   height: 900px;
@@ -47,25 +47,25 @@
   position: relative;
 }
 
-.registerOnEmail__closeIcon{
+.noticePage__closeIcon{
   position: absolute;
   top:30px;
   right:30px;
   cursor: pointer;
   transition: all 0.4ms ease-in-out;
 }
-.registerOnEmail__closeIcon:hover{
+.noticePage__closeIcon:hover{
   opacity: 0.7;
 }
 
-.registerOnEmail__titleContainer {
+.noticePage__titleContainer {
   max-width: 570px;
   width: 100%;
   max-height: 280px;
   margin: 290px 0 330px;
 }
 
-.registerOnEmail__titleText {
+.noticePage__titleText {
   color: #fff;
   font-family: 'IBM Plex Mono';
   font-size: 64px;
@@ -74,7 +74,7 @@
   letter-spacing: -1px;
   margin: 0;
 }
-.registerOnEmail__titleIcon {
+.noticePage__titleIcon {
   width: 158px;
   height: 60px;
   border-radius: 14px;
@@ -92,6 +92,6 @@
   left: 2px;
 }
 
-.registerOnEmail__titleImage {
+.noticePage__titleImage {
   margin: 165px 0 200px 30px;
 }

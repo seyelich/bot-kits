@@ -37,17 +37,17 @@ export default function Auth() {
   return (
     <>
       {banner.bannerState === 'registerOnEmail' && (
-        <div className={styles.registerOnEmail}>
-          <div className={styles.registerOnEmail__closeIcon} onClick={handleDefaultStateClick}>
+        <div className={styles.noticePage}>
+          <div className={styles.noticePage__closeIcon} onClick={handleDefaultStateClick}>
           <CloseIcon color="#22FFAA" width={32} height={32}/>
           </div>
-          <div className={styles.registerOnEmail__titleContainer}>
-            <h1 className={styles.registerOnEmail__titleText}>
+          <div className={styles.noticePage__titleContainer}>
+            <h1 className={styles.noticePage__titleText}>
               Письмо с подтверждением отправлено тебе на
-              <span className={styles.registerOnEmail__titleIcon}>/email</span>!</h1>
+              <span className={styles.noticePage__titleIcon}>/email</span>!</h1>
           </div>
           <img
-            className={styles.registerOnEmail__titleImage}
+            className={styles.noticePage__titleImage}
             src={sendEmail}
             alt="image"
           />
