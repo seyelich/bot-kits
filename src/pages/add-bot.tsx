@@ -1,3 +1,4 @@
+import styles from './add-bot.module.css';
 import AlisaIcon from '../icons/social/alisa';
 import FacebookIcon from '../icons/social/facebook';
 import GoogleIcon from '../icons/social/google';
@@ -12,102 +13,102 @@ import WebIcon from '../icons/social/web';
 import WhatsappIcon from '../icons/social/whatsapp';
 import YandexIcon from '../icons/social/yandex';
 import YoutubeIcon from '../icons/social/youtube';
-import { PlusButton } from '../components/plus-button/PlusButton';
-import { Button } from '../components/Button/Button';
-import { IconButton } from '../components/icon-button/IconButton';
-import { PointingHandIcon } from '../icons/others/PointingHand';
-import { DownIcon } from '../icons/others/Down';
-import { UpIcon } from '../icons/others/Up';
-import { DoneIcon } from '../icons/others/Done';
-import { UpdateIcon } from '../icons/others/Update';
-import { LinkSIcon } from '../icons/others/LinkS';
-import { AddLInkLIcon } from '../icons/others/AddLinkL';
-import { RadioButtonOnIcon } from '../icons/others/RadioButtonOn';
-import { RadioButtonOffIcon } from '../icons/others/RadioButtonOff';
-import { HelpIcon } from '../icons/others/Help';
-import { CloseIcon } from '../icons/others/Close';
-import { EllipsisIcon } from '../icons/others/Ellipsis';
-import { ChevronBigIcon } from '../icons/others/ChevronBig';
-import { UserIcon } from '../icons/others/User';
-import { CheckIcon } from '../icons/others/Check';
-import { CopyIcon } from '../icons/others/Copy';
-import { SearchIcon } from '../icons/others/Search';
-import { PlayIcon } from '../icons/others/Play';
-import { PauseIcon } from '../icons/others/Pause';
-import { SlashIcon } from '../icons/others/Slash';
-import { ZapIcon } from '../icons/others/Zap';
-import { XCircleIcon } from '../icons/others/XCircle';
-import { DashBoardIcon } from '../icons/others/DashBoard';
-import { ConstructorIcon } from '../icons/others/Constructor';
-import { MailingIcon } from '../icons/others/Mailing';
-import { ListsIcon } from '../icons/others/Lists';
-import { ChartsIcon } from '../icons/others/Charts';
-import { DialogueIcon } from '../icons/others/Dialogue';
-import { AccessIcon } from '../icons/others/Access';
-import { MinilandingIcon } from '../icons/others/Minilanding';
-import { CrmIcon } from '../icons/others/Crm';
-import { ExitIcon } from '../icons/others/Exit';
-import { TrashIcon } from '../icons/others/Trash';
-import { EditIcon } from '../icons/others/Edit';
-import { ShareIcon } from '../icons/others/Share';
-import { CopyBotIcon } from '../icons/others/CopyBot';
-import { SettingsIcon } from '../icons/others/Settings';
-import { PaymentIcon } from '../icons/others/Payment';
-import { CloseSmallIcon } from '../icons/others/CloseSmall';
-import { NotificationSettingsIcon } from '../icons/others/NotificationSettings';
-import { InfoIcon } from '../icons/others/Info';
-import { LinkIcon } from '../icons/others/Link';
-import { CloudIcon } from '../icons/others/Cloud';
-import { EqualIcon } from '../icons/others/Equal';
-import { EqualNotIcon } from '../icons/others/EqualNot';
-import { MoreIcon } from '../icons/others/More';
-import { LessIcon } from '../icons/others/Less';
-import { MoreOrEqualIcon } from '../icons/others/MoreOrEqual';
-import { LessOrEqualIcon } from '../icons/others/LessOrEqual';
-import { EqualWithoutCaseIcon } from '../icons/others/EqualWithoutCase';
-import { InLineIcon } from '../icons/others/InLine';
-import { InLineWithoutCaseIcon } from '../icons/others/InLineWithoutCase';
-import { NotInLineIcon } from '../icons/others/NotInLine';
-import { NotInLineWithoutCaseIcon } from '../icons/others/NotInLineWithoutCase';
-import { MessageSquareIcon } from '../icons/others/MessageSquare';
-import { SlidersIcon } from '../icons/others/Sliders';
-import { DeepLinkIcon } from '../icons/others/DeepLink';
-import { TableIcon } from '../icons/others/Table';
-import { HeadPhonesIcon } from '../icons/others/HeadPhones';
-import { ApiIcon } from '../icons/others/Api';
-import { CreaditCardIcon } from '../icons/others/CreditCard';
-import { MapPinIcon } from '../icons/others/MapPin';
-import { GitBranchIcon } from '../icons/others/GitBranch';
-import { TagIcon } from '../icons/others/Tag';
-import { MenuIcon } from '../icons/others/Menu';
-import { BracketIcon } from '../icons/others/Bracket';
-import { EmojiIcon } from '../icons/others/Emoji';
-import { VerticalIcon } from '../icons/others/Vertical';
-import { HorizontalIcon } from '../icons/others/Horizontal';
-import { AskPhoneIcon } from '../icons/others/AskPhone';
-import { UrlIcon } from '../icons/others/Url';
-import { PlusCircleIcon } from '../icons/others/PlusCircle';
-import { ArrowUpCircleIcon } from '../icons/others/ArrowUpCircle';
-import { DeleteIcon } from '../icons/others/Delete';
-import { VideoIcon } from '../icons/others/Video';
-import { ImageIcon } from '../icons/others/Image';
-import { FileIcon } from '../icons/others/File';
-import { MusicIcon } from '../icons/others/Music';
-import { BoldIcon } from '../icons/others/Bold';
-import { ItalicIcon } from '../icons/others/Italic';
-import { CodeIcon } from '../icons/others/Code';
-import { PlusIcon } from '../icons/others/Plus';
-import { MinusIcon } from '../icons/others/Minus';
-import { FitIcon } from '../icons/others/Fit';
-import { FullScreenIcon } from '../icons/others/FullScreen';
-import { PageIcon } from '../icons/others/Page';
-import { ButtonIcon } from '../icons/others/Button';
-import { UploadIcon } from '../icons/others/Upload';
-import { NotificationsIcon } from '../icons/others/Notifications/Notifications';
-import { TutorialButton } from '../components/tutorial-button/TutorialButton';
-import { AddBotButton } from '../components/add-bot-button/AddBotButton';
-import { AddBlockButton } from '../components/add-block-button/AddBlockButton';
-import { CreditCardIcon } from '../components/icons/add-block-button/CreditCard';
+import PlusButton from '../components/plus-button/PlusButton';
+import Button from '../components/Button/Button';
+import IconButton from '../components/icon-button/IconButton';
+import PointingHandIcon from '../icons/others/PointingHand';
+import DownIcon from '../icons/others/Down';
+import UpIcon from '../icons/others/Up';
+import DoneIcon from '../icons/others/Done';
+import UpdateIcon from '../icons/others/Update';
+import LinkSIcon from '../icons/others/LinkS';
+import AddLInkLIcon from '../icons/others/AddLinkL';
+import RadioButtonOnIcon from '../icons/others/RadioButtonOn';
+import RadioButtonOffIcon from '../icons/others/RadioButtonOff';
+import HelpIcon from '../icons/others/Help';
+import CloseIcon from '../icons/others/Close';
+import EllipsisIcon from '../icons/others/Ellipsis';
+import ChevronBigIcon from '../icons/others/ChevronBig';
+import UserIcon from '../icons/others/User';
+import CheckIcon from '../icons/others/Check';
+import CopyIcon from '../icons/others/Copy';
+import SearchIcon from '../icons/others/Search';
+import PlayIcon from '../icons/others/Play';
+import PauseIcon from '../icons/others/Pause';
+import SlashIcon from '../icons/others/Slash';
+import ZapIcon from '../icons/others/Zap';
+import XCircleIcon from '../icons/others/XCircle';
+import DashBoardIcon from '../icons/others/DashBoard';
+import ConstructorIcon from '../icons/others/Constructor';
+import MailingIcon from '../icons/others/Mailing';
+import ListsIcon from '../icons/others/Lists';
+import ChartsIcon from '../icons/others/Charts';
+import DialogueIcon from '../icons/others/Dialogue';
+import AccessIcon from '../icons/others/Access';
+import MinilandingIcon from '../icons/others/Minilanding';
+import CrmIcon from '../icons/others/Crm';
+import ExitIcon from '../icons/others/Exit';
+import TrashIcon from '../icons/others/Trash';
+import EditIcon from '../icons/others/Edit';
+import ShareIcon from '../icons/others/Share';
+import CopyBotIcon from '../icons/others/CopyBot';
+import SettingsIcon from '../icons/others/Settings';
+import PaymentIcon from '../icons/others/Payment';
+import CloseSmallIcon from '../icons/others/CloseSmall';
+import NotificationSettingsIcon from '../icons/others/NotificationSettings';
+import InfoIcon from '../icons/others/Info';
+import LinkIcon from '../icons/others/Link';
+import CloudIcon from '../icons/others/Cloud';
+import EqualIcon from '../icons/others/Equal';
+import EqualNotIcon from '../icons/others/EqualNot';
+import MoreIcon from '../icons/others/More';
+import LessIcon from '../icons/others/Less';
+import MoreOrEqualIcon from '../icons/others/MoreOrEqual';
+import LessOrEqualIcon from '../icons/others/LessOrEqual';
+import EqualWithoutCaseIcon from '../icons/others/EqualWithoutCase';
+import InLineIcon from '../icons/others/InLine';
+import InLineWithoutCaseIcon from '../icons/others/InLineWithoutCase';
+import NotInLineIcon from '../icons/others/NotInLine';
+import NotInLineWithoutCaseIcon from '../icons/others/NotInLineWithoutCase';
+import MessageSquareIcon from '../icons/others/MessageSquare';
+import SlidersIcon from '../icons/others/Sliders';
+import DeepLinkIcon from '../icons/others/DeepLink';
+import TableIcon from '../icons/others/Table';
+import HeadPhonesIcon from '../icons/others/HeadPhones';
+import ApiIcon from '../icons/others/Api';
+import CreaditCardIcon from '../icons/others/CreditCard';
+import MapPinIcon from '../icons/others/MapPin';
+import GitBranchIcon from '../icons/others/GitBranch';
+import TagIcon from '../icons/others/Tag';
+import MenuIcon from '../icons/others/Menu';
+import BracketIcon from '../icons/others/Bracket';
+import EmojiIcon from '../icons/others/Emoji';
+import VerticalIcon from '../icons/others/Vertical';
+import HorizontalIcon from '../icons/others/Horizontal';
+import AskPhoneIcon from '../icons/others/AskPhone';
+import UrlIcon from '../icons/others/Url';
+import PlusCircleIcon from '../icons/others/PlusCircle';
+import ArrowUpCircleIcon from '../icons/others/ArrowUpCircle';
+import DeleteIcon from '../icons/others/Delete';
+import VideoIcon from '../icons/others/Video';
+import ImageIcon from '../icons/others/Image';
+import FileIcon from '../icons/others/File';
+import MusicIcon from '../icons/others/Music';
+import BoldIcon from '../icons/others/Bold';
+import ItalicIcon from '../icons/others/Italic';
+import CodeIcon from '../icons/others/Code';
+import PlusIcon from '../icons/others/Plus';
+import MinusIcon from '../icons/others/Minus';
+import FitIcon from '../icons/others/Fit';
+import FullScreenIcon from '../icons/others/FullScreen';
+import PageIcon from '../icons/others/Page';
+import ButtonIcon from '../icons/others/Button';
+import UploadIcon from '../icons/others/Upload';
+import NotificationsIcon from '../icons/others/Notifications/Notifications';
+import TutorialButton from '../components/tutorial-button/TutorialButton';
+import AddBotButton from '../components/add-bot-button/AddBotButton';
+import AddBlockButton from '../components/add-block-button/AddBlockButton';
+import CreditCardIcon from '../components/icons/add-block-button/CreditCard';
 
 export default function AddBot() {
   return (
@@ -169,21 +170,6 @@ export default function AddBot() {
         <AlisaIcon type="blue" onClick={() => console.log('click')} />
         <AlisaIcon type="common" />
         <AlisaIcon type="disabled" />
-        <Button
-          type="blue"
-          onClick={() => console.log('click')}
-          text="СИНЯЯ КНОПКА"
-          width={180}
-          height={46}
-        />
-        <Button
-          type="blue"
-          disabled
-          onClick={() => console.log('click')}
-          text="СИНЯЯ КНОПКА"
-          width={180}
-          height={46}
-        />
         <PlusButton type="blue" onClick={() => console.log('click')} />
         <PlusButton type="blue" onClick={() => console.log('click')} disabled />
         <PlusButton type="green" onClick={() => console.log('click')} />
@@ -192,6 +178,24 @@ export default function AddBot() {
           onClick={() => console.log('click')}
           disabled
         />
+        <Button
+          type="blue"
+          onClick={() => console.log('click')}
+          width={301}
+          height={64}
+        >
+          <div
+            style={{
+              display: 'flex',
+              columnGap: '10px',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <p>ОПЛАТИТЬ ЧЕРЕЗ</p>
+            <PaymentIcon />
+          </div>
+        </Button>
         <Button
           type="green"
           onClick={() => console.log('click')}
@@ -221,6 +225,23 @@ export default function AddBot() {
           text="СЕРАЯ КНОПКА"
           width={180}
           height={46}
+        />
+        <Button
+          type="blue"
+          onClick={() => console.log('click')}
+          text="СИНЯЯ КНОПКА1"
+          width={180}
+          height={46}
+          extraClass={styles.my_class}
+        />
+        <Button
+          type="blue"
+          disabled
+          onClick={() => console.log('click')}
+          text="СИНЯЯ КНОПКА1"
+          width={180}
+          height={46}
+          extraClass={styles.my_class}
         />
         <IconButton
           onClick={() => console.log('click')}

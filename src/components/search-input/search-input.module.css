@@ -1,0 +1,53 @@
+.inputFrame {
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--default-grey-color);
+}
+
+.inputFrameFocus {
+  outline: 1.5px solid var(--default-blue-color);
+}
+
+.input {
+  border: none;
+  flex-grow: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+  background-color: inherit;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+.input:-moz-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+.input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.input:focus:-moz-placeholder {
+  opacity: 0;
+}
