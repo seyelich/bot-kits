@@ -9,10 +9,10 @@ interface IButton {
   text: string;
   width: number;
   height: number;
-  isRegister?: boolean;
+  isAuth?: boolean;
 }
 
-const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isRegister }) => {
+const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isAuth }) => {
   return (
     <button
       className={`${styles.button} ${
@@ -22,7 +22,7 @@ const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isR
           ? `${styles.button_grey} ${disabled ? styles.button_grey_disabled : ''}`
           : `${styles.button_green} ${disabled ? styles.button_green_disabled : ''}`
       } ${
-        isRegister && `${styles.regiser_button}`
+        isAuth && `${styles.regiser_button}`
       }  `}
       onClick={onClick}
       style={{
