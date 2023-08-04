@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Button from '../Button/Button';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './LoginForm.module.css';
 
-const LoginForm = () => {
+interface LoginFormProps {
+  signIn: () => void;
+}
+
+const LoginForm: FC<LoginFormProps> = ({ signIn }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -25,7 +29,7 @@ const LoginForm = () => {
           <span className={styles.loginForm__form__menuItems}>
             Забыли пароль?
           </span>
-          <span className={styles.loginForm__form__menuItems}>Регистрация</span>
+          <span className={styles.loginForm__form__menuItems} onClick={signIn}>Регистрация</span>
         </nav>
         <Button type="green" text="войти" width={260} height={64} isAuth />
       </form>

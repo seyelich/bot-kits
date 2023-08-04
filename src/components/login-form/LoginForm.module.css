@@ -10,13 +10,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
 }
 
 .loginForm__form {
   max-height: 415px;
-  margin: 60px 0 55px 0;
+  padding: 60px 0 55px 0;
   text-align: center;
+  border-radius: 30px;
+  background: #243cbb;
+  max-width: 770px;
+  width: 100%;
 }
 
 .loginForm__formContainer {
@@ -26,7 +29,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
+
 }
 
 .loginForm__form__menu {
@@ -34,7 +38,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
 }
 .loginForm__form__menuItems {
   margin-right: 30px;
@@ -45,7 +49,14 @@
   font-weight: 600;
   line-height: 150%;
   letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.4ms ease-in-out;
 }
+.loginForm__form__menuItems:hover {
+  opacity: 0.9;
+}
+
+
 .loginForm__form__menuItems:last-child {
   margin-right: 0;
 }

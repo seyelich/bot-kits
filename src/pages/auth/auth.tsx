@@ -19,18 +19,22 @@ export default function Auth() {
     setState({ authState: 'ForgotPass' });
   };
 
+  console.log(state.authState !== "Register");
+
+
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${state.authState !== "Register" && styles.wrapper_login}`}>
       <div className={styles.headerContainer}>
-        <Logo register={true} />
-        <h1 className={styles.title}>
+      {state.authState === 'Register' ? <Logo width={149} height={35}/> : <Logo width={161.5} height={38}/>}
+        <h1 className={`${styles.title} ${state.authState !== "Register" && styles.title_login}`}>
           {state.authState === 'Register' && 'Регистрация'}
           {state.authState === 'Login' && 'Вход'}
           {state.authState === 'ForgotPass' && 'Восстановление пароля'}
         </h1>
       </div>
-      {/* <RegisterForm logIn={handleLoginClick}/> */}
-      <LoginForm />
+      {state.authState === 'Register' && <RegisterForm logIn={handleLoginClick}/>}
+      {state.authState === 'Login' && <LoginForm signIn={handleRegisterClick} />}
+      {state.authState === 'ForgotPass' && 'Восстановление пароля'}
     </div>
   );
 }
