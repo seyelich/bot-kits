@@ -1,0 +1,32 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 264px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.container {
+  width: auto;
+  height: 422px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 20px;
+}
+
+.btn_left {
+  position: absolute;
+  top: 1px;
+  right: 130px;
+  z-index: 3;
+  rotate: 90deg;
+}
+
+.btn_right {
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  rotate: -90deg;
+  z-index: 2;
+}

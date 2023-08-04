@@ -9,22 +9,22 @@ interface IIconButton {
   height: number;
   icon: React.ReactNode;
 }
-
-export const IconButton: FC<IIconButton> = ({
+const IconButton: FC<IIconButton> = ({
   onClick,
   disabled,
   width,
   height,
   icon,
-}) => {
-  return (
-    <button
-      className={`${styles.button} ${disabled && styles.button_disabled}`}
-      onClick={onClick}
-      disabled={disabled}
-      style={{ width, height }}
-    >
-      {icon}
-    </button>
-  );
-};
+}) => (
+  <button
+    className={`${styles.button} ${disabled && styles.button_disabled}`}
+    onClick={onClick}
+    disabled={disabled}
+    style={{ width, height }}
+    type="button"
+  >
+    {icon}
+  </button>
+);
+
+export default IconButton;

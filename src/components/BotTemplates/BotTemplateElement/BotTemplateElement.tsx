@@ -1,13 +1,13 @@
 import { FC, useState } from 'react';
 import styles from './BotTemplateElement.module.css';
-import { Plus } from '../../icons/Plus/Plus';
+import Plus from '../../icons/Plus/Plus';
 
 interface IBotTemplate {
   icon: JSX.Element;
   text: string;
 }
 
-export const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
+const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
   const [isActive, setIsActive] = useState(false);
   const MouseOver = () => setIsActive(true);
   const MouseOut = () => setIsActive(false);
@@ -33,3 +33,5 @@ export const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
     </div>
   );
 };
+
+export default BotTemplateElement;

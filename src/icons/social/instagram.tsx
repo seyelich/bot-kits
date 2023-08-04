@@ -16,7 +16,13 @@ export default function InstagramIcon({
   switch (type) {
     case 'common':
       return (
-        <SocialIcon type={type} width={width} height={height} color="#2D88FF" onClick={onClick}>
+        <SocialIcon
+          type={type}
+          width={width}
+          height={height}
+          color="#2D88FF"
+          onClick={onClick}
+        >
           <svg
             width={width}
             height={height}
@@ -56,7 +62,13 @@ export default function InstagramIcon({
       );
     default:
       return (
-        <SocialIcon type={type} width={width} height={height} color="#2D88FF" onClick={onClick}>
+        <SocialIcon
+          type={type}
+          width={width}
+          height={height}
+          color="#2D88FF"
+          onClick={onClick}
+        >
           <svg
             width={width}
             height={height}

@@ -14,7 +14,13 @@ export default function TwitterIcon({
   onClick,
 }: ITwitterIcon) {
   return (
-    <SocialIcon type={type} width={width} height={height} color="#1DA1F2" onClick={onClick}>
+    <SocialIcon
+      type={type}
+      width={width}
+      height={height}
+      color="#1DA1F2"
+      onClick={onClick}
+    >
       <svg
         width={width}
         height={height}

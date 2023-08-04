@@ -1,101 +1,115 @@
 .sidebar {
   box-sizing: border-box;
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  width: 70px;
-  height: 100%;
-  background-color: #fff;
+  width: 69px;
+  max-width: fit-content;
+  height: fit-content;
+  max-height: 868px;
+  border-radius: 16px;
+  background-color: rgba(248, 249, 251, 1);
   transition: .2s;
-  @media (max-width: 670px) {
-    position: absolute;
-    top: 0;
-    left: 0;
+  @media (max-width: 375px) {
     display: flex;
-    width: 230px;
-    height: 64px;
+    min-width: 280px;
+    background-color: #fff;
   }
 }
 
 .sidebar-expanded {
-  width: max-content;
+  width: 100%;
   @media (max-width: 670px) {
-    height: max-content;
+    height: 100%;
   }
 }
 
 .sidebar-expanded .navtext {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 .sidebar-expanded .title {
-  margin-left: 0;
-  @media (max-width: 670px) {
-    margin-left: 65px;
-  }
+  margin-left: 6px;
 }
 
 .sidebar-expanded .addbutton {
+  margin: 0;
+  margin-bottom: 35px;
+  margin-left: 5px;
   overflow: visible;
-  @media (min-width: 671px) {
+  @media (min-width: 670px) {
     width: 182px;
     height: 48px;
     border-radius: 10px;
-    background-image: none;
     overflow: hidden;
+    background-image: none;
   }
 }
 
 .sidebar-expanded .addtext {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 18px;
-  overflow: hidden;
+  box-sizing: border-box;
   @media (max-width: 670px) {
+    gap: 0;
     padding: 0;
   }
 }
 
 .title {
-  display: flex;
-  align-items: flex-end;
+  display: grid;
+  grid-template-areas: "logo btn";
   gap: 12px;
-  width: max-content;
-  margin-left: 4px;
-  overflow-x: hidden;
+  margin-left: 6px;
+  padding: 20px 12px 0px;
+  overflow: visible;
   transition: all .3s;
   @media (max-width: 670px) {
-    margin-top: 7px;
-    margin-left: 65px;
+  grid-template-areas: "logo";
     min-height: 48px;
+    padding: 20px 12px 15px;
+
+  background-color: rgba(248, 249, 251, 1);
     zoom: 0.9;
+  };
+  @media (max-width: 375px) {
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas: "btn . logo";
   }
 }
 
 .expand-button {
-  position: absolute;
-  zoom: 1.05;
-  right: -85px;
+  position: relative;
   top: 5px;
+  right: -35px;
+  grid-area: btn;
+  width: 0px;
   border: none;
-  background-color: inherit;
-  cursor: pointer;
   fill: #D7DEEA;
   stroke: #D7DEEA;
+  background-color: inherit;
+  cursor: pointer;
+  zoom: 1.05;
   @media (max-width: 670px) {
     right: unset;
-    margin-top: 18px;
-    margin-left: 12px;
+    display: none;
     align-self: flex-start;
     fill: var(--primary-text-color);
     stroke: var(--primary-text-color);
+  };
+  @media (max-width: 375px) {
+    display: block;
+  }
+}
+
+.sidebar-expanded .expand-button {
+  right: -100px;
+  @media (max-width: 375px) {
+    right: unset;
   }
 }
 
@@ -103,32 +117,33 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  box-sizing: border-box;
+  padding: 0 12px;
   @media (max-width: 670px) {
-    margin-top: 30px;
-    margin-left: 23px;
     gap: 11px;
+    padding-top: 30px;
   }
 }
 
 .addbutton {
-  box-sizing: border-box;
   position: relative;
+  box-sizing: border-box;
   width: 46px;
   height: 46px;
-  margin-bottom: 43px;
-  padding: 13px;
+  margin-bottom: 30px;
   border-radius: 50%;
+  padding: 13px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
   background-color: var(--default-blue-color);
   background-image: url("./icons/plus.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: all .3s;
-  overflow: hidden;
-  text-align: center;
-  text-decoration: none;
   @media (max-width: 670px) {
-    margin-top: 26px;
     order: 1;
+    margin-top: 26px;
   }
 }
 
@@ -137,21 +152,21 @@
 }
 
 .addtext {
-  opacity: 0;
   visibility: hidden;
-  white-space: nowrap;
-  transition: all .4s;
+  opacity: 0;
+  color: #fff;
   font-family: "IBM Plex Mono", sans-serif;
   font-weight: 600;
   letter-spacing: var(--m-letter-space);
-  color: #fff;
   text-transform: uppercase;
+  transition: all .4s;
+  white-space: nowrap;
   @media (max-width: 670px) {
     position: absolute;
     right: -134px;
     color: var(--primary-text-color);
-    text-transform: none;
     font-family: "Open Sans", sans-serif;
+    text-transform: none;
   }
 }
 
@@ -161,16 +176,17 @@
   gap: 15px;
   width: max-content;
   min-width: 100%;
-  margin-left: 8px;
+  margin: 0 auto;
   margin-bottom: 15px;
+  margin-left: 11px;
+  overflow: hidden;
+  color: var(--primary-text-color);
   stroke: var(--disabled-grey-color);
   font-family: "Open Sans", sans-serif;
   font-weight: var(--normal);
   font-size: var(--l-font-size);
   letter-spacing: var(--m-letter-space);
   text-decoration: none;
-  color: var(--primary-text-color);
-  overflow: hidden;
   @media (max-width: 670px) {
     gap: 22px;
     font-weight: var(--bold);
@@ -178,23 +194,23 @@
 }
 
 .navlink-active {
-  stroke: var(--default-blue-color);
   color: var(--default-blue-color);
+  stroke: var(--default-blue-color);
 }
 
 .navlink:hover {
-  stroke: var(--hover-blue-color);
   color: var(--hover-blue-color);
+  stroke: var(--hover-blue-color);
 }
 
 .navtext {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
   transition: all .2s;
   white-space: nowrap;
-  overflow: hidden;
-  @media (max-width: 670px) {
-    opacity: 1;
+  @media (max-width: 375px) {
     visibility: visible;
+    opacity: 1;
   }
 }
