@@ -9,6 +9,8 @@ interface IButton {
   text: string;
   width: number;
   height: number;
+  extraClass?: string;
+  isAuth?: boolean;
 }
 
 const Button: FC<IButton> = ({
@@ -18,9 +20,10 @@ const Button: FC<IButton> = ({
   text,
   width,
   height,
+  extraClass,
+  isAuth,
 }) => (
   <button
-    type="button"
     className={`${styles.button} ${
       type === 'blue'
         ? `${styles.button_blue} ${disabled ? styles.button_blue_disabled : ''}`
@@ -29,8 +32,9 @@ const Button: FC<IButton> = ({
         : `${styles.button_green} ${
             disabled ? styles.button_green_disabled : ''
           }`
-    }  `}
+    } ${isAuth && `${styles.regiser_button}`} ${extraClass}`}
     onClick={onClick}
+    type="button"
     style={{
       width,
       height,
@@ -48,5 +52,4 @@ const Button: FC<IButton> = ({
     </p>
   </button>
 );
-
 export default Button;

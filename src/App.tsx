@@ -18,6 +18,7 @@ import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
 function App() {
   return (
     <BrowserRouter>
+      {/* <Auth/> */}
       <div className={styles.content}>
         <Sidebar />
         <main>
