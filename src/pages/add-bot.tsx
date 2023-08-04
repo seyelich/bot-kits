@@ -170,23 +170,6 @@ export default function AddBot() {
         <AlisaIcon type="blue" onClick={() => console.log('click')} />
         <AlisaIcon type="common" />
         <AlisaIcon type="disabled" />
-        <Button
-          type="blue"
-          onClick={() => console.log('click')}
-          text="СИНЯЯ КНОПКА1"
-          width={180}
-          height={46}
-          extraClass={styles.button}
-        />
-        <Button
-          type="blue"
-          disabled
-          onClick={() => console.log('click')}
-          text="СИНЯЯ КНОПКА1"
-          width={180}
-          height={46}
-          extraClass={styles.button}
-        />
         <PlusButton type="blue" onClick={() => console.log('click')} />
         <PlusButton type="blue" onClick={() => console.log('click')} disabled />
         <PlusButton type="green" onClick={() => console.log('click')} />
@@ -224,6 +207,23 @@ export default function AddBot() {
           text="СЕРАЯ КНОПКА"
           width={180}
           height={46}
+        />
+        <Button
+          type="blue"
+          onClick={() => console.log('click')}
+          text="СИНЯЯ КНОПКА1"
+          width={180}
+          height={46}
+          extraClass={styles.my_class}
+        />
+        <Button
+          type="blue"
+          disabled
+          onClick={() => console.log('click')}
+          text="СИНЯЯ КНОПКА1"
+          width={180}
+          height={46}
+          extraClass={styles.my_class}
         />
         <IconButton
           onClick={() => console.log('click')}

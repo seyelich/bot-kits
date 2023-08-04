@@ -10,6 +10,7 @@ interface IButton {
   width: number;
   height: number;
   extraClass?: string;
+  isAuth?: boolean;
 }
 
 const Button: FC<IButton> = ({
@@ -20,6 +21,7 @@ const Button: FC<IButton> = ({
   width,
   height,
   extraClass,
+  isAuth,
 }) => (
   <button
     className={`${styles.button} ${
@@ -30,7 +32,7 @@ const Button: FC<IButton> = ({
         : `${styles.button_green} ${
             disabled ? styles.button_green_disabled : ''
           }`
-    } ${extraClass} `}
+    } ${isAuth && `${styles.regiser_button}`} ${extraClass}`}
     onClick={onClick}
     type="button"
     style={{

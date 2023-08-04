@@ -1,0 +1,171 @@
+.registerForm {
+  max-width: 770px;
+  width: 100%;
+  max-height: 619px;
+  height: 100%;
+  border-radius: 30px;
+  border-radius: 30px;
+  background: #2743ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.registerForm__socialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 192px;
+}
+
+.registerForm__socialContainer__title {
+  color: #fff;
+  text-align: center;
+  font-family: 'IBM Plex Mono';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 50px 0 14px 0;
+}
+
+.registerForm__socialContainer__footerText {
+  border-radius: 15px;
+  background: #243cbb;
+  color: #fff;
+  max-width: 80px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  margin-bottom: -8px;
+  z-index: 2;
+}
+
+.registerForm__wrapper {
+  width: 100%;
+  max-height: 438px;
+  height: 100%;
+  border-radius: 30px;
+  background: #243cbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.registerForm__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.registerForm__inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 670px;
+  max-height: 140px;
+  margin-bottom: 50px;
+}
+
+.registerForm__passwordContainer {
+  margin-top: 20px;
+  position: relative;
+}
+.registerForm__passwordHide {
+  position: absolute;
+  right: 28px;
+  top: 15px;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+.registerForm__passwordHide:hover {
+  transition: all 0.2ms ease-in-out;
+  opacity: 0.8;
+}
+
+.registerForm__phoneContainer {
+  max-width: 325px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.registerForm__phoneSelector {
+  width: 110px;
+  height: 60px;
+  background-color: #000000;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+}
+.registerForm__phoneSelector:active {
+  border: none;
+}
+.registerForm__phoneOption {
+  background-color: #fff;
+  color: black;
+}
+
+.registerForm__footer {
+  max-width: 670px;
+  width: 100%;
+  max-height: 24px;
+  margin: 53px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registerForm__footer__text {
+  color: #fff;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+}
+.registerForm__footer__link {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  text-decoration-line: underline;
+  display: flex;
+  transition: all 0.4ms ease-in-out;
+}
+.registerForm__footer__link:hover {
+  opacity: 0.9;
+}
+
+.registerForm__authImage {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}

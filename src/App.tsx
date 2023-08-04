@@ -11,10 +11,12 @@ import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
 import Layout from './components/Layout/Layout';
+// import Auth from './pages/auth/auth';
 
 function App() {
   return (
     <BrowserRouter>
+      {/* <Auth/> */}
       <div className={styles.content}>
         <Sidebar />
         <main>
