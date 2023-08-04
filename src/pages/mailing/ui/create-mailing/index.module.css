@@ -321,7 +321,7 @@
     height: 0;
   }
   to {
-    height: 140px ;
+    height: 140px;
   }
 }
 
@@ -346,12 +346,24 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1200px) {
   .inputs {
     flex-direction: column;
     row-gap: 8px;
   }
 
+  .select__block {
+    width: 100%;
+  }
+
+  .select__list {
+    z-index: 999;
+    background-color: #fff;
+  }
+
+}
+
+@media screen and (max-width: 1020px) {
   .select {
     width: calc(100% - 16px);
   }

@@ -45,3 +45,9 @@
   text-align: left;
   color: #ff5555;
 }
+
+@media screen and (max-width: 1150px) {
+  .button {
+    width: 410px;
+  }
+}
