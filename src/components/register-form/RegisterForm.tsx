@@ -30,7 +30,7 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
           Создай аккаунт с помощью
         </p>
         <NavLinkBar />
-        <p className={styles.registerForm__socialContainer__footer}>или</p>
+        <p className={styles.registerForm__socialContainer__footerText}>или</p>
       </div>
       <div className={styles.registerForm__wrapper}>
         <form className={styles.registerForm__form} onSubmit={handleSubmit}>
@@ -38,7 +38,7 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
             <AuthInput type="text" placeholder="Имя" width={325} height={60} />
             <AuthInput
               type="email"
-              placeholder="Email"
+              placeholder="E-mail"
               width={325}
               height={60}
             />

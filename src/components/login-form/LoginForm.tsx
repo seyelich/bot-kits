@@ -17,7 +17,12 @@ const LoginForm: FC<LoginFormProps> = ({ signIn }) => {
     <div className={styles.loginForm}>
       <form className={styles.loginForm__form} onSubmit={handleSubmit}>
         <div className={styles.loginForm__formContainer}>
-          <AuthInput type="email" placeholder="Email" width={570} height={60} />
+          <AuthInput
+            type="email"
+            placeholder="E-mail"
+            width={570}
+            height={60}
+          />
           <AuthInput
             type="password"
             placeholder="Пароль"
@@ -29,7 +34,9 @@ const LoginForm: FC<LoginFormProps> = ({ signIn }) => {
           <span className={styles.loginForm__form__menuItems}>
             Забыли пароль?
           </span>
-          <span className={styles.loginForm__form__menuItems} onClick={signIn}>Регистрация</span>
+          <span className={styles.loginForm__form__menuItems} onClick={signIn}>
+            Регистрация
+          </span>
         </nav>
         <Button type="green" text="войти" width={260} height={64} isAuth />
       </form>
