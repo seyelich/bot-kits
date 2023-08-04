@@ -18,10 +18,12 @@ import ImageIcon from '../../../../icons/others/Image';
 import VideoIcon from '../../../../icons/others/Video';
 import MusicIcon from '../../../../icons/others/Music';
 import ButtonIcon from '../../../../icons/others/Button';
-import InputSelect from '../../../../components/input-select/input-select';
 import DownloadButtons from '../../../../components/download-button/DownloadButtons';
 import InlineButtons from '../inline-button/InlineButton';
 import Widget from '../widget/widget';
+import DownIcon from '../../../../icons/others/Down';
+import ListsRow from './ListsRow';
+import FunnelsRow from './FunnelsRow';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
@@ -40,6 +42,7 @@ const CreateMailing: FC = () => {
   const [videoActive, setVideoActive] = useState(false);
   const [musicActive, setMusicActive] = useState(false);
   const [buttonActive, setButtonActive] = useState(false);
+  const [listOpen, setListOpen] = useState(false);
 
   const useOutsideAlerter = (ref: any) => {
     useEffect(() => {
@@ -67,19 +70,33 @@ const CreateMailing: FC = () => {
               <p style={{ margin: '0' }}>Создание рассылки</p>
             </div>
             <div className={styles.inputs}>
-              <TextInput
-                name="mailing"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <InputSelect
-                placeholder="Список рассылки"
-                width="264"
-                disabled={false}
-                options={list}
-                dropDownHeight="164"
-                setSelectedValue={() => {}}
-              />
+              <div className={styles.input__name}>
+                <TextInput
+                  name="mailing"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className={styles.select__block}>
+                <div className={styles.select}>
+                  <p className={styles.select__text}>Список рассылки</p>
+                  <div
+                    className={`${styles.select__icon} ${
+                      listOpen && styles.select__icon_rotated
+                    }`}
+                    onClick={() => setListOpen(!listOpen)}
+                  >
+                    <DownIcon width={16} height={16} />
+                  </div>
+                </div>
+                {listOpen && (
+                  <div className={styles.select__list}>
+                    {list.map((el, i) => (
+                      <ListsRow el={el} key={i} />
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           <div className={styles.block}>
@@ -194,13 +211,7 @@ const CreateMailing: FC = () => {
                 {activate && (
                   <div className={styles.funnels}>
                     {funnels.map((el, i) => (
-                      <button
-                        type="button"
-                        key={i}
-                        className={styles.funnels__button}
-                      >
-                        {el}
-                      </button>
+                      <FunnelsRow el={el} key={i} />
                     ))}
                   </div>
                 )}
