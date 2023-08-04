@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.page {
+  background-color: blue;
+  color: white;
+}
+
+.page_active {
+  background-color: white;
+  color: blue;
+}

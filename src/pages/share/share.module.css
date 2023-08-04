@@ -1,0 +1,25 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  justify-self: flex-start;
+}
+
+.panel-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.panel-button {
+  display: flex;
+  align-items: center;
+}
