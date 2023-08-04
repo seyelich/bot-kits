@@ -24,12 +24,13 @@ export default function UserRow({
         check={checked}
         onClick={() =>
           setChecked((set) => {
-            if (set.has(_id)) {
-              set.delete(_id);
+            const newSet: Set<string> = new Set(set.values());
+            if (newSet.has(_id)) {
+              newSet.delete(_id);
             } else {
-              set.add(_id);
+              newSet.add(_id);
             }
-            return set;
+            return newSet;
           })
         }
       />

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import SearchInput from '../../components/search-input/search-input';
 import IconButton from '../../components/icon-button/IconButton';
 
@@ -13,6 +13,7 @@ import getFakeUsers from './get-fake-users';
 import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
+import PerPageSelector from '../../components/per-page-selector/per-page-selector';
 
 function MoreIcon() {
   return (
@@ -34,25 +35,30 @@ export default function Share() {
   useEffect(() => {
     const res = getFakeUsers(perPage, (current - 1) * perPage);
     setUsers(res.users);
+    setChecked(new Set());
     setTotal(res.total);
-  }, [current]);
+  }, [current, perPage]);
 
   return (
     <>
       <div className={styles.title}>
-        <h1>Пользователи</h1>
-        <Button type="green" text={filter || ''} width={237} height={46} />
+        <h1 className={styles['title-text']}>Пользователи</h1>
+        <Button
+          type="green"
+          text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ"
+          width={237}
+          height={46}
+        />
       </div>
-      <div className={styles['top-panel']}>
-        <div className={styles.filter}>
-          <SearchInput
-            placeholder=""
-            hasFilter
-            onChange={(evt) => {
-              setFilter(evt.target.value);
-            }}
-          />
-        </div>
+      <div className={styles.filter}>
+        <SearchInput
+          placeholder=""
+          hasFilter
+          width="34.8%"
+          onChange={(evt) => {
+            setFilter(evt.target.value);
+          }}
+        />
         <div className={styles['panel-buttons']}>
           <button type="button" className={styles['panel-button']}>
             {UploadIcon({ color: 'var(--primary-text-color)' })}
@@ -70,11 +76,15 @@ export default function Share() {
         </div>
       </div>
       <MyUsers users={users} checked={checked} setChecked={setChecked} />
-      <PageControl
-        page={current}
-        count={Math.ceil(total / perPage)}
-        setCurrent={setCurrent}
-      />
+      <div className={styles['page-control']}>
+        <PageControl
+          page={current}
+          count={Math.ceil(total / perPage)}
+          setCurrent={setCurrent}
+        />
+        <p className={styles['page-selector-label']}>Отображать по строкам:</p>
+        <PerPageSelector perPage={perPage} setPerPage={setPerPage} />
+      </div>
     </>
   );
 }

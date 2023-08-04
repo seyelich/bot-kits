@@ -1,7 +1,15 @@
 .title {
+  margin-top: 30px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.title-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  color: var(--primary-text-color);
+  letter-spacing: -.2px;
 }
 
 .top-panel {
@@ -11,15 +19,32 @@
 }
 
 .filter {
-  justify-self: flex-start;
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
 }
 
 .panel-buttons {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .panel-button {
   display: flex;
+  width: 90px;
+  height: 24px;
+  border-radius: 5px;
   align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.page-control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-selector-label {
+  margin-left: auto;
 }

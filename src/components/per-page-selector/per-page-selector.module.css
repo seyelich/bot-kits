@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+}
+
+.panel-active {
+  display: flex;
+}

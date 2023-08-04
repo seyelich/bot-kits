@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 import { Dispatch, ReactNode, SetStateAction, useMemo } from 'react';
 import styles from './page-control.module.css';
@@ -31,5 +32,50 @@ export default function PageControl({
     }
     return res;
   }, [count, page]);
-  return <div className={styles.container}>{pages}</div>;
+  return (
+    <div className={styles.container}>
+      {pages}
+      <button
+        type="button"
+        disabled={page === 1}
+        onClick={() => setCurrent((current) => --current)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+        >
+          <path
+            stroke="#CCD4E0"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12.15 15.834 6.317 10l5.833-5.833"
+          />
+        </svg>
+      </button>
+      <button
+        type="button"
+        disabled={page === count}
+        onClick={() => setCurrent((current) => ++current)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="none"
+          transform="rotate(180)"
+        >
+          <path
+            stroke="#CCD4E0"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12.15 15.834 6.317 10l5.833-5.833"
+          />
+        </svg>
+      </button>
+    </div>
+  );
 }
