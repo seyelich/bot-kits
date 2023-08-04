@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { FC, useState } from 'react';
 import Button from '../Button/Button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
-import styles from './AuthForm.module.css';
+import styles from './RegisterForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 import { items } from '../../utils/itemsForRegister';
 import robot from '../../images/registerRobot.png';
 
-const AuthForm = () => {
+interface RegisterFormProps {
+  logIn: ()=>void;
+}
+
+const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibility = () => {
@@ -21,17 +24,17 @@ const AuthForm = () => {
   };
 
   return (
-    <div className={styles.authForm}>
-      <div className={styles.authForm__socialContainer}>
-        <p className={styles.authForm__socialContainer__title}>
+    <div className={styles.registerForm}>
+      <div className={styles.registerForm__socialContainer}>
+        <p className={styles.registerForm__socialContainer__title}>
           Создай аккаунт с помощью
         </p>
         <NavLinkBar />
-        <p className={styles.authForm__socialContainer__footer}>или</p>
+        <p className={styles.registerForm__socialContainer__footer}>или</p>
       </div>
-      <div className={styles.authForm__wrapper}>
-        <form className={styles.authForm__form} onSubmit={handleSubmit}>
-          <div className={styles.authForm__inputContainer}>
+      <div className={styles.registerForm__wrapper}>
+        <form className={styles.registerForm__form} onSubmit={handleSubmit}>
+          <div className={styles.registerForm__inputContainer}>
             <AuthInput type="text" placeholder="Имя" width={325} height={60} />
             <AuthInput
               type="email"
@@ -39,7 +42,7 @@ const AuthForm = () => {
               width={325}
               height={60}
             />
-            <div className={styles.authForm__passwordContainer}>
+            <div className={styles.registerForm__passwordContainer}>
               <AuthInput
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Пароль"
@@ -47,7 +50,7 @@ const AuthForm = () => {
                 height={60}
               />
               <button
-                className={styles.authForm__passwordHide}
+                className={styles.registerForm__passwordHide}
                 type="button"
                 onClick={handlePasswordVisibility}
               >
@@ -55,7 +58,7 @@ const AuthForm = () => {
               </button>
             </div>
 
-            <div className={styles.authForm__phoneContainer}>
+            <div className={styles.registerForm__phoneContainer}>
               <SelectCodeNumber items={items} />
               <AuthInput
                 type="text"
@@ -74,16 +77,14 @@ const AuthForm = () => {
           />
         </form>
 
-        <div className={styles.authForm__footer}>
-          <span className={styles.authForm__footer__text}>
+        <div className={styles.registerForm__footer}>
+          <span className={styles.registerForm__footer__text}>
             Уже прошли регистрацию?
           </span>
-          <NavLink to="#">
-            <span className={styles.authForm__footer__link}>Войти</span>
-          </NavLink>
+            <span className={styles.registerForm__footer__link} onClick={logIn}>Войти</span>
         </div>
         <img
-          className={styles.authForm__authImage}
+          className={styles.registerForm__authImage}
           src={robot}
           alt="register-robot"
         />
@@ -92,4 +93,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default RegisterForm;
