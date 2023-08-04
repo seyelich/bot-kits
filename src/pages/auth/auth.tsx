@@ -5,11 +5,12 @@ import LoginForm from '../../components/login-form/LoginForm';
 import { useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import sendEmail from '../../images/sendEmail.png';
+import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
   const [state, setState] = useState({ authState: 'Login' });
-  const [banner, setBanner] = useState({ bannerState: 'registerOnEmail' });
+  const [banner, setBanner] = useState({ bannerState: 'none' });
 
   const handleRegisterClick = () => {
     setState({ authState: 'Register' });
@@ -32,19 +33,24 @@ export default function Auth() {
   };
   const handleDefaultStateClick = () => {
     setBanner({ bannerState: 'none' });
+    setState({ authState: 'Login' });
   };
 
   return (
     <>
       {banner.bannerState === 'registerOnEmail' && (
         <div className={styles.noticePage}>
-          <div className={styles.noticePage__closeIcon} onClick={handleDefaultStateClick}>
-          <CloseIcon color="#22FFAA" width={32} height={32}/>
+          <div
+            className={styles.noticePage__closeIcon}
+            onClick={handleDefaultStateClick}
+          >
+            <CloseIcon color="#22FFAA" width={32} height={32} />
           </div>
           <div className={styles.noticePage__titleContainer}>
             <h1 className={styles.noticePage__titleText}>
               Письмо с подтверждением отправлено тебе на
-              <span className={styles.noticePage__titleIcon}>/email</span>!</h1>
+              <span className={styles.noticePage__titleIcon}>/email</span>!
+            </h1>
           </div>
           <img
             className={styles.noticePage__titleImage}
@@ -54,7 +60,25 @@ export default function Auth() {
         </div>
       )}
       {banner.bannerState === 'forgotPassOnEmail' && (
-        <div>Страница восстановления пароля на почту</div>
+        <div className={styles.noticePage}>
+          <div
+            className={styles.noticePage__closeIcon}
+            onClick={handleDefaultStateClick}
+          >
+            <CloseIcon color="#22FFAA" width={32} height={32} />
+          </div>
+          <div className={styles.noticePage__titleContainer}>
+            <h1 className={styles.noticePage__titleText}>
+              Ссылка для сброса пароля отправлена тебе на
+              <span className={styles.noticePage__titleIcon}>/email</span>!
+            </h1>
+          </div>
+          <img
+            className={styles.noticePage__titleImage}
+            src={sendForgotPass}
+            alt="image"
+          />
+        </div>
       )}
       {banner.bannerState === 'none' && (
         <div
@@ -79,7 +103,10 @@ export default function Auth() {
             </h1>
           </div>
           {state.authState === 'Register' && (
-            <RegisterForm logIn={handleLoginClick} />
+            <RegisterForm
+              logIn={handleLoginClick}
+              handleRegister={handleRegisterBannerClick}
+            />
           )}
           {state.authState === 'Login' && (
             <LoginForm
@@ -87,7 +114,9 @@ export default function Auth() {
               forgotPass={handleForgotPassClick}
             />
           )}
-          {state.authState === 'ForgotPass' && <ForgotPassForm />}
+          {state.authState === 'ForgotPass' && (
+            <ForgotPassForm handleForgotPass={handleForgotPassBannerClick} />
+          )}
         </div>
       )}
     </>

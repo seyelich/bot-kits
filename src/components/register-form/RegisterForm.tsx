@@ -10,9 +10,10 @@ import robot from '../../images/registerRobot.png';
 
 interface RegisterFormProps {
   logIn: () => void;
+  handleRegister: () => void;
 }
 
-const RegisterForm: FC<RegisterFormProps> = ({ logIn }) => {
+const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibility = () => {
@@ -76,6 +77,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn }) => {
             width={260}
             height={64}
             isAuth
+            onClick={handleRegister}
           />
         </form>
 

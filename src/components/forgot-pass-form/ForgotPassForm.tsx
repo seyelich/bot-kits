@@ -1,10 +1,14 @@
 import React, { FC } from 'react';
 import Button from '../Button/Button';
 import AuthInput from '../input-auth/AuthInput';
-import robot from "../../images/forgotPassRobot.png";
+import robot from '../../images/forgotPassRobot.png';
 import styles from './ForgotPassForm.module.css';
 
-const ForgotPassForm: FC = () => {
+interface ForgotPassFormProps {
+  handleForgotPass: () => void;
+}
+
+const ForgotPassForm: FC<ForgotPassFormProps> = ({ handleForgotPass }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -12,7 +16,7 @@ const ForgotPassForm: FC = () => {
   return (
     <div className={styles.forgotPassForm}>
       <form className={styles.forgotPassForm__form} onSubmit={handleSubmit}>
-      <p className={styles.forgotPassForm__formTitle}>Введи свой e-mail:</p>
+        <p className={styles.forgotPassForm__formTitle}>Введи свой e-mail:</p>
         <div className={styles.forgotPassForm__formContainer}>
           <AuthInput
             type="email"
@@ -21,10 +25,17 @@ const ForgotPassForm: FC = () => {
             height={60}
           />
         </div>
-        <Button type="green" text="сбросить пароль" width={260} height={64} isAuth />
+        <Button
+          type="green"
+          text="сбросить пароль"
+          width={260}
+          height={64}
+          isAuth
+          onClick={handleForgotPass}
+        />
       </form>
       <div className={styles.forgotPassForm__footer}>
-      <img
+        <img
           className={styles.forgotPassForm__authImage}
           src={robot}
           alt="forgot-robot"
