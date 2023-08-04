@@ -6,11 +6,12 @@ import mailingIcon from './icons/mailing-icon';
 import botBuilderIcon from './icons/bot-builder-icon';
 import chatIcon from './icons/chat-icon';
 import shareIcon from './icons/share-icon';
+import botKitsTitle from './icons/botkits-title';
+import botkitsLogo from './icons/botkits-logo';
 import menuExpandIcon from './icons/menu-expand';
+
 import styles from './sidebar.module.css';
 import menuCollapseIcon from './icons/menu-collapse';
-import Logo from '../Logo/Logo';
-import botkitsLogo from './icons/botkits-logo';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
   isActive
@@ -29,26 +30,6 @@ export default function Sidebar() {
     setExpanded((value) => !value);
   }
 
-  // Обработчик изменения размера экрана
-  function handleResize() {
-    if (window.innerWidth < 670) {
-      setExpanded(true);
-    } else {
-      setExpanded(false);
-    }
-  }
-
-  useEffect(() => {
-    // При монтировании компонента добавляем обработчик изменения размера экрана
-    window.addEventListener('resize', handleResize);
-    // Проверяем размер экрана и устанавливаем значение expanded
-    handleResize();
-    // При размонтировании компонента удаляем обработчик изменения размера экрана
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <div
       className={
@@ -57,16 +38,17 @@ export default function Sidebar() {
           : styles.sidebar
       }
     >
+      <button
+        type="button"
+        onClick={menuExpandHandler}
+        className={styles['expand-button']}
+      >
+        {expanded ? menuCollapseIcon : menuExpandIcon}
+      </button>
       <div className={styles.content}>
         <div className={styles.title}>
-          <button
-            type="button"
-            onClick={menuExpandHandler}
-            className={styles['expand-button']}
-          >
-            {expanded ? menuCollapseIcon : menuExpandIcon}
-          </button>
-          {expanded ? <Logo /> : botkitsLogo}
+          {botkitsLogo}
+          {botKitsTitle}
         </div>
         <nav className={styles.navigation}>
           <NavLink to="/add-bot" className={styles.addbutton}>
