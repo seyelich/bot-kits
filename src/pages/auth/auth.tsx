@@ -3,6 +3,7 @@ import Logo from '../../components/Logo/Logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
 import { useState } from 'react';
+import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 
 export default function Auth() {
   const [state, setState] = useState({ authState: 'Login' });
@@ -38,16 +39,16 @@ export default function Auth() {
         >
           {state.authState === 'Register' && 'Регистрация'}
           {state.authState === 'Login' && 'Вход'}
-          {state.authState === 'ForgotPass' && 'Восстановление пароля'}
+          {state.authState === 'ForgotPass' && 'Востановление пароля'}
         </h1>
       </div>
       {state.authState === 'Register' && (
         <RegisterForm logIn={handleLoginClick} />
       )}
       {state.authState === 'Login' && (
-        <LoginForm signIn={handleRegisterClick} />
+        <LoginForm signIn={handleRegisterClick} forgotPass={handleForgotPassClick}/>
       )}
-      {state.authState === 'ForgotPass' && 'Восстановление пароля'}
+      {state.authState === 'ForgotPass' && <ForgotPassForm/>}
     </div>
   );
 }

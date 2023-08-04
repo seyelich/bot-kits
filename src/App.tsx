@@ -1,23 +1,23 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar';
-import Dashboard from './pages/Dashboard/dashboard';
-import AddBot from './pages/add-bot';
-import styles from './App.module.css';
-import BotBuilder from './pages/bot-builder';
-import Chat from './pages/chat';
-import Mailing from './pages/mailing';
-import Partnership from './pages/partnership/partnership';
-import Share from './pages/share';
-import Subscription from './pages/subscription';
-import NotFound from './pages/not-found';
-import Layout from './components/Layout/Layout';
-// import Auth from './pages/auth/auth';
+// import Sidebar from './components/sidebar/sidebar';
+// import Dashboard from './pages/Dashboard/dashboard';
+// import AddBot from './pages/add-bot';
+// import styles from './App.module.css';
+// import BotBuilder from './pages/bot-builder';
+// import Chat from './pages/chat';
+// import Mailing from './pages/mailing';
+// import Partnership from './pages/partnership/partnership';
+// import Share from './pages/share';
+// import Subscription from './pages/subscription';
+// import NotFound from './pages/not-found';
+// import Layout from './components/Layout/Layout';
+import Auth from './pages/auth/auth';
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Auth/> */}
-      <div className={styles.content}>
+      <Auth/>
+      {/* <div className={styles.content}>
         <Sidebar />
         <main>
           <Routes>
@@ -34,7 +34,7 @@ function App() {
             </Route>
           </Routes>
         </main>
-      </div>
+      </div> */}
     </BrowserRouter>
   );
 }
