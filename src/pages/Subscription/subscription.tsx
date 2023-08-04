@@ -4,6 +4,7 @@ import { Button } from '../../components/Button/Button';
 import SubscriptionStatusNotSubscribe from '../../components/subscription-status/subscription-status-not-subscribe';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
+import PopupTarif from '../../components/popup-tarif/popup-tarif';
 // import PopupPromocode from '../../components/popup-promocode/popup-promocode';
 
 export default function Subscription() {
@@ -28,6 +29,7 @@ export default function Subscription() {
         <SubscriptionTable />
       </section>
       {/* <PopupPromocode /> */}
+      <PopupTarif />
     </main>
   );
 }

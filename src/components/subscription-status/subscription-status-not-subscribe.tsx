@@ -1,5 +1,5 @@
 import { Button } from '../Button/Button';
-import PopupPromocode from '../popup-promocode/popup-promocode';
+// import PopupPromocode from '../popup-promocode/popup-promocode';
 import styles from './subscription-status-not-subscribe.module.css';
 
 export default function SubscriptionStatusNotSubscribe() {
@@ -30,7 +30,7 @@ export default function SubscriptionStatusNotSubscribe() {
           />
         </div>
       </div>
-      <PopupPromocode />
+      {/* <PopupPromocode /> */}
     </>
   );
 }

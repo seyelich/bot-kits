@@ -69,3 +69,9 @@
   font-weight: 700;
   src: url("./fonts/CenturyGothic/CenturyGothic-Bold.ttf");
 }
+
+@font-face {
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  src: url("./fonts/HelveticaNeue/HelveticaNeue-Thin.ttf");
+}
