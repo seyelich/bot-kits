@@ -16,7 +16,7 @@ import Layout from './components/Layout/Layout';
 function App() {
   return (
     <BrowserRouter>
-    {/* <Auth/> */}
+      {/* <Auth/> */}
       <div className={styles.content}>
         <Sidebar />
         <main>
