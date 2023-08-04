@@ -11,11 +11,14 @@
   background-color: #f8f9fb;
   border: none;
   cursor: pointer;
-  transition: background-color .1s linear;
+  transition:
+    background-color 0.1s linear,
+    box-shadow 0.1s linear;
 }
 
 .button:hover {
   background-color: #fff;
+  box-shadow: 0px 6px 16px 0px #15123314;
 }
 
 .button:hover .button__text {
@@ -28,6 +31,7 @@
 
 .button_active {
   background-color: #fff;
+  box-shadow: 0px 6px 16px 0px #15123314;
 }
 
 .button__icon {
@@ -38,7 +42,7 @@
   align-items: center;
   background-color: #ccd4e0;
   border-radius: 59px;
-  transition: background-color .1s linear;
+  transition: background-color 0.1s linear;
 }
 
 .button__icon_active {
@@ -54,7 +58,7 @@
   letter-spacing: 0.30000001192092896px;
   text-align: center;
   color: #a6b3c9;
-  transition: color .1s linear;
+  transition: color 0.1s linear;
 }
 
 .button__text_active {
