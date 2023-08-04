@@ -63,8 +63,8 @@ const CreateMailing: FC = () => {
         <div className={styles.creation}>
           <div style={{ marginBottom: '2px' }}>
             <div className={styles.firstStep}>
-              <p>{'1 Шаг >'}</p>
-              <p>Создание рассылки</p>
+              <p style={{ margin: '0' }}>{'1 Шаг >'}</p>
+              <p style={{ margin: '0' }}>Создание рассылки</p>
             </div>
             <div className={styles.inputs}>
               <TextInput

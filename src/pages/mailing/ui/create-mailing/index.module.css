@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 32px;
+  margin-bottom: 16px;
   font-family: IBM Plex Mono;
   font-size: 16px;
   font-weight: 600;
@@ -261,4 +262,24 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .firstStep {
+    column-gap: 12px;
+  }
+
+  .creation {
+    padding: 24px 24px 50px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  .block__icons {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
 }
