@@ -8,7 +8,7 @@
   column-gap: 16px;
   padding: 0;
   border-radius: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 21px;
@@ -34,7 +34,7 @@
 
 .main__icon {
   position: absolute;
-  color: #A6B3C9;
+  color: #a6b3c9;
   left: 30px;
   top: 16px;
 }
@@ -46,11 +46,11 @@
 }
 
 .button_disabled .main__icon {
-  color: #CCD4E0;
+  color: #ccd4e0;
 }
 
 .button_disabled:hover .main__icon {
-  color: #CCD4E0;
+  color: #ccd4e0;
   left: 30px;
   top: 16px;
 }
@@ -98,7 +98,7 @@
 }
 
 .text_disabled {
-  color: #CCD4E0;
+  color: #ccd4e0;
 }
 
 .button:hover .text {
@@ -107,4 +107,32 @@
 
 .button_disabled:hover .text {
   margin-left: 201px;
+}
+
+@media screen and (max-width: 1000px) {
+  .button {
+    width: 500px;
+  }
+
+  .button:hover .text {
+    margin-left: 163px;
+  }
+
+  .text {
+    margin-left: 161px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    width: 272px;
+  }
+
+  .button:hover .text {
+    margin-left: 143px;
+  }
+
+  .text {
+    margin-left: 141px;
+  }
 }

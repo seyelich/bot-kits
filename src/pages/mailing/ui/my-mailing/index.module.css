@@ -151,3 +151,10 @@ td {
   background-color: #f8f9fb;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1150px) {
+  .buttons {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}

@@ -17,6 +17,7 @@ const Mailing: FC = () => {
             text="СОЗДАТЬ РАССЫЛКУ"
             width={188}
             height={46}
+            extraClass={styles.button__dekstop}
             onClick={() =>
               navigate(
                 window.location.pathname === '/mailing'
@@ -28,6 +29,23 @@ const Mailing: FC = () => {
         ) : null}
       </div>
       <Outlet />
+      {window.location.pathname === '/mailing' ? (
+        <div className={styles.button__mobile}>
+          <Button
+            type="green"
+            text="СОЗДАТЬ РАССЫЛКУ"
+            width={272}
+            height={56}
+            onClick={() =>
+              navigate(
+                window.location.pathname === '/mailing'
+                  ? '/mailing/start'
+                  : '/mailing/add'
+              )
+            }
+          />
+        </div>
+      ) : null}
     </section>
   );
 };
