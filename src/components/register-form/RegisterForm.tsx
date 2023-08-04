@@ -73,7 +73,7 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
             text="создать аккаунт"
             width={260}
             height={64}
-            isRegister
+            isAuth
           />
         </form>
 
