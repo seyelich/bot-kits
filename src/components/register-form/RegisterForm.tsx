@@ -9,10 +9,10 @@ import { items } from '../../utils/itemsForRegister';
 import robot from '../../images/registerRobot.png';
 
 interface RegisterFormProps {
-  logIn: ()=>void;
+  logIn: () => void;
 }
 
-const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
+const RegisterForm: FC<RegisterFormProps> = ({ logIn }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibility = () => {
@@ -42,7 +42,7 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
               width={325}
               height={60}
               error
-              textError='Ошибка'
+              textError="Ошибка"
             />
             <div className={styles.registerForm__passwordContainer}>
               <AuthInput
@@ -83,7 +83,9 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
           <span className={styles.registerForm__footer__text}>
             Уже прошли регистрацию?
           </span>
-            <span className={styles.registerForm__footer__link} onClick={logIn}>Войти</span>
+          <span className={styles.registerForm__footer__link} onClick={logIn}>
+            Войти
+          </span>
         </div>
         <img
           className={styles.registerForm__authImage}

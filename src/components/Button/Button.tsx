@@ -12,18 +12,30 @@ interface IButton {
   isAuth?: boolean;
 }
 
-const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isAuth }) => {
+const Button: FC<IButton> = ({
+  type,
+  onClick,
+  disabled,
+  text,
+  width,
+  height,
+  isAuth,
+}) => {
   return (
     <button
       className={`${styles.button} ${
         type === 'blue'
-          ? `${styles.button_blue} ${disabled ? styles.button_blue_disabled : ''}`
+          ? `${styles.button_blue} ${
+              disabled ? styles.button_blue_disabled : ''
+            }`
           : type === 'grey'
-          ? `${styles.button_grey} ${disabled ? styles.button_grey_disabled : ''}`
-          : `${styles.button_green} ${disabled ? styles.button_green_disabled : ''}`
-      } ${
-        isAuth && `${styles.regiser_button}`
-      }  `}
+          ? `${styles.button_grey} ${
+              disabled ? styles.button_grey_disabled : ''
+            }`
+          : `${styles.button_green} ${
+              disabled ? styles.button_green_disabled : ''
+            }`
+      } ${isAuth && `${styles.regiser_button}`}  `}
       onClick={onClick}
       style={{
         width,
@@ -32,7 +44,12 @@ const Button: FC<IButton> = ({ type, onClick, disabled, text, width, height, isA
       }}
       disabled={disabled}
     >
-      <p style={{ opacity: disabled && type === 'green' ? '.4' : undefined, margin: "0" }}>
+      <p
+        style={{
+          opacity: disabled && type === 'green' ? '.4' : undefined,
+          margin: '0',
+        }}
+      >
         {text}
       </p>
     </button>

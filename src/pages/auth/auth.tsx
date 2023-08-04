@@ -19,20 +19,34 @@ export default function Auth() {
     setState({ authState: 'ForgotPass' });
   };
 
-
-
   return (
-    <div className={`${styles.wrapper} ${state.authState !== "Register" && styles.wrapper_login}`}>
+    <div
+      className={`${styles.wrapper} ${
+        state.authState !== 'Register' && styles.wrapper_login
+      }`}
+    >
       <div className={styles.headerContainer}>
-      {state.authState === 'Register' ? <Logo width={149} height={35}/> : <Logo width={161.5} height={38}/>}
-        <h1 className={`${styles.title} ${state.authState !== "Register" && styles.title_login}`}>
+        {state.authState === 'Register' ? (
+          <Logo width={149} height={35} />
+        ) : (
+          <Logo width={161.5} height={38} />
+        )}
+        <h1
+          className={`${styles.title} ${
+            state.authState !== 'Register' && styles.title_login
+          }`}
+        >
           {state.authState === 'Register' && 'Регистрация'}
           {state.authState === 'Login' && 'Вход'}
           {state.authState === 'ForgotPass' && 'Восстановление пароля'}
         </h1>
       </div>
-      {state.authState === 'Register' && <RegisterForm logIn={handleLoginClick}/>}
-      {state.authState === 'Login' && <LoginForm signIn={handleRegisterClick} />}
+      {state.authState === 'Register' && (
+        <RegisterForm logIn={handleLoginClick} />
+      )}
+      {state.authState === 'Login' && (
+        <LoginForm signIn={handleRegisterClick} />
+      )}
       {state.authState === 'ForgotPass' && 'Восстановление пароля'}
     </div>
   );

@@ -32,7 +32,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto 25px;
-
 }
 
 .loginForm__form__menu {
@@ -46,7 +45,7 @@
   margin-right: 30px;
   color: #fff;
   text-align: right;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 600;
   line-height: 150%;
@@ -58,13 +57,11 @@
   opacity: 0.9;
 }
 
-
 .loginForm__form__menuItems:last-child {
   margin-right: 0;
 }
 
-
-.loginForm__footer{
+.loginForm__footer {
   position: relative;
   margin: 0 auto;
   padding-bottom: 32px;
@@ -75,7 +72,7 @@
   max-height: 175;
 }
 
-.loginForm__footerTitle{
+.loginForm__footerTitle {
   border-radius: 15px;
   background: #243cbb;
   color: #fff;
@@ -86,9 +83,9 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  color:#FFF;
+  color: #fff;
   text-align: center;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;

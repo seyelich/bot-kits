@@ -9,7 +9,7 @@ interface IAuthInput {
   value?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   error?: boolean;
-  textError?:string;
+  textError?: string;
 }
 
 const AuthInput: FC<IAuthInput> = ({
@@ -20,7 +20,7 @@ const AuthInput: FC<IAuthInput> = ({
   value,
   onChange,
   error,
-  textError
+  textError,
 }) => {
   return (
     <div className={styles.authInput__container}>
@@ -35,8 +35,20 @@ const AuthInput: FC<IAuthInput> = ({
         value={value}
         onChange={onChange}
       />
-      <span className={`${styles.authInput__necessarily} ${error && styles.authInput__necessarily_error}`}>*</span>
-      <span className={`${styles.authInput__textError} ${textError && styles.authInput__textError_visible}`}>{textError}</span>
+      <span
+        className={`${styles.authInput__necessarily} ${
+          error && styles.authInput__necessarily_error
+        }`}
+      >
+        *
+      </span>
+      <span
+        className={`${styles.authInput__textError} ${
+          textError && styles.authInput__textError_visible
+        }`}
+      >
+        {textError}
+      </span>
     </div>
   );
 };
