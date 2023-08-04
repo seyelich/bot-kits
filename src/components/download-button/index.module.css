@@ -1,0 +1,47 @@
+.block {
+  margin-top: 16px;
+}
+
+.button {
+  height: 65px;
+  border-radius: 10px;
+  border: 2px solid #a6b3c9;
+  border-style: dashed;
+  background-color: #fff;
+  padding: 21px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  justify-content: center;
+  color: #a6b3c9;
+  cursor: pointer;
+}
+
+.button_large {
+  width: 556px;
+}
+
+.button_medium {
+  width: 410px;
+}
+
+.button_small {
+  width: 272px;
+}
+
+.button_error {
+  border: 1px solid #ff5656;
+  color: #ccd4e0;
+}
+
+.error__message {
+  margin: 2px 0 0;
+  font-family: Open Sans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #ff5555;
+}

@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar-expanded {
   width: max-content;
   margin-right: 16px;
@@ -129,7 +135,7 @@
   padding: 13px;
   border-radius: 50%;
   background-color: var(--default-blue-color);
-  background-image: url("./icons/plus.svg");
+  background-image: url('./icons/plus.svg');
   background-repeat: no-repeat;
   background-position: center;
   transition: all .3s;
@@ -174,7 +180,7 @@
   margin-left: 8px;
   margin-bottom: 15px;
   stroke: var(--disabled-grey-color);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: var(--normal);
   font-size: var(--l-font-size);
   letter-spacing: var(--m-letter-space);
