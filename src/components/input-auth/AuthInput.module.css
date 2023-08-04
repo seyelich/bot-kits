@@ -14,20 +14,28 @@
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.5px;
-  color: #FFFFFF;
+  color: #ffffff;
   box-sizing: border-box;
 }
-.authInput:focus{
+.authInput:focus {
   outline: none;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
 }
-.authInput::placeholder{
-  color: #FFFFFF;
+.authInput::placeholder {
+  color: #ffffff;
   opacity: 0.6;
 }
+.authInput_error::placeholder {
+  color: #ff5555;
+  opacity: 1;
+}
+.authInput_error {
+  border-bottom: 2px solid rgba(255, 85, 85, 1);
+  color: #ff5555;
+}
 
-.authInput__necessarily{
-  color:#FFF;
+.authInput__necessarily {
+  color: #fff;
   text-align: right;
   font-size: 18px;
   font-weight: 400;
@@ -35,6 +43,28 @@
   letter-spacing: 0.75px;
   opacity: 0.6000000238418579;
   position: absolute;
-  top:18px;
+  top: 18px;
   right: 0px;
+}
+
+.authInput__necessarily_error {
+  color: #ff5555;
+  opacity: 1;
+}
+
+.authInput__textError {
+  position: absolute;
+  bottom: -16px;
+  left: 0px;
+  color: #f55;
+  font-family: 'PT Sans';
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  visibility: hidden;
+}
+
+.authInput__textError_visible {
+  visibility: visible;
 }

@@ -19,7 +19,6 @@ export default function Auth() {
     setState({ authState: 'ForgotPass' });
   };
 
-  console.log(state.authState !== "Register");
 
 
   return (

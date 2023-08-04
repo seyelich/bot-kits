@@ -41,6 +41,8 @@ const RegisterForm: FC<RegisterFormProps> = ({logIn}) => {
               placeholder="E-mail"
               width={325}
               height={60}
+              error
+              textError='Ошибка'
             />
             <div className={styles.registerForm__passwordContainer}>
               <AuthInput
