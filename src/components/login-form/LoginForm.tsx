@@ -6,9 +6,10 @@ import styles from './LoginForm.module.css';
 
 interface LoginFormProps {
   signIn: () => void;
+  forgotPass: () => void;
 }
 
-const LoginForm: FC<LoginFormProps> = ({ signIn }) => {
+const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -31,7 +32,7 @@ const LoginForm: FC<LoginFormProps> = ({ signIn }) => {
           />
         </div>
         <nav className={styles.loginForm__form__menu}>
-          <span className={styles.loginForm__form__menuItems}>
+          <span className={styles.loginForm__form__menuItems} onClick={forgotPass}>
             Забыли пароль?
           </span>
           <span className={styles.loginForm__form__menuItems} onClick={signIn}>
