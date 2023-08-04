@@ -11,6 +11,7 @@ import Share from './pages/share';
 import Subscription from './pages/subscription';
 import NotFound from './pages/not-found';
 import Layout from './components/Layout/Layout';
+// import Auth from './pages/auth/auth';
 import FirstMailing from './pages/mailing/ui/first-mailing/FirstMailing';
 import MyMailing from './pages/mailing/ui/my-mailing/MyMailing';
 import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
