@@ -1,6 +1,7 @@
 .block {
-  max-width: 556px;
+  max-width: 524px;
   padding: 12px 16px 16px;
+  margin-top: 16px;
   background-color: #f8f9fb;
   border-radius: 10px;
   display: flex;
@@ -25,25 +26,34 @@
   flex-direction: row;
   column-gap: 8px;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
   border-radius: 10px;
-  transition: background-color .1s linear;
+  background-color: #f2f4f8;
+  transition: background-color 0.1s linear;
+}
+
+.block__text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
 }
 
 .block__button:active {
   background-color: #ecefff;
 }
 
-.block__button > svg {
+.block__button > div > svg {
   color: #a6b3c9;
-  transition: color .1s linear;
+  transition: color 0.1s linear;
 }
 
-.block__button:hover > svg {
+.block__button:hover > div > svg {
   color: #243cbb;
 }
 
-.block__button > p {
+.block__button > div > p {
   margin: 0;
   font-family: Open Sans;
   font-size: 13px;
@@ -52,10 +62,10 @@
   letter-spacing: 0.30000001192092896px;
   text-align: left;
   color: #8392ab;
-  transition: color .1s linear;
+  transition: color 0.1s linear;
 }
 
-.block__button:hover > p {
+.block__button:hover > div > p {
   color: #243cbb;
 }
 
@@ -63,10 +73,34 @@
   background-color: #ecefff;
 }
 
-.block__button_active > svg {
+.block__button_active > div > svg {
   color: #243cbb;
 }
 
-.block__button_active > p {
+.block__button_active > div > p {
   color: #243cbb;
+}
+
+.block__input {
+  width: calc(100% - 16px);
+  padding: 10px 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background-color: #f2f4f8;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  color: #060c23;
+  border: none;
+}
+
+.block__input:focus {
+  outline: none;
+}
+
+.block__input::placeholder {
+  color: #bfc9d9;
 }
