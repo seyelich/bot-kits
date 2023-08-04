@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   text-align: center;
   border-radius: 10px;
-  font-family: IBM Plex Mono;
+  font-family: "IBM Plex Mono", sans-serif;
   transition: background-color 0.1s linear;
 }
 
