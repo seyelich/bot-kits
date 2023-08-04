@@ -6,11 +6,17 @@
   max-height: 868px;
   border-radius: 16px;
   background-color: rgba(248, 249, 251, 1);
-  transition: .2s;
+  transition: 0.2s;
   @media (max-width: 375px) {
     display: flex;
     min-width: 280px;
     background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
   }
 }
 
@@ -62,23 +68,23 @@
 
 .title {
   display: grid;
-  grid-template-areas: "logo btn";
+  grid-template-areas: 'logo btn';
   gap: 12px;
   margin-left: 6px;
   padding: 20px 12px 0px;
   overflow: visible;
-  transition: all .3s;
+  transition: all 0.3s;
   @media (max-width: 670px) {
-  grid-template-areas: "logo";
+    grid-template-areas: 'logo';
     min-height: 48px;
     padding: 20px 12px 15px;
 
-  background-color: rgba(248, 249, 251, 1);
+    background-color: rgba(248, 249, 251, 1);
     zoom: 0.9;
-  };
+  }
   @media (max-width: 375px) {
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-areas: "btn . logo";
+    grid-template-areas: 'btn . logo';
   }
 }
 
@@ -89,8 +95,8 @@
   grid-area: btn;
   width: 0px;
   border: none;
-  fill: #D7DEEA;
-  stroke: #D7DEEA;
+  fill: #d7deea;
+  stroke: #d7deea;
   background-color: inherit;
   cursor: pointer;
   zoom: 1.05;
@@ -100,7 +106,7 @@
     align-self: flex-start;
     fill: var(--primary-text-color);
     stroke: var(--primary-text-color);
-  };
+  }
   @media (max-width: 375px) {
     display: block;
   }
@@ -137,10 +143,10 @@
   text-align: center;
   text-decoration: none;
   background-color: var(--default-blue-color);
-  background-image: url("./icons/plus.svg");
+  background-image: url('./icons/plus.svg');
   background-repeat: no-repeat;
   background-position: center;
-  transition: all .3s;
+  transition: all 0.3s;
   @media (max-width: 670px) {
     order: 1;
     margin-top: 26px;
@@ -155,17 +161,17 @@
   visibility: hidden;
   opacity: 0;
   color: #fff;
-  font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 600;
   letter-spacing: var(--m-letter-space);
   text-transform: uppercase;
-  transition: all .4s;
+  transition: all 0.4s;
   white-space: nowrap;
   @media (max-width: 670px) {
     position: absolute;
     right: -134px;
     color: var(--primary-text-color);
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: none;
   }
 }
@@ -182,7 +188,7 @@
   overflow: hidden;
   color: var(--primary-text-color);
   stroke: var(--disabled-grey-color);
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: var(--normal);
   font-size: var(--l-font-size);
   letter-spacing: var(--m-letter-space);
@@ -207,7 +213,7 @@
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
-  transition: all .2s;
+  transition: all 0.2s;
   white-space: nowrap;
   @media (max-width: 375px) {
     visibility: visible;
