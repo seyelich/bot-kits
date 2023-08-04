@@ -20,6 +20,8 @@
 }
 
 .mailing__title {
+  display: flex;
+  align-items: center;
   margin: 0;
   font-family: IBM Plex Mono;
   font-size: 24px;
@@ -40,6 +42,7 @@
 }
 
 .filter__text {
+  margin: 0;
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 600;
@@ -50,6 +53,7 @@
 }
 
 .filter__icon {
+  margin-top: 2px;
   cursor: pointer;
   transition: transform 0.2s linear;
 }
@@ -152,9 +156,129 @@ td {
   cursor: pointer;
 }
 
+.table__mobile {
+  display: none;
+}
+
+.button__mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1150px) {
   .buttons {
     flex-direction: column;
     row-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mailing__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .mailings {
+    padding: 24px;
+  }
+
+  .table {
+    display: none;
+  }
+
+  .mailing__header {
+    margin-bottom: 32px;
+  }
+
+  .table__mobile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f2f4f8;
+  }
+
+  .row__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .row__name {
+    margin: 0;
+    font-family: Open Sans;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    color: #060c23;
+  }
+
+  .row__id {
+    margin: 0;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    color: #a6b3c9;
+  }
+
+  .row__messages {
+    margin: 0;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+    color: #060c23;
+  }
+
+  .row__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+  }
+
+  .row__iconBlock {
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    align-items: center;
+  }
+
+  .row__status {
+    margin: 0;
+    font-family: Open Sans;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.30000001192092896px;
+    text-align: left;
+  }
+
+  .button__mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about {
+    padding: 32px 24px;
+    row-gap: 20px;
+  }
+
+  .buttons {
+    row-gap: 12px;
   }
 }

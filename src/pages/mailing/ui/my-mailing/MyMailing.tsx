@@ -1,15 +1,38 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable arrow-body-style */
-/* eslint-disable import/prefer-default-export */
 import React, { FC, useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import styles from './index.module.css';
 
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
+import Button from '../../../../components/Button/Button';
+import IconWithPercents from '../icon-with-percents/IconWithPercents';
 
-const data = [
+interface IData {
+  id: number;
+  name: string;
+  messenger:
+    | 'Telegram'
+    | 'VK'
+    | 'Viber'
+    | 'Whatsapp'
+    | 'Alisa'
+    | 'Google'
+    | 'Facebook'
+    | 'Youtube'
+    | 'Instagram'
+    | 'Twitter'
+    | 'Web'
+    | 'Odnoklassniki'
+    | 'Mailru'
+    | 'Yandex';
+  messages: string;
+  conversion: string;
+  status: string;
+}
+
+const data: IData[] = [
   {
     id: 22496346,
     name: '№1',
@@ -36,7 +59,8 @@ const data = [
   },
 ];
 
-export const MyMailing: FC = () => {
+const MyMailing: FC = () => {
+  const navigate = useNavigate();
   const [arrowRotate, setArrowRotate] = useState(false);
   const [mailings, setMailings] = useState(data);
 
@@ -98,26 +122,68 @@ export const MyMailing: FC = () => {
             <th style={{ width: '132px' }}>Конверсия</th>
             <th style={{ width: '122px' }}>Статус запуска</th>
           </tr>
-          {mailings.map((el) => {
-            return (
-              <tr key={el.id}>
-                <td>{el.id}</td>
-                <td>{el.name}</td>
-                <td>{el.messenger}</td>
-                <td>{el.messages}</td>
-                <td>{el.conversion}</td>
-                <td
-                  style={{
-                    fontWeight: 600,
-                    color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
-                  }}
-                >
-                  {el.status}
-                </td>
-              </tr>
-            );
-          })}
+          {mailings.map((el) => (
+            <tr key={el.id}>
+              <td>{el.id}</td>
+              <td>{el.name}</td>
+              <td>{el.messenger}</td>
+              <td>{el.messages}</td>
+              <td>{el.conversion}</td>
+              <td
+                style={{
+                  fontWeight: 600,
+                  color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
+                }}
+              >
+                {el.status}
+              </td>
+            </tr>
+          ))}
         </table>
+        <div className={styles.table__mobile}>
+          {mailings.map((el) => (
+            <div className={styles.row}>
+              <div className={styles.row__iconBlock}>
+                <IconWithPercents
+                  messenger={el.messenger}
+                  conversion={el.conversion}
+                />
+                <div className={styles.row__info}>
+                  <div className={styles.row__header}>
+                    <p className={styles.row__name}>{el.name}</p>
+                    <p className={styles.row__id}>{el.id}</p>
+                  </div>
+                  <p className={styles.row__messages}>{el.messages}</p>
+                </div>
+              </div>
+              <p
+                className={styles.row__status}
+                style={{
+                  color: el.status === 'Запущено' ? '#00E98F' : '#243CBB',
+                }}
+              >
+                {el.status}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div>
+          <div className={styles.button__mobile}>
+            <Button
+              type="green"
+              text="СОЗДАТЬ РАССЫЛКУ"
+              width={272}
+              height={56}
+              onClick={() =>
+                navigate(
+                  window.location.pathname === '/mailing'
+                    ? '/mailing/start'
+                    : '/mailing/add'
+                )
+              }
+            />
+          </div>
+        </div>
       </div>
       <div className={styles.about}>
         <h3 className={styles.about__title}>Как это работает?</h3>
@@ -129,3 +195,5 @@ export const MyMailing: FC = () => {
     </div>
   );
 };
+
+export default MyMailing;
