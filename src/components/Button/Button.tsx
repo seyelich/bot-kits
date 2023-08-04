@@ -1,3 +1,4 @@
+/* eslint-disable no-unneeded-ternary */
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
@@ -6,11 +7,12 @@ interface IButton {
   type: 'blue' | 'green' | 'grey';
   onClick?: VoidFunction;
   disabled?: boolean;
-  text: string;
+  text?: string;
   width: number;
   height: number;
   extraClass?: string;
   isAuth?: boolean;
+  children?: React.ReactNode;
 }
 
 const Button: FC<IButton> = ({
@@ -22,6 +24,7 @@ const Button: FC<IButton> = ({
   height,
   extraClass,
   isAuth,
+  children,
 }) => (
   <button
     className={`${styles.button} ${
@@ -42,14 +45,18 @@ const Button: FC<IButton> = ({
     }}
     disabled={disabled}
   >
-    <p
-      style={{
-        opacity: disabled && type === 'green' ? '.4' : undefined,
-        margin: '0',
-      }}
-    >
-      {text}
-    </p>
+    {children ? (
+      children
+    ) : (
+      <p
+        style={{
+          opacity: disabled && type === 'green' ? '.4' : undefined,
+          margin: '0',
+        }}
+      >
+        {text}
+      </p>
+    )}
   </button>
 );
 export default Button;
