@@ -26,13 +26,72 @@
   padding: 20px 0 30px 0;
 }
 
-.wrapper_login{
+.wrapper_login {
   padding: 30px 0 104px 0;
-
 }
 
-.title_login{
+.title_login {
   padding: 30px 0 30px 0;
 }
 
+.registerOnEmail {
+  max-width: 1440px;
+  box-sizing: border-box;
+  height: 900px;
+  width: 100%;
+  padding: 0 135px;
+  background-color: #243cbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
+.registerOnEmail__closeIcon{
+  position: absolute;
+  top:30px;
+  right:30px;
+  cursor: pointer;
+  transition: all 0.4ms ease-in-out;
+}
+.registerOnEmail__closeIcon:hover{
+  opacity: 0.7;
+}
+
+.registerOnEmail__titleContainer {
+  max-width: 570px;
+  width: 100%;
+  max-height: 280px;
+  margin: 290px 0 330px;
+}
+
+.registerOnEmail__titleText {
+  color: #fff;
+  font-family: 'IBM Plex Mono';
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.registerOnEmail__titleIcon {
+  width: 158px;
+  height: 60px;
+  border-radius: 14px;
+  background: #435cdb;
+  color: #2fa;
+  font-family: 'IBM Plex Mono';
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.2px;
+  padding: 9px 23px 9px 20px;
+  margin: 0px 10px 0px 20px;
+  position: relative;
+  bottom: 7px;
+  left: 2px;
+}
+
+.registerOnEmail__titleImage {
+  margin: 165px 0 200px 30px;
+}
