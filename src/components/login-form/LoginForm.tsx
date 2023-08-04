@@ -12,30 +12,26 @@ const LoginForm = () => {
   return (
     <div className={styles.loginForm}>
       <form className={styles.loginForm__form} onSubmit={handleSubmit}>
-        <AuthInput type="email" placeholder="Email" width={570} height={60} />
-        <AuthInput
-          type="password"
-          placeholder="Пароль"
-          width={570}
-          height={60}
-        />
+        <div className={styles.loginForm__formContainer}>
+          <AuthInput type="email" placeholder="Email" width={570} height={60} />
+          <AuthInput
+            type="password"
+            placeholder="Пароль"
+            width={570}
+            height={60}
+          />
+        </div>
         <nav className={styles.loginForm__form__menu}>
           <span className={styles.loginForm__form__menuItems}>
             Забыли пароль?
           </span>
           <span className={styles.loginForm__form__menuItems}>Регистрация</span>
         </nav>
-        <Button
-          type="green"
-          text="войти"
-          width={260}
-          height={64}
-          isAuth
-        />
+        <Button type="green" text="войти" width={260} height={64} isAuth />
       </form>
       <div className={styles.loginForm__footer}>
         <p className={styles.loginForm__footerTitle}>Быстрый вход</p>
-      <NavLinkBar />
+        <NavLinkBar />
       </div>
     </div>
   );
