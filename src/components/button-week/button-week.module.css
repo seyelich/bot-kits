@@ -17,7 +17,7 @@
 
 
 
-  @media (max-width: 512px) {
+  @media (max-width: 767px) {
     font-size: 13px;
     line-height: 19.5px;
     letter-spacing: 0.3px;
@@ -43,7 +43,7 @@
   color: rgba(36, 60, 187, 1);
   font-weight: 600;
 
-  @media (max-width: 512px) {
+  @media (max-width: 767px) {
     font-size: 13px;
     line-height: 19.5px;
     letter-spacing: 0.3px;
