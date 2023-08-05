@@ -1,5 +1,11 @@
 .user {
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: 71px 1.06fr 1.25fr 1.28fr 1fr 1fr;
   align-items: center;
+  height: 60px;
+  border-bottom: 2px solid #d7deea;
+}
+
+.last-column {
+  justify-self: flex-end;
 }

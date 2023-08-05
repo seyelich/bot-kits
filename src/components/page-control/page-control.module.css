@@ -1,14 +1,35 @@
 .container {
+  margin-left: 30px;
   display: flex;
-  gap: 10px;
+  gap: 4px;
 }
 
 .page {
-  background-color: blue;
-  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--primary-text-color);
 }
 
 .page_active {
-  background-color: white;
-  color: blue;
+  background-color: var(--default-blue-color);
+  color: #fff;
+}
+
+.navbuttons {
+  margin-left: 19px;
+}
+
+.navbutton {
+  margin-right: 6px;
+  width: 24px;
+  height: 24px;
+  stroke: var(--primary-text-color);
+}
+
+.navbutton:disabled {
+  stroke: var(--disabled-grey-color);
+  cursor: auto;
 }

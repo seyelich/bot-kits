@@ -6,6 +6,7 @@ import UserCheckbox from '../user-checkbox/user-checkbox';
 type TUserRowProps = TUser & {
   checked: boolean;
   setChecked: Dispatch<SetStateAction<Set<string>>>;
+  extraClass?: string;
 };
 
 export default function UserRow({
@@ -17,9 +18,10 @@ export default function UserRow({
   phone = '-',
   checked = false,
   setChecked,
+  extraClass = '',
 }: TUserRowProps) {
   return (
-    <div className={styles.user}>
+    <div className={`${styles.user} ${extraClass}`}>
       <UserCheckbox
         check={checked}
         onClick={() =>
@@ -38,7 +40,7 @@ export default function UserRow({
       <p>{surname}</p>
       <p>{username}</p>
       <p>{messengerId}</p>
-      <p>{phone}</p>
+      <p className={styles['last-column']}>{phone}</p>
     </div>
   );
 }

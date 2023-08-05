@@ -1,0 +1,31 @@
+.container {
+  margin-bottom: 22px;
+  padding: 29px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+}
+
+.title {
+  margin-bottom: 8px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table-head {
+  display: grid;
+  grid-template-columns: 71px 1.06fr 1.25fr 1.28fr 1fr 1fr;
+  align-items: center;
+  height: 60px;
+  border-bottom: 2px solid #d7deea;
+}
+
+.table-head__text {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.last-column {
+  justify-self: flex-end;
+}

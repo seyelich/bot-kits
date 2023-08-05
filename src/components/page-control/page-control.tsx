@@ -35,47 +35,49 @@ export default function PageControl({
   return (
     <div className={styles.container}>
       {pages}
-      <button
-        type="button"
-        disabled={page === 1}
-        onClick={() => setCurrent((current) => --current)}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="none"
+      <div className={styles.navbuttons}>
+        <button
+          type="button"
+          disabled={page === 1}
+          onClick={() => setCurrent((current) => --current)}
+          className={styles.navbutton}
         >
-          <path
-            stroke="#CCD4E0"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12.15 15.834 6.317 10l5.833-5.833"
-          />
-        </svg>
-      </button>
-      <button
-        type="button"
-        disabled={page === count}
-        onClick={() => setCurrent((current) => ++current)}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="none"
-          transform="rotate(180)"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12.15 15.834 6.317 10l5.833-5.833"
+            />
+          </svg>
+        </button>
+        <button
+          type="button"
+          disabled={page === count}
+          onClick={() => setCurrent((current) => ++current)}
+          className={styles.navbutton}
         >
-          <path
-            stroke="#CCD4E0"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12.15 15.834 6.317 10l5.833-5.833"
-          />
-        </svg>
-      </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            transform="rotate(180)"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12.15 15.834 6.317 10l5.833-5.833"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }

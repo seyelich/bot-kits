@@ -9,11 +9,11 @@ import TrashIcon from '../../icons/others/Trash';
 import UploadIcon from '../../icons/others/Upload';
 import DownloadIcon from '../../icons/others/Download';
 import Button from '../../components/Button/Button';
-import getFakeUsers from './get-fake-users';
 import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
 import PerPageSelector from '../../components/per-page-selector/per-page-selector';
+import useFakeUsers from './use-fake-users';
 
 function MoreIcon() {
   return (
@@ -31,12 +31,22 @@ export default function Share() {
   const [perPage, setPerPage] = useState<number>(10);
   const [current, setCurrent] = useState<number>(1);
   const [users, setUsers] = useState<Array<TUser>>([]);
+  const { getUsers, removeUsers } = useFakeUsers();
 
-  useEffect(() => {
-    const res = getFakeUsers(perPage, (current - 1) * perPage);
+  function refreshUsers() {
+    const res = getUsers(perPage, (current - 1) * perPage);
     setUsers(res.users);
     setChecked(new Set());
     setTotal(res.total);
+  }
+
+  function deleteUsers() {
+    removeUsers(Array.from(checked));
+    refreshUsers();
+  }
+
+  useEffect(() => {
+    refreshUsers();
   }, [current, perPage]);
 
   return (
@@ -48,6 +58,7 @@ export default function Share() {
           text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ"
           width={237}
           height={46}
+          extraClass={styles.greenbutton}
         />
       </div>
       <div className={styles.filter}>
@@ -61,15 +72,19 @@ export default function Share() {
         />
         <div className={styles['panel-buttons']}>
           <button type="button" className={styles['panel-button']}>
-            {UploadIcon({ color: 'var(--primary-text-color)' })}
+            {UploadIcon({ color: 'currentColor' })}
             Экспорт
           </button>
           <button type="button" className={styles['panel-button']}>
-            {DownloadIcon({ color: 'var(--primary-text-color)' })}
+            {DownloadIcon({ color: 'currentColor' })}
             Импорт
           </button>
-          <button type="button" className={styles['panel-button']}>
-            {TrashIcon({ color: 'var(--primary-text-color)' })}
+          <button
+            type="button"
+            className={styles['panel-button']}
+            onClick={() => deleteUsers()}
+          >
+            {TrashIcon({ color: 'currentColor' })}
             Удалить
           </button>
           <IconButton width={24} height={24} icon={MoreIcon() as ReactNode} />
