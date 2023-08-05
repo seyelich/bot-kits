@@ -138,7 +138,7 @@
   align-items: center;
   justify-content: center;
 }
-.registerForm__socialContainer__navBar{
+.registerForm__socialContainer__navBar {
   margin-bottom: 28px;
 }
 .registerForm__footer__text {
@@ -171,13 +171,11 @@
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background-image: url("../../images/registerRobot1440.png");
+  background-image: url('../../images/registerRobot1440.png');
   width: 225px;
   height: 187px;
   transition: all 0.2s ease-in-out;
 }
-
-
 
 @media screen and (max-width: 790px) {
   .registerForm {
@@ -194,24 +192,21 @@
     max-width: 300px;
   }
 
-  .registerForm__phoneInput{
+  .registerForm__phoneInput {
     max-width: 175px;
-
-
   }
 
   .registerForm__authImage {
-    background-image: url("../../images/registerRobot768.png");
+    background-image: url('../../images/registerRobot768.png');
     width: 205px;
   }
 }
-
-
 
 @media screen and (max-width: 660px) {
   .registerForm {
     max-width: 700px;
     max-height: 821px;
+    height: 100%;
   }
 
   .registerForm__socialContainer {
@@ -219,53 +214,90 @@
     flex-direction: column;
     align-items: center;
     max-height: 170px;
-}
+  }
 
-.registerForm__socialContainer__navBar{
-  margin-bottom: 23px;
-}
-.registerForm__socialContainer__footerText {
-  margin-bottom: 0px;
-  margin-top: -14px;
-}
+  .registerForm__socialContainer__navBar {
+    margin-bottom: 23px;
+  }
+  .registerForm__socialContainer__footerText {
+    margin-bottom: 0px;
+    margin-top: -14px;
+  }
 
   .registerForm__inputContainer {
     margin-bottom: 40px;
     max-height: 300px;
+    height: 100%;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .registerForm__phoneContainer {
     max-width: 300px;
   }
 
-  .registerForm__phoneInput{
+  .registerForm__phoneInput {
     max-width: 175px;
   }
 
   .registerForm__wrapper {
     max-height: 662px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
-
 
   .registerForm__footer {
     max-height: 300px;
     margin: 30px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .registerForm__authImage {
-    background-image: url("../../images/registerRobot360.png");
+    background-image: url('../../images/registerRobot360.png');
     width: 230px;
     height: 145px;
     position: relative;
     margin: 30px auto 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .registerForm__socialContainer__title {
+    font-family: "Open Sans";
+    max-width: 320px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22.5px;
+    letter-spacing: 0.5px;
+    margin: 25px 0 0;
+  }
+
+  .registerForm__socialContainer__navBar {
+  }
+  .registerForm__socialContainer__footerText {
+    position: relative;
+    top: 10px;
+  }
+
+  .registerForm__form {
+    margin-top: 25px;
+  }
+
+  .registerForm__inputContainer {
+    min-height: 307px;
+  }
+
+  .registerForm__passwordContainer {
+    margin-top: 0;
+  }
+
+  .registerForm__phoneContainer {
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .registerForm__phoneInput {
+    max-width: 195px;
+  }
+
+  .registerForm__wrapper {
+    max-height: 670px;
+    border-radius: 30px 30px 0 0;
   }
 }

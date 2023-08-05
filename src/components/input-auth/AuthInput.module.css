@@ -1,7 +1,6 @@
 .authInput__container {
   max-width: 570px;
-  box-sizing: border-box;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
 }
 
@@ -79,5 +78,19 @@
   }
   .authInput {
     max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .authInput__container {
+    max-width: 320px;
+  }
+  .authInput {
+    max-width: 320px;
+  }
+  .authInput__textError {
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
   }
 }

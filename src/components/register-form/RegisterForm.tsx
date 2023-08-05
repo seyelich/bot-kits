@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
@@ -6,7 +6,6 @@ import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './RegisterForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 import { items } from '../../utils/itemsForRegister';
-import robot from '../../images/registerRobot.png';
 
 interface RegisterFormProps {
   logIn: () => void;
@@ -15,6 +14,18 @@ interface RegisterFormProps {
 
 const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -31,7 +42,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
           Создай аккаунт с помощью
         </p>
         <div className={styles.registerForm__socialContainer__navBar}>
-        <NavLinkBar />
+          <NavLinkBar />
         </div>
         <p className={styles.registerForm__socialContainer__footerText}>или</p>
       </div>
@@ -66,19 +77,19 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
             <div className={styles.registerForm__phoneContainer}>
               <SelectCodeNumber items={items} />
               <div className={styles.registerForm__phoneInput}>
-              <AuthInput
-                type="text"
-                placeholder="Телефон"
-                width={200}
-                height={60}
-              />
+                <AuthInput
+                  type="text"
+                  placeholder="Телефон"
+                  width={200}
+                  height={60}
+                />
               </div>
             </div>
           </div>
           <Button
             type="green"
             text="создать аккаунт"
-            width={260}
+            width={windowWidth <= 400 ? 320 : 260}
             height={64}
             isAuth
             onClick={handleRegister}
@@ -93,7 +104,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
             Войти
           </span>
         </div>
-        <div className={styles.registerForm__authImage}/>
+        <div className={styles.registerForm__authImage} />
       </div>
     </div>
   );

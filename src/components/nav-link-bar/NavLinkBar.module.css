@@ -29,9 +29,21 @@
   @media screen and (max-width: 660px){
 
     .navLinkBar_menu{
-      border-radius: 30px;
-      background:#314DD8;
       margin: 0 20px 0 0;
+    }
+
+    .navLinkBar_menuItem{
+      margin: 8px 2px 8px 8px;
+    }
+    .navLinkBar_menuItem:last-child {
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+
+    .navLinkBar_menu{
+      margin: 15px 0 0;
     }
 
     .navLinkBar_menuItem{

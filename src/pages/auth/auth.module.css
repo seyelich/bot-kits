@@ -113,8 +113,8 @@
 
 @media screen and (max-width: 660px) {
   .wrapper {
-    padding: 20px 0 0 0;
-    height: 900px;
+    padding: 15px 0 0 0;
+    max-height: 1024px;
   }
 }
 
@@ -132,7 +132,10 @@
 @media screen and (max-width: 660px) {
   .wrapper {
     padding: 20px 0 0 0;
-    height: 900px;
+    height: 941px;
+  }
+  .title {
+    padding: 15px 0 20px 0;
   }
 }
 
