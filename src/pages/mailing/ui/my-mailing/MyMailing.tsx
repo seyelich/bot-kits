@@ -63,6 +63,7 @@ const MyMailing: FC = () => {
   const navigate = useNavigate();
   const [arrowRotate, setArrowRotate] = useState(false);
   const [mailings, setMailings] = useState(data);
+  const [showTutotialButtons, setShowtutorialButtons] = useState(true);
 
   return (
     <div className={styles.section}>
@@ -186,11 +187,23 @@ const MyMailing: FC = () => {
         </div>
       </div>
       <div className={styles.about}>
-        <h3 className={styles.about__title}>Как это работает?</h3>
-        <div className={styles.buttons}>
-          <TutorialButton type="instruction" />
-          <TutorialButton type="video" />
+        <div className={styles.about__header}>
+          <h3 className={styles.about__title}>Как это работает?</h3>
+          <div
+            onClick={() => setShowtutorialButtons(!showTutotialButtons)}
+            className={`${styles.about__icon} ${
+              showTutotialButtons && styles.about__icon_rotated
+            }`}
+          >
+            <ChevronBigIcon width={26} height={26} />
+          </div>
         </div>
+        {showTutotialButtons && (
+          <div className={styles.buttons}>
+            <TutorialButton type="instruction" />
+            <TutorialButton type="video" />
+          </div>
+        )}
       </div>
     </div>
   );

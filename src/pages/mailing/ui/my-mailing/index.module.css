@@ -164,6 +164,25 @@ td {
   display: none;
 }
 
+.about__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__icon {
+  display: none;
+  transition: transform .2s linear;
+  cursor: pointer;
+  color: #BFC9D9;
+  transform: rotate(180deg);
+}
+
+.about__icon_rotated {
+  transform: rotate(0deg);
+}
+
 @media screen and (max-width: 1150px) {
   .buttons {
     flex-direction: column;
@@ -280,5 +299,19 @@ td {
 
   .buttons {
     row-gap: 12px;
+    animation: show_tutorial_buttons .2s ease;
+  }
+
+  .about__icon {
+    display: block;
+  }
+}
+
+@keyframes show_tutorial_buttons {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
   }
 }
