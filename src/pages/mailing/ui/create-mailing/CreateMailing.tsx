@@ -230,13 +230,24 @@ const CreateMailing: FC = () => {
           >
             ВЫЙТИ
           </button>
-          <Button
-            type="green"
-            text="ДАЛЕЕ"
-            width={188}
-            height={65}
-            onClick={() => navigate('/mailing/conditions')}
-          />
+          <div className={styles.next}>
+            <Button
+              type="green"
+              text="ДАЛЕЕ"
+              width={188}
+              height={65}
+              onClick={() => navigate('/mailing/conditions')}
+            />
+          </div>
+          <div className={styles.next__mobile}>
+            <Button
+              type="green"
+              text="ДАЛЕЕ"
+              width={130}
+              height={48}
+              onClick={() => navigate('/mailing/conditions')}
+            />
+          </div>
         </div>
       </div>
       <Widget name={name} text={text} />

@@ -109,3 +109,14 @@
     width: 410px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .block {
+    width: 272px;
+    margin-top: 0;
+  }
+
+  .block__icon {
+    display: none;
+  }
+}

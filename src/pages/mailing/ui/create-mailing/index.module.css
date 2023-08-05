@@ -250,7 +250,6 @@
 }
 
 .block__icons {
-  /* max-width: 556px; */
   max-width: 100%;
   display: flex;
   flex-direction: row;
@@ -356,6 +355,10 @@
   cursor: pointer;
 }
 
+.next__mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .inputs {
     flex-direction: column;
@@ -400,5 +403,42 @@
 
   .block__icons::-webkit-scrollbar {
     display: none;
+  }
+
+  .select__block {
+    width: 272px;
+  }
+
+  .select {
+    width: 272px;
+  }
+
+  .select__list {
+    width: 272px;
+  }
+
+  .textarea__input {
+    width: 272px;
+  }
+
+  .navigation__exit {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .next {
+    display: none;
+  }
+
+  .next__mobile {
+    display: block;
+  }
+
+  .navigation {
+    padding: 32px 24px;
+  }
+
+  .block__icons {
+    padding: 24px;
   }
 }
