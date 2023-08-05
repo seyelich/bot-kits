@@ -44,6 +44,8 @@
   font-size: 13px;
   color: var(--primary-text-color);
   letter-spacing: .3px;
+  border: none;
+  background: none;
 }
 
 .panel-button:hover {

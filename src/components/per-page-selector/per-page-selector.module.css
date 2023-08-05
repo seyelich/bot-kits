@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--default-grey-color);
+  border: none;
   border-radius: 5px;
 }
 
@@ -21,4 +22,5 @@
 
 .panel-active {
   display: flex;
+  z-index: 1;
 }

@@ -2,6 +2,7 @@
   margin-left: 30px;
   display: flex;
   gap: 4px;
+  align-items: center;
 }
 
 .page {
@@ -10,6 +11,8 @@
   border-radius: 2px;
   font-weight: 600;
   font-size: 13px;
+  border: none;
+  background: none;
   color: var(--primary-text-color);
 }
 
@@ -26,7 +29,11 @@
   margin-right: 6px;
   width: 24px;
   height: 24px;
+  padding: 3px;
+  border: none;
+  background: none;
   stroke: var(--primary-text-color);
+  cursor: pointer;
 }
 
 .navbutton:disabled {
