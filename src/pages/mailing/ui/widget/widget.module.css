@@ -170,3 +170,42 @@
   right: 0;
   bottom: 0;
 }
+
+.widget__nameIcon {
+  display: none;
+}
+
+.widget__nameBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.widget_hide {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .arrow {
+    display: none;
+  }
+
+  .widget {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: -80px;
+  }
+
+  .widget__block {
+    width: 100%;
+    height: 100%;
+  }
+
+  .widget__nameIcon {
+    display: block;
+    cursor: pointer;
+  }
+}

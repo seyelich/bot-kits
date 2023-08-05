@@ -6,40 +6,48 @@ import BotLogoIcon from '../../../../icons/others/BotLogo';
 import RobotIcon from '../../../../icons/others/Robot';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import Button from '../../../../components/Button/Button';
-
+import CloseIcon from '../../../../icons/others/Close';
 
 interface IWidget {
   name: string;
   text: string;
+  hideSection: boolean;
+  setHideSection: (arg: boolean) => void;
 }
 
-const Widget: FC<IWidget> = ({ name, text }) => {
+const Widget: FC<IWidget> = ({ name, text, hideSection, setHideSection }) => {
   const [showWidget, setShowWidget] = useState(true);
 
   return (
-    <div className={styles.widget}>
+    <div className={`${styles.widget} ${hideSection && styles.widget_hide}`}>
       <button
         type="button"
         className={styles.arrow}
         onClick={() => setShowWidget(!showWidget)}
       >
-        {
-          <div
-            className={
-              showWidget
-                ? `${styles.arrow__rotate} ${styles.arrow__rotate_rotated}`
-                : styles.arrow__rotate
-            }
-          >
-            <ChevronBigIcon width={16} height={16} />
-          </div>
-        }
+        <div
+          className={
+            showWidget
+              ? `${styles.arrow__rotate} ${styles.arrow__rotate_rotated}`
+              : styles.arrow__rotate
+          }
+        >
+          <ChevronBigIcon width={16} height={16} />
+        </div>
       </button>
       {showWidget ? (
         <div className={styles.widget__block}>
           <div className={styles.widget__header}>
             <p className={styles.widget__type}>Тестовый виджет</p>
-            <p className={styles.widget__name}>{name}</p>
+            <div className={styles.widget__nameBlock}>
+              <p className={styles.widget__name}>{name}</p>
+              <div
+                className={styles.widget__nameIcon}
+                onClick={() => setHideSection(false)}
+              >
+                <CloseIcon width={24} height={24} color="#060C23" />
+              </div>
+            </div>
           </div>
           <div className={styles.widget__container}>
             <div className={styles.widget__chat}>

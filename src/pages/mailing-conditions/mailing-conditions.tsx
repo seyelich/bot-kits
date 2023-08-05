@@ -86,7 +86,12 @@ export default function MailingConditions() {
                 <ChevronBigIcon width={16} height={16} />
               </div>
             </button>
-            <Widget name={name} text={text} />
+            <Widget
+              name={name}
+              text={text}
+              hideSection={false}
+              setHideSection={() => {}}
+            />
           </div>
         )}
       </section>
