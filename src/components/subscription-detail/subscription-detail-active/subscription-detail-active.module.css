@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  padding-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, min-content) 0 min-content;
+  row-gap: 12px;
+}
+
+.comment{
+  margin: 0;
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.comment__line {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: var(--s-font-size);
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  text-align: left;
+}
+
+.payment_data {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.payment_card {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  color: var(--placeholder-grey-color);
+}
+
+.text_size_l {
+  font-family: "Open Sans";
+  font-size: var(--l-font-size);
+  font-style: normal;
+  font-weight: var(--bold);
+  line-height: var(--l-line-height);
+  letter-spacing: var(--l-letter-space);
+}
+
+.cancel {
+  grid-column: 1;
+  grid-row: 4;
+  display: flex;
+  font-family: "Open Sans";
+  font-size: var(--m-font-size);
+  font-style: normal;
+  font-weight: var(--bold);
+  line-height: var(--m-line-height);
+  letter-spacing: var(--m-letter-space);
+  color: var(--placeholder-grey-color);
+}

@@ -9,7 +9,6 @@ export default function Subscription() {
   // const [status, setStatus] = useState('notSubscribe');
   // ['notSubscribe', 'active', 'notActive']
   status = 'active';
-
   return (
     <main className={styles.container}>
       <div className={styles.title_container}>

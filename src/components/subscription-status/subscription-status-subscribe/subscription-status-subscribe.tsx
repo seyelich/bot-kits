@@ -1,6 +1,8 @@
 import { Dispatch, SetStateAction } from 'react';
-import Button from '../Button/Button';
+// import Button from '../Button/Button';
 import styles from './subscription-status-subscribe.module.css';
+import SubscriptionDetailNotActive from '../../subscription-detail/subscription-detail-not-active/subscription-detail-not-active';
+import SubscriptionDetailActive from '../../subscription-detail/subscription-detail-active/subscription-detail-active';
 
 type TProps = {
   status: string;
@@ -16,7 +18,10 @@ export default function SubscriptionStatusSubscribe({
   };
 
   return (
-    <div className={styles.subscription}>
+    <div
+      className={styles.subscription}
+      style={status === 'active' ? { paddingBottom: 32 } : {}}
+    >
       <div className={styles.statusbar}>
         <h3 className={styles.title}>Бизнес</h3>
         {status === 'active' && (
@@ -28,19 +33,10 @@ export default function SubscriptionStatusSubscribe({
           </h4>
         )}
       </div>
-      <div className={styles.comment}>
-        <p className={styles.comment__line}>
-          Не удалось продлить подписку 15.06.2020
-        </p>
-        <p className={styles.comment__line}>Недостаточно средств</p>
-      </div>
-      <Button
-        type="green"
-        text="АКТИВИРОВАТЬ ПОДПИСКУ"
-        width={340}
-        height={56}
-        onClick={openPopupTarif}
-      />
+      {status === 'notActive' && (
+        <SubscriptionDetailNotActive openTariffs={openPopupTarif} />
+      )}
+      {status === 'active' && <SubscriptionDetailActive />}
     </div>
   );
 }

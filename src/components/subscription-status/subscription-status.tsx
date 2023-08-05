@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button/Button';
-import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe';
-import SubscriptionStatusSubscribe from './subscription-status-subscribe';
+import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe/subscription-status-not-subscribe';
+import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscription-status-subscribe';
 import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
 import Modal from '../modal/modal';
