@@ -7,6 +7,7 @@ import styles from './mailing-conditions.module.css';
 import MailingForm from '../../components/mailing-form/mailing-form';
 import Button from '../../components/Button/Button';
 import Widget from '../mailing/ui/widget/widget';
+import WidgetMobileIcon from '../mailing/ui/widget/widget-mobile-icon/WidgetMobileIcon';
 
 const MailingConditions: FC = () => {
   const navigate = useNavigate();
@@ -49,6 +50,7 @@ const MailingConditions: FC = () => {
               <h2 className={styles.mailing__title}>Моя рассылка 1</h2>
               <MailingForm />
             </div>
+            <WidgetMobileIcon bottom="90px" setHideSection={setHideSection} />
           </div>
           <div className={styles.navigation}>
             <button

@@ -139,7 +139,10 @@ const CreateMailing: FC = () => {
                   </div>
                 </div>
               </div>
-              <WidgetMobileIcon setHideSection={setHideSection} />
+              <WidgetMobileIcon
+                bottom="-270px"
+                setHideSection={setHideSection}
+              />
             </div>
             <div className={styles.block}>
               <h5 className={styles.block__title}>Добавить</h5>

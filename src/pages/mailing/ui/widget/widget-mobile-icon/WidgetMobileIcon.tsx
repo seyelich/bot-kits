@@ -6,10 +6,18 @@ import BotLogoIcon from '../../../../../icons/others/BotLogo';
 
 interface IWidgetMobileIcon {
   setHideSection: (arg: boolean) => void;
+  bottom: string;
 }
 
-const WidgetMobileIcon: FC<IWidgetMobileIcon> = ({ setHideSection }) => (
-  <div className={styles.icon} onClick={() => setHideSection(false)}>
+const WidgetMobileIcon: FC<IWidgetMobileIcon> = ({
+  setHideSection,
+  bottom,
+}) => (
+  <div
+    className={styles.icon}
+    onClick={() => setHideSection(false)}
+    style={{ bottom }}
+  >
     <BotLogoIcon width={35} height={35} />
   </div>
 );

@@ -5,7 +5,6 @@
 @media screen and (max-width: 767px) {
   .icon {
     position: absolute;
-    bottom: -270px;
     right: 0;
     z-index: 200;
     display: flex;

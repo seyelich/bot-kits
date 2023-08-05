@@ -2,7 +2,6 @@
   position: relative;
   top: -52px;
   width: 296px;
-  /* margin-left: 82px; */
 }
 
 .widget__block {
@@ -182,7 +181,6 @@
   align-items: center;
 }
 
-
 @media screen and (max-width: 767px) {
   .widget_hide {
     display: none;
@@ -203,10 +201,21 @@
   .widget__block {
     width: 100%;
     height: 100%;
+    right: -80px;
+    animation: show_widget_mobile 0.3s ease;
   }
 
   .widget__nameIcon {
     display: block;
     cursor: pointer;
+  }
+}
+
+@keyframes show_widget_mobile {
+  from {
+    right: -600px;
+  }
+  to {
+    right: -80px;
   }
 }
