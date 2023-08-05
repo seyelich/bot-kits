@@ -168,8 +168,8 @@
 }
 
 .textarea__input {
-  max-width: 264px;
-  height: 78px;
+  width: 264px;
+  height: 102px;
   padding: 12px 12px 28px 12px;
   scroll-padding: 28px;
   resize: none;
@@ -211,11 +211,15 @@
 
 .textarea__settings {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: #fff;
   z-index: 99;
   top: -60px;
   left: 36px;
-  max-height: 40px;
+  height: 40px;
   border-radius: 5px;
   box-shadow: 0px 12px 24px 0px #15123321;
   animation: show_textarea_settings 0.2s ease;
@@ -233,8 +237,12 @@
 }
 
 .textarea__settings > svg {
-  padding: 8px 12px;
+  margin: 8px 12px;
+}
+
+.border {
   border-right: 1px solid #f2f4f8;
+  height: 100%;
 }
 
 .textarea__settings > svg:last-child {
@@ -309,7 +317,7 @@
 .select__list {
   position: absolute;
   z-index: 200;
-  width: 280px;
+  width: 264px;
   display: flex;
   flex-direction: column;
   padding: 8px 0;
@@ -365,9 +373,9 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .select {
+  /* .select {
     width: calc(100% - 16px);
-  }
+  } */
 }
 
 @media screen and (max-width: 900px) {

@@ -1,3 +1,5 @@
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 import React, { FC, useEffect, useRef, useState } from 'react';
 
@@ -104,9 +106,12 @@ const CreateMailing: FC = () => {
             <div className={styles.textarea}>
               {showTextareaSettings && (
                 <div className={styles.textarea__settings}>
-                  <BoldIcon />
+                  <BoldIcon width={24} height={24} />
+                  <div className={styles.border}></div>
                   <ItalicIcon />
+                  <div className={styles.border}></div>
                   <CodeIcon />
+                  <div className={styles.border}></div>
                   <DeleteIcon color="#A6B3C9" />
                 </div>
               )}
