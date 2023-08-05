@@ -1,0 +1,47 @@
+.tutorContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(272px, 579px));
+  grid-template-rows: repeat(2, auto);
+  row-gap: 16px;
+  column-gap: 29px;
+  padding: 32px 40px 40px 40px;
+  transition: all 1s linear;
+}
+
+.tutorPar {
+  margin: 0;
+  font-size: var(--h4-font-size);
+  font-weight: var(--bold);
+  line-height: var(--h4-line-height);
+  font-family: 'IBM Plex Mono';
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / 3;
+}
+
+.arrowBtn {
+  border: 0;
+  width: fit-content;
+  height: fit-content;
+  background: none;
+  cursor: pointer;
+  justify-self: right;
+  transition: all 0.5s linear;
+}
+
+.arrowBtn_active {
+  rotate: 180deg;
+}
+
+.tutorials {
+  grid-column: 1 / 3;
+  display: flex;
+}
+
+@media screen and (max-width: 850px) {
+  .tutorContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+}

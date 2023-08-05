@@ -1,16 +1,23 @@
-import { useState } from 'react';
+import { SetStateAction, Dispatch } from 'react';
 import Styles from './selected-pages.module.css';
 import PageOption from '../PageOption/PageOption';
 import fakeData from './selected-pages.fakedata';
 
 interface SelectedPagesProps {
   isDisabled?: boolean;
+  pages: typeof fakeData;
+  setPages: Dispatch<SetStateAction<typeof fakeData>>;
+  count: number;
+  setCount: Dispatch<SetStateAction<number>>;
 }
 
-function SelectedPages({ isDisabled = false }: SelectedPagesProps) {
-  const [pages, setPages] = useState<typeof fakeData>([]);
-
-  let count = 0;
+function SelectedPages({
+  isDisabled = false,
+  pages,
+  setPages,
+  count,
+  setCount,
+}: SelectedPagesProps) {
   const isEmpty = Boolean(!pages.length);
   const { cnt, cntNotEmpty, defaultButton, plusImg } = Styles;
   const classNames = [cnt];
@@ -21,7 +28,7 @@ function SelectedPages({ isDisabled = false }: SelectedPagesProps) {
 
   const addPage = () => {
     setPages([...pages, fakeData[count]]);
-    count += 1;
+    setCount(count + 1);
   };
 
   return (
