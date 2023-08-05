@@ -1,7 +1,6 @@
 .popup {
   align-items: center;
   background-color: rgba(191,201,217,.5);
-  /* background-color: #BFC9D9; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -45,6 +44,8 @@
   padding-top: 50px;
   height: 207px;
   text-align: center;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
 }
 
 .menu_container {
@@ -61,7 +62,6 @@
   padding-top: 29px;
   padding-left: 35px;
   padding-right: 35px;
-  /* padding-bottom: 32px; */
   position: relative;
   top: -74px;
   box-sizing: border-box;
@@ -122,15 +122,17 @@
   padding-right: 40px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  position: relative;
 }
 
 .payment_detail {
+  background-color: rgba(239, 253, 255, 0.15);
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
-  background-color: #EFFDFF;
-  border-radius: 10px;
-  opacity: 0.15000000596046448;
-  background: #EFFDFF;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .payment_info {
@@ -139,6 +141,7 @@
   color: #FFF;
   align-items: baseline;
   margin: 0;
+  padding-top: 14px;
 }
 
 .payment_text {
@@ -172,9 +175,47 @@
   letter-spacing: 2px;
 }
 
+.payment_buttons {
+  display: flex;
+  flex-direction: row;
+  width: 522px;
+  justify-content: space-between;
+}
+
+.button_kassa_text {
+  margin: 0;
+  font-family: "Century Gothic";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 134%; /* 21.44px */
+  letter-spacing: 2px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo_kassa {
+  padding-left: 10px;
+}
+
+.button_bill {
+  background-color: #FFF;
+}
+
 .launch_container {
   display: flex;
   position: absolute;
   top: -37px;
   left: 110px;
+}
+
+.circle {
+  width: 205px;
+  height: 205px;
+  background-color: #E9FCFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 47px;
+  left: 75px;
 }

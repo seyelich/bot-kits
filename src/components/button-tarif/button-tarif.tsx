@@ -2,7 +2,7 @@ import styles from './button-tarif.module.css';
 
 interface IButton {
   // type?: 'blue' | 'green' | 'grey';
-  onClick?: VoidFunction;
+  onClick?: any;
   disabled?: boolean;
   tarif: string;
   price: number;
@@ -31,6 +31,8 @@ export default function ButtonTarif({
         cursor: disabled ? 'not-allowed' : 'pointer',
       }}
       disabled={disabled}
+      data-name={tarif}
+      data-price={price}
     >
       {/* <p style={{ opacity: disabled && type === 'green' ? '.4' : undefined, margin: "0" }}>
         {tarif}

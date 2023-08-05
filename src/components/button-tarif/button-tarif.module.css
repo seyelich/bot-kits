@@ -14,6 +14,18 @@
   justify-content: space-between;
 }
 
+.button:hover {
+  border: 1.5px solid #433FB8;
+}
+
+.button:active {
+  border: 1.5px solid #433FB8;
+}
+
+.button_chosen {
+  border: 1.5px solid #433FB8;
+}
+
 .button_blue {
   color: #fff;
   background-color: #243cbb;
@@ -37,31 +49,6 @@
 
 .button_blue_disabled:active {
   background-color: #ecefff;
-}
-
-.button_green {
-  color: #060c23;
-  background-color: #22ffaa;
-}
-
-.button_green:hover {
-  background-color: #70ffc8;
-}
-
-.button_green:active {
-  background-color: #22ffaa;
-}
-
-.button_green_disabled {
-  background-color: #85ffd0;
-}
-
-.button_green_disabled:hover {
-  background-color: #85ffd0;
-}
-
-.button_green_disabled:active {
-  background-color: #85ffd0;
 }
 
 .button_grey {
