@@ -5,15 +5,13 @@ import CheckIcon from '../../../../icons/others/Check';
 
 interface IListsRow {
   el: string;
-  key: number;
 }
 
-const ListsRow: FC<IListsRow> = ({ el, key }) => {
+const ListsRow: FC<IListsRow> = ({ el }) => {
   const [active, setActive] = useState(false);
   return (
     <div
       className={styles.select__listElement}
-      key={key}
       onClick={() => setActive(!active)}
     >
       {el}

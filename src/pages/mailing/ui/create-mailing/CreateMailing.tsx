@@ -26,6 +26,7 @@ import Widget from '../widget/widget';
 import DownIcon from '../../../../icons/others/Down';
 import ListsRow from './ListsRow';
 import FunnelsRow from './FunnelsRow';
+import WidgetMobileIcon from '../widget/widget-mobile-icon/WidgetMobileIcon';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
@@ -41,7 +42,7 @@ const CreateMailing: FC = () => {
   const [notActivate, setNotActivate] = useState(false);
   const [showTextareaSettings, setShowTextareaSettings] = useState(false);
   const [listOpen, setListOpen] = useState(false);
-  const [hideSection, setHideSection] = useState(false);
+  const [hideSection, setHideSection] = useState(true);
 
   const [socialIconSelectedType, setSocialIconSelectedType] = useState<
     'Photo' | 'Video' | 'Music' | 'Button' | undefined
@@ -65,7 +66,7 @@ const CreateMailing: FC = () => {
 
   return (
     <div className={styles.layout}>
-      {!hideSection && (
+      {hideSection && (
         <div className={styles.section}>
           <div className={styles.creation}>
             <div style={{ marginBottom: '2px' }}>
@@ -138,6 +139,7 @@ const CreateMailing: FC = () => {
                   </div>
                 </div>
               </div>
+              <WidgetMobileIcon setHideSection={setHideSection} />
             </div>
             <div className={styles.block}>
               <h5 className={styles.block__title}>Добавить</h5>

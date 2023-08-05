@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { FC, useState } from 'react';
 import { useNavigate } from 'react-router';
@@ -115,35 +116,39 @@ const MyMailing: FC = () => {
           </div>
         </div>
         <table className={styles.table}>
-          <tr className={styles.table__header}>
-            <th style={{ width: '120px' }}>ID</th>
-            <th style={{ width: '140px' }}>Название</th>
-            <th style={{ width: '162px' }}>Мессенджер</th>
-            <th style={{ width: '182px' }}>Отправлено сообщений</th>
-            <th style={{ width: '132px' }}>Конверсия</th>
-            <th style={{ width: '122px' }}>Статус запуска</th>
-          </tr>
-          {mailings.map((el) => (
-            <tr key={el.id}>
-              <td>{el.id}</td>
-              <td>{el.name}</td>
-              <td>{el.messenger}</td>
-              <td>{el.messages}</td>
-              <td>{el.conversion}</td>
-              <td
-                style={{
-                  fontWeight: 600,
-                  color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
-                }}
-              >
-                {el.status}
-              </td>
+          <thead className={styles.table__header}>
+            <tr>
+              <th style={{ width: '120px' }}>ID</th>
+              <th style={{ width: '140px' }}>Название</th>
+              <th style={{ width: '162px' }}>Мессенджер</th>
+              <th style={{ width: '182px' }}>Отправлено сообщений</th>
+              <th style={{ width: '132px' }}>Конверсия</th>
+              <th style={{ width: '122px' }}>Статус запуска</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {mailings.map((el) => (
+              <tr key={el.id}>
+                <td>{el.id}</td>
+                <td>{el.name}</td>
+                <td>{el.messenger}</td>
+                <td>{el.messages}</td>
+                <td>{el.conversion}</td>
+                <td
+                  style={{
+                    fontWeight: 600,
+                    color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
+                  }}
+                >
+                  {el.status}
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
         <div className={styles.table__mobile}>
-          {mailings.map((el) => (
-            <div className={styles.row}>
+          {mailings.map((el, i) => (
+            <div className={styles.row} key={i}>
               <div className={styles.row__iconBlock}>
                 <IconWithPercents
                   messenger={el.messenger}

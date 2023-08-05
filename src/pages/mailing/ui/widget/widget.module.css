@@ -182,11 +182,12 @@
   align-items: center;
 }
 
-.widget_hide {
-  display: none;
-}
 
 @media screen and (max-width: 767px) {
+  .widget_hide {
+    display: none;
+  }
+
   .arrow {
     display: none;
   }

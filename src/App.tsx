@@ -31,12 +31,11 @@ function App() {
               <Route path="bot-builder" element={<BotBuilder />} />
               <Route path="chat" element={<Chat />} />
               <Route path="mailing" element={<Mailing />}>
-
                 <Route path="" element={<FirstMailing />} />
                 <Route path="start" element={<MyMailing />} />
                 <Route path="add" element={<CreateMailing />} />
+                <Route path="conditions" element={<MailingConditions />} />
               </Route>
-              <Route path="mailing/conditions" element={<MailingConditions />}/>
               <Route path="partnership" element={<Partnership />} />
               <Route path="share" element={<Share />} />
               <Route path="subscription" element={<Subscription />} />

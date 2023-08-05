@@ -17,9 +17,10 @@ interface IWidget {
 
 const Widget: FC<IWidget> = ({ name, text, hideSection, setHideSection }) => {
   const [showWidget, setShowWidget] = useState(true);
-
   return (
-    <div className={`${styles.widget} ${hideSection && styles.widget_hide}`}>
+    <div
+      className={`${styles.widget} ${hideSection ? styles.widget_hide : ''}`}
+    >
       <button
         type="button"
         className={styles.arrow}
@@ -43,7 +44,7 @@ const Widget: FC<IWidget> = ({ name, text, hideSection, setHideSection }) => {
               <p className={styles.widget__name}>{name}</p>
               <div
                 className={styles.widget__nameIcon}
-                onClick={() => setHideSection(false)}
+                onClick={() => setHideSection(true)}
               >
                 <CloseIcon width={24} height={24} color="#060C23" />
               </div>

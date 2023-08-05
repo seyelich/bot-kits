@@ -36,7 +36,6 @@ export default function MailingForm() {
   const [day, setDay] = useState<string | undefined>('');
   const [month, setMonth] = useState<string | undefined>('');
 
-
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 512px)').matches
   );
