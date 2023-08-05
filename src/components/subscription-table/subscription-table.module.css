@@ -18,7 +18,7 @@
   font-family: "IBM Plex Mono";
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--bold);
   line-height: 130%;
   margin: 0;
   padding-bottom: 32px;
@@ -33,7 +33,7 @@
   font-family: "Open Sans";
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--bold);
   line-height: 150%;
   padding-bottom: 12px;
   height: 33px;

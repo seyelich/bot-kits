@@ -18,12 +18,14 @@ export default function SubscriptionStatusSubscribe({
   return (
     <div className={styles.subscription}>
       <div className={styles.statusbar}>
-        <h2 className={styles.title}>Бизнес</h2>
+        <h3 className={styles.title}>Бизнес</h3>
         {status === 'active' && (
-          <p className={`${styles.text} ${styles.text_active}`}>активен</p>
+          <h4 className={`${styles.text} ${styles.text_active}`}>активен</h4>
         )}
         {status === 'notActive' && (
-          <p className={`${styles.text} ${styles.text_notactive}`}>неактивен</p>
+          <h4 className={`${styles.text} ${styles.text_notactive}`}>
+            неактивен
+          </h4>
         )}
       </div>
       <div className={styles.comment}>

@@ -35,7 +35,7 @@ export default function SubscriptionStatus({ status }: TProps) {
       <div className={styles.promo}>
         <div className={styles.balans}>
           <p className={styles.comment__line}>Баланс</p>
-          <p className={styles.title}>0&#8381;</p>
+          <h3 className={styles.title}>0&#8381;</h3>
         </div>
         <Button
           type="grey"

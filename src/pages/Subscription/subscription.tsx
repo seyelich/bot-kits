@@ -10,8 +10,6 @@ export default function Subscription() {
   // ['notSubscribe', 'active', 'notActive']
   status = 'active';
 
-  // function activatePromo
-
   return (
     <main className={styles.container}>
       <div className={styles.title_container}>

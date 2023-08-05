@@ -7,8 +7,8 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  left: 0;
   position: fixed;
+  left: 0;
   top: 0;
 }
 
@@ -24,10 +24,10 @@
 
 .container {
   width: 970px;
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   background-color: #FFF;
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   position: fixed;
@@ -45,7 +45,7 @@
   height: 207px;
   text-align: center;
   box-sizing: border-box;
-  border-radius: 10px 10px 0 0;
+  border-radius: var(--border-radius-10) var(--border-radius-10) 0 0;
 }
 
 .menu_container {
@@ -58,7 +58,7 @@
 .menu {
   height: 257px;
   background-color: #FFF;
-  border-radius: 10px;
+  border-radius: var(--border-radius-10);
   padding-top: 29px;
   padding-left: 35px;
   padding-right: 35px;
@@ -70,10 +70,10 @@
 .menu_title{
   margin: 0;
   font-family: "Century Gothic";
-  font-size: 18px;
+  font-size: var(--h4-font-size);
   font-style: normal;
   font-weight: 700;
-  line-height: 140%;
+  line-height: var(--h4-line-height);
   display: flex;
   flex-direction: row;
 }
@@ -92,11 +92,11 @@
 
 .text {
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: var(--m-font-size);
   font-style: normal;
-  font-weight: 600;
-  line-height: 150%; /* 21px */
-  letter-spacing: 0.3px;
+  font-weight: var(--bold);
+  line-height: var(--m-line-height);
+  letter-spacing: var(--m-letter-space);
   text-align: center;
   margin: 0;
   padding-bottom: 12px;
@@ -104,17 +104,17 @@
 
 .comment {
   font-family: "Open Sans";
-  font-size: 14px;
+  font-size: var(--m-font-size);
   font-style: normal;
-  font-weight: 400;
-  line-height: 150%; /* 21px */
-  letter-spacing: 0.3px;
+  font-weight: var(--normal);
+  line-height: var(--m-line-height);
+  letter-spacing: var(--m-letter-space);
   text-align: center;
   margin: 0;
 }
 
 .payment_container {
-  border-radius: 10px;
+  border-radius: var(--border-radius-10);
   background-color: #131118;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -128,7 +128,7 @@
 
 .payment_detail {
   background-color: rgba(239, 253, 255, 0.15);
-  border-radius: 10px;
+  border-radius: var(--border-radius-10);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,7 +160,7 @@
   font-family: "Helvetica Neue";
   font-size: 22px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--normal);
   line-height: 130%; /* 28.6px */
   letter-spacing: -0.2px;
   margin: 0;

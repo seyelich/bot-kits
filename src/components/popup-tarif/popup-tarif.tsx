@@ -38,12 +38,12 @@ export default function PopupTarif({ onClose }: TPopupProps) {
       <h2 className={styles.title}>ПОДПИСАТЬСЯ</h2>
       <div className={styles.menu_container}>
         <div className={styles.menu}>
-          <h3 className={styles.menu_title}>
+          <h4 className={styles.menu_title}>
             Выбери тариф
             <span className={styles.check_container}>
               <CheckIcon color="#00E98F" />
             </span>
-          </h3>
+          </h4>
           <div className={styles.buttons_container}>
             {tariffs.map((tarif) => (
               <ButtonTarif

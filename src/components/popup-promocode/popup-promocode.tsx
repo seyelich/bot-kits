@@ -12,7 +12,7 @@ export default function PopupPromocode({ onClose }: TPopupProps) {
       <button type="button" className={styles.button_close} onClick={onClose}>
         <CloseIcon />
       </button>
-      <h2 className={styles.title}>Активация промокода</h2>
+      <h3 className={styles.title}>Активация промокода</h3>
       <form className={styles.form}>
         <input />
         <Button type="blue" text="АКТИВИРОВАТЬ" width={320} height={46} />
