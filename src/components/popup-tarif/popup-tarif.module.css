@@ -11,9 +11,6 @@
   left: 0;
   position: fixed;
   top: 0;
-  /* opacity: 0; */
-  transition: visibility .8s,opacity .8s linear;
-  /* visibility: hidden; */
 }
 
 .button_close {

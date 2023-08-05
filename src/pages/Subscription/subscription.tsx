@@ -1,17 +1,14 @@
 import SubscriptionStatus from '../../components/subscription-status/subscription-status';
 // import { useState } from 'react';
-import { Button } from '../../components/Button/Button';
-import SubscriptionStatusNotSubscribe from '../../components/subscription-status/subscription-status-not-subscribe';
+import Button from '../../components/Button/Button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
-import PopupTarif from '../../components/popup-tarif/popup-tarif';
-// import PopupPromocode from '../../components/popup-promocode/popup-promocode';
 
 export default function Subscription() {
-  const status = 'notSubscribe';
+  let status = 'notSubscribe';
   // const [status, setStatus] = useState('notSubscribe');
   // ['notSubscribe', 'active', 'notActive']
-  // status = 'notActive';
+  status = 'active';
 
   // function activatePromo
 
@@ -19,17 +16,14 @@ export default function Subscription() {
     <main className={styles.container}>
       <div className={styles.title_container}>
         <h1 className={styles.title}>Подписка и платежи</h1>
-        {status !== 'notSubscribe' && (
+        {status === 'active' && (
           <Button type="green" text="СМЕНИТЬ ТАРИФ" width={188} height={46} />
         )}
       </div>
       <section className={styles.subscription}>
-        {status === 'notSubscribe' && <SubscriptionStatusNotSubscribe />}
-        {status !== 'notSubscribe' && <SubscriptionStatus status={status} />}
+        <SubscriptionStatus status={status} />
         <SubscriptionTable />
       </section>
-      {/* <PopupPromocode /> */}
-      <PopupTarif />
     </main>
   );
 }
