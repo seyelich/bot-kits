@@ -26,6 +26,8 @@ const Widget: FC<IWidget> = ({
   setHideSection,
 }) => {
   const [showWidget, setShowWidget] = useState(true);
+  const date = new Date();
+
   return (
     <div
       className={`${styles.widget} ${hideSection ? styles.widget_hide : ''}`}
@@ -63,8 +65,7 @@ const Widget: FC<IWidget> = ({
             <div className={styles.widget__chat}>
               <RobotIcon width={32} height={32} />
               <div className={styles.widget__chatText_container}>
-                <p className={styles.widget__chatText_title}>Бот</p>
-                <p
+                <div
                   className={
                     text.length > 0
                       ? `${styles.widget__chatText} ${
@@ -73,8 +74,26 @@ const Widget: FC<IWidget> = ({
                       : `${styles.widget__chatText} ${styles.widget__chatText_short}`
                   }
                 >
-                  {text.length > 0 ? text : '...'}
-                </p>
+                  {text.length > 0 ? (
+                    <div>
+                      <p className={styles.widget__chatText_title}>Бот</p>
+                      <p
+                        className={`
+                           ${italicText && styles.widget__chatText_italic} ${
+                             boldText && styles.widget__chatText_bold
+                           }
+                          `}
+                      >
+                        {text}
+                      </p>
+                    </div>
+                  ) : (
+                    '...'
+                  )}
+                  <p
+                    className={styles.widget__date}
+                  >{`${date.getHours()}:${date.getMinutes()}`}</p>
+                </div>
               </div>
             </div>
             <div className={styles.button__container}>

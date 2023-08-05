@@ -141,8 +141,15 @@ const CreateMailing: FC = () => {
                 <div className={styles.textarea__footer}>
                   <p style={{ margin: '0' }}>{text.length}/4096</p>
                   <div className={styles.teaxtarea__icons}>
-                    <BracketIcon width={20} height={20} />
-                    <EmojiIcon width={20} height={20} />
+                    <div
+                      className={styles.textarea__icon}
+                      onClick={() => setText(`{${text}}`)}
+                    >
+                      <BracketIcon width={20} height={20} />
+                    </div>
+                    <div className={styles.textarea__icon}>
+                      <EmojiIcon width={20} height={20} />
+                    </div>
                   </div>
                 </div>
               </div>

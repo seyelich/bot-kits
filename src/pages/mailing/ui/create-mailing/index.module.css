@@ -185,6 +185,10 @@
   color: #060c23;
 }
 
+.textarea__icon {
+  cursor: pointer;
+}
+
 .textarea__input_bold {
   font-weight: 600;
 }
