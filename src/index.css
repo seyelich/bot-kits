@@ -12,7 +12,6 @@ body {
 }
 
 main {
-  width: 100%;
   overflow: hidden;
 }
 
@@ -35,12 +34,14 @@ main {
 }
 
 :root {
-  --default-grey-color: #f8f9fb;
-  --hover-grey-color: #f2f4f8;
-  --focus-grey-color: #e4e9f1;
-  --disabled-grey-color: #ccd4e0;
-  --default-dark-grey-color: #a6b3c9;
-  --placeholder-grey-color: #bfc9d9;
+  --default-grey-color: #F8F9FB;
+  --hover-grey-color: #F2F4F8;
+  --focus-grey-color: #E4E9F1;
+  --disabled-grey-color: #CCD4E0;
+  --default-dark-grey-color: #A6B3C9;
+  --placeholder-grey-color: #BFC9D9;
+  --white-color: #FFFFFF;
+
 
   --default-blue-color: #243cbb;
   --hover-blue-color: #435cdb;
@@ -62,6 +63,7 @@ main {
   --h2-line-height: 41.6px;
   --h3-line-height: 31.2px;
   --h4-line-height: 23.4px;
+  --h5-line-height: 20.8px;
   --m-line-height: 21px;
   --s-line-height: 19.5px;
   --xs-line-height: 18px;
@@ -71,7 +73,7 @@ main {
   --normal: 400;
 
   --h2-letter-space: -0.2px;
-  --h5-letter-spacce: 0.5px;
+  --h5-letter-space: 0.5px;
   --m-letter-space: 0.3px;
   --s-letter-space: 0.2px;
 
