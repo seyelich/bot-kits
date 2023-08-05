@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
-import Subscription from './pages/subscription/subscription';
+import Subscription from './pages/Subscription/subscription';
 import AddBot from './pages/add-bot';
 import styles from './App.module.css';
 import BotBuilder from './pages/bot-builder';
@@ -31,12 +31,11 @@ function App() {
               <Route path="bot-builder" element={<BotBuilder />} />
               <Route path="chat" element={<Chat />} />
               <Route path="mailing" element={<Mailing />}>
-
                 <Route path="" element={<FirstMailing />} />
                 <Route path="start" element={<MyMailing />} />
                 <Route path="add" element={<CreateMailing />} />
               </Route>
-              <Route path="mailing/conditions" element={<MailingConditions />}/>
+              <Route path="mailing/conditions" element={<MailingConditions />} />
               <Route path="partnership" element={<Partnership />} />
               <Route path="share" element={<Share />} />
               <Route path="subscription" element={<Subscription />} />
