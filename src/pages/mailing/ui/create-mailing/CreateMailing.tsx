@@ -38,11 +38,11 @@ const CreateMailing: FC = () => {
   const [activate, setActivate] = useState(false);
   const [notActivate, setNotActivate] = useState(false);
   const [showTextareaSettings, setShowTextareaSettings] = useState(false);
-  const [photoActive, setPhotoActive] = useState(false);
-  const [videoActive, setVideoActive] = useState(false);
-  const [musicActive, setMusicActive] = useState(false);
-  const [buttonActive, setButtonActive] = useState(false);
   const [listOpen, setListOpen] = useState(false);
+
+  const [socialIconSelectedType, setSocialIconSelectedType] = useState<
+    'Photo' | 'Video' | 'Music' | 'Button' | undefined
+  >(undefined);
 
   const useOutsideAlerter = (ref: any) => {
     useEffect(() => {
@@ -137,52 +137,32 @@ const CreateMailing: FC = () => {
             <div className={styles.block__icons}>
               <SocialButton
                 text="Фото"
-                active={photoActive}
-                onClick={(arg: boolean) => {
-                  setPhotoActive(arg);
-                  setVideoActive(false);
-                  setMusicActive(false);
-                  setButtonActive(false);
-                }}
+                active={socialIconSelectedType === 'Photo'}
+                onClick={() => setSocialIconSelectedType('Photo')}
                 icon={<ImageIcon color="#fff" />}
               />
               <SocialButton
                 text="Видео"
-                active={videoActive}
-                onClick={(arg: boolean) => {
-                  setPhotoActive(false);
-                  setVideoActive(arg);
-                  setMusicActive(false);
-                  setButtonActive(false);
-                }}
+                active={socialIconSelectedType === 'Video'}
+                onClick={() => setSocialIconSelectedType('Video')}
                 icon={<VideoIcon color="#fff" />}
               />
               <SocialButton
                 text="Аудио"
-                active={musicActive}
-                onClick={(arg: boolean) => {
-                  setPhotoActive(false);
-                  setVideoActive(false);
-                  setMusicActive(arg);
-                  setButtonActive(false);
-                }}
+                active={socialIconSelectedType === 'Music'}
+                onClick={() => setSocialIconSelectedType('Music')}
                 icon={<MusicIcon color="#fff" />}
               />
               <SocialButton
                 text="Кнопка"
-                active={buttonActive}
-                onClick={(arg: boolean) => {
-                  setPhotoActive(false);
-                  setVideoActive(false);
-                  setMusicActive(false);
-                  setButtonActive(arg);
-                }}
+                active={socialIconSelectedType === 'Button'}
+                onClick={() => setSocialIconSelectedType('Button')}
                 icon={<ButtonIcon color="#fff" />}
               />
             </div>
-            {buttonActive ? (
+            {socialIconSelectedType === 'Button' ? (
               <InlineButtons />
-            ) : photoActive || videoActive || musicActive ? (
+            ) : socialIconSelectedType !== undefined ? (
               <DownloadButtons size="large" />
             ) : null}
           </div>

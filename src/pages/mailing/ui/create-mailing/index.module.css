@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 48px;
+  margin-bottom: 109px;
 }
 
 .section {
@@ -241,7 +242,8 @@
 }
 
 .block__icons {
-  max-width: 556px;
+  /* max-width: 556px; */
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -360,7 +362,6 @@
     z-index: 999;
     background-color: #fff;
   }
-
 }
 
 @media screen and (max-width: 1020px) {
@@ -386,6 +387,10 @@
 
   .block__icons {
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  .block__icons::-webkit-scrollbar {
+    display: none;
   }
 }
