@@ -43,26 +43,21 @@ const CreateMailing: FC = () => {
   const [showTextareaSettings, setShowTextareaSettings] = useState(false);
   const [listOpen, setListOpen] = useState(false);
   const [hideSection, setHideSection] = useState(true);
+  const [italicText, setItalicText] = useState(false);
+  const [boldText, setBoldText] = useState(false);
 
   const [socialIconSelectedType, setSocialIconSelectedType] = useState<
     'Photo' | 'Video' | 'Music' | 'Button' | undefined
   >(undefined);
 
-  const useOutsideAlerter = (ref: any) => {
-    useEffect(() => {
-      function handleClickOutside(event: any) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setShowTextareaSettings(false);
-        }
-      }
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, [ref]);
-  };
+  useEffect(() => {
+    const setShowTextareaSettingsFn = () => setShowTextareaSettings(false);
 
-  useOutsideAlerter(wrapperRef);
+    document.addEventListener('click', setShowTextareaSettingsFn);
+    return () => {
+      document.removeEventListener('click', setShowTextareaSettingsFn);
+    };
+  }, []);
 
   return (
     <div className={styles.layout}>
@@ -106,30 +101,42 @@ const CreateMailing: FC = () => {
             </div>
             <div className={styles.block}>
               <h5 className={styles.block__title}>Текст сообщения</h5>
-              <div className={styles.textarea}>
+              <div
+                className={styles.textarea}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowTextareaSettings(true);
+                }}
+              >
                 {showTextareaSettings && (
                   <div className={styles.textarea__settings}>
-                    <BoldIcon width={24} height={24} />
-                    <div className={styles.border}></div>
-                    <ItalicIcon />
-                    <div className={styles.border}></div>
-                    <CodeIcon />
-                    <div className={styles.border}></div>
-                    <DeleteIcon color="#A6B3C9" />
+                    <div onClick={() => setBoldText(!boldText)}>
+                      <BoldIcon width={24} height={24} />
+                    </div>
+                    <div onClick={() => setItalicText(!italicText)}>
+                      <ItalicIcon />
+                    </div>
+                    <div onClick={() => setText(`<${text}/>`)}>
+                      <CodeIcon />
+                    </div>
+                    <div onClick={() => setText('')}>
+                      <DeleteIcon color="#A6B3C9" />
+                    </div>
                   </div>
                 )}
                 <textarea
-                  ref={wrapperRef}
                   name="12"
                   id="12"
                   placeholder="Введите текст"
                   cols={30}
                   rows={10}
-                  onClick={() => setShowTextareaSettings(true)}
+                  maxLength={4096}
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   draggable={false}
-                  className={styles.textarea__input}
+                  className={`${styles.textarea__input} ${
+                    italicText && styles.textarea__input_italic
+                  } ${boldText && styles.textarea__input_bold}`}
                 />
                 <div className={styles.textarea__footer}>
                   <p style={{ margin: '0' }}>{text.length}/4096</p>
@@ -259,6 +266,8 @@ const CreateMailing: FC = () => {
         </div>
       )}
       <Widget
+        italicText={italicText}
+        boldText={boldText}
         name={name}
         text={text}
         hideSection={hideSection}

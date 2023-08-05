@@ -9,13 +9,22 @@ import Button from '../../../../components/Button/Button';
 import CloseIcon from '../../../../icons/others/Close';
 
 interface IWidget {
+  italicText?: boolean;
+  boldText?: boolean;
   name: string;
   text: string;
   hideSection: boolean;
   setHideSection: (arg: boolean) => void;
 }
 
-const Widget: FC<IWidget> = ({ name, text, hideSection, setHideSection }) => {
+const Widget: FC<IWidget> = ({
+  italicText,
+  boldText,
+  name,
+  text,
+  hideSection,
+  setHideSection,
+}) => {
   const [showWidget, setShowWidget] = useState(true);
   return (
     <div
@@ -53,12 +62,14 @@ const Widget: FC<IWidget> = ({ name, text, hideSection, setHideSection }) => {
           <div className={styles.widget__container}>
             <div className={styles.widget__chat}>
               <RobotIcon width={32} height={32} />
-              <div className={styles.widget__chatText}>
+              <div className={styles.widget__chatText_container}>
                 <p className={styles.widget__chatText_title}>Бот</p>
                 <p
                   className={
                     text.length > 0
-                      ? styles.widget__chatText
+                      ? `${styles.widget__chatText} ${
+                          italicText && styles.widget__chatText_italic
+                        } ${boldText && styles.widget__chatText_bold}`
                       : `${styles.widget__chatText} ${styles.widget__chatText_short}`
                   }
                 >
