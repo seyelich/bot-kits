@@ -2,15 +2,27 @@ import RegisterForm from '../../components/register-form/RegisterForm';
 import Logo from '../../components/Logo/Logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import sendEmail from '../../images/sendEmail.png';
 import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
-  const [state, setState] = useState({ authState: 'Login' });
+  const [state, setState] = useState({ authState: 'Register' });
   const [banner, setBanner] = useState({ bannerState: 'none' });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleRegisterClick = () => {
     setState({ authState: 'Register' });
@@ -87,10 +99,16 @@ export default function Auth() {
           }`}
         >
           <div className={styles.headerContainer}>
-            {state.authState === 'Register' ? (
-              <Logo width={149} height={35} />
+            {windowWidth <= 660 ? (
+              <Logo width={127.5} height={30} />
             ) : (
-              <Logo width={161.5} height={38} />
+              <>
+                {state.authState === 'Register' ? (
+                  <Logo width={149} height={35} />
+                ) : (
+                  <Logo width={161.5} height={38} />
+                )}
+              </>
             )}
             <h1
               className={`${styles.title} ${

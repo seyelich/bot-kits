@@ -2,7 +2,8 @@
   padding: 40px 0 104px 0;
   margin: 0 auto;
   max-width: 1440px;
-  height: 900px;
+  max-height: 900px;
+  height: 100%;
   width: 100%;
   background-color: #fff;
   display: flex;
@@ -24,6 +25,7 @@
   line-height: 52.8px;
   margin: 0;
   padding: 20px 0 30px 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .wrapper_login {
@@ -95,3 +97,43 @@
 .noticePage__titleImage {
   margin: 165px 0 200px 30px;
 }
+
+
+
+@media screen and (max-width: 790px) {
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35.2px;
+    letter-spacing: -0.2px;
+    padding: 30px 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .wrapper {
+    padding: 20px 0 0 0;
+    height: 900px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35.2px;
+    letter-spacing: -0.2px;
+    padding: 15px 0 15px 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .wrapper {
+    padding: 20px 0 0 0;
+    height: 900px;
+  }
+}
+
+

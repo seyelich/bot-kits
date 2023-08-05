@@ -1,5 +1,7 @@
 .authInput__container {
   max-width: 570px;
+  box-sizing: border-box;
+  overflow-y: hidden;
   position: relative;
 }
 
@@ -67,4 +69,15 @@
 
 .authInput__textError_visible {
   visibility: visible;
+}
+
+
+
+@media screen and (max-width: 790px) {
+  .authInput__container {
+    max-width: 300px;
+  }
+  .authInput {
+    max-width: 300px;
+  }
 }

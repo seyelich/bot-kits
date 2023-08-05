@@ -30,7 +30,9 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
         <p className={styles.registerForm__socialContainer__title}>
           Создай аккаунт с помощью
         </p>
+        <div className={styles.registerForm__socialContainer__navBar}>
         <NavLinkBar />
+        </div>
         <p className={styles.registerForm__socialContainer__footerText}>или</p>
       </div>
       <div className={styles.registerForm__wrapper}>
@@ -63,12 +65,14 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
 
             <div className={styles.registerForm__phoneContainer}>
               <SelectCodeNumber items={items} />
+              <div className={styles.registerForm__phoneInput}>
               <AuthInput
                 type="text"
                 placeholder="Телефон"
                 width={200}
                 height={60}
               />
+              </div>
             </div>
           </div>
           <Button
@@ -89,11 +93,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
             Войти
           </span>
         </div>
-        <img
-          className={styles.registerForm__authImage}
-          src={robot}
-          alt="register-robot"
-        />
+        <div className={styles.registerForm__authImage}/>
       </div>
     </div>
   );
