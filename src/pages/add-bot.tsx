@@ -179,6 +179,24 @@ export default function AddBot() {
           disabled
         />
         <Button
+          type="blue"
+          onClick={() => console.log('click')}
+          width={301}
+          height={64}
+        >
+          <div
+            style={{
+              display: 'flex',
+              columnGap: '10px',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <p>ОПЛАТИТЬ ЧЕРЕЗ</p>
+            <PaymentIcon />
+          </div>
+        </Button>
+        <Button
           type="green"
           onClick={() => console.log('click')}
           text="ДОБАВИТЬ БОТА"

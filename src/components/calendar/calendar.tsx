@@ -1,5 +1,5 @@
 import ru from 'date-fns/locale/ru';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import getYear from 'date-fns/getYear';
 import getMonth from 'date-fns/getMonth';
@@ -21,9 +21,33 @@ const Calendar: FC = () => {
   const [startMonth, setStartMonth] = useState(new Date());
   const [endMonth, setEndMonth] = useState(new Date());
   const [resetDate, setDateReset] = useState(false);
+  const [matches, setMatches] = useState(
+    window.matchMedia('(max-width: 768px)').matches
+  );
 
+  useEffect(() => {
+    window
+      .matchMedia('(max-width: 768px)')
+      .addEventListener('change', (e) => setMatches(e.matches));
+  }, []);
   return (
     <DatePicker
+    popperPlacement="bottom-end"
+    popperModifiers={matches ? [
+      {
+        name: "offset",
+        options: {
+          offset: [15, -300],
+        },
+      },
+    ] : [
+      {
+        name: "offset",
+        options: {
+          offset: [300, -200],
+        },
+      },
+    ]}
       customInput={<CustomInput />}
       shouldCloseOnSelect
       locale="ru"

@@ -1,0 +1,75 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 264px;
+}
+
+.input {
+  box-sizing: border-box;
+  width: inherit;
+  height: 40px;
+  margin-top: 4px;
+  padding-right: 35px;
+  padding-left: 16px;
+  font-family: 'Open sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+.input_default {
+  background-color: rgba(248, 249, 251, 1);
+  color: rgba(6, 12, 35, 1);
+  cursor: pointer;
+}
+.input_disabled {
+  background-color: rgba(242, 244, 248, 1);
+  color: rgba(191, 201, 217, 1);
+  cursor: auto;
+}
+
+.input__label {
+  width: inherit;
+  color: rgba(6, 12, 35, 1);
+  padding-top: 3px;
+}
+
+.input__label_regular {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+}
+
+.input__label_bold {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.8px;
+}
+
+.input::placeholder {
+  color: rgba(6, 12, 35, 1);
+}
+
+.input::-webkit-input-placeholder {
+  color: rgba(6, 12, 35, 1);
+}
+
+.input::-ms-input-placeholder {
+  color: rgba(6, 12, 35, 1);
+}
+
+.input:-moz-placeholder {
+  color: rgba(6, 12, 35, 1);
+}

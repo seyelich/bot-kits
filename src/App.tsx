@@ -15,6 +15,7 @@ import Layout from './components/Layout/Layout';
 import FirstMailing from './pages/mailing/ui/first-mailing/FirstMailing';
 import MyMailing from './pages/mailing/ui/my-mailing/MyMailing';
 import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
+import MailingConditions from './pages/mailing-conditions/mailing-conditions';
 
 function App() {
   return (
@@ -30,10 +31,12 @@ function App() {
               <Route path="bot-builder" element={<BotBuilder />} />
               <Route path="chat" element={<Chat />} />
               <Route path="mailing" element={<Mailing />}>
+
                 <Route path="" element={<FirstMailing />} />
                 <Route path="start" element={<MyMailing />} />
                 <Route path="add" element={<CreateMailing />} />
               </Route>
+              <Route path="mailing/conditions" element={<MailingConditions />}/>
               <Route path="partnership" element={<Partnership />} />
               <Route path="share" element={<Share />} />
               <Route path="subscription" element={<Subscription />} />

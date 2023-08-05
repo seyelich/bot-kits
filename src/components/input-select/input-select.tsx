@@ -16,10 +16,11 @@ interface IInputSelectsProps {
   options: string[];
   width: string;
   label?: string;
-  dropDownHeight: string;
+  dropDownHeight?: string;
+  dropDownWidth?: string;
   placeholder?: string;
   labelType?: 'regular' | 'bold';
-  setSelectedValue: Dispatch<SetStateAction<string>>;
+  setSelectedValue?: Dispatch<SetStateAction<string>>;
   disabled: boolean;
   onClick?: () => void;
   reset?: boolean;
@@ -31,6 +32,7 @@ const InputSelect: FC<IInputSelectsProps> = ({
   width,
   label,
   dropDownHeight,
+  dropDownWidth,
   placeholder,
   labelType,
   setSelectedValue,
@@ -112,7 +114,10 @@ const InputSelect: FC<IInputSelectsProps> = ({
         className={`${styles.wrapper} ${
           !isActive ? styles.wrapper_default : styles.wrapper_active
         }`}
-        style={{ height: isActive ? dropDownHeight : 0, width }}
+        style={{
+          height: isActive ? dropDownHeight : 0,
+          width: dropDownWidth !== undefined ? dropDownWidth : width,
+        }}
       >
         <ul className={styles.list}>
           {options.map((option, index) => (
@@ -123,7 +128,7 @@ const InputSelect: FC<IInputSelectsProps> = ({
               key={index}
               onClick={() => {
                 handleOptionOnclick(option);
-                setSelectedValue(option);
+                setSelectedValue?.(option);
                 onClick?.();
               }}
             >
