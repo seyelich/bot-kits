@@ -13,17 +13,16 @@
   height: 40px;
   margin-top: 4px;
   padding-right: 35px;
-  padding-left: 16px;
- font-family: 'Open sans', sans-serif;
+  padding-left: 13px;
+  font-family: 'Open sans', sans-serif;
   font-size: 13px;
-  font-weight:400;
-  line-height:19.5px;
+  font-weight: 400;
+  line-height: 19.5px;
   letter-spacing: 0.3px;
   border: none;
   border-radius: 5px;
   outline: none;
   transition: all 0.2s linear;
-
 }
 
 .input_default {
@@ -34,12 +33,13 @@
 .input_disabled {
   background-color: rgba(242, 244, 248, 1);
   color: rgba(191, 201, 217, 1);
-  cursor: auto;
+  cursor: not-allowed;
 }
 
 .input__label {
   width: inherit;
   color: rgba(6, 12, 35, 1);
+  padding-top: 3px;
 }
 
 .input__label_regular {
@@ -58,7 +58,7 @@
 }
 .input__button {
   position: absolute;
-  right: 10px;
+  right: 6px;
   width: 20px;
   height: 20px;
 
@@ -70,13 +70,11 @@
 .input__button_default {
   top: 15px;
   rotate: 0deg;
-
 }
 
 .input__button_active {
   top: 13px;
   rotate: 180deg;
-
 }
 .wrapper {
   position: absolute;
@@ -105,8 +103,6 @@
     background: var(--placeholder);
     border-radius: 3px;
   }
-
-
 }
 
 .list {
@@ -119,9 +115,10 @@
   display: flex;
   align-items: center;
 
-  height: 36px;
-
-  padding: 3px 0 3px 15px;
+  height: 37px;
+  margin-top: 4px;
+  margin-bottom: 3px;
+  padding-left: 15px;
   font-family: 'Open sans', sans-serif;
   font-weight: 400;
   font-size: 13px;
@@ -141,11 +138,11 @@
 }
 
 .input::placeholder {
-color: rgba(6, 12, 35, 1);
+  color: rgba(6, 12, 35, 1);
 }
 
-  .input::-webkit-input-placeholder {
-   color: rgba(6, 12, 35, 1);
+.input::-webkit-input-placeholder {
+  color: rgba(6, 12, 35, 1);
 }
 
 .input::-ms-input-placeholder {
@@ -155,5 +152,3 @@ color: rgba(6, 12, 35, 1);
 .input:-moz-placeholder {
   color: rgba(6, 12, 35, 1);
 }
-
-

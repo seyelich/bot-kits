@@ -1,0 +1,43 @@
+.container {
+  height: 40px;
+  background-color: rgba(248, 249, 251, 1);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s linear;
+}
+
+.text {
+  flex: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 1);
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.btn_prev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+.btn_next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  rotate: -90deg;
+  cursor: pointer;
+}

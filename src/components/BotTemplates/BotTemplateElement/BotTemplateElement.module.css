@@ -1,6 +1,7 @@
 .container {
   width: 188px;
 
+
   @media (max-width: 768px) {
     width: 134px;
   }
@@ -37,6 +38,7 @@
   font-weight: 600;
   letter-spacing: 0.3px;
   margin-bottom: 15px;
+  margin-top: 18px;
   transition: all 0.5s linear;
 
   @media (max-width: 414px) {
