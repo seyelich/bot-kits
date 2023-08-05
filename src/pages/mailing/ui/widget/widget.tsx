@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-else-if */
 import React, { FC, useState } from 'react';
 
 import styles from './widget.module.css';
@@ -27,6 +28,15 @@ const Widget: FC<IWidget> = ({
 }) => {
   const [showWidget, setShowWidget] = useState(true);
   const date = new Date();
+  let minutes: number | string = date.getMinutes();
+  let hours: number | string = date.getHours();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  const messageTime = `${hours}:${minutes}`;
 
   return (
     <div
@@ -90,9 +100,7 @@ const Widget: FC<IWidget> = ({
                   ) : (
                     '...'
                   )}
-                  <p
-                    className={styles.widget__date}
-                  >{`${date.getHours()}:${date.getMinutes()}`}</p>
+                  <p className={styles.widget__date}>{messageTime}</p>
                 </div>
               </div>
             </div>
