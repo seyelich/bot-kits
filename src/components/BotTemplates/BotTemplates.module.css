@@ -72,6 +72,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -123,5 +124,5 @@
 }
 
 .track_active {
-  height: 282px;
+  height: 290px;
 }

@@ -1,10 +1,12 @@
-@import "variables.scss";
-@import "mixins.scss";
+@import 'variables.scss';
+@import 'mixins.scss';
 
 .react-datepicker-wrapper {
-  display: inline-block;
+
   padding: 0;
   border: 0;
+  width: 264px;
+  margin-bottom: -5px;
 }
 
 .react-datepicker {
@@ -16,7 +18,6 @@
   border-radius: $datepicker__border-radius;
   display: inline-block;
   position: relative;
-
 }
 
 .react-datepicker--time-only {
@@ -42,10 +43,9 @@
 }
 
 .react-datepicker-popper {
-  z-index: 1;
+  z-index: 5;
 
-
-  &[data-placement^="bottom"] {
+  &[data-placement^='bottom'] {
     padding-top: $datepicker__triangle-size + 2px;
 
     .react-datepicker__triangle {
@@ -53,15 +53,15 @@
     }
   }
 
-  &[data-placement="bottom-end"],
-  &[data-placement="top-end"] {
+  &[data-placement='bottom-end'],
+  &[data-placement='top-end'] {
     .react-datepicker__triangle {
       left: auto;
       right: 50px;
     }
   }
 
-  &[data-placement^="top"] {
+  &[data-placement^='top'] {
     padding-bottom: $datepicker__triangle-size + 2px;
 
     .react-datepicker__triangle {
@@ -69,7 +69,7 @@
     }
   }
 
-  &[data-placement^="right"] {
+  &[data-placement^='right'] {
     padding-left: $datepicker__triangle-size;
 
     .react-datepicker__triangle {
@@ -78,13 +78,12 @@
     }
   }
 
-  &[data-placement^="left"] {
+  &[data-placement^='left'] {
     padding-right: $datepicker__triangle-size;
 
     .react-datepicker__triangle {
       left: 42px;
       right: auto;
-
     }
   }
 }
@@ -221,10 +220,9 @@
 .react-datepicker__month-container {
   float: left;
   width: 296px;
-  height:478px;
+  height: 478px;
   border-radius: 10px;
   box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
-
 }
 
 .react-datepicker__year {
@@ -255,7 +253,6 @@
     display: inline-block;
     width: 4rem;
     margin: 2px;
-
   }
 }
 
@@ -281,13 +278,13 @@
         width: auto;
       }
 
-      input[type="time"]::-webkit-inner-spin-button,
-      input[type="time"]::-webkit-outer-spin-button {
+      input[type='time']::-webkit-inner-spin-button,
+      input[type='time']::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
 
-      input[type="time"] {
+      input[type='time'] {
         -moz-appearance: textfield;
       }
     }
@@ -391,12 +388,10 @@
 .react-datepicker__week {
   white-space: nowrap;
 
- &:last-of-type {
-  padding-bottom: 15px;
- }
+  &:last-of-type {
+    padding-bottom: 15px;
+  }
 }
-
-
 
 .react-datepicker__day-names {
   margin-bottom: -8px;
@@ -627,7 +622,7 @@
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    content: "\00d7";
+    content: '\00d7';
   }
 }
 

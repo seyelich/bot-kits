@@ -3,6 +3,7 @@
   height: 283px;
   border-radius: 30px;
   background-color: rgba(228, 233, 241, 1);
+  padding-top: 25px;
 
   @media (max-width: 992px) {
     height: auto;
@@ -15,6 +16,9 @@
   flex-direction: row;
   gap: 65px;
 
+  @media (max-width: 1200px) {
+    gap: 15px;
+  }
   @media (max-width: 992px) {
     flex-direction: column;
     gap: 0;
@@ -37,6 +41,7 @@
   line-height: 23.4px;
   color: rgba(6, 12, 35, 1);
   font-weight: 600;
+  padding-bottom: 25px;
 
   @media (max-width: 768px) {
     margin-top: 27px;
@@ -53,6 +58,7 @@
   color: rgba(6, 12, 35, 1);
   padding-left: 30px;
   margin-top: 0;
+  padding-bottom: 25px;
 
   @media (max-width: 768px) {
     padding-left: 20px;
@@ -89,6 +95,12 @@
   flex-direction: row;
   align-items: baseline;
   gap: 20px;
+  padding-bottom: 15px;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 0px;
+  }
+
 }
 
 .text {
@@ -103,11 +115,11 @@
   transition: all 0.2s linear;
 
   @media (max-width: 768px) {
- margin-top: 5px;
- margin-bottom: 18px;
+    margin-top: 5px;
+    margin-bottom: 18px;
   }
 }
 
 .text:hover {
-  color: #243CBB;
+  color: #243cbb;
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './Header.module.css';
 import Menu24px from '../icons/Menu24px/Menu24px';
 import Help from '../icons/Help/Help';
-import Notifications from '../icons/Notifications/Notifications';
+import NotificationsIcon from '../../icons/others/Notifications/Notifications';
 import avatar from '../../images/avatar.svg';
 import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
 import Logo from '../Logo/Logo';
@@ -36,7 +36,7 @@ export default function Header() {
         <p className={styles.text}>Демо</p>
         <div className={styles.icons}>
           <Help />
-          <Notifications number={2} />
+          <NotificationsIcon counter={2} color="#ccd4e0" />
         </div>
         <span className={styles.avatar}>
           <img src={avatar} alt="Avatar" className={styles.image} />
