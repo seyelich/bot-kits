@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import styles from './popup-promocode.module.css';
 import CloseIcon from '../../icons/others/Close';
+import TextInput from '../input/input';
 
 type TPopupProps = {
   onClose: () => void;
@@ -14,7 +15,12 @@ export default function PopupPromocode({ onClose }: TPopupProps) {
       </button>
       <h3 className={styles.title}>Активация промокода</h3>
       <form className={styles.form}>
-        <input />
+        <TextInput
+          name="promo-input"
+          placeholder="Введите промокод"
+          onChange={() => {}}
+          value=""
+        />
         <Button type="blue" text="АКТИВИРОВАТЬ" width={320} height={46} />
       </form>
     </div>
