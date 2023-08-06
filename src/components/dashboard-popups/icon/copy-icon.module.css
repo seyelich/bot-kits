@@ -1,0 +1,10 @@
+.button {
+  padding: 6px 6px 6px 6px;
+  border-radius: 10px;
+}
+
+.button_active {
+  padding: 6px 6px 6px 6px;
+  border-radius: 10px;
+  background-color: rgba(236, 239, 255, 1);
+}

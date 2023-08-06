@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import styles from './AddBot.module.css';
 import Plus from '../../icons/Plus/Plus';
 
@@ -7,9 +8,12 @@ export default function AddBot() {
   const [isClicked, setIsClicked] = useState(false);
   const MouseOver = () => setOnHover(true);
   const MouseOut = () => setOnHover(false);
+  const navigate = useNavigate();
   const addBot = () => {
     setIsClicked(true);
+    navigate('/bot-builder');
   };
+
   return (
     <div
       className={`${styles.wrapper} ${

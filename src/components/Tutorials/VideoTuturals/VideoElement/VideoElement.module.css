@@ -59,4 +59,8 @@
   left: 0.3px;
   color: rgba(6, 12, 35, 1);
   margin-top: 15px;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 }
