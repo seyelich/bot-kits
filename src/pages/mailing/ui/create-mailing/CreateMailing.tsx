@@ -56,7 +56,10 @@ const CreateMailing: FC = () => {
   >(undefined);
 
   useEffect(() => {
-    const setShowTextareaSettingsFn = () => setShowTextareaSettings(false);
+    const setShowTextareaSettingsFn = () => {
+      setShowEmojis(false);
+      setShowTextareaSettings(false);
+    };
 
     document.addEventListener('click', setShowTextareaSettingsFn);
     return () => {
