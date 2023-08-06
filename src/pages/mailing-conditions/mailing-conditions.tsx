@@ -66,6 +66,7 @@ const MailingConditions: FC = () => {
               text="ОТПРАВИТЬ"
               width={matches ? 130 : 188}
               height={matches ? 48 : 65}
+              extraClass={matches ? '' : styles.button__text}
               onClick={() => navigate('/mailing/conditions')}
             />
           </div>

@@ -259,6 +259,7 @@ const CreateMailing: FC = () => {
                 text="ДАЛЕЕ"
                 width={188}
                 height={65}
+                extraClass={styles.button__text}
                 onClick={() => navigate('/mailing/conditions')}
               />
             </div>

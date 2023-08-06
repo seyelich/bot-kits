@@ -127,6 +127,15 @@
   }
 }
 
+.button__text {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 @media screen and (max-width: 1130px) {
   .button_container {
     flex-direction: column;
