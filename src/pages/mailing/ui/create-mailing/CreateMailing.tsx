@@ -1,11 +1,12 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/no-array-index-key */
-import React, { FC, useEffect, useRef, useState } from 'react';
-
+import React, { FC, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import styles from './index.module.css';
+
 import Button from '../../../../components/Button/Button';
 import TextInput from '../../../../components/input/input';
 import CheckIcon from '../../../../icons/others/Check';
@@ -27,12 +28,13 @@ import DownIcon from '../../../../icons/others/Down';
 import ListsRow from './ListsRow';
 import FunnelsRow from './FunnelsRow';
 import WidgetMobileIcon from '../widget/widget-mobile-icon/WidgetMobileIcon';
+import { SidebarContext } from '../../../../App';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
 
 const CreateMailing: FC = () => {
-  const wrapperRef = useRef(null);
+  const { sidebarOpen } = useContext(SidebarContext);
   const navigate = useNavigate();
   const [name, setName] = useState('Моя рассылка 1');
   const [text, setText] = useState(
