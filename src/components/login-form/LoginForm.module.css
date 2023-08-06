@@ -4,7 +4,6 @@
   min-height: 590px;
   height: 100%;
   border-radius: 30px;
-  border-radius: 30px;
   background: #2743ce;
   display: flex;
   flex-direction: column;
@@ -119,12 +118,40 @@
 
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 730px) {
+  .loginForm {
+    min-height: 520px;
+    max-height: 520px;
+    max-width: 500px;
+    border-radius: 30px 30px 0 0;
+  }
 
+  .loginForm__form {
+    min-height: 300px;
+    padding: 40px 0 30px 0;
+  }
+
+  .loginForm__formContainer {
+    max-width: 320px;
+    max-height: 140px;
+  }
+
+  .loginForm__form__menu {
+    margin: 0 auto 41px;
+  }
+
+  .loginForm__footerTitle {
+    width: 100%;
+    height: 23px;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .loginForm__footer {
+    position: relative;
+    min-height: 78px;
+  }
 }
 
-
-
-@media screen and (max-width: 400px) {
-
-}

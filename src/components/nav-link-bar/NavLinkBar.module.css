@@ -30,6 +30,7 @@
 
     .navLinkBar_menu{
       margin: 0 20px 0 0;
+      max-height: 50px;
     }
 
     .navLinkBar_menuItem{

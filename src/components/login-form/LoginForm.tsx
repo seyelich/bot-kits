@@ -43,7 +43,7 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
             Регистрация
           </span>
         </nav>
-        <Button type="green" text="войти" width={260} height={64} isAuth />
+        <Button type="green" text="войти" width={windowWidth <= 730 ? 320 : 260} height={64} isAuth />
       </form>
       <div className={styles.loginForm__footer}>
         <p className={styles.loginForm__footerTitle}>Быстрый вход</p>

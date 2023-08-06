@@ -20,27 +20,27 @@ const NavLinkBar:FC<NavLinkBarProps> = ({windowWidth}) => {
     <div className={styles.navLinkBar}>
       <nav className={styles.navLinkBar_menu}>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <GoogleIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <GoogleIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <YandexIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <YandexIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <MailruIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <MailruIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
       </nav>
       <nav className={styles.navLinkBar_menu}>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <VKIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <VKIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <OdnoklassnikiIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <OdnoklassnikiIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <FacebookIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <FacebookIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
         <NavLink className={styles.navLinkBar_menuItem} to="#">
-          <TelegramIcon width={windowWidth <= 660 ? 34 : 40} height={windowWidth <= 660 ? 34 : 40} type="blue" />
+          <TelegramIcon width={windowWidth <= 730 ? 34 : 40} height={windowWidth <= 730 ? 34 : 40} type="blue" />
         </NavLink>
       </nav>
     </div>
