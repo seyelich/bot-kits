@@ -54,10 +54,10 @@ export default function PopupTarif({ onClose }: TPopupProps) {
               />
             ))}
           </div>
-          <p className={styles.text}>
+          <p className={`${styles.text} ${styles.text_m_size}`}>
             Цены на тарифы указаны за 1 месяц пользования.
           </p>
-          <p className={styles.comment}>
+          <p className={`${styles.comment} ${styles.text_m_size}`}>
             Оплата будет автоматически взиматься каждый месяц до тех пор, пока
             вы не отмените подписку.
           </p>

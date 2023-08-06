@@ -1,9 +1,15 @@
 .container {
-  position: sticky;
   max-width: 404px;
   box-sizing: content-box;
   padding-right: 28px;
-  min-height: 450px;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    height: 450px;
+    position: relative;
+  }
 }
 
 .title {
@@ -28,11 +34,11 @@
 .promo {
   width: 404px;
   box-sizing: border-box;
-  border-radius: var(--border-radius-30);
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 32px;
   padding-top: 113px;
+  border-radius: var(--border-radius-30);
   background-color: var(--hover-grey-color);
   display: flex;
   justify-content: space-between;
@@ -40,6 +46,11 @@
   position: absolute;
   top: 147px;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: 320px;
+  }
 }
 
 .balans {
