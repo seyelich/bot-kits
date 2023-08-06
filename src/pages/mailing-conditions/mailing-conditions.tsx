@@ -32,45 +32,47 @@ const MailingConditions: FC = () => {
   return (
     <section className={styles.container}>
       <section className={styles.wrapper}>
-        <div className={styles.section}>
-          <div className={styles.mailing__header}>
-            <div className={styles.creation}>
-              <div
-                className={styles.button_container}
-                style={{ marginBottom: '2px' }}
-              >
-                <div className={styles.firstStep}>
-                  <p>{'1  Шаг  >'}</p>
-                  <p>Создание рассылки</p>
+        {hideSection && (
+          <div className={styles.section}>
+            <div className={styles.mailing__header}>
+              <div className={styles.creation}>
+                <div
+                  className={styles.button_container}
+                  style={{ marginBottom: '2px' }}
+                >
+                  <div className={styles.firstStep}>
+                    <p>{'1  Шаг  >'}</p>
+                    <p>Создание рассылки</p>
+                  </div>
+                  <div className={styles.firstStep}>
+                    <p>{'2  Шаг  >'}</p>
+                    <p>Условия рассылки</p>
+                  </div>
                 </div>
-                <div className={styles.firstStep}>
-                  <p>{'2  Шаг  >'}</p>
-                  <p>Условия рассылки</p>
-                </div>
+                <h2 className={styles.mailing__title}>Моя рассылка 1</h2>
+                <MailingForm />
               </div>
-              <h2 className={styles.mailing__title}>Моя рассылка 1</h2>
-              <MailingForm />
+              <WidgetMobileIcon bottom="90px" setHideSection={setHideSection} />
             </div>
-            <WidgetMobileIcon bottom="90px" setHideSection={setHideSection} />
+            <div className={styles.navigation}>
+              <button
+                type="button"
+                className={styles.navigation__exit}
+                onClick={() => window.history.back()}
+              >
+                НАЗАД
+              </button>
+              <Button
+                type="green"
+                text="ОТПРАВИТЬ"
+                width={matches ? 130 : 188}
+                height={matches ? 48 : 65}
+                extraClass={matches ? '' : styles.button__text}
+                onClick={() => navigate('/mailing/conditions')}
+              />
+            </div>
           </div>
-          <div className={styles.navigation}>
-            <button
-              type="button"
-              className={styles.navigation__exit}
-              onClick={() => window.history.back()}
-            >
-              НАЗАД
-            </button>
-            <Button
-              type="green"
-              text="ОТПРАВИТЬ"
-              width={matches ? 130 : 188}
-              height={matches ? 48 : 65}
-              extraClass={matches ? '' : styles.button__text}
-              onClick={() => navigate('/mailing/conditions')}
-            />
-          </div>
-        </div>
+        )}
         <Widget
           name={name}
           text={text}
