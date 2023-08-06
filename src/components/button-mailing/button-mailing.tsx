@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-console */
 import { Dispatch, FC, SetStateAction, useState } from 'react';
 import CheckIcon from '../../icons/others/Check';
 import styles from './button.mailing.module.css';
@@ -25,13 +27,15 @@ const ButtonMailing: FC<IButtonMailing> = ({ width, text, setSelected }) => {
           if (text === 'Месяц отправки') {
             setSelected(!isActive);
           }
+          console.log(text);
+          console.log(setSelected);
         }}
         className={`${styles.input} `}
         style={{ width }}
       >
         {text}
       </button>
-      {isActive && (
+      {!isActive && (
         <span className={styles.button}>
           {' '}
           <CheckIcon color="#243CBB" width={16} height={16} />
