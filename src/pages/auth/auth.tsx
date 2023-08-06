@@ -7,8 +7,8 @@ import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
-  const [state, setState] = useState({ authState: 'ForgotPass' });
-  const [banner, setBanner] = useState({ bannerState: 'forgotPassOnEmail' });
+  const [state, setState] = useState({ authState: 'Register' });
+  const [banner, setBanner] = useState({ bannerState: 'none' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -70,15 +70,17 @@ export default function Auth() {
           >
             <CloseIcon color="#22FFAA" width={32} height={32} />
           </div>
-          <div className={styles.noticePage__titleContainer}>
-            <h1 className={styles.noticePage__titleText}>
-              Письмо с подтверждением отправлено тебе на
-              <span className={styles.noticePage__titleIcon}>/email</span>!
-            </h1>
+          <div className={styles.noticePage__wrapper}>
+            <div className={styles.noticePage__titleContainer}>
+              <h1 className={styles.noticePage__titleText}>
+                Письмо с подтверждением отправлено тебе на
+                <span className={styles.noticePage__titleIcon}>/email</span>!
+              </h1>
+            </div>
+            <div
+              className={`${styles.noticePage__titleImage} ${styles.noticePage__registerOrEmailImg}`}
+            />
           </div>
-          <div
-            className={`${styles.noticePage__titleImage} ${styles.noticePage__registerOrEmailImg}`}
-          />
         </div>
       )}
       {banner.bannerState === 'forgotPassOnEmail' && (
@@ -89,15 +91,17 @@ export default function Auth() {
           >
             <CloseIcon color="#22FFAA" width={32} height={32} />
           </div>
-          <div className={styles.noticePage__titleContainer}>
-            <h1 className={styles.noticePage__titleText}>
-              Ссылка для сброса пароля отправлена тебе на
-              <span className={styles.noticePage__titleIcon}>/email</span>!
-            </h1>
+          <div className={styles.noticePage__wrapper}>
+            <div className={styles.noticePage__titleContainer}>
+              <h1 className={styles.noticePage__titleText}>
+                Ссылка для сброса пароля отправлена тебе на
+                <span className={styles.noticePage__titleIcon}>/email</span>!
+              </h1>
+            </div>
+            <div
+              className={`${styles.noticePage__titleImage} ${styles.noticePage__forgotPassOnEmailImg}`}
+            />
           </div>
-          <div
-            className={`${styles.noticePage__titleImage} ${styles.noticePage__forgotPassOnEmailImg}`}
-          />
         </div>
       )}
       {banner.bannerState === 'none' && (

@@ -45,13 +45,13 @@ const RegisterForm: FC<RegisterFormProps> = ({
             <AuthInput
               type="text"
               placeholder="Имя"
-              width={windowWidth <= 790 ? 320 : 325}
+              width={windowWidth <= 790 ? 300 : 325}
               height={60}
             />
             <AuthInput
               type="email"
               placeholder="E-mail"
-              width={windowWidth <= 790 ? 320 : 325}
+              width={windowWidth <= 790 ? 300 : 325}
               height={60}
               error
               textError="Ошибка"
@@ -60,7 +60,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
               <AuthInput
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Пароль"
-                width={windowWidth <= 790 ? 320 : 325}
+                width={windowWidth <= 790 ? 300 : 325}
                 height={60}
               />
               <button
@@ -78,7 +78,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
                 <AuthInput
                   type="text"
                   placeholder="Телефон"
-                  width={200}
+                  width={windowWidth <= 790 ? 175 : 200}
                   height={60}
                 />
               </div>

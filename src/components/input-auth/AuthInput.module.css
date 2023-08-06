@@ -67,6 +67,7 @@
   max-width: 280px;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 4;
 }
 
 .authInput__textError_visible {
@@ -74,10 +75,6 @@
 }
 
 
-
-@media screen and (max-width: 790px) {
-
-}
 
 @media screen and (max-width: 660px) {
   .authInput__container {
