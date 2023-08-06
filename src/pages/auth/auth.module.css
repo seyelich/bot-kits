@@ -50,6 +50,13 @@
   position: relative;
 }
 
+.noticePage__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .noticePage__closeIcon {
   position: absolute;
   top: 30px;
@@ -132,10 +139,7 @@
   }
 
   .noticePage__registerOrEmailImg{
-    background-image: url('../../images/sendEmail.png');
-    background-size: contain;
-    width: 387px;
-    height: 367px;
+    background-image: url('../../images/sendEmail768.png');
   }
 
   .noticePage__forgotPassOnEmailImg{
@@ -153,14 +157,23 @@
     display: flex;
     flex-direction: column-reverse;
     max-width: 616px;
-    max-height: 596px;
     margin: 130px 77px 298px 75px;
   }
 
   .noticePage__titleContainer {
     max-width: 616px;
     max-height: 300px;
-    margin:70px 0 0 ;
+    margin:127px 0 0 ;
+  }
+  .noticePage__registerOrEmailImg{
+    position: relative;
+    top:53px;
+    right: 115px;
+  }
+  .noticePage__forgotPassOnEmailImg{
+    position: relative;
+    top:53px;
+    right: 115px;
   }
 
   .noticePage__titleImage {
@@ -209,6 +222,15 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+  }
+
+  .noticePage__forgotPassOnEmailText{
+    margin-bottom: 54px;
+  }
+
+  .noticePage__closeIcon {
+    top: 16px;
+    right: 35px;
   }
 
 }
