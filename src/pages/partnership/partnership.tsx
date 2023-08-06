@@ -52,6 +52,9 @@ export default function Partnership() {
   const [arrowRotate, setArrowRotate] = useState(false);
   const [ships, setShips] = useState(data);
 
+  const formattedNumber = (numberValue: number): string =>
+    `${numberValue.toLocaleString()} Р`;
+
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -163,67 +166,14 @@ export default function Partnership() {
                 >
                   {el.status}
                 </td>
-                <td>{el.summ}</td>
-                <td>{el.commission}</td>
-                <td>{el.paid}</td>
-                <td>{el.withdrawal}</td>
+                <td>{formattedNumber(el.summ)}</td>
+                <td>{formattedNumber(el.commission)}</td>
+                <td>{formattedNumber(el.paid)}</td>
+                <td>{formattedNumber(el.withdrawal)}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        {/* <div className={styles.table__mobile}>
-          {ships.map((el) => (
-            <table className={styles.table_mobile}>
-              <colgroup>
-                <col style={{ width: '180px' }} />
-                <col style={{ width: '10px' }} />
-              </colgroup>
-              <tbody>
-                <tr key={el.id}>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Перешли по ссылке</td>
-                    <td className={styles.td_mobile}>{el.visities}</td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Число регистраций</td>
-                    <td className={styles.td_mobile}>{el.registrations}</td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Оплата</td>
-                    <td
-                      className={
-                        (styles.td_mobile,
-                        el.status === 'Оплачено'
-                          ? styles.payPaidFor
-                          : el.status === 'В обработке'
-                          ? styles.inProcessing
-                          : styles.notPaid)
-                      }
-                    >
-                      {el.status}
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Сумма</td>
-                    <td className={styles.td_mobile}>{el.summ}</td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Комиссия</td>
-                    <td className={styles.td_mobile}>{el.commission}</td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Выплачено</td>
-                    <td className={styles.td_mobile}>{el.paid}</td>
-                  </tr>
-                  <tr>
-                    <td className={styles.td_name_mobile}>Вывод</td>
-                    <td className={styles.td_mobile}>{el.withdrawal}</td>
-                  </tr>
-                </tr>
-              </tbody>
-            </table>
-          ))}
-        </div> */}
         <div className={styles.table__mobile}>
           {ships.map((el) => (
             <table className={styles.table_item_mobile}>
@@ -257,19 +207,27 @@ export default function Partnership() {
                 </tr>
                 <tr>
                   <td className={styles.td_name_mobile}>Сумма</td>
-                  <td className={styles.td_curr_mobile}>{el.summ}</td>
+                  <td className={styles.td_curr_mobile}>
+                    {formattedNumber(el.summ)}
+                  </td>
                 </tr>
                 <tr>
                   <td className={styles.td_name_mobile}>Комиссия</td>
-                  <td className={styles.td_curr_mobile}>{el.commission}</td>
+                  <td className={styles.td_curr_mobile}>
+                    {formattedNumber(el.commission)}
+                  </td>
                 </tr>
                 <tr>
                   <td className={styles.td_name_mobile}>Выплачено</td>
-                  <td className={styles.td_curr_mobile}>{el.paid}</td>
+                  <td className={styles.td_curr_mobile}>
+                    {formattedNumber(el.paid)}
+                  </td>
                 </tr>
                 <tr>
                   <td className={styles.td_name_mobile}>Вывод</td>
-                  <td className={styles.td_curr_mobile}>{el.withdrawal}</td>
+                  <td className={styles.td_curr_mobile}>
+                    {formattedNumber(el.withdrawal)}
+                  </td>
                 </tr>
               </tbody>
             </table>
