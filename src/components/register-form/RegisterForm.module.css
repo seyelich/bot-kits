@@ -183,6 +183,10 @@
     max-height: 619px;
   }
 
+  .registerForm__form {
+    margin-top: 59px;
+  }
+
   .registerForm__inputContainer {
     max-width: 620px;
     margin-bottom: 50px;

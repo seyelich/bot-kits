@@ -89,7 +89,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
           <Button
             type="green"
             text="создать аккаунт"
-            width={windowWidth <= 400 ? 320 : 260}
+            width={windowWidth <= 660 ? 320 : 260}
             height={64}
             isAuth
             onClick={handleRegister}
