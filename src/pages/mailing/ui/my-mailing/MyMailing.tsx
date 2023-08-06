@@ -115,37 +115,39 @@ const MyMailing: FC = () => {
             )}
           </div>
         </div>
-        <table className={styles.table}>
-          <thead className={styles.table__header}>
-            <tr>
-              <th style={{ width: '120px' }}>ID</th>
-              <th style={{ width: '140px' }}>Название</th>
-              <th style={{ width: '162px' }}>Мессенджер</th>
-              <th style={{ width: '182px' }}>Отправлено сообщений</th>
-              <th style={{ width: '132px' }}>Конверсия</th>
-              <th style={{ width: '122px' }}>Статус запуска</th>
-            </tr>
-          </thead>
-          <tbody>
-            {mailings.map((el) => (
-              <tr key={el.id}>
-                <td>{el.id}</td>
-                <td>{el.name}</td>
-                <td>{el.messenger}</td>
-                <td>{el.messages}</td>
-                <td>{el.conversion}</td>
-                <td
-                  style={{
-                    fontWeight: 600,
-                    color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
-                  }}
-                >
-                  {el.status}
-                </td>
+        <div className={styles.table__block}>
+          <table className={styles.table}>
+            <thead className={styles.table__header}>
+              <tr>
+                <th style={{ width: '120px' }}>ID</th>
+                <th style={{ width: '140px' }}>Название</th>
+                <th style={{ width: '162px' }}>Мессенджер</th>
+                <th style={{ width: '182px' }}>Отправлено сообщений</th>
+                <th style={{ width: '132px' }}>Конверсия</th>
+                <th style={{ width: '122px' }}>Статус запуска</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {mailings.map((el) => (
+                <tr key={el.id}>
+                  <td>{el.id}</td>
+                  <td>{el.name}</td>
+                  <td>{el.messenger}</td>
+                  <td>{el.messages}</td>
+                  <td>{el.conversion}</td>
+                  <td
+                    style={{
+                      fontWeight: 600,
+                      color: el.status === 'Запущено' ? '#00E98F' : '#FF5555',
+                    }}
+                  >
+                    {el.status}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <div className={styles.table__mobile}>
           {mailings.map((el, i) => (
             <div className={styles.row} key={i}>
@@ -205,8 +207,11 @@ const MyMailing: FC = () => {
         </div>
         {showTutotialButtons && (
           <div className={styles.buttons}>
-            <TutorialButton type="instruction" />
-            <TutorialButton type="video" />
+            <TutorialButton
+              type="instruction"
+              extraClass={styles.buttons__button}
+            />
+            <TutorialButton type="video" extraClass={styles.buttons__button} />
           </div>
         )}
       </div>

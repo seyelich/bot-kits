@@ -87,6 +87,10 @@
   column-gap: 29px;
 }
 
+.table__block {
+  overflow: auto;
+}
+
 table {
   width: 100%;
   border-spacing: 0 28px;
@@ -128,6 +132,16 @@ td {
   background-color: #fff;
   box-shadow: 0px 12px 24px 0px #15123321;
   animation: show_filter_list 0.2s ease;
+}
+
+.buttons__button {
+  @media (max-width: 950px) {
+    width: 300px;
+  }
+
+  @media (max-width: 767px) {
+    width: 272px;
+  }
 }
 
 @keyframes show_filter_list {
@@ -173,9 +187,9 @@ td {
 
 .about__icon {
   display: none;
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
   cursor: pointer;
-  color: #BFC9D9;
+  color: #bfc9d9;
   transform: rotate(180deg);
 }
 
@@ -299,7 +313,7 @@ td {
 
   .buttons {
     row-gap: 12px;
-    animation: show_tutorial_buttons .2s ease;
+    animation: show_tutorial_buttons 0.2s ease;
   }
 
   .about__icon {
