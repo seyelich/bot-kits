@@ -15,6 +15,7 @@ const ButtonMailing: FC<IButtonMailing> = ({ width, text, setSelected }) => {
   return (
     <div className={styles.container}>
       <button
+        type="button"
         onClick={() => {
           setActive(!isActive);
           if (text === 'Число месяца') {

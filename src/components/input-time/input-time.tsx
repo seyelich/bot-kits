@@ -17,7 +17,7 @@ const InputTime: FC<IInputTimeProps> = ({ inputName, onClick }) => (
         <span className={styles.calendar_icon}>
           <Clock color="#A6B3C9" />
         </span>
-        <p className={styles.date}>Дата</p>
+        <p className={styles.date}>Время</p>
       </div>
       <div className={styles.input_wrapper}>
         <input
