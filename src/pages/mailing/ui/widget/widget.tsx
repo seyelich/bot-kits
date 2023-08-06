@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-dupe-else-if */
-import React, { FC, useState } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 
 import styles from './widget.module.css';
 
@@ -8,6 +10,7 @@ import RobotIcon from '../../../../icons/others/Robot';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import Button from '../../../../components/Button/Button';
 import CloseIcon from '../../../../icons/others/Close';
+import { SidebarContext } from '../../../../App';
 
 interface IWidget {
   italicText?: boolean;
@@ -26,6 +29,8 @@ const Widget: FC<IWidget> = ({
   hideSection,
   setHideSection,
 }) => {
+  const { sidebarOpen } = useContext(SidebarContext);
+
   const [showWidget, setShowWidget] = useState(true);
   const date = new Date();
   let minutes: number | string = date.getMinutes();
@@ -38,9 +43,22 @@ const Widget: FC<IWidget> = ({
   }
   const messageTime = `${hours}:${minutes}`;
 
+  const [matches, setMatches] = useState(
+    window.matchMedia('(max-width: 767px)').matches
+  );
+
+  useEffect(() => {
+    window.matchMedia('(max-width: 767px)').addEventListener('change', (e) => {
+      setMatches(e.matches);
+      setShowWidget(true);
+    });
+  }, []);
+
   return (
     <div
-      className={`${styles.widget} ${hideSection ? styles.widget_hide : ''}`}
+      className={`${styles.widget} ${hideSection ? styles.widget_hide : ''} ${
+        sidebarOpen && !matches ? styles.widget_short : ''
+      }`}
     >
       <button
         type="button"
@@ -58,7 +76,11 @@ const Widget: FC<IWidget> = ({
         </div>
       </button>
       {showWidget ? (
-        <div className={styles.widget__block}>
+        <div
+          className={`${styles.widget__block} ${
+            sidebarOpen && styles.widget__block_short
+          }`}
+        >
           <div className={styles.widget__header}>
             <p className={styles.widget__type}>Тестовый виджет</p>
             <div className={styles.widget__nameBlock}>
