@@ -1,6 +1,5 @@
 .authInput__container {
   max-width: 570px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -17,6 +16,7 @@
   letter-spacing: 0.5px;
   color: #ffffff;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .authInput:focus {
   outline: none;
@@ -64,6 +64,9 @@
   line-height: 150%;
   letter-spacing: 0.3px;
   visibility: hidden;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .authInput__textError_visible {
@@ -73,12 +76,7 @@
 
 
 @media screen and (max-width: 790px) {
-  .authInput__container {
-    max-width: 300px;
-  }
-  .authInput {
-    max-width: 300px;
-  }
+
 }
 
 @media screen and (max-width: 660px) {
@@ -90,7 +88,8 @@
   }
   .authInput__textError {
     position: absolute;
-    bottom: 0px;
+    bottom: -14px;
     z-index: 2;
+    max-width: 300px;
   }
 }

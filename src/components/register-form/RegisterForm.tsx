@@ -10,22 +10,15 @@ import { items } from '../../utils/itemsForRegister';
 interface RegisterFormProps {
   logIn: () => void;
   handleRegister: () => void;
+  windowWidth: number;
 }
 
-const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
+const RegisterForm: FC<RegisterFormProps> = ({
+  logIn,
+  handleRegister,
+  windowWidth,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -42,18 +35,23 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
           Создай аккаунт с помощью
         </p>
         <div className={styles.registerForm__socialContainer__navBar}>
-          <NavLinkBar />
+          <NavLinkBar windowWidth={windowWidth} />
         </div>
         <p className={styles.registerForm__socialContainer__footerText}>или</p>
       </div>
       <div className={styles.registerForm__wrapper}>
         <form className={styles.registerForm__form} onSubmit={handleSubmit}>
           <div className={styles.registerForm__inputContainer}>
-            <AuthInput type="text" placeholder="Имя" width={325} height={60} />
+            <AuthInput
+              type="text"
+              placeholder="Имя"
+              width={windowWidth <= 790 ? 300 : 325}
+              height={60}
+            />
             <AuthInput
               type="email"
               placeholder="E-mail"
-              width={325}
+              width={windowWidth <= 790 ? 300 : 325}
               height={60}
               error
               textError="Ошибка"
@@ -62,7 +60,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
               <AuthInput
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Пароль"
-                width={325}
+                width={windowWidth <= 790 ? 300 : 325}
                 height={60}
               />
               <button

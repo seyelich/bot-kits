@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
@@ -7,9 +7,10 @@ import styles from './LoginForm.module.css';
 interface LoginFormProps {
   signIn: () => void;
   forgotPass: () => void;
+  windowWidth: number;
 }
 
-const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass }) => {
+const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -32,7 +33,10 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass }) => {
           />
         </div>
         <nav className={styles.loginForm__form__menu}>
-          <span className={styles.loginForm__form__menuItems} onClick={forgotPass}>
+          <span
+            className={styles.loginForm__form__menuItems}
+            onClick={forgotPass}
+          >
             Забыли пароль?
           </span>
           <span className={styles.loginForm__form__menuItems} onClick={signIn}>
@@ -43,7 +47,7 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass }) => {
       </form>
       <div className={styles.loginForm__footer}>
         <p className={styles.loginForm__footerTitle}>Быстрый вход</p>
-        <NavLinkBar />
+        <NavLinkBar windowWidth={windowWidth} />
       </div>
     </div>
   );

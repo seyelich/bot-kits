@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s ease-in-out;
 }
 
 .loginForm__form {
@@ -22,6 +23,7 @@
   max-width: 770px;
   width: 100%;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 .loginForm__formContainer {
@@ -94,4 +96,36 @@
   position: absolute;
   top: -70px;
   left: 185px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 790px) {
+  .loginForm {
+    max-width: 700px;
+    min-height: 590px;
+  }
+
+  .loginForm__form {
+    min-height: 420px;
+    padding: 60px 0 60px 0;
+    max-width: 700px;
+  }
+
+  .loginForm__formContainer {
+    max-width: 500px;
+    max-height: 140px;
+  }
+
+}
+
+@media screen and (max-width: 660px) {
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
 }

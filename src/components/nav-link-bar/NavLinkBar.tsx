@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import FacebookIcon from '../../icons/social/facebook';
 import GoogleIcon from '../../icons/social/google';
@@ -9,20 +9,11 @@ import VKIcon from '../../icons/social/vk';
 import YandexIcon from '../../icons/social/yandex';
 import styles from './NavLinkBar.module.css';
 
-const NavLinkBar = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+interface NavLinkBarProps{
+  windowWidth:number;
+}
 
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+const NavLinkBar:FC<NavLinkBarProps> = ({windowWidth}) => {
 
 
   return (
