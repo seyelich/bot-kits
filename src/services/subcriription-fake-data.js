@@ -44,7 +44,7 @@ export const payments = [
     date: '15.09.2022 10:11',
     summ: '+2000',
     operation: 'Поступление',
-    note: 'Пополнение счёта',
+    note: '',
     status: 'Успешно',
   },
   {
