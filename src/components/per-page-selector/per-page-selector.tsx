@@ -31,13 +31,25 @@ export default function PerPageSelector({ perPage, setPerPage }: TProps) {
           opened ? `${styles.panel} ${styles['panel-active']}` : styles.panel
         }
       >
-        <button type="button" onClick={() => selectPerPage(10)}>
+        <button
+          type="button"
+          className={styles.panel__button}
+          onClick={() => selectPerPage(10)}
+        >
           10
         </button>
-        <button type="button" onClick={() => selectPerPage(20)}>
+        <button
+          type="button"
+          className={styles.panel__button}
+          onClick={() => selectPerPage(20)}
+        >
           20
         </button>
-        <button type="button" onClick={() => selectPerPage(30)}>
+        <button
+          type="button"
+          className={styles.panel__button}
+          onClick={() => selectPerPage(30)}
+        >
           30
         </button>
       </div>

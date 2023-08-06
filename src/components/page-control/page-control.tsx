@@ -58,7 +58,7 @@ export default function PageControl({
         </button>
         <button
           type="button"
-          disabled={page === count}
+          disabled={count < 2 || page === count}
           onClick={() => setCurrent((current) => ++current)}
           className={styles.navbutton}
         >

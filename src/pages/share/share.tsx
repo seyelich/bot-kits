@@ -14,6 +14,8 @@ import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
 import PerPageSelector from '../../components/per-page-selector/per-page-selector';
 import useFakeUsers from './use-fake-users';
+import Modal from '../../components/modal/modal';
+import CreateUser from '../../components/create-user/create-user';
 
 function MoreIcon() {
   return (
@@ -31,6 +33,7 @@ export default function Share() {
   const [perPage, setPerPage] = useState<number>(10);
   const [current, setCurrent] = useState<number>(1);
   const [users, setUsers] = useState<Array<TUser>>([]);
+  const [modalOpened, setModalOpened] = useState<boolean>(false);
   const { getUsers, removeUsers } = useFakeUsers();
 
   function refreshUsers() {
@@ -46,6 +49,7 @@ export default function Share() {
   }
 
   useEffect(() => {
+    if (current > 1 && current > Math.ceil(total / perPage)) setCurrent(1);
     refreshUsers();
   }, [current, perPage]);
 
@@ -59,6 +63,7 @@ export default function Share() {
           width={237}
           height={46}
           extraClass={styles.greenbutton}
+          onClick={() => setModalOpened(true)}
         />
       </div>
       <div className={styles.filter}>
@@ -100,6 +105,11 @@ export default function Share() {
         <p className={styles['page-selector-label']}>Отображать по строкам:</p>
         <PerPageSelector perPage={perPage} setPerPage={setPerPage} />
       </div>
+      {modalOpened && (
+        <Modal onClose={() => setModalOpened(false)}>
+          <CreateUser />
+        </Modal>
+      )}
     </>
   );
 }

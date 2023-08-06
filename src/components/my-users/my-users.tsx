@@ -13,7 +13,6 @@ type TMyUsersProps = {
   setChecked: Dispatch<SetStateAction<Set<string>>>;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function MyUsers({ users, checked, setChecked }: TMyUsersProps) {
   function handleCheckAll() {
     if (users.length === checked.size) {
@@ -38,7 +37,7 @@ export default function MyUsers({ users, checked, setChecked }: TMyUsersProps) {
       <h2 className={styles.title}>Мои пользователи</h2>
       <div className={styles['table-head']}>
         <UserCheckbox
-          check={users.length === checked.size}
+          check={checked.size > 0 && users.length === checked.size}
           onClick={() => handleCheckAll()}
         />
         <p className={styles['table-head__text']}>Имя</p>
