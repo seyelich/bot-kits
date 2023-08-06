@@ -16,4 +16,20 @@ export const tariffs = [
   },
 ];
 
-export const subscribe = {};
+export const subscribeActive = {
+  tarif: 'Бизнес',
+  status: 'active',
+  next_payment: '20.09.2023',
+  payment_source: '*** 1119',
+};
+
+export const subscribeNotActive = {
+  tarif: 'Бизнес',
+  status: 'notActive',
+  next_payment: '20.09.2023',
+  reason: 'Недостаточно средств',
+};
+
+export const notSubscribe = {
+  status: 'notSubscribe',
+};

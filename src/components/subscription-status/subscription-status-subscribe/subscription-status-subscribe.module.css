@@ -46,20 +46,3 @@
 .text_notactive {
   color: var(--error-red-color);
 }
-
-.comment{
-  margin: 0;
-  width: 100%;
-  height: 40px;
-  padding-bottom: 23px;
-}
-
-.comment__line {
-  margin: 0;
-  font-family: "Open Sans";
-  font-size: var(--s-font-size);
-  font-style: normal;
-  font-weight: var(--normal);
-  line-height: var(--s-line-height);
-  text-align: left;
-}

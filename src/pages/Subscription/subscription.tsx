@@ -1,14 +1,17 @@
-import SubscriptionStatus from '../../components/subscription-status/subscription-status';
 // import { useState } from 'react';
+import SubscriptionStatus from '../../components/subscription-status/subscription-status';
 import Button from '../../components/Button/Button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
+import {
+  // notSubscribe,
+  // subscribeActive,
+  subscribeNotActive,
+} from '../../services/subcriription-fake-data';
 
 export default function Subscription() {
-  let status = 'notSubscribe';
-  // const [status, setStatus] = useState('notSubscribe');
-  // ['notSubscribe', 'active', 'notActive']
-  status = 'active';
+  const subcriription = subscribeNotActive;
+  const { status } = subcriription;
   return (
     <main className={styles.container}>
       <div className={styles.title_container}>
@@ -18,7 +21,7 @@ export default function Subscription() {
         )}
       </div>
       <section className={styles.subscription}>
-        <SubscriptionStatus status={status} />
+        <SubscriptionStatus subcriription={subcriription} />
         <SubscriptionTable />
       </section>
     </main>

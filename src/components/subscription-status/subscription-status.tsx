@@ -8,10 +8,17 @@ import Modal from '../modal/modal';
 import PopupTarif from '../popup-tarif/popup-tarif';
 
 type TProps = {
-  status: string;
+  subcriription: {
+    tarif?: string;
+    status: string;
+    next_payment?: string;
+    payment_source?: string;
+    reason?: string;
+  };
 };
 
-export default function SubscriptionStatus({ status }: TProps) {
+export default function SubscriptionStatus({ subcriription }: TProps) {
+  const { status } = subcriription;
   const [openPromo, setOpenPromo] = useState(false);
   const [openTarif, setOpenTarif] = useState(false);
   const openPopupPromocode = () => {
@@ -28,7 +35,7 @@ export default function SubscriptionStatus({ status }: TProps) {
         <SubscriptionStatusNotSubscribe setOpenPopup={setOpenTarif} />
       ) : (
         <SubscriptionStatusSubscribe
-          status={status}
+          subcriription={subcriription}
           setOpenPopup={setOpenTarif}
         />
       )}

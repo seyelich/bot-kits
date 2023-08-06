@@ -5,17 +5,31 @@ import SubscriptionDetailNotActive from '../../subscription-detail/subscription-
 import SubscriptionDetailActive from '../../subscription-detail/subscription-detail-active/subscription-detail-active';
 
 type TProps = {
-  status: string;
+  subcriription: {
+    tarif?: string;
+    status: string;
+    next_payment?: string;
+    payment_source?: string;
+    reason?: string;
+  };
   setOpenPopup: Dispatch<SetStateAction<boolean>>;
 };
 
 export default function SubscriptionStatusSubscribe({
-  status,
+  subcriription,
   setOpenPopup,
 }: TProps) {
   const openPopupTarif = () => {
     setOpenPopup(true);
   };
+
+  const {
+    tarif,
+    status,
+    next_payment: nextPayment,
+    payment_source: paymentSource,
+    reason,
+  } = subcriription;
 
   return (
     <div
@@ -23,7 +37,7 @@ export default function SubscriptionStatusSubscribe({
       style={status === 'active' ? { paddingBottom: 32 } : {}}
     >
       <div className={styles.statusbar}>
-        <h3 className={styles.title}>Бизнес</h3>
+        <h3 className={styles.title}>{tarif}</h3>
         {status === 'active' && (
           <h4 className={`${styles.text} ${styles.text_active}`}>активен</h4>
         )}
@@ -34,9 +48,18 @@ export default function SubscriptionStatusSubscribe({
         )}
       </div>
       {status === 'notActive' && (
-        <SubscriptionDetailNotActive openTariffs={openPopupTarif} />
+        <SubscriptionDetailNotActive
+          payment={nextPayment!}
+          reason={reason!}
+          openTariffs={openPopupTarif}
+        />
       )}
-      {status === 'active' && <SubscriptionDetailActive />}
+      {status === 'active' && (
+        <SubscriptionDetailActive
+          payment={nextPayment!}
+          card={paymentSource!}
+        />
+      )}
     </div>
   );
 }

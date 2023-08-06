@@ -55,5 +55,10 @@
   font-weight: var(--bold);
   line-height: var(--m-line-height);
   letter-spacing: var(--m-letter-space);
+  transition: color 0.1s linear;
   color: var(--placeholder-grey-color);
+}
+
+.cancel:hover {
+  color: var(--primary-text-color)
 }
