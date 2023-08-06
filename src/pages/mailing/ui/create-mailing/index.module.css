@@ -384,6 +384,13 @@
   text-align: center;
 }
 
+.textarea__emojiPicker {
+  position: absolute;
+  z-index: 999;
+  top: 20px;
+  right: -38px;
+}
+
 @media screen and (max-width: 1200px) {
   .inputs {
     flex-direction: column;

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -5,6 +6,7 @@
 import React, { FC, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
+import EmojiPicker from 'emoji-picker-react';
 import styles from './index.module.css';
 
 import Button from '../../../../components/Button/Button';
@@ -47,6 +49,7 @@ const CreateMailing: FC = () => {
   const [hideSection, setHideSection] = useState(true);
   const [italicText, setItalicText] = useState(false);
   const [boldText, setBoldText] = useState(false);
+  const [showEmojis, setShowEmojis] = useState(false);
 
   const [socialIconSelectedType, setSocialIconSelectedType] = useState<
     'Photo' | 'Video' | 'Music' | 'Button' | undefined
@@ -149,7 +152,20 @@ const CreateMailing: FC = () => {
                     >
                       <BracketIcon width={20} height={20} />
                     </div>
-                    <div className={styles.textarea__icon}>
+                    {showEmojis && (
+                      <div className={styles.textarea__emojiPicker}>
+                        (
+                        <EmojiPicker
+                          width={300}
+                          onEmojiClick={(e) => setText(`${text}${e.emoji}`)}
+                        />
+                        )
+                      </div>
+                    )}
+                    <div
+                      className={styles.textarea__icon}
+                      onClick={() => setShowEmojis(!showEmojis)}
+                    >
                       <EmojiIcon width={20} height={20} />
                     </div>
                   </div>
