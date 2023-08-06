@@ -4,13 +4,11 @@ import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
 import { useEffect, useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
-import sendEmail from '../../images/sendEmail.png';
-import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
   const [state, setState] = useState({ authState: 'ForgotPass' });
-  const [banner, setBanner] = useState({ bannerState: 'none' });
+  const [banner, setBanner] = useState({ bannerState: 'forgotPassOnEmail' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -62,7 +60,6 @@ export default function Auth() {
 
   const logoSize = chooseLogoSize();
 
-
   return (
     <>
       {banner.bannerState === 'registerOnEmail' && (
@@ -79,10 +76,8 @@ export default function Auth() {
               <span className={styles.noticePage__titleIcon}>/email</span>!
             </h1>
           </div>
-          <img
-            className={styles.noticePage__titleImage}
-            src={sendEmail}
-            alt="image"
+          <div
+            className={`${styles.noticePage__titleImage} ${styles.noticePage__registerOrEmailImg}`}
           />
         </div>
       )}
@@ -100,10 +95,8 @@ export default function Auth() {
               <span className={styles.noticePage__titleIcon}>/email</span>!
             </h1>
           </div>
-          <img
-            className={styles.noticePage__titleImage}
-            src={sendForgotPass}
-            alt="image"
+          <div
+            className={`${styles.noticePage__titleImage} ${styles.noticePage__forgotPassOnEmailImg}`}
           />
         </div>
       )}
@@ -114,7 +107,7 @@ export default function Auth() {
           }`}
         >
           <div className={styles.headerContainer}>
-          <Logo width={logoSize.width} height={logoSize.height} />
+            <Logo width={logoSize.width} height={logoSize.height} />
             <h1
               className={`${styles.title} ${
                 state.authState !== 'Register' && styles.title_login
@@ -140,7 +133,10 @@ export default function Auth() {
             />
           )}
           {state.authState === 'ForgotPass' && (
-            <ForgotPassForm handleForgotPass={handleForgotPassBannerClick} windowWidth={windowWidth} />
+            <ForgotPassForm
+              handleForgotPass={handleForgotPassBannerClick}
+              windowWidth={windowWidth}
+            />
           )}
         </div>
       )}

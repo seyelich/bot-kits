@@ -96,7 +96,18 @@
 }
 
 .noticePage__titleImage {
+  width: 570px;
+  height: 540px;
   margin: 165px 0 200px 30px;
+}
+
+.noticePage__registerOrEmailImg{
+  background-image: url('../../images/sendEmail.png');
+}
+
+.noticePage__forgotPassOnEmailImg{
+  background-image: url('../../images/sendForgotPass.png');
+
 }
 
 
@@ -114,6 +125,14 @@
     line-height: 35.2px;
     letter-spacing: -0.2px;
     padding: 30px 0 30px 0;
+  }
+
+  .noticePage {
+    max-height: 1024px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    flex-direction: column;
   }
 }
 
