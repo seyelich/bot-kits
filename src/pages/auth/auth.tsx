@@ -9,7 +9,7 @@ import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
-  const [state, setState] = useState({ authState: 'Login' });
+  const [state, setState] = useState({ authState: 'Register' });
   const [banner, setBanner] = useState({ bannerState: 'none' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {

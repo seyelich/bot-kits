@@ -22,13 +22,13 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
           <AuthInput
             type="email"
             placeholder="E-mail"
-            width={570}
+            width={windowWidth <= 790 ? 500 : 570}
             height={60}
           />
           <AuthInput
             type="password"
             placeholder="Пароль"
-            width={570}
+            width={windowWidth <= 790 ? 500 : 570}
             height={60}
           />
         </div>
