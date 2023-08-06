@@ -4,6 +4,8 @@ import Button from '../../components/Button/Button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
 import {
+  // paymentsEmpty,
+  payments,
   // notSubscribe,
   // subscribeActive,
   subscribeNotActive,
@@ -12,6 +14,7 @@ import {
 export default function Subscription() {
   const subcriription = subscribeNotActive;
   const { status } = subcriription;
+  // const payments = paymentsEmpty;
   return (
     <main className={styles.container}>
       <div className={styles.title_container}>
@@ -22,7 +25,7 @@ export default function Subscription() {
       </div>
       <section className={styles.subscription}>
         <SubscriptionStatus subcriription={subcriription} />
-        <SubscriptionTable />
+        <SubscriptionTable payments={payments} />
       </section>
     </main>
   );

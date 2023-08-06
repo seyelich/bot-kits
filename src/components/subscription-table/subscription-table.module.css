@@ -107,3 +107,22 @@
   letter-spacing: var(--m-letter-space);
   text-align: left;
 }
+
+.table_text {
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 19.5px */
+  letter-spacing: 0.3px;
+}
+
+.status_success {
+  color: #00E98F;
+  font-weight: var(--bold);
+}
+
+.status_fail {
+  color: var(--error-red-color);
+  font-weight: var(--bold);
+}

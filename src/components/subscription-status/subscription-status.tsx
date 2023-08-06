@@ -14,6 +14,7 @@ type TProps = {
     next_payment?: string;
     payment_source?: string;
     reason?: string;
+    balance?: string;
   };
 };
 
@@ -42,7 +43,7 @@ export default function SubscriptionStatus({ subcriription }: TProps) {
       <div className={styles.promo}>
         <div className={styles.balans}>
           <p className={styles.comment__line}>Баланс</p>
-          <h3 className={styles.title}>0&#8381;</h3>
+          <h3 className={styles.title}>{subcriription.balance}&#8381;</h3>
         </div>
         <Button
           type="grey"

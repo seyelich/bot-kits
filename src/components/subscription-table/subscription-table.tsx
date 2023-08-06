@@ -2,7 +2,11 @@ import { useState } from 'react';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './subscription-table.module.css';
 
-export default function SubscriptionTable() {
+type TTableProps = {
+  payments: any[];
+};
+
+export default function SubscriptionTable({ payments }: TTableProps) {
   const [arrowRotate, setArrowRotate] = useState(false);
 
   return (
@@ -58,20 +62,42 @@ export default function SubscriptionTable() {
       </div>
       <table className={styles.table}>
         <thead className={styles.table__header}>
-          <th style={{ width: '136px' }}>Дата</th>
-          <th style={{ width: '88px' }}>Операция</th>
-          <th style={{ width: '116px' }}>Сумма</th>
-          <th style={{ width: '276px' }}>Примечание</th>
-          <th style={{ width: '76px' }}>Статус</th>
-        </thead>
-        <tbody>
           <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
+            <th style={{ width: '136px' }}>Дата</th>
+            <th style={{ width: '88px' }}>Операция</th>
+            <th style={{ width: '116px' }}>Сумма</th>
+            <th style={{ width: '276px' }}>Примечание</th>
+            <th style={{ width: '76px' }}>Статус</th>
           </tr>
+        </thead>
+        <tbody className={styles.table_text}>
+          {!payments.length && (
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          )}
+          {payments.length &&
+            payments.map((payment) => (
+              <tr key={payment.id}>
+                <td>{payment.date}</td>
+                <td>{payment.operation}</td>
+                <td>{payment.summ}&#8381;</td>
+                <td>{payment.note || '-'}</td>
+                <td
+                  className={
+                    payment.status === 'Успешно'
+                      ? styles.status_success
+                      : styles.status_fail
+                  }
+                >
+                  {payment.status}
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
