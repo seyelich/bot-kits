@@ -9,7 +9,7 @@ import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
-  const [state, setState] = useState({ authState: 'Login' });
+  const [state, setState] = useState({ authState: 'ForgotPass' });
   const [banner, setBanner] = useState({ bannerState: 'none' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function Auth() {
             >
               {state.authState === 'Register' && 'Регистрация'}
               {state.authState === 'Login' && 'Вход'}
-              {state.authState === 'ForgotPass' && 'Восстановление пароля'}
+              {state.authState === 'ForgotPass' && 'Востановление пароля'}
             </h1>
           </div>
           {state.authState === 'Register' && (
