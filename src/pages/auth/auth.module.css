@@ -40,7 +40,7 @@
 .noticePage {
   max-width: 1440px;
   box-sizing: border-box;
-  height: 900px;
+  max-height: 900px;
   width: 100%;
   padding: 0 135px;
   background-color: #243cbb;
@@ -130,7 +130,7 @@
   }
   .wrapper {
     padding: 20px 0 0 0;
-    height: 941px;
+    max-height: 941px;
     overflow: hidden;
 
   }

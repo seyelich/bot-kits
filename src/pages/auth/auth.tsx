@@ -122,7 +122,7 @@ export default function Auth() {
             >
               {state.authState === 'Register' && 'Регистрация'}
               {state.authState === 'Login' && 'Вход'}
-              {state.authState === 'ForgotPass' && 'Востановление пароля'}
+              {state.authState === 'ForgotPass' && 'Восстановление пароля'}
             </h1>
           </div>
           {state.authState === 'Register' && (
@@ -140,7 +140,7 @@ export default function Auth() {
             />
           )}
           {state.authState === 'ForgotPass' && (
-            <ForgotPassForm handleForgotPass={handleForgotPassBannerClick} />
+            <ForgotPassForm handleForgotPass={handleForgotPassBannerClick} windowWidth={windowWidth} />
           )}
         </div>
       )}

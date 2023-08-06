@@ -6,9 +6,10 @@ import styles from './ForgotPassForm.module.css';
 
 interface ForgotPassFormProps {
   handleForgotPass: () => void;
+  windowWidth: number;
 }
 
-const ForgotPassForm: FC<ForgotPassFormProps> = ({ handleForgotPass }) => {
+const ForgotPassForm: FC<ForgotPassFormProps> = ({ handleForgotPass, windowWidth }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -28,18 +29,20 @@ const ForgotPassForm: FC<ForgotPassFormProps> = ({ handleForgotPass }) => {
         <Button
           type="green"
           text="сбросить пароль"
-          width={260}
+          width={windowWidth <= 730 ? 320 : 260}
           height={64}
           isAuth
           onClick={handleForgotPass}
         />
       </form>
       <div className={styles.forgotPassForm__footer}>
-        <img
+        {/* <img
           className={styles.forgotPassForm__authImage}
           src={robot}
           alt="forgot-robot"
-        />
+        /> */}
+        <div className={styles.forgotPassForm__authImage} />
+
       </div>
     </div>
   );
