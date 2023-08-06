@@ -48,6 +48,21 @@ export default function Auth() {
     setState({ authState: 'Login' });
   };
 
+  const chooseLogoSize = () => {
+    if (windowWidth >= 1000 && state.authState === 'Register') {
+      return { width: 148.75, height: 35 };
+    } else if (windowWidth >= 1000) {
+      return { width: 161.5, height: 38 };
+    } else if (windowWidth >= 700 && windowWidth <= 999) {
+      return { width: 148.75, height: 35 };
+    } else {
+      return { width: 127.5, height: 30 };
+    }
+  };
+
+  const logoSize = chooseLogoSize();
+
+
   return (
     <>
       {banner.bannerState === 'registerOnEmail' && (
@@ -99,17 +114,7 @@ export default function Auth() {
           }`}
         >
           <div className={styles.headerContainer}>
-            {windowWidth <= 660 ? (
-              <Logo width={127.5} height={30} />
-            ) : (
-              <>
-                {state.authState === 'Register' ? (
-                  <Logo width={149} height={35} />
-                ) : (
-                  <Logo width={161.5} height={38} />
-                )}
-              </>
-            )}
+          <Logo width={logoSize.width} height={logoSize.height} />
             <h1
               className={`${styles.title} ${
                 state.authState !== 'Register' && styles.title_login
