@@ -1,0 +1,30 @@
+.cnt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.filesBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockHeadingCnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blockHeading {
+  color: var(--primary-text-color);
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--bold);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+
+.blockButton {
+  color: var(--default-blue-color);
+}
