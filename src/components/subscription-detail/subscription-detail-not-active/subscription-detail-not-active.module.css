@@ -1,0 +1,22 @@
+.container {
+  height: 127px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.comment{
+  margin: 0;
+  width: 100%;
+}
+
+.comment__line {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: var(--s-font-size);
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  text-align: left;
+}

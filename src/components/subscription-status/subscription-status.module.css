@@ -1,52 +1,56 @@
 .container {
-  position: sticky;
   max-width: 404px;
   box-sizing: content-box;
   padding-right: 28px;
-  min-height: 450px;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    height: 450px;
+    position: relative;
+  }
 }
 
 .title {
   font-family: "IBM Plex Mono";
-  font-size: 24px;
+  font-size: var(--h3-font-size);
   font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
+  font-weight: var(--bold);
+  line-height: var(--h3-line-height);
   margin: 0;
-}
-
-.comment{
-  margin: 0;
-  width: 100%;
-  height: 40px;
-  padding-bottom: 23px;
 }
 
 .comment__line {
   margin: 0;
   font-family: "Open Sans";
-  font-size: 13px;
+  font-size: var(--s-font-size);
   font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
   text-align: left;
 }
 
 .promo {
   width: 404px;
   box-sizing: border-box;
-  border-radius: 30px;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 32px;
-  padding-top: 133px;
-  background-color: #F2F4F8;
+  padding-top: 113px;
+  border-radius: var(--border-radius-30);
+  background-color: var(--hover-grey-color);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
   top: 147px;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: 320px;
+  }
 }
 
 .balans {
