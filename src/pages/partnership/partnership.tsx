@@ -4,10 +4,12 @@ import Button from '../../components/Button/Button';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './partnership.module.css';
 import data from './fakeDatafromApi';
+import LinkWithCopyButton from '../../components/link-with-copy-btn/link-with-copy-btn';
 
 export default function Partnership() {
   const [arrowRotate, setArrowRotate] = useState(false);
   const [statistics, setStatistics] = useState(data);
+  const [refLink] = useState('botkits.ru/?=12345');
 
   const formattedNumber = (numberValue: number): string =>
     `${numberValue.toLocaleString()} Р`;
@@ -29,6 +31,11 @@ export default function Partnership() {
           }}
         />
       </div>
+
+      <LinkWithCopyButton
+        className={styles.link_with_copy_button}
+        link={refLink}
+      />
 
       <div className={styles.statistics}>
         <div className={styles.statistics__header}>

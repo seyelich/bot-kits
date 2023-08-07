@@ -35,6 +35,10 @@
   display: none;
 }
 
+.link_with_copy_button {
+  margin-bottom: 32px;
+}
+
 @media screen and (max-width: 1024px) {
   .section {
     min-width: 320px;
@@ -61,6 +65,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 32px;
+  }
+
+  .link_with_copy_button {
+    margin-bottom: 26px;
   }
 }
 
@@ -140,6 +148,7 @@ table {
 }
 
 .th_desktop {
+  padding-bottom: 16px;
   color: #060c23;
   font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 500;
@@ -148,7 +157,6 @@ table {
   letter-spacing: 0.3px;
   text-align: left;
   white-space: nowrap;
-  padding-bottom: 16px;
 }
 
 .th_mobile {
