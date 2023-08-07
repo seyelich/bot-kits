@@ -3,7 +3,7 @@
   height: 283px;
   border-radius: 30px;
   background-color: rgba(228, 233, 241, 1);
-  padding-top: 25px;
+  padding-top: 27px;
 
 }
 
@@ -24,7 +24,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  gap: 65px;
+  gap: 50px;
 }
 
 @media (max-width: 1200px) {
@@ -35,7 +35,7 @@
 }
 
 .header {
-  padding-top: 6px;
+  padding-top: 0;
   display: flex;
   flex-direction: row;
   align-items: baseline;

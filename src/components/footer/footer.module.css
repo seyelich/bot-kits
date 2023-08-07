@@ -11,6 +11,7 @@
   width: 100%;
   border-top: 1px solid #D7DEEA;
   background-color: #FFF;
+  z-index: 3;
   @media (max-width: 768px) {
     justify-content: center;
   }
