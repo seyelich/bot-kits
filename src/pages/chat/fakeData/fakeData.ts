@@ -1,6 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import avatar from './img/defaultAvatar.png';
 import { IFakeDialog } from './fakeDataTypes';
+import img1 from './img/imageFromDialog.png';
+import img2 from './img/imageFromDialog2.png';
 
 export const FAKE_DIALOGS: IFakeDialog[] = [
   {
@@ -32,6 +34,8 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
         isOwnMe: false,
       },
     ],
+    files: ['ЧитыGTASA.docx', 'Инструкция.pdf'],
+    images: [img1, img2, img1],
   },
   {
     id: 'wqqqqqqqqqqf3=232r413e3',
@@ -89,6 +93,8 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
         isOwnMe: true,
       },
     ],
+    files: ['ЧитыGTASA.docx', 'Инструкция.pdf'],
+    images: [img2, img1, img2],
   },
   {
     id: 'wqqqqqqq213f3=232r413e3',
@@ -137,6 +143,8 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
         isOwnMe: true,
       },
     ],
+    files: ['ЧитыGTASA.docx', 'Инструкция.pdf'],
+    images: [img1, img2, img1],
   },
   {
     id: 'wqq21qqq213f3=232r413e3',
@@ -176,6 +184,8 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
         isOwnMe: false,
       },
     ],
+    files: ['ЧитыGTASA.docx', 'Инструкция.pdf'],
+    images: [img1, img2, img1],
   },
   {
     id: '214qqqqq213f3=232r413e3',
@@ -206,5 +216,7 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
         isOwnMe: false,
       },
     ],
+    files: ['ЧитыGTASA.docx', 'Инструкция.pdf'],
+    images: [img1, img2, img2],
   },
 ];
