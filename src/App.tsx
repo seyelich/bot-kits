@@ -8,7 +8,7 @@ import Subscription from './pages/Subscription/subscription';
 import AddBot from './pages/add-bot/add-bot';
 import styles from './App.module.css';
 import BotBuilder from './pages/bot-builder/bot-builder';
-import Chat from './pages/chat';
+import Chat from './pages/chat/chat';
 import Mailing from './pages/mailing/mailing';
 import Partnership from './pages/partnership/partnership';
 import Share from './pages/share';
