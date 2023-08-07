@@ -8,6 +8,7 @@ import ArrowSmall from '../icons/ArrowSmall/ArrowSmall';
 import Logo from '../Logo/Logo';
 import MenuMobile from '../icons/MenuMobile/MenuMobile';
 import DropdownMenu from './dropdown-menu/dropdown-menu';
+// eslint-disable-next-line import/no-cycle
 import AccountSettings from './account-settings/account-settings';
 
 import PopupRenameFile from '../dashboard-popups/popup-rename-file/popup-rename-file';

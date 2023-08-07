@@ -253,8 +253,8 @@ export default function MailingForm() {
                   <InputSlider
                     options={days}
                     setSelected={setDay}
-                    width={matches ? '91px' : '174px'}
-                    slideWidth={matches ? '91px' : '174px'}
+                    width={matches ? '80px' : '174px'}
+                    slideWidth={matches ? '80px' : '174px'}
                   />
                   <InputSelect
                     width="174px"
@@ -342,8 +342,8 @@ export default function MailingForm() {
                   <InputSlider
                     options={days}
                     setSelected={setDay}
-                    width={matches ? '91px' : '174px'}
-                    slideWidth={matches ? '91px' : '174px'}
+                    width={matches ? '80px' : '174px'}
+                    slideWidth={matches ? '80px' : '174px'}
                   />
                   <InputSelect
                     width="174px"
