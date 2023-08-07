@@ -2,8 +2,17 @@ import { useState } from 'react';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './subscription-table.module.css';
 
+type TPayment = {
+  id: number;
+  date: string;
+  summ: string;
+  operation: string;
+  note: string;
+  status: string;
+};
+
 type TTableProps = {
-  payments: any[];
+  payments: TPayment[];
 };
 
 export default function SubscriptionTable({ payments }: TTableProps) {

@@ -1,42 +1,21 @@
+import { MouseEventHandler } from 'react';
 import styles from './button-tarif.module.css';
 
 interface IButton {
-  // type?: 'blue' | 'green' | 'grey';
-  onClick?: any;
-  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   tarif: string;
   price: number;
 }
 
-export default function ButtonTarif({
-  // type,
-  onClick,
-  disabled,
-  tarif,
-  price,
-}: IButton) {
+export default function ButtonTarif({ onClick, tarif, price }: IButton) {
   return (
     <button
       type="button"
       className={styles.button}
-      // className={`${styles.button} ${
-      //   type === 'blue'
-      //     ? `${styles.button_blue} ${disabled ? styles.button_blue_disabled : ''}`
-      //     : type === 'grey'
-      //     ? `${styles.button_grey} ${disabled ? styles.button_grey_disabled : ''}`
-      //     : `${styles.button_green} ${disabled ? styles.button_green_disabled : ''}`
-      // }  `}
       onClick={onClick}
-      style={{
-        cursor: disabled ? 'not-allowed' : 'pointer',
-      }}
-      disabled={disabled}
       data-name={tarif}
       data-price={price}
     >
-      {/* <p style={{ opacity: disabled && type === 'green' ? '.4' : undefined, margin: "0" }}>
-        {tarif}
-      </p> */}
       <h4 className={styles.tarif_name}>{tarif}</h4>
       <div className={styles.price_container}>
         <p className={styles.tarif_price}>{price}</p>

@@ -16,14 +16,10 @@ export default function PopupTarif({ onClose }: TPopupProps) {
   const [bill, setBill] = useState(0);
 
   function onClick(e: MouseEvent) {
-    // /* eslint-disable */
-    // debugger
-    // const buttons = Array.from(e.currentTarget.parentElement!.children);
     const currentButton = e.currentTarget;
     const { price } = (
       currentButton as EventTarget & Element & { dataset: { price: string } }
     ).dataset;
-    // currentButton.classList.add(`active`)
     setBill(+price);
   }
   return (
