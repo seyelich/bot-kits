@@ -19,10 +19,10 @@ export default function AddBotTutorials() {
         </button>
       </p>
       {isActive && (
-        <>
+        <div className={styles.buttons}>
           <TutorialButton type="instruction" />
           <TutorialButton type="video" />
-        </>
+        </div>
       )}
     </div>
   );

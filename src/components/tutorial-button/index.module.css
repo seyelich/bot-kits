@@ -1,6 +1,6 @@
 .button {
   box-sizing: border-box;
-  max-width: 579px;
+  width: 579px;
   height: 76px;
   display: flex;
   flex-direction: row;
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 1030px) {
   .button {
-    max-width: 500px;
+    width: 500px;
   }
 
   .button:hover .text {
