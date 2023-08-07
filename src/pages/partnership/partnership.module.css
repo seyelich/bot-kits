@@ -64,7 +64,7 @@
   }
 }
 
-.ships {
+.statistics {
   position: relative;
   z-index: 3;
   border-radius: 30px;
@@ -73,14 +73,14 @@
   background-color: #fff;
 }
 
-.ship__header {
+.statistic__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 26px;
 }
 
-.ship__title {
+.statistic__title {
   display: flex;
   align-items: center;
   margin: 0;
@@ -289,12 +289,12 @@ table.table_item_mobile {
     display: none;
   }
 
-  .ship__title {
+  .statistic__title {
     font-size: 18px;
     line-height: 23px;
   }
 
-  .ships {
+  .statistics {
     padding: 24px;
   }
 

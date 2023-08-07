@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './partnership.module.css';
 
-interface IDataShips {
+interface IDataStatistics {
   id: number;
   visities: string;
   registrations: number;
@@ -15,7 +15,7 @@ interface IDataShips {
   withdrawal: number;
 }
 
-const data: IDataShips[] = [
+const data: IDataStatistics[] = [
   {
     id: 1,
     visities: '28 человек',
@@ -50,7 +50,7 @@ const data: IDataShips[] = [
 
 export default function Partnership() {
   const [arrowRotate, setArrowRotate] = useState(false);
-  const [ships, setShips] = useState(data);
+  const [statistics, setStatistics] = useState(data);
 
   const formattedNumber = (numberValue: number): string =>
     `${numberValue.toLocaleString()} Р`;
@@ -72,7 +72,8 @@ export default function Partnership() {
           }}
         />
       </div>
-      <div className={styles.ships}>
+
+      <div className={styles.statistics}>
         <div className={styles.ship__header}>
           <h2 className={styles.ship__title}>Статистика рефералов</h2>
           <div className={styles.filter}>
@@ -92,7 +93,7 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
-                    setShips(data);
+                    setStatistics(data);
                   }}
                 >
                   Все
@@ -101,7 +102,9 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
-                    setShips(data.filter((el) => el.status === 'Оплачено'));
+                    setStatistics(
+                      data.filter((el) => el.status === 'Оплачено')
+                    );
                   }}
                 >
                   Оплачены
@@ -110,7 +113,9 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
-                    setShips(data.filter((el) => el.status === 'Не оплачено'));
+                    setStatistics(
+                      data.filter((el) => el.status === 'Не оплачено')
+                    );
                   }}
                 >
                   Не оплачены
@@ -119,7 +124,9 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
-                    setShips(data.filter((el) => el.status === 'В обработке'));
+                    setStatistics(
+                      data.filter((el) => el.status === 'В обработке')
+                    );
                   }}
                 >
                   В обработке
@@ -150,7 +157,7 @@ export default function Partnership() {
             </tr>
           </thead>
           <tbody>
-            {ships.map((el) => (
+            {statistics.map((el) => (
               <tr className={styles.tr_table} key={el.id}>
                 <td>{el.visities}</td>
                 <td>{el.registrations}</td>
@@ -175,7 +182,7 @@ export default function Partnership() {
           </tbody>
         </table>
         <div className={styles.table__mobile}>
-          {ships.map((el) => (
+          {statistics.map((el) => (
             <table className={styles.table_item_mobile}>
               <colgroup>
                 <col style={{ width: '180px' }} />
