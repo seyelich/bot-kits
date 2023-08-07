@@ -1,3 +1,12 @@
+.message {
+  list-style-type: none;
+  display: flex;
+}
+
+.messageMy {
+  justify-content: end;
+}
+
 .block {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -14,16 +23,20 @@
   margin-top: 20px;
   padding: 0;
   font-family: 'Open sans', sans-serif;
-  font-weight: 400;
+  font-weight: var(--normal);
   font-size: 10px;
   line-height: 15px;
-  letter-spacing: 0.3px;
+  letter-spacing: var(--m-letter-space);
+}
+
+.blockMy {
+  grid-template-columns: 1fr min-content;
+  grid-template-areas: 'container avatar' 'status .';
 }
 
 .container {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr min-content;
   grid-template-areas: 'name .' 'message sendTime';
   grid-area: container;
   align-items: end;
@@ -37,7 +50,28 @@
   border-radius: 10px;
   border-bottom-left-radius: 0px;
   padding: 16px;
-  background-color: rgba(248, 249, 251, 1);
+  background-color: var(--default-grey-color);
+  color: var(--primary-text-color);
+}
+
+.containerMy {
+  position: relative;
+  display: grid;
+  grid-template-areas: 'name .' 'message sendTime';
+  grid-area: container;
+  align-items: end;
+  row-gap: 6px;
+  column-gap: 21px;
+  float: right;
+  clear: both;
+  box-sizing: border-box;
+  min-width: 232px;
+  max-width: 310px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  padding: 16px;
+  background-color: var(--default-blue-color);
+  color: #fff;
 }
 
 .container:before {
@@ -49,15 +83,29 @@
   width: 0px;
   height: 0px;
   border-top: 15px solid transparent;
-  border-right: 5px solid rgba(248, 249, 251, 1);
-  border-bottom: 5px solid rgba(248, 249, 251, 1);
+  border-right: 5px solid var(--default-grey-color);
+  border-bottom: 5px solid var(--default-grey-color);
   border-left: 5px solid transparent;
+}
+
+.containerMy:before {
+  content: '';
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-top: 15px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--default-blue-color);
+  border-left: 5px solid var(--default-blue-color);
 }
 
 .name {
   grid-area: name;
   margin: 0;
-  font-weight: 600;
+  font-weight: var(--bold);
 }
 
 .message {
@@ -78,7 +126,7 @@
 .status {
   grid-area: status;
   margin: 0;
-  color: rgba(166, 179, 201, 1);
+  color: var(--default-dark-grey-color);
   font-size: 8px;
   line-height: 12px;
   text-align: end;
@@ -87,7 +135,8 @@
 .sendTime {
   grid-area: sendTime;
   margin: 0;
-  color: rgba(166, 179, 201, 1);
+  color: var(--default-dark-grey-color);
+  font-size: 8px;
   text-align: end;
   white-space: nowrap;
 }
