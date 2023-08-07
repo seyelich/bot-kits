@@ -35,7 +35,7 @@ export function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [settingsOpen, setSettingOpen] = useState(false);
   // Установить True при демонстрации визуала авторизации
-  const [authenticated, setAuthenticated] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const logIn = () => {
     //Тут должна быть логика по авторизации(запись токена и тд)
