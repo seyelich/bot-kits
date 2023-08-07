@@ -18,4 +18,6 @@ export interface IFakeDialog {
   firstAction: string;
   quantityNew: number;
   messages: IFakeMessage[];
+  files: string[];
+  images: string[];
 }
