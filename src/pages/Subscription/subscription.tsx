@@ -24,9 +24,9 @@ export default function Subscription() {
 
   return (
     <main className={styles.container}>
-      <div className={styles.title_container}>
-        <h1 className={styles.title}>Подписка и платежи</h1>
-        {status === 'active' && (
+      <h1 className={styles.title}>Подписка и платежи</h1>
+      {status === 'active' && (
+        <div className={styles.button_container}>
           <Button
             type="green"
             text="СМЕНИТЬ ТАРИФ"
@@ -36,8 +36,8 @@ export default function Subscription() {
               setOpenTarif(true);
             }}
           />
-        )}
-      </div>
+        </div>
+      )}
       <section className={styles.subscription}>
         <SubscriptionStatus
           subcriription={subcriription}
