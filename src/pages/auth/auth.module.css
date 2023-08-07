@@ -111,19 +111,17 @@
   transition: all 0.2s ease-in-out;
 }
 
-.noticePage__registerOrEmailImg{
+.noticePage__registerOrEmailImg {
   background-image: url('../../images/sendEmail.png');
   transition: all 0.2s ease-in-out;
 }
 
-.noticePage__forgotPassOnEmailImg{
+.noticePage__forgotPassOnEmailImg {
   background-image: url('../../images/sendForgotPass.png');
   transition: all 0.2s ease-in-out;
 }
 
-
 @media screen and (max-width: 1439px) {
-
   .noticePage {
     padding: 0 10px;
     min-height: 1024px;
@@ -138,15 +136,14 @@
     height: 367px;
   }
 
-  .noticePage__registerOrEmailImg{
+  .noticePage__registerOrEmailImg {
     background-image: url('../../images/sendEmail768.png');
   }
 
-  .noticePage__forgotPassOnEmailImg{
+  .noticePage__forgotPassOnEmailImg {
     background-image: url('../../images/sendForgotPass768.png');
   }
 }
-
 
 @media screen and (max-width: 1030px) {
   .noticePage {
@@ -163,16 +160,16 @@
   .noticePage__titleContainer {
     max-width: 616px;
     max-height: 300px;
-    margin:127px 0 0 ;
+    margin: 127px 0 0;
   }
-  .noticePage__registerOrEmailImg{
+  .noticePage__registerOrEmailImg {
     position: relative;
-    top:53px;
+    top: 53px;
     right: 115px;
   }
-  .noticePage__forgotPassOnEmailImg{
+  .noticePage__forgotPassOnEmailImg {
     position: relative;
-    top:53px;
+    top: 53px;
     right: 115px;
   }
 
@@ -199,7 +196,6 @@
   }
 }
 
-
 @media screen and (max-width: 790px) {
   .wrapper {
     padding: 60px 0 0 0;
@@ -224,7 +220,7 @@
     flex-direction: column;
   }
 
-  .noticePage__forgotPassOnEmailText{
+  .noticePage__forgotPassOnEmailText {
     margin-bottom: 54px;
   }
 
@@ -232,10 +228,7 @@
     top: 16px;
     right: 35px;
   }
-
 }
-
-
 
 @media screen and (max-width: 660px) {
   .title {
@@ -246,15 +239,81 @@
     letter-spacing: -0.2px;
     padding: 15px 0 15px 0;
   }
-  .wrapper {
-    padding: 20px 0 0 0;
-    max-height: 941px;
-    overflow: hidden;
 
-  }
   .title {
     padding: 15px 0 20px 0;
   }
+
+  .noticePage {
+    min-height: 640px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .noticePage__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: 0 0 0px;
+  }
+
+  .noticePage__forgotPassOnEmailText {
+    margin-bottom: 54px;
+  }
+
+  .noticePage__titleContainer {
+    max-width: 320px;
+    max-height: 168px;
+    margin: 0;
+  }
+
+  .noticePage__titleText {
+    font-family: 'IBM Plex Mono';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.2px;
+  }
+
+  .noticePage__titleImage {
+    width: 306px;
+    height: 290px;
+  }
+
+  .noticePage__registerOrEmailImg {
+    background-image: url('../../images/sendEmail360.png');
+    background-repeat: no-repeat;
+    position: relative;
+    top: 92px;
+    right: -27px;
+    margin-top: 32px;
+  }
+
+  .noticePage__forgotPassOnEmailImg {
+    background-image: url('../../images/sendForgotPass360.png');
+    background-repeat: no-repeat;
+    position: relative;
+    top: 92px;
+    right: -27px;
+    margin-top: 32px;
+  }
+
+  .noticePage__titleIcon {
+    width: 103px;
+    height: 36px;
+    font-size: 20px;
+    padding: 5px 13px 5px 7px;
+    border-radius: 8px;
+    margin: 6px 19px 0px 4px;
+    position: relative;
+    bottom: 2px;
+    left: 11px;
+  }
+
+  .noticePage__closeIcon {
+    top: 16px;
+    right: 20px;
+  }
 }
-
-

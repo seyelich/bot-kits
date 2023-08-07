@@ -8,7 +8,7 @@ import CloseIcon from '../../icons/others/Close';
 
 export default function Auth() {
   const [state, setState] = useState({ authState: 'Login' });
-  const [banner, setBanner] = useState({ bannerState: 'registerOnEmail' });
+  const [banner, setBanner] = useState({ bannerState: 'none' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -93,7 +93,9 @@ export default function Auth() {
           </div>
           <div className={styles.noticePage__wrapper}>
             <div className={styles.noticePage__titleContainer}>
-              <h1 className={`${styles.noticePage__titleText} ${styles.noticePage__forgotPassOnEmailText}`}>
+              <h1
+                className={`${styles.noticePage__titleText} ${styles.noticePage__forgotPassOnEmailText}`}
+              >
                 Ссылка для сброса пароля отправлена тебе на
                 <span className={styles.noticePage__titleIcon}>/email</span>!
               </h1>

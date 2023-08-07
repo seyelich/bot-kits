@@ -26,9 +26,9 @@
 }
 
 .forgotPassForm__formTitle {
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono';
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
@@ -43,7 +43,6 @@
   margin: 0 auto 50px;
 }
 
-
 .forgotPassForm__footer {
   position: relative;
   margin: 0 auto;
@@ -54,7 +53,6 @@
   justify-content: space-between;
 }
 
-
 .forgotPassForm__authImage {
   position: absolute;
   right: -160px;
@@ -64,8 +62,6 @@
   height: 266px;
   transition: all 0.2s ease-in-out;
 }
-
-
 
 @media screen and (max-width: 790px) {
   .forgotPassForm {
@@ -87,7 +83,6 @@
   .forgotPassForm__authImage {
     background-image: url('../../images/forgotPassRobot.png');
   }
-
 }
 
 @media screen and (max-width: 730px) {
@@ -109,7 +104,7 @@
     margin: 0 auto 40px;
   }
 
-  .forgotPassForm__formTitle{
+  .forgotPassForm__formTitle {
     display: none;
   }
 
@@ -140,5 +135,3 @@
     right: -116px;
   }
 }
-
-

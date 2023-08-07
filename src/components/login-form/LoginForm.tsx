@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import Button from '../Button/Button';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
@@ -43,7 +43,13 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
             Регистрация
           </span>
         </nav>
-        <Button type="green" text="войти" width={windowWidth <= 730 ? 320 : 260} height={64} isAuth />
+        <Button
+          type="green"
+          text="войти"
+          width={windowWidth <= 730 ? 320 : 260}
+          height={64}
+          isAuth
+        />
       </form>
       <div className={styles.loginForm__footer}>
         <p className={styles.loginForm__footerTitle}>Быстрый вход</p>

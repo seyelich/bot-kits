@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import Button from '../Button/Button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';

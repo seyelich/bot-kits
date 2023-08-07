@@ -97,8 +97,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-
-
 @media screen and (max-width: 790px) {
   .loginForm {
     max-width: 700px;
@@ -115,7 +113,6 @@
     max-width: 500px;
     max-height: 140px;
   }
-
 }
 
 @media screen and (max-width: 730px) {
@@ -154,4 +151,3 @@
     min-height: 78px;
   }
 }
-
