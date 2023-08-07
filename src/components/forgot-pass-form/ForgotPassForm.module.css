@@ -1,7 +1,7 @@
 .forgotPassForm {
   max-width: 770px;
   width: 100%;
-  max-height: 590px;
+  min-height: 590px;
   height: 100%;
   border-radius: 30px;
   border-radius: 30px;
@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .forgotPassForm__form {
@@ -25,9 +26,9 @@
 }
 
 .forgotPassForm__formTitle {
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono';
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;
@@ -42,7 +43,6 @@
   margin: 0 auto 50px;
 }
 
-
 .forgotPassForm__footer {
   position: relative;
   margin: 0 auto;
@@ -51,13 +51,87 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-height: 175;
 }
 
-.forgotPassForm__authImage{
+.forgotPassForm__authImage {
   position: absolute;
-  left: -159px;
+  right: -160px;
   bottom: 0px;
+  background-image: url('../../images/forgotPassRobot.png');
+  width: 320px;
+  height: 266px;
+  transition: all 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 790px) {
+  .forgotPassForm {
+    max-width: 700px;
+    min-height: 590px;
+  }
 
+  .forgotPassForm__form {
+    min-height: 420px;
+    padding: 50px 0 60px 0;
+    max-width: 700px;
+  }
+
+  .forgotPassForm__formContainer {
+    max-width: 500px;
+    max-height: 140px;
+  }
+
+  .forgotPassForm__authImage {
+    background-image: url('../../images/forgotPassRobot.png');
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .forgotPassForm {
+    min-height: 485px;
+    max-height: 485px;
+    max-width: 500px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .forgotPassForm__form {
+    min-height: 300px;
+    padding: 40px 0 30px 0;
+  }
+
+  .forgotPassForm__formContainer {
+    max-width: 320px;
+    max-height: 140px;
+    margin: 0 auto 40px;
+  }
+
+  .forgotPassForm__formTitle {
+    display: none;
+  }
+
+  .forgotPassForm__form__menu {
+    margin: 0 auto 41px;
+  }
+
+  .forgotPassForm__footerTitle {
+    width: 100%;
+    height: 23px;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .forgotPassForm__footer {
+    position: relative;
+    min-height: 78px;
+  }
+
+  .forgotPassForm__authImage {
+    background-image: url('../../images/forgotPassRobot360.png');
+    background-repeat: no-repeat;
+    width: 232px;
+    height: 193px;
+    bottom: 0px;
+    right: -116px;
+  }
+}
