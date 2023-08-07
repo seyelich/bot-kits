@@ -59,17 +59,17 @@
 }
 
 .input::placeholder {
-  color: rgba(6, 12, 35, 1);
+  color: #ccd4e0;
 }
 
 .input::-webkit-input-placeholder {
-  color: rgba(6, 12, 35, 1);
+  color: #ccd4e0;
 }
 
 .input::-ms-input-placeholder {
-  color: rgba(6, 12, 35, 1);
+  color: #ccd4e0;
 }
 
 .input:-moz-placeholder {
-  color: rgba(6, 12, 35, 1);
+  color: #ccd4e0;
 }

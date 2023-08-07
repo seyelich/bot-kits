@@ -1,13 +1,17 @@
-import { FC, useEffect, useState } from 'react';
+/* eslint-disable import/no-cycle */
+import { FC, useContext, useEffect, useState } from 'react';
 import styles from './Bot.module.css';
 import Dots from '../../icons/Dots/Dots';
 import TelegramIcon from '../../../icons/social/telegram';
+import { SidebarContext } from '../../../App';
 
 interface IBot {
   text: string;
 }
 
 const Bot: FC<IBot> = ({ text }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { settingsOpen, setSettingOpen } = useContext(SidebarContext);
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 768px)').matches
   );
@@ -26,8 +30,14 @@ const Bot: FC<IBot> = ({ text }) => {
         ) : (
           <TelegramIcon width={52} height={52} type="blue" />
         )}
-
-        <Dots />
+        <button
+          onClick={() => {
+            setSettingOpen(true);
+          }}
+          type="button"
+        >
+          <Dots />
+        </button>
       </div>
       <div className={styles.container}>
         <p className={styles.text}>{text}</p>

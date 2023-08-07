@@ -87,6 +87,10 @@
   column-gap: 29px;
 }
 
+.table__block {
+  overflow: auto;
+}
+
 table {
   width: 100%;
   border-spacing: 0 28px;
@@ -130,6 +134,16 @@ td {
   animation: show_filter_list 0.2s ease;
 }
 
+.buttons__button {
+  @media (max-width: 950px) {
+    width: 300px;
+  }
+
+  @media (max-width: 767px) {
+    width: 272px;
+  }
+}
+
 @keyframes show_filter_list {
   from {
     height: 0;
@@ -162,6 +176,25 @@ td {
 
 .button__mobile {
   display: none;
+}
+
+.about__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__icon {
+  display: none;
+  transition: transform 0.2s linear;
+  cursor: pointer;
+  color: #bfc9d9;
+  transform: rotate(180deg);
+}
+
+.about__icon_rotated {
+  transform: rotate(0deg);
 }
 
 @media screen and (max-width: 1150px) {
@@ -280,5 +313,19 @@ td {
 
   .buttons {
     row-gap: 12px;
+    animation: show_tutorial_buttons 0.2s ease;
+  }
+
+  .about__icon {
+    display: block;
+  }
+}
+
+@keyframes show_tutorial_buttons {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
   }
 }

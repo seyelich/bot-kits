@@ -4,8 +4,8 @@
   margin-top: 21px;
 
   @media (max-width: 414px) {
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-bottom: 55px;
   }
 }
 
@@ -48,7 +48,7 @@
     letter-spacing: 0.3px;
     color: rgba(131, 146, 171, 1);
     padding-right: 20px;
-    margin-top: 48px;
+    margin-top: 60px;
   }
 }
 
@@ -73,6 +73,10 @@
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
+
+  @media (max-width: 414px) {
+    margin-bottom: 0;
+  }
 }
 
 .title {
@@ -85,7 +89,7 @@
   @media (max-width: 414px) {
     font-size: 24px;
     line-height: 31.2px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
@@ -100,6 +104,7 @@
   @media (max-width: 768px) {
     grid-template-columns: repeat(6, 134px);
     column-gap: 17px;
+    row-gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: 20px;

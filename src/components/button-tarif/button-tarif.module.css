@@ -5,7 +5,7 @@
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 23px;
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   border: 1.5px solid rgba(6, 12, 35, 0.30);
   transition: background-color 0.1s linear;
   background-color: transparent;
@@ -81,10 +81,10 @@
 
 .tarif_name {
   font-family: "Century Gothic";
-  font-size: 18px;
+  font-size: var(--h4-font-size);
   font-style: normal;
   font-weight: 700;
-  line-height: 130%; /* 23.4px */
+  line-height: var(--h4-line-height);
   letter-spacing: -0.2px;
   margin: 0;
 }

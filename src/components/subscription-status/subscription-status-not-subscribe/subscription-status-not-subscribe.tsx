@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import Button from '../Button/Button';
+import Button from '../../Button/Button';
 import styles from './subscription-status-not-subscribe.module.css';
 
 type TProps = {
@@ -14,9 +14,7 @@ export default function SubscriptionStatusNotSubscribe({
   };
   return (
     <div className={styles.subscription}>
-      <div className={styles.statusbar}>
-        <h2 className={styles.text}>У вас нет активных подписок</h2>
-      </div>
+      <h4 className={styles.text}>У вас нет активных подписок</h4>
       <div className={styles.comment}>
         <p className={styles.comment__line}>
           Выберите оптимальный тариф для себя

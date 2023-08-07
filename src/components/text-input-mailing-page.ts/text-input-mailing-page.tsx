@@ -21,7 +21,7 @@ const InputTextMailingPage: FC<IInputSelectsProps> = ({
   disabled,
   reset,
 }) => {
-  const [inputValue, setInputValue] = useState(placeholder);
+  const [inputValue, setInputValue] = useState('');
   const [isActive, setActive] = useState(false);
   const ref = useRef<HTMLInputElement>(null);
   const handleToggle = () => {
@@ -55,7 +55,7 @@ const InputTextMailingPage: FC<IInputSelectsProps> = ({
         id="select"
         type="text"
         name={inputName}
-        value={reset ? placeholder : inputValue}
+        value={reset ? '' : inputValue}
         placeholder={placeholder}
         className={`${styles.input} ${
           disabled ? styles.input_disabled : styles.input_default

@@ -1,3 +1,6 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable react/jsx-no-constructed-context-values */
+import { createContext, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
@@ -17,38 +20,48 @@ import MyMailing from './pages/mailing/ui/my-mailing/MyMailing';
 import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
 import MailingConditions from './pages/mailing-conditions/mailing-conditions';
 
-function App() {
-  return (
-    <BrowserRouter>
-      {/* <Auth/> */}
-      <div className={styles.content}>
-        <Sidebar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="add-bot" element={<AddBot />} />
-              <Route path="bot-builder" element={<BotBuilder />} />
-              <Route path="chat" element={<Chat />} />
-              <Route path="mailing" element={<Mailing />}>
-                <Route path="" element={<FirstMailing />} />
-                <Route path="start" element={<MyMailing />} />
-                <Route path="add" element={<CreateMailing />} />
-              </Route>
-              <Route
-                path="mailing/conditions"
-                element={<MailingConditions />}
-              />
-              <Route path="partnership" element={<Partnership />} />
-              <Route path="share" element={<Share />} />
-              <Route path="subscription" element={<Subscription />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
-  );
+interface ISidebarContext {
+  sidebarOpen: boolean;
+  setSidebarOpen: (arg: boolean) => void;
+  settingsOpen: boolean;
+  setSettingOpen: (arg: boolean) => void;
 }
 
-export default App;
+export const SidebarContext = createContext({} as ISidebarContext);
+
+export function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [settingsOpen, setSettingOpen] = useState(false);
+  return (
+    <SidebarContext.Provider
+      value={{ sidebarOpen, setSidebarOpen, settingsOpen, setSettingOpen }}
+    >
+      <BrowserRouter>
+        {/* <Auth/> */}
+        <div className={styles.content}>
+          <Sidebar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="add-bot" element={<AddBot />} />
+                <Route path="bot-builder" element={<BotBuilder />} />
+                <Route path="chat" element={<Chat />} />
+                <Route path="mailing" element={<Mailing />}>
+                  <Route path="" element={<FirstMailing />} />
+                  <Route path="start" element={<MyMailing />} />
+                  <Route path="add" element={<CreateMailing />} />
+                  <Route path="conditions" element={<MailingConditions />} />
+                </Route>
+                <Route path="partnership" element={<Partnership />} />
+                <Route path="share" element={<Share />} />
+                <Route path="subscription" element={<Subscription />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
+    </SidebarContext.Provider>
+  );
+}

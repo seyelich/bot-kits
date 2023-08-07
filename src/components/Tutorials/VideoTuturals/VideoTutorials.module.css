@@ -29,8 +29,8 @@
   padding-top:30px;
 
   @media (max-width: 768px) {
-    margin-top: 26px;
-    margin-bottom: 19px;
+    margin-top: -3px;
+    margin-bottom: -3px;
   }
 }
 
@@ -39,3 +39,4 @@
   flex-direction: row;
   gap: 5px;
 }
+
