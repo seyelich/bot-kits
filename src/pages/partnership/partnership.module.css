@@ -77,6 +77,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 26px;
 }
 
 .ship__title {
@@ -124,11 +125,18 @@
 
 table {
   width: 100%;
-  border-spacing: 0 28px;
+}
+
+.table_desktop {
+  border-spacing: 0;
 }
 
 .table__mobile {
   display: none;
+}
+
+.tbody_desktop {
+  border-spacing: 0;
 }
 
 .th_desktop {
@@ -140,6 +148,7 @@ table {
   letter-spacing: 0.3px;
   text-align: left;
   white-space: nowrap;
+  padding-bottom: 16px;
 }
 
 .th_mobile {
@@ -179,6 +188,10 @@ table {
   letter-spacing: 0.3px;
 }
 
+.tr_table {
+  height: 48px;
+}
+
 .td_curr_mobile {
   font-weight: 600;
 }
@@ -190,7 +203,6 @@ table {
 /* Устанавливаем отступ между строками на 6px */
 table.table_item_mobile {
   border-spacing: 0 8px;
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -273,10 +285,6 @@ table.table_item_mobile {
 }
 
 @media screen and (max-width: 1024px) {
-  .ship__header {
-    margin-bottom: 26px;
-  }
-
   .filter__text {
     display: none;
   }

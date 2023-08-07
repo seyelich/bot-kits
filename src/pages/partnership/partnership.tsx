@@ -149,9 +149,9 @@ export default function Partnership() {
               <th className={styles.th_desktop}>Вывод</th>
             </tr>
           </thead>
-          <tbody className={styles.tbody_desktop}>
+          <tbody>
             {ships.map((el) => (
-              <tr key={el.id}>
+              <tr className={styles.tr_table} key={el.id}>
                 <td>{el.visities}</td>
                 <td>{el.registrations}</td>
                 <td
