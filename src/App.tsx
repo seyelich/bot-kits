@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { createContext, useState } from 'react';
+import { Dispatch, SetStateAction, createContext, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
@@ -27,11 +27,17 @@ interface IContext {
   setSettingOpen: (arg: boolean) => void;
   logIn: () => void;
   logOut: () => void;
+  accountSettingsOpen: boolean;
+  setAccountSettingsOpen: Dispatch<SetStateAction<boolean>>;
+  dropdownMenuOpen: boolean;
+  setDropdownMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Context = createContext({} as IContext);
 
 export function App() {
+  const [dropdownMenuOpen, setDropdownMenuOpen] = useState(false);
+  const [accountSettingsOpen, setAccountSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [settingsOpen, setSettingOpen] = useState(false);
   // Установить True при демонстрации визуала авторизации
@@ -56,12 +62,26 @@ export function App() {
         setSettingOpen,
         logIn,
         logOut,
+        accountSettingsOpen,
+        setAccountSettingsOpen,
+        dropdownMenuOpen,
+        setDropdownMenuOpen,
       }}
     >
       <BrowserRouter>
         {!authenticated && <Auth />}
         {authenticated && (
-          <div className={styles.content}>
+          <div
+            className={styles.content}
+            onClick={(e) => {
+              if (e.currentTarget && accountSettingsOpen) {
+                setAccountSettingsOpen(false);
+              }
+              if (e.currentTarget && dropdownMenuOpen) {
+                setDropdownMenuOpen(false);
+              }
+            }}
+          >
             <Sidebar />
             <main>
               <Routes>

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import {
   Dispatch,
@@ -18,15 +19,15 @@ import { Context } from '../../../App';
 
 interface IDropdownMenu {
   state: boolean;
-  setIsSettingOpen: Dispatch<SetStateAction<boolean>>;
-  setIsActive: Dispatch<SetStateAction<boolean>>;
+  setAccountSettingsOpen: Dispatch<SetStateAction<boolean>>;
+  setDropdownMenuOpen: Dispatch<SetStateAction<boolean>>;
   setIsPopupMessagesOpened: Dispatch<SetStateAction<boolean>>;
 }
 
 const DropdownMenu: FC<IDropdownMenu> = ({
   state,
-  setIsSettingOpen,
-  setIsActive,
+  setAccountSettingsOpen,
+  setDropdownMenuOpen,
   setIsPopupMessagesOpened,
 }) => {
   const { logOut } = useContext(Context);
@@ -63,8 +64,8 @@ const DropdownMenu: FC<IDropdownMenu> = ({
         <li
           className={styles.item}
           onClick={() => {
-            setIsSettingOpen((prevCheck) => !prevCheck);
-            setIsActive(false);
+            setAccountSettingsOpen((prevCheck) => !prevCheck);
+            setDropdownMenuOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -76,7 +77,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
           className={styles.item}
           onClick={() => {
             navigate('/subscription');
-            setIsActive(false);
+            setDropdownMenuOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -91,7 +92,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
         <li
           className={styles.item}
           onClick={() => {
-            setIsActive(false);
+            setDropdownMenuOpen(false);
           }}
         >
           <div className={styles.option} onClick={logOut}>
@@ -109,7 +110,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
               className={styles.item}
               onClick={() => {
                 setIsPopupMessagesOpened(true);
-                setIsActive(false);
+                setDropdownMenuOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -121,7 +122,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
             <li
               className={styles.item}
               onClick={() => {
-                setIsActive(false);
+                setDropdownMenuOpen(false);
               }}
             >
               <div className={styles.option}>
