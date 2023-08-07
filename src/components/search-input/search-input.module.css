@@ -3,6 +3,7 @@
   height: 40px;
   padding: 0 8px;
   position: relative;
+  border: 1.5px solid var(--default-grey-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -10,10 +11,11 @@
   background-color: var(--default-grey-color);
   flex-grow: 1;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .inputFrameFocus {
-  outline: 1.5px solid var(--default-blue-color);
+  border: 1.5px solid var(--default-blue-color);
 }
 
 .input {
