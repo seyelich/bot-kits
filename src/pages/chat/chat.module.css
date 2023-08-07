@@ -1,0 +1,6 @@
+.page {
+  /* временное решение, надеюсь на добавление flex-grow 1 в родительский компонент page */
+  height: calc(100vh - 154.8px);
+  display: flex;
+  overflow: hidden;
+}

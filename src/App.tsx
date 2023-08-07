@@ -4,7 +4,7 @@ import Dashboard from './pages/Dashboard/dashboard';
 import AddBot from './pages/add-bot';
 import styles from './App.module.css';
 import BotBuilder from './pages/bot-builder';
-import Chat from './pages/chat';
+import Chat from './pages/chat/chat';
 import Mailing from './pages/mailing';
 import Partnership from './pages/partnership/partnership';
 import Share from './pages/share';
