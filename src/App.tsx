@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
 import Subscription from './pages/Subscription/subscription';
-import AddBot from './pages/add-bot';
+import AddBot from './pages/add-bot/add-bot';
 import styles from './App.module.css';
 import BotBuilder from './pages/bot-builder';
 import Chat from './pages/chat';
