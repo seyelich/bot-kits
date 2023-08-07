@@ -3,7 +3,7 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/no-array-index-key */
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import EmojiPicker from 'emoji-picker-react';
@@ -30,13 +30,16 @@ import DownIcon from '../../../../icons/others/Down';
 import ListsRow from './ListsRow';
 import FunnelsRow from './FunnelsRow';
 import WidgetMobileIcon from '../widget/widget-mobile-icon/WidgetMobileIcon';
-import { Context } from '../../../../App';
+import FacebookIcon from '../../../../icons/social/facebook';
+import TelegramIcon from '../../../../icons/social/telegram';
+import OdnoklassnikiIcon from '../../../../icons/social/odnoklassniki';
+import VKIcon from '../../../../icons/social/vk';
+import WhatsappIcon from '../../../../icons/social/whatsapp';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
 
 const CreateMailing: FC = () => {
-  const { sidebarOpen } = useContext(Context);
   const navigate = useNavigate();
   const [name, setName] = useState('Моя рассылка 1');
   const [text, setText] = useState(
@@ -52,8 +55,28 @@ const CreateMailing: FC = () => {
   const [showEmojis, setShowEmojis] = useState(false);
 
   const [socialIconSelectedType, setSocialIconSelectedType] = useState<
+    | 'Facebook'
+    | 'Telegram'
+    | 'Odnoklassniki'
+    | 'VK'
+    | 'Whatsapp'
+    | 'Viber'
+    | undefined
+  >(undefined);
+  const [iconSelectedType, setIconSelectedType] = useState<
     'Photo' | 'Video' | 'Music' | 'Button' | undefined
   >(undefined);
+  const [textareaTextLength, setTextareaTextLength] = useState(4096);
+
+  useEffect(() => {
+    if (socialIconSelectedType === 'Facebook') {
+      setTextareaTextLength(600);
+    } else if (socialIconSelectedType === 'Viber') {
+      setTextareaTextLength(7000);
+    } else {
+      setTextareaTextLength(4096);
+    }
+  }, [socialIconSelectedType]);
 
   useEffect(() => {
     const setShowTextareaSettingsFn = () => {
@@ -108,6 +131,79 @@ const CreateMailing: FC = () => {
               </div>
             </div>
             <div className={styles.block}>
+              <h5 className={styles.block__title}>Выберите мессемессенджер</h5>
+              <div className={styles.block__social}>
+                <div
+                  onClick={() => setSocialIconSelectedType('Facebook')}
+                  className={styles.social}
+                >
+                  <FacebookIcon
+                    width={52}
+                    height={52}
+                    type={
+                      socialIconSelectedType === 'Facebook'
+                        ? 'common'
+                        : 'disabled'
+                    }
+                  />
+                </div>
+                <div
+                  onClick={() => setSocialIconSelectedType('Telegram')}
+                  className={styles.social}
+                >
+                  <TelegramIcon
+                    width={52}
+                    height={52}
+                    type={
+                      socialIconSelectedType === 'Telegram'
+                        ? 'common'
+                        : 'disabled'
+                    }
+                  />
+                </div>
+                <div
+                  onClick={() => setSocialIconSelectedType('Odnoklassniki')}
+                  className={styles.social}
+                >
+                  <OdnoklassnikiIcon
+                    width={52}
+                    height={52}
+                    type={
+                      socialIconSelectedType === 'Odnoklassniki'
+                        ? 'common'
+                        : 'disabled'
+                    }
+                  />
+                </div>
+                <div
+                  onClick={() => setSocialIconSelectedType('VK')}
+                  className={styles.social}
+                >
+                  <VKIcon
+                    width={52}
+                    height={52}
+                    type={
+                      socialIconSelectedType === 'VK' ? 'common' : 'disabled'
+                    }
+                  />
+                </div>
+                <div
+                  onClick={() => setSocialIconSelectedType('Whatsapp')}
+                  className={styles.social}
+                >
+                  <WhatsappIcon
+                    width={52}
+                    height={52}
+                    type={
+                      socialIconSelectedType === 'Whatsapp'
+                        ? 'common'
+                        : 'disabled'
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+            <div className={styles.block}>
               <h5 className={styles.block__title}>Текст сообщения</h5>
               <div
                 className={styles.textarea}
@@ -138,7 +234,7 @@ const CreateMailing: FC = () => {
                   placeholder="Введите текст"
                   cols={30}
                   rows={10}
-                  maxLength={4096}
+                  maxLength={textareaTextLength}
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   draggable={false}
@@ -147,7 +243,9 @@ const CreateMailing: FC = () => {
                   } ${boldText && styles.textarea__input_bold}`}
                 />
                 <div className={styles.textarea__footer}>
-                  <p style={{ margin: '0' }}>{text.length}/4096</p>
+                  <p style={{ margin: '0' }}>
+                    {text.length}/{textareaTextLength}
+                  </p>
                   <div className={styles.teaxtarea__icons}>
                     <div
                       className={styles.textarea__icon}
@@ -184,32 +282,32 @@ const CreateMailing: FC = () => {
               <div className={styles.block__icons}>
                 <SocialButton
                   text="Фото"
-                  active={socialIconSelectedType === 'Photo'}
-                  onClick={() => setSocialIconSelectedType('Photo')}
+                  active={iconSelectedType === 'Photo'}
+                  onClick={() => setIconSelectedType('Photo')}
                   icon={<ImageIcon color="#fff" />}
                 />
                 <SocialButton
                   text="Видео"
-                  active={socialIconSelectedType === 'Video'}
-                  onClick={() => setSocialIconSelectedType('Video')}
+                  active={iconSelectedType === 'Video'}
+                  onClick={() => setIconSelectedType('Video')}
                   icon={<VideoIcon color="#fff" />}
                 />
                 <SocialButton
                   text="Аудио"
-                  active={socialIconSelectedType === 'Music'}
-                  onClick={() => setSocialIconSelectedType('Music')}
+                  active={iconSelectedType === 'Music'}
+                  onClick={() => setIconSelectedType('Music')}
                   icon={<MusicIcon color="#fff" />}
                 />
                 <SocialButton
                   text="Кнопка"
-                  active={socialIconSelectedType === 'Button'}
-                  onClick={() => setSocialIconSelectedType('Button')}
+                  active={iconSelectedType === 'Button'}
+                  onClick={() => setIconSelectedType('Button')}
                   icon={<ButtonIcon color="#fff" />}
                 />
               </div>
-              {socialIconSelectedType === 'Button' ? (
+              {iconSelectedType === 'Button' ? (
                 <InlineButtons />
-              ) : socialIconSelectedType !== undefined ? (
+              ) : iconSelectedType !== undefined ? (
                 <DownloadButtons size="large" />
               ) : null}
             </div>

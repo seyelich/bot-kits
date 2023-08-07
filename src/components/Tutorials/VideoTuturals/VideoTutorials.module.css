@@ -26,10 +26,10 @@
   line-height: 23.4px;
   color: rgba(6, 12, 35, 1);
   padding-bottom: 20px;
-  padding-top:30px;
+  padding-top:25px;
 
   @media (max-width: 768px) {
-    margin-top: -3px;
+    margin-top: 2px;
     margin-bottom: -3px;
   }
 }

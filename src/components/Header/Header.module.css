@@ -6,7 +6,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  padding-left: 46px;
+  padding-left: 0;
+  margin-left: 25px;
   border-bottom: 1px solid #e4e9f1;
 }
 @media (max-width: 670px) {
@@ -74,7 +75,7 @@
   cursor: pointer;
 
   @media (max-width: 768px) {
-    margin-right: 12px;
+    margin-right: 34px;
   }
 }
 
