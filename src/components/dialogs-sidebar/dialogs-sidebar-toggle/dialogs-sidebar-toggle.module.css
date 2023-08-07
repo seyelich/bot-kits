@@ -1,0 +1,28 @@
+.toggle {
+  width: 100%;
+  margin: 32px 0;
+  display: flex;
+}
+
+.toggleOption {
+  width: 50%;
+  padding-bottom: 12px;
+  border-bottom: 0.8px solid #D7DEEA;
+  color: var(--disabled-grey-color);
+  cursor: pointer;
+}
+
+.toggleOptionActive {
+  border-bottom: 3px solid var(--default-blue-color);
+  border-radius: 2px 0px 0px 2px;
+  color: var(--default-blue-color);
+}
+
+.optionName {
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--bold);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
