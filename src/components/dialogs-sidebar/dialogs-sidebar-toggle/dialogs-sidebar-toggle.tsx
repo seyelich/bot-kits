@@ -6,10 +6,12 @@ import ToggleFiles from './toggle-files/toggle-files';
 interface DialogsSidebarToggleProps {
   lastAction: string;
   firstAction: string;
+  files: string[];
+  images: string[];
 }
 
 const DialogsSidebarToggle = memo(
-  ({ lastAction, firstAction }: DialogsSidebarToggleProps) => {
+  ({ lastAction, firstAction, files, images }: DialogsSidebarToggleProps) => {
     const [isInfoOpen, setInfoOpen] = useState(true);
 
     const toggleOnInfo = () => {
@@ -46,7 +48,7 @@ const DialogsSidebarToggle = memo(
             firstAction={firstAction}
           />
         ) : (
-          <ToggleFiles />
+          <ToggleFiles files={files} images={images} />
         )}
       </>
     );

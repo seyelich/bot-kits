@@ -19,6 +19,7 @@ const DialogMainMessages = memo(
             interlocutor={name}
             avatar={avatar}
             isOnline={item.isOwnMe ? false : isOnline}
+            key={item.text + item.sendTime}
           />
         ))}
       </ul>
