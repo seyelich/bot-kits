@@ -1,13 +1,20 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { useNavigate } from 'react-router';
 import styles from './dropdown-menu.module.css';
 import SettingsIcon from '../../../icons/others/Settings';
 import PaymentIcon from '../../../icons/others/Payment';
 import ExitIcon from '../../../icons/others/Exit';
-
 import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
 import InfoIcon from '../../../icons/others/Info';
+import { Context } from '../../../App';
 
 interface IDropdownMenu {
   state: boolean;
@@ -22,6 +29,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
   setIsActive,
   setIsPopupMessagesOpened,
 }) => {
+  const { logOut } = useContext(Context);
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 414px)').matches
   );
@@ -86,7 +94,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
             setIsActive(false);
           }}
         >
-          <div className={styles.option}>
+          <div className={styles.option} onClick={logOut}>
             <ExitIcon
               color={!matches ? '#d7deea' : '#a6b3c9'}
               width={24}

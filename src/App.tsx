@@ -14,54 +14,78 @@ import Partnership from './pages/partnership/partnership';
 import Share from './pages/share';
 import NotFound from './pages/not-found';
 import Layout from './components/Layout/Layout';
-// import Auth from './pages/auth/auth';
 import FirstMailing from './pages/mailing/ui/first-mailing/FirstMailing';
 import MyMailing from './pages/mailing/ui/my-mailing/MyMailing';
 import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
 import MailingConditions from './pages/mailing-conditions/mailing-conditions';
+import Auth from './pages/auth/auth';
 
-interface ISidebarContext {
+interface IContext {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
   settingsOpen: boolean;
   setSettingOpen: (arg: boolean) => void;
+  logIn: () => void;
+  logOut: () => void;
 }
 
-export const SidebarContext = createContext({} as ISidebarContext);
+export const Context = createContext({} as IContext);
 
 export function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [settingsOpen, setSettingOpen] = useState(false);
+  // Установить True при демонстрации визуала авторизации
+  const [authenticated, setAuthenticated] = useState(true);
+
+  const logIn = () => {
+    //Тут должна быть логика по авторизации(запись токена и тд)
+    setAuthenticated(true);
+  };
+
+  const logOut = () => {
+    //Тут должна быть логика по удалению токена и закрытию авторизации)
+    setAuthenticated(false);
+  };
+
   return (
-    <SidebarContext.Provider
-      value={{ sidebarOpen, setSidebarOpen, settingsOpen, setSettingOpen }}
+    <Context.Provider
+      value={{
+        sidebarOpen,
+        setSidebarOpen,
+        settingsOpen,
+        setSettingOpen,
+        logIn,
+        logOut,
+      }}
     >
       <BrowserRouter>
-        {/* <Auth/> */}
-        <div className={styles.content}>
-          <Sidebar />
-          <main>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="add-bot" element={<AddBot />} />
-                <Route path="bot-builder" element={<BotBuilder />} />
-                <Route path="chat" element={<Chat />} />
-                <Route path="mailing" element={<Mailing />}>
-                  <Route path="" element={<FirstMailing />} />
-                  <Route path="start" element={<MyMailing />} />
-                  <Route path="add" element={<CreateMailing />} />
-                  <Route path="conditions" element={<MailingConditions />} />
+        {!authenticated && <Auth />}
+        {authenticated && (
+          <div className={styles.content}>
+            <Sidebar />
+            <main>
+              <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route path="/" element={<Dashboard />} />
+                  <Route path="add-bot" element={<AddBot />} />
+                  <Route path="bot-builder" element={<BotBuilder />} />
+                  <Route path="chat" element={<Chat />} />
+                  <Route path="mailing" element={<Mailing />}>
+                    <Route path="" element={<FirstMailing />} />
+                    <Route path="start" element={<MyMailing />} />
+                    <Route path="add" element={<CreateMailing />} />
+                    <Route path="conditions" element={<MailingConditions />} />
+                  </Route>
+                  <Route path="partnership" element={<Partnership />} />
+                  <Route path="share" element={<Share />} />
+                  <Route path="subscription" element={<Subscription />} />
+                  <Route path="*" element={<NotFound />} />
                 </Route>
-                <Route path="partnership" element={<Partnership />} />
-                <Route path="share" element={<Share />} />
-                <Route path="subscription" element={<Subscription />} />
-                <Route path="*" element={<NotFound />} />
-              </Route>
-            </Routes>
-          </main>
-        </div>
+              </Routes>
+            </main>
+          </div>
+        )}
       </BrowserRouter>
-    </SidebarContext.Provider>
+    </Context.Provider>
   );
 }

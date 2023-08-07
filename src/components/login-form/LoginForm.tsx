@@ -8,9 +8,15 @@ interface LoginFormProps {
   signIn: () => void;
   forgotPass: () => void;
   windowWidth: number;
+  logIn: () => void;
 }
 
-const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
+const LoginForm: FC<LoginFormProps> = ({
+  signIn,
+  forgotPass,
+  windowWidth,
+  logIn,
+}) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   };
@@ -44,6 +50,7 @@ const LoginForm: FC<LoginFormProps> = ({ signIn, forgotPass, windowWidth }) => {
           </span>
         </nav>
         <Button
+          onClick={logIn}
           type="green"
           text="войти"
           width={windowWidth <= 730 ? 320 : 260}

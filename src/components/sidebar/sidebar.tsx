@@ -13,7 +13,7 @@ import menuExpandIcon from './icons/menu-expand';
 
 import styles from './sidebar.module.css';
 import menuCollapseIcon from './icons/menu-collapse';
-import { SidebarContext } from '../../App';
+import { Context } from '../../App';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
   isActive
@@ -23,7 +23,7 @@ const linkStyle = ({ isActive }: { isActive: boolean }) =>
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
   const { pathname } = useLocation();
-  const { sidebarOpen, setSidebarOpen } = useContext(SidebarContext);
+  const { sidebarOpen, setSidebarOpen } = useContext(Context);
   useEffect(() => {
     setSidebarOpen(false);
     setExpanded(false);

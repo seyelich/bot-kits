@@ -10,7 +10,7 @@ import RobotIcon from '../../../../icons/others/Robot';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import Button from '../../../../components/Button/Button';
 import CloseIcon from '../../../../icons/others/Close';
-import { SidebarContext } from '../../../../App';
+import { Context } from '../../../../App';
 
 interface IWidget {
   italicText?: boolean;
@@ -29,7 +29,7 @@ const Widget: FC<IWidget> = ({
   hideSection,
   setHideSection,
 }) => {
-  const { sidebarOpen } = useContext(SidebarContext);
+  const { sidebarOpen } = useContext(Context);
 
   const [showWidget, setShowWidget] = useState(true);
   const date = new Date();

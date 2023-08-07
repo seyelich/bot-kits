@@ -30,13 +30,13 @@ import DownIcon from '../../../../icons/others/Down';
 import ListsRow from './ListsRow';
 import FunnelsRow from './FunnelsRow';
 import WidgetMobileIcon from '../widget/widget-mobile-icon/WidgetMobileIcon';
-import { SidebarContext } from '../../../../App';
+import { Context } from '../../../../App';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
 
 const CreateMailing: FC = () => {
-  const { sidebarOpen } = useContext(SidebarContext);
+  const { sidebarOpen } = useContext(Context);
   const navigate = useNavigate();
   const [name, setName] = useState('Моя рассылка 1');
   const [text, setText] = useState(
