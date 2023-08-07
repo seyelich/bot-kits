@@ -3,12 +3,14 @@ import { useState } from 'react';
 import Button from '../../components/Button/Button';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './partnership.module.css';
-import data from './fakeDatafromApi';
+import { fakeDataPayments, fakeDataStats } from './fakeDatafromApi';
 import LinkWithCopyButton from '../../components/link-with-copy-btn/link-with-copy-btn';
 
 export default function Partnership() {
-  const [arrowRotate, setArrowRotate] = useState(false);
-  const [statistics, setStatistics] = useState(data);
+  const [openFilter, setOpenFilter] = useState(false);
+  const [openSlider, setOpenSlider] = useState(false);
+  const [statistics, setStatistics] = useState(fakeDataStats);
+  const [payments] = useState(fakeDataPayments);
   const [refLink] = useState('botkits.ru/?=12345');
 
   const formattedNumber = (numberValue: number): string =>
@@ -38,26 +40,26 @@ export default function Partnership() {
       />
 
       <div className={styles.statistics}>
-        <div className={styles.statistics__header}>
-          <h2 className={styles.statistics__title}>Статистика рефералов</h2>
+        <div className={styles.container__header}>
+          <h2 className={styles.container__title}>Статистика рефералов</h2>
           <div className={styles.filter}>
             <p className={styles.filter__text}>Все</p>
             <div
               className={`${styles.filter__icon} ${
-                arrowRotate ? styles.filter__icon_rotated : ''
+                openFilter ? styles.filter__icon_rotated : ''
               }`}
-              onClick={() => setArrowRotate(!arrowRotate)}
+              onClick={() => setOpenFilter(!openFilter)}
             >
               <ChevronBigIcon color="#A6B3C9" width={26} height={26} />
             </div>
 
-            {arrowRotate && (
+            {openFilter && (
               <div className={styles.filter__list}>
                 <p
                   className={styles.filter__listText}
                   onClick={() => {
-                    setArrowRotate(false);
-                    setStatistics(data);
+                    setOpenFilter(false);
+                    setStatistics(statistics);
                   }}
                 >
                   Все
@@ -65,9 +67,9 @@ export default function Partnership() {
                 <p
                   className={styles.filter__listText}
                   onClick={() => {
-                    setArrowRotate(false);
+                    setOpenFilter(false);
                     setStatistics(
-                      data.filter((el) => el.status === 'Оплачено')
+                      statistics.filter((el) => el.status === 'Оплачено')
                     );
                   }}
                 >
@@ -76,9 +78,9 @@ export default function Partnership() {
                 <p
                   className={styles.filter__listText}
                   onClick={() => {
-                    setArrowRotate(false);
+                    setOpenFilter(false);
                     setStatistics(
-                      data.filter((el) => el.status === 'Не оплачено')
+                      statistics.filter((el) => el.status === 'Не оплачено')
                     );
                   }}
                 >
@@ -87,9 +89,9 @@ export default function Partnership() {
                 <p
                   className={styles.filter__listText}
                   onClick={() => {
-                    setArrowRotate(false);
+                    setOpenFilter(false);
                     setStatistics(
-                      data.filter((el) => el.status === 'В обработке')
+                      statistics.filter((el) => el.status === 'В обработке')
                     );
                   }}
                 >
@@ -99,6 +101,7 @@ export default function Partnership() {
             )}
           </div>
         </div>
+
         <table className={styles.table_desktop}>
           <colgroup>
             <col style={{ width: '130px' }} />
@@ -123,11 +126,11 @@ export default function Partnership() {
           <tbody>
             {statistics.map((el) => (
               <tr className={styles.tr_table} key={el.id}>
-                <td>{el.visities}</td>
-                <td>{el.registrations}</td>
+                <td className={styles.td_desktop}>{el.visities}</td>
+                <td className={styles.td_desktop}>{el.registrations}</td>
                 <td
                   className={[
-                    styles.td_desktop,
+                    styles.td_desktop_weight,
                     el.status === 'Оплачено'
                       ? styles.payPaidFor
                       : el.status === 'В обработке'
@@ -137,10 +140,18 @@ export default function Partnership() {
                 >
                   {el.status}
                 </td>
-                <td>{formattedNumber(el.summ)}</td>
-                <td>{formattedNumber(el.commission)}</td>
-                <td>{formattedNumber(el.paid)}</td>
-                <td>{formattedNumber(el.withdrawal)}</td>
+                <td className={styles.td_desktop}>
+                  {formattedNumber(el.summ)}
+                </td>
+                <td className={styles.td_desktop}>
+                  {formattedNumber(el.commission)}
+                </td>
+                <td className={styles.td_desktop}>
+                  {formattedNumber(el.paid)}
+                </td>
+                <td className={styles.td_desktop}>
+                  {formattedNumber(el.withdrawal)}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -218,6 +229,118 @@ export default function Partnership() {
               }}
             />
           </div>
+        </div>
+      </div>
+
+      <div
+        className={
+          openSlider
+            ? styles.payments
+            : `${styles.payments} ${styles.payments_close}`
+        }
+      >
+        <div className={styles.container__header}>
+          <h2 className={styles.container__title}>Выплаты</h2>
+          <div className={styles.slider}>
+            <div
+              className={`${styles.filter__icon} ${
+                openSlider ? styles.filter__icon_rotated : ''
+              }`}
+              onClick={() => setOpenSlider(!openSlider)}
+            >
+              <ChevronBigIcon color="#A6B3C9" width={26} height={26} />
+            </div>
+          </div>
+        </div>
+
+        {openSlider ? (
+          <table className={styles.table_desktop}>
+            <colgroup>
+              <col style={{ width: '20%' }} />
+              <col style={{ width: '20%' }} />
+              <col style={{ width: '20%' }} />
+              <col style={{ width: '15%' }} />
+              <col style={{ width: '10%' }} />
+            </colgroup>
+            <thead>
+              <tr>
+                <th className={styles.th_desktop}>Дата запроса</th>
+                <th className={styles.th_desktop}>Дата выплаты</th>
+                <th className={styles.th_desktop}>Акт</th>
+                <th className={styles.th_desktop}>Статус</th>
+                <th className={styles.th_desktop}>Сумма выплаты</th>
+              </tr>
+            </thead>
+            <tbody>
+              {payments.map((el) => (
+                <tr className={styles.tr_table} key={el.id}>
+                  <td className={styles.td_desktop_weight_weight}>
+                    {el.date_request}
+                  </td>
+                  <td className={styles.td_desktop}>{el.date_payment}</td>
+                  <td className={styles.td_desktop}>{el.act}</td>
+                  <td
+                    className={[
+                      styles.td_desktop_weight,
+                      el.status === 'Выплачено'
+                        ? styles.payPaidFor
+                        : styles.inProcessing,
+                    ].join(' ')}
+                  >
+                    {el.status}
+                  </td>
+                  <td className={styles.td_desktop}>
+                    {formattedNumber(el.summ)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : null}
+
+        <div className={styles.table__mobile}>
+          {openSlider &&
+            payments.map((el) => (
+              <table className={styles.table_item_mobile}>
+                <colgroup>
+                  <col style={{ width: '180px' }} />
+                  <col style={{ width: '10px' }} />
+                </colgroup>
+                <tbody>
+                  <tr key={el.id}>
+                    <td className={styles.td_name_mobile}>Дата запроса</td>
+                    <td className={styles.td_curr_mobile}>{el.date_request}</td>
+                  </tr>
+                  <tr>
+                    <td className={styles.td_name_mobile}>Дата выплаты</td>
+                    <td className={styles.td_curr_mobile}>{el.date_payment}</td>
+                  </tr>
+                  <tr>
+                    <td className={styles.td_name_mobile}>Статус</td>
+                    <td
+                      className={[
+                        styles.td_curr_mobile,
+                        el.status === 'Выплачено'
+                          ? styles.payPaidFor
+                          : styles.inProcessing,
+                      ].join(' ')}
+                    >
+                      {el.status}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.td_name_mobile}>Сумма</td>
+                    <td className={styles.td_curr_mobile}>
+                      {formattedNumber(el.summ)}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className={styles.td_name_mobile}>Акт</td>
+                    <td className={styles.td_curr_mobile}>{el.act}</td>
+                  </tr>
+                </tbody>
+              </table>
+            ))}
         </div>
       </div>
     </section>

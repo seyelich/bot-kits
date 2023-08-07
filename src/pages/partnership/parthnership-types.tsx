@@ -8,3 +8,12 @@ export interface IDataStatistics {
   paid: number;
   withdrawal: number;
 }
+
+export interface IDataPayments {
+  id: number;
+  date_request: string;
+  date_payment: string;
+  act: string;
+  status: string;
+  summ: number;
+}

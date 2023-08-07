@@ -1,6 +1,6 @@
-import { IDataStatistics } from './parthnership-types';
+import { IDataPayments, IDataStatistics } from './parthnership-types';
 
-const fakeData: IDataStatistics[] = [
+export const fakeDataStats: IDataStatistics[] = [
   {
     id: 1,
     visities: '28 человек',
@@ -33,4 +33,32 @@ const fakeData: IDataStatistics[] = [
   },
 ];
 
-export default fakeData;
+export const fakeDataPayments: IDataPayments[] = [
+  {
+    id: 1,
+    date_request: '05.07.22',
+    date_payment: '07.07.22',
+    // Временное решение, пока нет бекенда
+    act: 'Док.pdf',
+    status: 'Выплачено',
+    summ: 1500,
+  },
+  {
+    id: 2,
+    date_request: '02.07.22',
+    date_payment: '-',
+    // Временное решение, пока нет бекенда
+    act: 'Фото.png',
+    status: 'В обработке',
+    summ: 4500,
+  },
+  {
+    id: 3,
+    date_request: '27.06.22',
+    date_payment: '28.06.22',
+    // Временное решение, пока нет бекенда
+    act: 'Data.pdf',
+    status: 'Выплачено',
+    summ: 1000,
+  },
+];
