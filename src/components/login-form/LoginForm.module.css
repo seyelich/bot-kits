@@ -1,15 +1,15 @@
 .loginForm {
   max-width: 770px;
   width: 100%;
-  max-height: 590px;
+  min-height: 590px;
   height: 100%;
-  border-radius: 30px;
   border-radius: 30px;
   background: #2743ce;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s ease-in-out;
 }
 
 .loginForm__form {
@@ -22,11 +22,12 @@
   max-width: 770px;
   width: 100%;
   box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
 }
 
 .loginForm__formContainer {
   max-width: 570px;
-  max-height: 140px;
+  min-height: 144px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 auto 50px;
+  margin: 0 auto 46px;
 }
 .loginForm__form__menuItems {
   margin-right: 30px;
@@ -64,12 +65,12 @@
 .loginForm__footer {
   position: relative;
   margin: 0 auto;
-  padding-bottom: 32px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-height: 175;
+  min-height: 78px;
 }
 
 .loginForm__footerTitle {
@@ -91,7 +92,62 @@
   line-height: 150%;
   letter-spacing: 0.5px;
   z-index: 2;
-  position: absolute;
-  top: -70px;
-  left: 185px;
+  position: relative;
+  top: -40px;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 790px) {
+  .loginForm {
+    max-width: 700px;
+    min-height: 590px;
+  }
+
+  .loginForm__form {
+    min-height: 420px;
+    padding: 60px 0 60px 0;
+    max-width: 700px;
+  }
+
+  .loginForm__formContainer {
+    max-width: 500px;
+    max-height: 140px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .loginForm {
+    min-height: 520px;
+    max-height: 520px;
+    max-width: 500px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .loginForm__form {
+    min-height: 300px;
+    padding: 40px 0 30px 0;
+  }
+
+  .loginForm__formContainer {
+    max-width: 320px;
+    max-height: 140px;
+  }
+
+  .loginForm__form__menu {
+    margin: 0 auto 41px;
+  }
+
+  .loginForm__footerTitle {
+    width: 100%;
+    height: 23px;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .loginForm__footer {
+    position: relative;
+    min-height: 78px;
+  }
 }
