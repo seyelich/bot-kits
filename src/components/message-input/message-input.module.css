@@ -19,6 +19,7 @@
   line-height: var(--s-line-height);
   letter-spacing: var(--m-letter-space);
   background-color: inherit;
+  cursor: text;
 }
 
 .input:focus {
@@ -77,11 +78,11 @@
 
 .xCircleCnt {
   transform: rotate(45deg);
+  transition: transform 0.3s;
 }
 
 .xCircleCntOpened {
   transform: rotate(0deg);
-  transition: transform 0.3s;
 }
 
 @media screen and (max-width: 360px) {
