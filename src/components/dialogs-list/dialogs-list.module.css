@@ -1,0 +1,19 @@
+.section  {
+  width: 308px;
+  padding: 32px 20px 0 0;
+}
+
+.heading {
+  margin-bottom: 26px;
+  font-family: 'IBM Plex Mono';
+  font-size: var(--h2-font-size);
+  font-weight: var(--bold);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-space);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 13px;
+}
