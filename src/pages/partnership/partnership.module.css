@@ -73,14 +73,14 @@
   background-color: #fff;
 }
 
-.statistic__header {
+.statistics__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 26px;
 }
 
-.statistic__title {
+.statistics__title {
   display: flex;
   align-items: center;
   margin: 0;
@@ -289,7 +289,7 @@ table.table_item_mobile {
     display: none;
   }
 
-  .statistic__title {
+  .statistics__title {
     font-size: 18px;
     line-height: 23px;
   }
