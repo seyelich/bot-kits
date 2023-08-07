@@ -11,7 +11,7 @@ export default function AddBot() {
   const navigate = useNavigate();
   const addBot = () => {
     setIsClicked(true);
-    navigate('/bot-builder');
+    navigate('/add-bot');
   };
 
   return (
