@@ -10,7 +10,8 @@ interface DialogsSidebarProps {
 
 const DialogsSidebar = memo(({ currentDialog }: DialogsSidebarProps) => {
   const [isOpen, setIsOpen] = useState(true);
-  const { name, role, avatar, lastAction, firstAction } = currentDialog;
+  const { name, role, avatar, lastAction, firstAction, files, images } =
+    currentDialog;
 
   return (
     <div className={`${Styles.cnt} ${isOpen && Styles.cntO}`}>
@@ -22,6 +23,8 @@ const DialogsSidebar = memo(({ currentDialog }: DialogsSidebarProps) => {
           <DialogsSidebarToggle
             lastAction={lastAction}
             firstAction={firstAction}
+            files={files}
+            images={images}
           />
         </div>
       )}
