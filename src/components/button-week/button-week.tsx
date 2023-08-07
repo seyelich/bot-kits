@@ -19,7 +19,6 @@ const ButtonWeek: FC<IButtonWeek> = ({ week, setWeekChosen }) => {
   const ref = useRef<HTMLButtonElement>(null);
   const handleClick = () => {
     setIsActive(!isActive);
-    console.log(ref?.current?.innerText);
     setWeekChosen(ref?.current?.innerText);
   };
 
