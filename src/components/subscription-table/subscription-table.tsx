@@ -8,13 +8,15 @@ type TTableProps = {
 
 export default function SubscriptionTable({ payments }: TTableProps) {
   const [arrowRotate, setArrowRotate] = useState(false);
+  const [filter, setFilter] = useState(payments);
+  const [condition, setCondition] = useState('Все');
 
   return (
     <div className={styles.container}>
       <div className={styles.title_container}>
         <p className={styles.title}>История платежей</p>
         <div className={styles.filter}>
-          <p className={styles.filter__text}>Все</p>
+          <p className={styles.filter__text}>{condition}</p>
           <div
             className={`${styles.filter__icon} ${
               arrowRotate ? styles.filter__icon_rotated : ''
@@ -31,7 +33,8 @@ export default function SubscriptionTable({ payments }: TTableProps) {
                 className={styles.filter__listText}
                 onClick={() => {
                   setArrowRotate(false);
-                  // setMailings(data);
+                  setFilter(payments);
+                  setCondition('Все');
                 }}
               >
                 Все
@@ -41,7 +44,10 @@ export default function SubscriptionTable({ payments }: TTableProps) {
                 className={styles.filter__listText}
                 onClick={() => {
                   setArrowRotate(false);
-                  // setMailings(data.filter((el) => el.status === 'Запущено'));
+                  setFilter(
+                    payments.filter((el) => el.operation === 'Списание')
+                  );
+                  setCondition('Списания');
                 }}
               >
                 Списания
@@ -51,7 +57,10 @@ export default function SubscriptionTable({ payments }: TTableProps) {
                 className={styles.filter__listText}
                 onClick={() => {
                   setArrowRotate(false);
-                  // setMailings(data.filter((el) => el.status === 'Отклонено'));
+                  setFilter(
+                    payments.filter((el) => el.operation === 'Поступление')
+                  );
+                  setCondition('Поступления');
                 }}
               >
                 Поступления
@@ -71,7 +80,7 @@ export default function SubscriptionTable({ payments }: TTableProps) {
           </tr>
         </thead>
         <tbody className={styles.table_text}>
-          {!payments.length && (
+          {!filter.length && (
             <tr>
               <td>-</td>
               <td>-</td>
@@ -80,8 +89,8 @@ export default function SubscriptionTable({ payments }: TTableProps) {
               <td>-</td>
             </tr>
           )}
-          {payments.length &&
-            payments.map((payment) => (
+          {filter.length &&
+            filter.map((payment) => (
               <tr key={payment.id}>
                 <td>{payment.date}</td>
                 <td>{payment.operation}</td>
