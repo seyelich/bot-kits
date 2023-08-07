@@ -73,11 +73,11 @@ export function App() {
         {authenticated && (
           <div
             className={styles.content}
-            onClick={(e) => {
-              if (e.currentTarget && accountSettingsOpen) {
+            onClick={() => {
+              if (accountSettingsOpen) {
                 setAccountSettingsOpen(false);
               }
-              if (e.currentTarget && dropdownMenuOpen) {
+              if (dropdownMenuOpen) {
                 setDropdownMenuOpen(false);
               }
             }}
