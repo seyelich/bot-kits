@@ -23,15 +23,19 @@ import MailingConditions from './pages/mailing-conditions/mailing-conditions';
 interface ISidebarContext {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
+  settingsOpen: boolean;
+  setSettingOpen: (arg: boolean) => void;
 }
 
 export const SidebarContext = createContext({} as ISidebarContext);
 
 export function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const [settingsOpen, setSettingOpen] = useState(false);
   return (
-    <SidebarContext.Provider value={{ sidebarOpen, setSidebarOpen }}>
+    <SidebarContext.Provider
+      value={{ sidebarOpen, setSidebarOpen, settingsOpen, setSettingOpen }}
+    >
       <BrowserRouter>
         {/* <Auth/> */}
         <div className={styles.content}>

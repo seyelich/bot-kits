@@ -1,5 +1,12 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
 import { useNavigate } from 'react-router';
 import styles from './account-settings.module.css';
 
@@ -12,6 +19,8 @@ import InfoIcon from '../../../icons/others/Info';
 import NotificationSettingsIcon from '../../../icons/others/NotificationSettings';
 import TrashIcon from '../../../icons/others/Trash';
 import CloseIcon from '../../../icons/others/Close';
+// eslint-disable-next-line import/no-cycle
+import { SidebarContext } from '../../../App';
 
 interface IAccountSettings {
   isOpen: boolean;
@@ -33,7 +42,8 @@ const AccountSettings: FC<IAccountSettings> = ({
   setIsNotificationsSettingsPopupOpened,
 }) => {
   const navigate = useNavigate();
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { settingsOpen, setSettingOpen } = useContext(SidebarContext);
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 414px)').matches
   );
@@ -47,7 +57,7 @@ const AccountSettings: FC<IAccountSettings> = ({
   return (
     <div
       className={
-        !isOpen
+        !isOpen && !settingsOpen
           ? `${styles.container} ${styles.container_default}`
           : `${styles.container} ${styles.container_active}`
       }
@@ -58,6 +68,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           onClick={() => {
             navigate('/add-bot');
             setIsSettingOpen(false);
+            setSettingOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -72,6 +83,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           onClick={() => {
             setIsShareAccessPopupOpened?.(true);
             setIsSettingOpen(false);
+            setSettingOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -84,6 +96,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           onClick={() => {
             setIsRenamePopupOpened?.(true);
             setIsSettingOpen(false);
+            setSettingOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -98,6 +111,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsCopyLinkPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -110,6 +124,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsConnectionInfoPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -122,6 +137,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsNotificationsSettingsPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -140,6 +156,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsConnectionInfoPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -152,6 +169,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsNotificationsSettingsPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -166,6 +184,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               onClick={() => {
                 setIsCopyLinkPopupOpened?.(true);
                 setIsSettingOpen(false);
+                setSettingOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -180,6 +199,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           className={styles.item}
           onClick={() => {
             setIsSettingOpen(false);
+            setSettingOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -192,6 +212,7 @@ const AccountSettings: FC<IAccountSettings> = ({
             className={styles.item}
             onClick={() => {
               setIsSettingOpen(false);
+              setSettingOpen(false);
             }}
           >
             <div className={styles.option}>
