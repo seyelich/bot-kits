@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import SearchInput from '../../components/search-input/search-input';
 import IconButton from '../../components/icon-button/IconButton';
 
@@ -34,7 +34,7 @@ export default function Share() {
   const [current, setCurrent] = useState<number>(1);
   const [users, setUsers] = useState<Array<TUser>>([]);
   const [modalOpened, setModalOpened] = useState<boolean>(false);
-  const { getUsers, removeUsers } = useFakeUsers();
+  const { getUsers, removeUsers, addUser } = useFakeUsers();
 
   function refreshUsers() {
     const res = getUsers(perPage, (current - 1) * perPage);
@@ -51,7 +51,7 @@ export default function Share() {
   useEffect(() => {
     if (current > 1 && current > Math.ceil(total / perPage)) setCurrent(1);
     refreshUsers();
-  }, [current, perPage]);
+  }, [current, perPage, modalOpened]);
 
   return (
     <>
@@ -107,7 +107,10 @@ export default function Share() {
       </div>
       {modalOpened && (
         <Modal onClose={() => setModalOpened(false)}>
-          <CreateUser />
+          <CreateUser
+            callback={addUser}
+            onClose={() => setModalOpened(false)}
+          />
         </Modal>
       )}
     </>

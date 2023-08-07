@@ -16,11 +16,17 @@ export default function useFakeUsers() {
     };
   }
 
-  async function removeUsers(query: Array<string>) {
+  function removeUsers(query: Array<string>) {
     const userList = JSON.parse(sessionStorage.getItem('users') || '');
     const res = userList.filter((user: TUser) => !query.includes(user._id));
     sessionStorage.setItem('users', JSON.stringify(res));
   }
 
-  return { getUsers, removeUsers };
+  function addUser(user: Omit<TUser, '_id'>) {
+    const userList = JSON.parse(sessionStorage.getItem('users') || '');
+    userList.push({ ...user, _id: Math.random() });
+    sessionStorage.setItem('users', JSON.stringify(userList));
+  }
+
+  return { getUsers, removeUsers, addUser };
 }

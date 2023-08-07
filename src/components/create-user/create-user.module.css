@@ -12,6 +12,16 @@
   font-weight: 600;
 }
 
+.close-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
 .form {
   display: grid;
   gap: 0 41px;
@@ -33,10 +43,34 @@
 
 .input {
   height: 45px;
-  border-bottom: 1px grey solid;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px var(--focus-grey-color) solid;
+}
+
+.input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--default-dark-grey-color);
 }
 
 .buttons {
-  margin-top: 40px;
+  margin-top: 35px;
+  padding: 5px 0;
   grid-column: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: stretch;
+}
+
+.clear-button {
+  min-height: 46px;
+  border: none;
+  background: none;
+}
+
+.add-button {
+  min-height: 46px;
+  flex-basis: 58%;
 }

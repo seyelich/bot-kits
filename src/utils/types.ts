@@ -5,4 +5,5 @@ export type TUser = {
   username?: string;
   messengerId: string;
   phone?: string;
+  country?: string;
 };

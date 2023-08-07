@@ -3,9 +3,10 @@ import { MouseEventHandler } from 'react';
 type Props = {
   check: boolean;
   onClick: MouseEventHandler<SVGSVGElement>;
+  extraClass?: string;
 };
 
-export default function UserCheckbox({ check, onClick }: Props) {
+export default function UserCheckbox({ check, onClick, extraClass }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,6 +14,7 @@ export default function UserCheckbox({ check, onClick }: Props) {
       width="20"
       height="20"
       fill="none"
+      className={extraClass || ''}
     >
       <g fill="#000" clipPath="url(#a)">
         {check && (

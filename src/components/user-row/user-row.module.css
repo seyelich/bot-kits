@@ -1,11 +1,63 @@
 .user {
   display: grid;
-  grid-template-columns: 71px 1.06fr 1.25fr 1.28fr 1fr 1fr;
+  grid-template-columns: [check] 71px [avatar] max-content [name] 1.06fr [surname] 1.25fr [username] 1.28fr [messengerid] 1fr [phone] 1fr;
   align-items: center;
   height: 60px;
   border-bottom: 2px solid #d7deea;
+  @media (max-width: 670px) {
+    grid-template-columns: max-content 60px max-content 1fr max-content;
+    grid-template-areas:
+      "check avatar name surname edit"
+      "check avatar messengerid messengerid edit";
+  }
 }
 
-.last-column {
+.check {
+  grid-area: check;
+  grid-row: 1;
+  @media (max-width: 670px) {
+    grid-row: 1 / -1;
+  }
+}
+
+.name {
+  grid-area: name;
+  grid-row: 1;
+  @media (max-width: 670px) {
+    margin-right: 5px;
+  }
+}
+
+.surname {
+  grid-area: surname;
+  grid-row: 1;
+}
+
+.username {
+  grid-area: username;
+  grid-row: 1;
+  @media (max-width: 670px) {
+    display: none;
+  }
+}
+
+.messengerid {
+  grid-area: messengerid;
+  grid-row: 1;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @media (max-width: 670px) {
+    grid-row: 2;
+  }
+}
+
+.phone {
+  grid-area: phone;
+  grid-row: 1;
   justify-self: flex-end;
+  @media (max-width: 670px) {
+    display: none;
+  }
 }
