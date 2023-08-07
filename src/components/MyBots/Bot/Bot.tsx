@@ -3,7 +3,7 @@ import { FC, useContext, useEffect, useState } from 'react';
 import styles from './Bot.module.css';
 import Dots from '../../icons/Dots/Dots';
 import TelegramIcon from '../../../icons/social/telegram';
-import { SidebarContext } from '../../../App';
+import { Context } from '../../../App';
 
 interface IBot {
   text: string;
@@ -11,7 +11,7 @@ interface IBot {
 
 const Bot: FC<IBot> = ({ text }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { settingsOpen, setSettingOpen } = useContext(SidebarContext);
+  const { settingsOpen, setSettingOpen } = useContext(Context);
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 768px)').matches
   );

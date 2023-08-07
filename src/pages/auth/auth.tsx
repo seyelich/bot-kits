@@ -2,11 +2,13 @@ import RegisterForm from '../../components/register-form/RegisterForm';
 import Logo from '../../components/Logo/Logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import CloseIcon from '../../icons/others/Close';
+import { Context } from '../../App';
 
 export default function Auth() {
+  const { logIn } = useContext(Context);
   const [state, setState] = useState({ authState: 'Login' });
   const [banner, setBanner] = useState({ bannerState: 'none' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -136,6 +138,7 @@ export default function Auth() {
               signIn={handleRegisterClick}
               forgotPass={handleForgotPassClick}
               windowWidth={windowWidth}
+              logIn={logIn}
             />
           )}
           {state.authState === 'ForgotPass' && (

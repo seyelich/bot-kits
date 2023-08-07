@@ -20,7 +20,7 @@ import NotificationSettingsIcon from '../../../icons/others/NotificationSettings
 import TrashIcon from '../../../icons/others/Trash';
 import CloseIcon from '../../../icons/others/Close';
 // eslint-disable-next-line import/no-cycle
-import { SidebarContext } from '../../../App';
+import { Context } from '../../../App';
 
 interface IAccountSettings {
   isOpen: boolean;
@@ -43,7 +43,7 @@ const AccountSettings: FC<IAccountSettings> = ({
 }) => {
   const navigate = useNavigate();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { settingsOpen, setSettingOpen } = useContext(SidebarContext);
+  const { settingsOpen, setSettingOpen } = useContext(Context);
   const [matches, setMatches] = useState(
     window.matchMedia('(max-width: 414px)').matches
   );
