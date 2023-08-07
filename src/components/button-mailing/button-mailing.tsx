@@ -27,15 +27,13 @@ const ButtonMailing: FC<IButtonMailing> = ({ width, text, setSelected }) => {
           if (text === 'Месяц отправки') {
             setSelected(!isActive);
           }
-          console.log(text);
-          console.log(setSelected);
         }}
         className={`${styles.input} `}
         style={{ width }}
       >
         {text}
       </button>
-      {!isActive && (
+      {isActive && (
         <span className={styles.button}>
           {' '}
           <CheckIcon color="#243CBB" width={16} height={16} />

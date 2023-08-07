@@ -56,7 +56,7 @@ const AccountSettings: FC<IAccountSettings> = ({
         <li
           className={styles.item}
           onClick={() => {
-            navigate('/bot-builder');
+            navigate('/add-bot');
             setIsSettingOpen(false);
           }}
         >
