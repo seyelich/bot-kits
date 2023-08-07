@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+  max-width: 1268px;
+  height: 100vh;
+  background-image: url('../../../src/icons/background/bg-plus.svg');
+  stroke: red;
+
+  background-color: #f8f9fb;
+}
+
+.plusButton {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 24px;
+  right: 24px;
+}
