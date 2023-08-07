@@ -15,12 +15,14 @@ const ChatAvatar = memo(
       width: '40px',
       height: '40px',
       backgroundImage: `url(${img})`,
+      flex: `0 0 40px`,
     };
 
     switch (size) {
       case 'large': {
         style.width = '80px';
         style.height = '80px';
+        style.flex = '0 0 80px';
         break;
       }
       default: {
