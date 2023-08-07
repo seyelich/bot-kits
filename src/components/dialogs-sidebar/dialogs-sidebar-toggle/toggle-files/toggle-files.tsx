@@ -1,7 +1,13 @@
 import { memo } from 'react';
 import Styles from './toggle-files.module.css';
+import DocCircleIcon from '../../../../icons/others/doc-circle';
 
-const ToggleFiles = memo(() => (
+interface ToggleFilesProps {
+  files: string[];
+  images: string[];
+}
+
+const ToggleFiles = memo(({ files, images }: ToggleFilesProps) => (
   <div className={Styles.cnt}>
     <div className={Styles.filesBlock}>
       <div className={Styles.blockHeadingCnt}>
@@ -13,6 +19,21 @@ const ToggleFiles = memo(() => (
           Все
         </button>
       </div>
+      <ul className={Styles.filesList}>
+        {files.map((item, i) => {
+          if (i < 2) {
+            return (
+              <li key={item}>
+                <div className={Styles.file}>
+                  <DocCircleIcon />
+                  <p className={Styles.fileName}>{item}</p>
+                </div>
+              </li>
+            );
+          }
+          return <div />;
+        })}
+      </ul>
     </div>
     <div className={Styles.filesBlock}>
       <div className={Styles.blockHeadingCnt}>
@@ -24,6 +45,21 @@ const ToggleFiles = memo(() => (
           Все
         </button>
       </div>
+      <ul className={`${Styles.filesList} ${Styles.imagesList}`}>
+        {images.map((item, i) => {
+          if (i < 3) {
+            return (
+              <li key={item}>
+                <div
+                  className={Styles.image}
+                  style={{ backgroundImage: `url(${item})` }}
+                />
+              </li>
+            );
+          }
+          return <div />;
+        })}
+      </ul>
     </div>
   </div>
 ));
