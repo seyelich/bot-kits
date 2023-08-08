@@ -1,10 +1,18 @@
-import { FormEventHandler } from 'react';
+import { memo, useState, FormEventHandler } from 'react';
 import Styles from './dialogs-main-input.module.css';
 import MessageInput from '../../message-input/message-input';
+import Modal from '../../modal/modal';
+import FileModal from './file-modal/file-modal';
 
-function DialogMainInput() {
+const DialogMainInput = memo(() => {
+  const [isOpenFileModal, setFileModal] = useState(false);
+
   // TODO Заглушка. Потом убрать
   const mock = () => {};
+
+  const fileModalHandler = () => {
+    setFileModal(!isOpenFileModal);
+  };
 
   const submitForm: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -16,13 +24,19 @@ function DialogMainInput() {
       <MessageInput
         placeholder="Введите сообщение..."
         onChange={mock}
-        onFileClick={mock}
+        onFileClick={fileModalHandler}
         onSlashClick={mock}
         onZapClick={mock}
       />
       <button className={Styles.button} type="submit" aria-label="Отправить" />
+
+      {isOpenFileModal && (
+        <Modal onClose={fileModalHandler}>
+          <FileModal modalHandler={fileModalHandler} />
+        </Modal>
+      )}
     </form>
   );
-}
+});
 
 export default DialogMainInput;

@@ -1,0 +1,43 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import { memo } from 'react';
+import Styles from './file-modal.module.css';
+import IconButton from '../../../icon-button/IconButton';
+import CloseIcon from '../../../../icons/others/Close';
+import LogOut from '../../../../icons/others/LogOut';
+
+interface FileModalProps {
+  modalHandler: VoidFunction;
+}
+
+const FileModal = memo(({ modalHandler }: FileModalProps) => (
+  <div className={Styles.modalWindow}>
+    <div className={Styles.closeIcon}>
+      <IconButton
+        width={24}
+        height={24}
+        icon={CloseIcon({ color: '#060C23' })}
+        onClick={modalHandler}
+      />
+    </div>
+    <div className={Styles.dropArea}>
+      <label className={Styles.inputFileLabel}>
+        <LogOut />
+        <h4 className={Styles.dropHint}>
+          Перетяните файл
+          <br />
+          или
+        </h4>
+        <p className={Styles.upload}>Загрузите</p>
+        <input className={Styles.inputFile} type="file" multiple />
+      </label>
+    </div>
+    <div className={Styles.uploadedFiles}>
+      {/* TODO доделать!! */}
+      <ul>
+        <li />
+      </ul>
+    </div>
+  </div>
+));
+
+export default FileModal;
