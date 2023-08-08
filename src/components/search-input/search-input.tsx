@@ -1,6 +1,5 @@
 import { ChangeEventHandler, useState } from 'react';
 import Styles from './search-input.module.css';
-// TODO Тут надо будет поменять импорты на дефолтные после исправлений ошибок линтера в иконках
 import SearchIcon from '../../icons/others/Search';
 import IconButton from '../icon-button/IconButton';
 import FilterIcon from '../../icons/others/Filter';
@@ -11,6 +10,7 @@ interface SearchInputProps {
   size?: 'default' | 'small';
   hasFilter?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
+  onFilterClick?: VoidFunction;
 }
 
 function SearchInput({
@@ -19,6 +19,7 @@ function SearchInput({
   size = 'default',
   hasFilter = false,
   onChange,
+  onFilterClick,
 }: SearchInputProps) {
   const [hasFocus, setFocus] = useState(false);
 
@@ -63,6 +64,7 @@ function SearchInput({
             width: iconSize,
             height: iconSize,
           })}
+          onClick={onFilterClick}
         />
       )}
     </div>
