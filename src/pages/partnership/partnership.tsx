@@ -5,11 +5,13 @@ import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './partnership.module.css';
 import { fakeDataPayments, fakeDataStats } from './fakeDatafromApi';
 import LinkWithCopyButton from '../../components/link-with-copy-btn/link-with-copy-btn';
+import { IDataStatistics } from './parthnership-types';
 
 export default function Partnership() {
   const [openFilter, setOpenFilter] = useState(false);
   const [openSlider, setOpenSlider] = useState(false);
   const [statistics, setStatistics] = useState(fakeDataStats);
+  const [filtredStat, setFiltredStat] = useState(statistics);
   const [payments] = useState(fakeDataPayments);
   const [refLink] = useState('botkits.ru/?=12345');
 
@@ -59,7 +61,7 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setOpenFilter(false);
-                    setStatistics(statistics);
+                    setFiltredStat(statistics);
                   }}
                 >
                   Все
@@ -68,9 +70,7 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setOpenFilter(false);
-                    setStatistics(
-                      statistics.filter((el) => el.status === 'Оплачено')
-                    );
+                    setFiltredStat(statistics.filter((el) => el.status === 'Оплачено'))
                   }}
                 >
                   Оплачены
@@ -79,9 +79,7 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setOpenFilter(false);
-                    setStatistics(
-                      statistics.filter((el) => el.status === 'Не оплачено')
-                    );
+                    setFiltredStat(statistics.filter((el) => el.status === 'Не оплачено'))
                   }}
                 >
                   Не оплачены
@@ -90,7 +88,7 @@ export default function Partnership() {
                   className={styles.filter__listText}
                   onClick={() => {
                     setOpenFilter(false);
-                    setStatistics(
+                    setFiltredStat(
                       statistics.filter((el) => el.status === 'В обработке')
                     );
                   }}
@@ -124,7 +122,7 @@ export default function Partnership() {
             </tr>
           </thead>
           <tbody>
-            {statistics.map((el) => (
+            {filtredStat.map((el) => (
               <tr className={styles.tr_table} key={el.id}>
                 <td className={styles.td_desktop}>{el.visities}</td>
                 <td className={styles.td_desktop}>{el.registrations}</td>
@@ -157,7 +155,7 @@ export default function Partnership() {
           </tbody>
         </table>
         <div className={styles.table__mobile}>
-          {statistics.map((el) => (
+          {filtredStat.map((el) => (
             <table className={styles.table_item_mobile} key={el.id}>
               <colgroup>
                 <col style={{ width: '180px' }} />
