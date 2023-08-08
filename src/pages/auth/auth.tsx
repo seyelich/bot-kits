@@ -1,10 +1,11 @@
+import { useContext, useEffect, useState } from 'react';
 import RegisterForm from '../../components/register-form/RegisterForm';
 import Logo from '../../components/Logo/Logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
-import { useContext, useEffect, useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import CloseIcon from '../../icons/others/Close';
+// eslint-disable-next-line import/no-cycle
 import { Context } from '../../App';
 
 export default function Auth() {
@@ -51,13 +52,14 @@ export default function Auth() {
   const chooseLogoSize = () => {
     if (windowWidth >= 1000 && state.authState === 'Register') {
       return { width: 148.75, height: 35 };
-    } else if (windowWidth >= 1000) {
-      return { width: 161.5, height: 38 };
-    } else if (windowWidth >= 700 && windowWidth <= 999) {
-      return { width: 148.75, height: 35 };
-    } else {
-      return { width: 127.5, height: 30 };
     }
+    if (windowWidth >= 1000) {
+      return { width: 161.5, height: 38 };
+    }
+    if (windowWidth >= 700 && windowWidth <= 999) {
+      return { width: 148.75, height: 35 };
+    }
+    return { width: 127.5, height: 30 };
   };
 
   const logoSize = chooseLogoSize();

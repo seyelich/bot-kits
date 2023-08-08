@@ -12,11 +12,8 @@ interface DialogsListProps {
 
 const DialogsList = memo(
   ({ data, current, currentHandler }: DialogsListProps) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [currentFilter, setFilter] = useState('firstNew');
-
-    // FIXME Временное решение, чтобы линтер не ругался на неиспользуемую переменную
-    // console.log можно удалить
-    // console.log(currentFilter);
 
     return (
       <section className={Styles.section}>

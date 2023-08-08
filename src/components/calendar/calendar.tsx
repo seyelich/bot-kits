@@ -32,22 +32,26 @@ const Calendar: FC = () => {
   }, []);
   return (
     <DatePicker
-    popperPlacement="bottom-end"
-    popperModifiers={matches ? [
-      {
-        name: "offset",
-        options: {
-          offset: [15, -300],
-        },
-      },
-    ] : [
-      {
-        name: "offset",
-        options: {
-          offset: [300, -200],
-        },
-      },
-    ]}
+      popperPlacement="bottom-end"
+      popperModifiers={
+        matches
+          ? [
+              {
+                name: 'offset',
+                options: {
+                  offset: [15, -300],
+                },
+              },
+            ]
+          : [
+              {
+                name: 'offset',
+                options: {
+                  offset: [300, -200],
+                },
+              },
+            ]
+      }
       customInput={<CustomInput />}
       shouldCloseOnSelect
       locale="ru"

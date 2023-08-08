@@ -61,4 +61,3 @@ const ServiceBasics: FC = () => (
 );
 
 export default ServiceBasics;
-

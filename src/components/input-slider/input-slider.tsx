@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction,  useState } from 'react';
+import { Dispatch, FC, SetStateAction, useState } from 'react';
 import styles from './input-sider.module.css';
 import Arrow from '../../icons/others/arrow';
 

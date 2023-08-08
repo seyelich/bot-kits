@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styles from './MyBots.module.css';
+// eslint-disable-next-line import/no-cycle
 import Bot from './Bot/Bot';
 import AddBot from './AddBot/AddBot';
 

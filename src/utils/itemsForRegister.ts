@@ -1,7 +1,7 @@
 import belarus from '../images/belarus.png';
 import azer from '../images/azer.png';
 import rus from '../images/rus.png';
-import armenia from '../images/belarus.png';
+import armenia from '../images/armenia.png';
 import ukr from '../images/ukr.png';
 
 const items = [

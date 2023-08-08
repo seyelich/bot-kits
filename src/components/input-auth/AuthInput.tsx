@@ -21,36 +21,34 @@ const AuthInput: FC<IAuthInput> = ({
   onChange,
   error,
   textError,
-}) => {
-  return (
-    <div className={styles.authInput__container}>
-      <input
-        className={`${styles.authInput} ${error && styles.authInput_error}`}
-        style={{
-          width,
-          height,
-        }}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
-      <span
-        className={`${styles.authInput__necessarily} ${
-          error && styles.authInput__necessarily_error
-        }`}
-      >
-        *
-      </span>
-      <span
-        className={`${styles.authInput__textError} ${
-          textError && styles.authInput__textError_visible
-        }`}
-      >
-        {textError}
-      </span>
-    </div>
-  );
-};
+}) => (
+  <div className={styles.authInput__container}>
+    <input
+      className={`${styles.authInput} ${error && styles.authInput_error}`}
+      style={{
+        width,
+        height,
+      }}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
+    <span
+      className={`${styles.authInput__necessarily} ${
+        error && styles.authInput__necessarily_error
+      }`}
+    >
+      *
+    </span>
+    <span
+      className={`${styles.authInput__textError} ${
+        textError && styles.authInput__textError_visible
+      }`}
+    >
+      {textError}
+    </span>
+  </div>
+);
 
 export default AuthInput;

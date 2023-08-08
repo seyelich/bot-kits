@@ -3,7 +3,6 @@ import styles from './BotTemplateElement.module.css';
 import Plus from '../../icons/Plus/Plus';
 import PopupBotDetails from '../../dashboard-popups/bot-details-popup/popup-bot-details';
 
-
 interface IBotTemplate {
   icon: JSX.Element;
   text: string;

@@ -30,6 +30,7 @@ export default function Partnership() {
           height={46}
           extraClass={styles.button__dekstop}
           onClick={() => {
+            // eslint-disable-next-line no-console
             console.log(
               'Пока неизвестно, что должно происходить по нажатию кнопки'
             );
@@ -226,6 +227,7 @@ export default function Partnership() {
               width={272}
               height={56}
               onClick={() => {
+                // eslint-disable-next-line no-console
                 console.log(
                   'Пока неизвестно, что должно происходить по нажатию кнопки'
                 );

@@ -48,6 +48,7 @@ export default function AddBotForm({
     setPages([]);
     setCount(0);
     navigate('/bot-builder');
+    // eslint-disable-next-line no-console
     console.log('Bot has been added');
   };
 

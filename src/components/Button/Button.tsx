@@ -9,7 +9,7 @@ interface IButton {
   disabled?: boolean;
   text?: string;
   fontFamily?: string;
-  fontWeight?:number
+  fontWeight?: number;
   width: number;
   height: number;
   extraClass?: string;
@@ -28,7 +28,7 @@ const Button: FC<IButton> = ({
   isAuth,
   children,
   fontFamily,
-  fontWeight
+  fontWeight,
 }) => (
   <button
     className={`${styles.button} ${

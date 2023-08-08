@@ -16,7 +16,7 @@ const DialogMainInput = memo(() => {
 
   const submitForm: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    console.log('Сообщение отправлено');
+    // console.log('Сообщение отправлено');
   };
 
   return (
