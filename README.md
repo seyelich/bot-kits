@@ -1,30 +1,33 @@
 # bot-kits-team-3
 
-https://shadowed-pencil-6fd.notion.site/BotKits-11-2f6ea7e8409349108278d17f475fa9bb
+### Установка проекта:
+- npm install
+- npm start
 
-# BotKits
+### Как посмотреть все страницы?
+Обратите пожалуйста внимание, что при запуске приложения пользователь уже зарегистрирован и открывается главная страница. Чтобы посмотреть страницы регистрации/авторизации/восттановления пароля нужно нажать на кнопку выхода из профиля в соответствующем меню в шапке(header) страницы.
+
+### Ссылка на бриф: <a href="https://shadowed-pencil-6fd.notion.site/BotKits-11-2f6ea7e8409349108278d17f475fa9bb">Notion</a>*
+*Если ссылка не открывается - в корневом  каталоге проекта есть PDF с копией брифа (Проект BotKits - проектный месяц, 11+.pdf).
+### Ссылка на макет Figma: <a href="https://www.figma.com/file/89caTZSLaLwqYKSWH4SXLo/BOTkit-Admin-panel-(Copy-07.08.23)?type=design&node-id=26-24906&mode=design&t=N3Tqq2EV1KVl9sUW-0">BotKits макет</a>
+
+
+# Описание проекта BotKits
 
 Многостраничное приложение - личный кабинет пользователей сайта BotKits: desktop и mobile. BotKits является конструктором чат ботов. Это сервис для создания чат бота для общения с клиентами в мессенджерах, позволяющий автоматизировать общение с клиентами в мессенджерах.
 
-### Ссылка на макет Figma: <a href="https://www.figma.com/file/89caTZSLaLwqYKSWH4SXLo/BOTkit-Admin-panel-(Copy-07.08.23)?type=design&node-id=1440-199297&mode=design&t=40W7LjV4RJYvSQtp-0">BotKits личный кабинет пользователя</a>
-
 ### Технологии:
 
+- React
+- TypeScript
 - HTML5
 - CSS
-- TypeScript
-- React
-
+- 
 ### Библиотеки:
 
 - emoji-picker-react
 - react-datepicker
 - react-ios-time-picker
-
-### Установка проекта:
-
-- npm install
-- npm run start
 
 ### Структура приложения:
 
