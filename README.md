@@ -127,3 +127,16 @@ https://shadowed-pencil-6fd.notion.site/BotKits-11-2f6ea7e8409349108278d17f475fa
 
 Содержит блок с информацией о статистике рефералов: количество человек, перешедших по ссылке, статус оплаты, комиссия, выплачено, вывод. Реализована возможность фильтрации по статусу оплаты.
 Также на странице реализован блок с детальной информацией о статусах выплат.
+
+#### Создано в соавторстве
+
+- 👨‍💻 [Александр Огородников](https://github.com/Zorkiy82)
+- 👨‍💻 [Вадим Белоусов](https://github.com/TheVadiratti)
+- 👨‍💻 [Дмитрий Платонов](https://github.com/Lokrand)
+- 👨‍💻 [Елизавета Чепурина](https://github.com/seyelich)
+- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
+- 👨‍💻 [Катерина Кузнецова](https://github.com/Kartinkartin)
+- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
+- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
+- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
+
