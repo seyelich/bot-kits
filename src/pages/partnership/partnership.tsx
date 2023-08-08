@@ -158,7 +158,7 @@ export default function Partnership() {
         </table>
         <div className={styles.table__mobile}>
           {statistics.map((el) => (
-            <table className={styles.table_item_mobile}>
+            <table className={styles.table_item_mobile} key={el.id}>
               <colgroup>
                 <col style={{ width: '180px' }} />
                 <col style={{ width: '10px' }} />
@@ -301,7 +301,7 @@ export default function Partnership() {
         <div className={styles.table__mobile}>
           {openSlider &&
             payments.map((el) => (
-              <table className={styles.table_item_mobile}>
+              <table className={styles.table_item_mobile} key={el.id}>
                 <colgroup>
                   <col style={{ width: '180px' }} />
                   <col style={{ width: '10px' }} />
