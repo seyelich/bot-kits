@@ -19,6 +19,7 @@
   line-height: var(--s-line-height);
   letter-spacing: var(--m-letter-space);
   background-color: inherit;
+  cursor: text;
 }
 
 .input:focus {
@@ -75,13 +76,30 @@
   transform: rotate(45deg);
 }
 
+.slashCnt {
+  position: relative;
+}
+
+.slashCnt:hover::before {
+  content: '';
+  position: absolute;
+  width: 132px;
+  height: 27.2px;
+  top: -30.2px;
+  left: -55px;
+  z-index: 2;
+  background-image: url(./img/slash-helper.svg);
+  background-position: center;
+  background-size: 100%;
+}
+
 .xCircleCnt {
   transform: rotate(45deg);
+  transition: transform 0.3s;
 }
 
 .xCircleCntOpened {
   transform: rotate(0deg);
-  transition: transform 0.3s;
 }
 
 @media screen and (max-width: 360px) {

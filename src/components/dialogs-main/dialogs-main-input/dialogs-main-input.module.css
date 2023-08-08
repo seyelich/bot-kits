@@ -1,0 +1,19 @@
+.form {
+  padding: 10px 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: var(--default-blue-color);
+  background-image: url(./img/arrow-up.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 0 0 40px;
+  filter: drop-shadow(0px 2px 4px rgba(36, 60, 187, 0.18));
+}

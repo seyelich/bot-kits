@@ -65,12 +65,14 @@ function MessageInput({
       </div>
       {isShowOtherButtons && (
         <>
-          <IconButton
-            width={iconSize}
-            height={iconSize}
-            icon={SlashIcon({ color: iconColor })}
-            onClick={onSlashClick}
-          />
+          <div className={Styles.slashCnt}>
+            <IconButton
+              width={iconSize}
+              height={iconSize}
+              icon={SlashIcon({ color: iconColor })}
+              onClick={onSlashClick}
+            />
+          </div>
           <IconButton
             width={iconSize}
             height={iconSize}

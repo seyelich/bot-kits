@@ -1,0 +1,8 @@
+.section {
+  border: 1px solid #D7DEEA;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
