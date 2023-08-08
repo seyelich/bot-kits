@@ -5,7 +5,7 @@ import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './RegisterForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
-import { items } from '../../utils/itemsForRegister';
+import items from '../../utils/itemsForRegister';
 
 interface RegisterFormProps {
   logIn: () => void;
