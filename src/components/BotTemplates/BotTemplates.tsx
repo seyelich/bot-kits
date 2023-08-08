@@ -16,7 +16,7 @@ import ELearning from '../icons/bot-templates/ELearning/ELearning';
 import Questions from '../icons/bot-templates/Questions/Questions';
 import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
 
-const BotTemplates: FC = ({}) => {
+const BotTemplates: FC = () => {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
     setIsActive(!isActive);
