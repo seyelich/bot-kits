@@ -40,16 +40,16 @@ export function App() {
   const [accountSettingsOpen, setAccountSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [settingsOpen, setSettingOpen] = useState(false);
-  // Установить True при демонстрации визуала авторизации
+  // Установить false при демонстрации визуала авторизации
   const [authenticated, setAuthenticated] = useState(true);
 
   const logIn = () => {
-    //Тут должна быть логика по авторизации(запись токена и тд)
+    //Тут должна быть логика по авторизации(получение/проверка/запись токена и тд)
     setAuthenticated(true);
   };
 
   const logOut = () => {
-    //Тут должна быть логика по удалению токена и закрытию авторизации)
+    //Тут должна быть логика по удалению токена и закрытию сессии
     setAuthenticated(false);
   };
 
