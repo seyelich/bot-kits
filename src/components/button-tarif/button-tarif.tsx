@@ -5,9 +5,15 @@ interface IButton {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   tarif: string;
   price: number;
+  active: boolean;
 }
 
-export default function ButtonTarif({ onClick, tarif, price }: IButton) {
+export default function ButtonTarif({
+  onClick,
+  active,
+  tarif,
+  price,
+}: IButton) {
   return (
     <button
       type="button"
@@ -15,6 +21,7 @@ export default function ButtonTarif({ onClick, tarif, price }: IButton) {
       onClick={onClick}
       data-name={tarif}
       data-price={price}
+      style={active ? { border: '1.5px solid #433FB8' } : {}}
     >
       <h4 className={styles.tarif_name}>{tarif}</h4>
       <div className={styles.price_container}>

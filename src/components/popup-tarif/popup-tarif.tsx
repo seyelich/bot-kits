@@ -14,13 +14,16 @@ type TPopupProps = {
 
 export default function PopupTarif({ onClose }: TPopupProps) {
   const [bill, setBill] = useState(0);
+  const [chosenTarif, setChosenTarif] = useState<string | null>(null);
 
   function onClick(e: MouseEvent) {
     const currentButton = e.currentTarget;
-    const { price } = (
-      currentButton as EventTarget & Element & { dataset: { price: string } }
+    const { price, name } = (
+      currentButton as EventTarget &
+        Element & { dataset: { price: string; name: string } }
     ).dataset;
     setBill(+price);
+    setChosenTarif(name);
   }
   return (
     <div className={styles.container}>
@@ -47,6 +50,7 @@ export default function PopupTarif({ onClose }: TPopupProps) {
                 price={tarif.price}
                 key={tarif.id}
                 onClick={(e: MouseEvent) => onClick(e)}
+                active={chosenTarif === tarif.name}
               />
             ))}
           </div>
