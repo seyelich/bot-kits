@@ -8,9 +8,9 @@
   justify-content: center;
   align-items: center;
   transition: all 0.5s linear;
+  flex: none;
 
   @media (max-width: 768px) {
-    flex: none;
     width: 235px;
     height: 177px;
   }

@@ -1,5 +1,4 @@
 .content {
-  width: calc(100% - 45px);
   height: 282px;
   padding: 24px;
   background-color: #f2f4f8;
@@ -33,8 +32,17 @@
 
 @media screen and (max-width: 767px) {
   .content {
-    width: 256px;
-    height: 256px;
+    width: 320px;
+    height: 320px;
     padding: 32px;
+  }
+
+  .content__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .content__subtitle {
+    font-size: 14px;
+    line-height: 21px;
   }
 }

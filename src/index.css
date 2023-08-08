@@ -50,6 +50,7 @@ main {
   --primary-text-color: #060c23;
   --default-green-color: #22ffaa;
   --error-red-color: #ff5555;
+  --white-color: #ffff;
 
   --h2-font-size: 32px;
   --h3-font-size: 24px;
@@ -62,6 +63,7 @@ main {
   --h2-line-height: 41.6px;
   --h3-line-height: 31.2px;
   --h4-line-height: 23.4px;
+  --l-line-height: 24px;
   --m-line-height: 21px;
   --s-line-height: 19.5px;
   --xs-line-height: 18px;
@@ -72,6 +74,7 @@ main {
 
   --h2-letter-space: -0.2px;
   --h5-letter-spacce: 0.5px;
+  --l-letter-space: 0.3px;
   --m-letter-space: 0.3px;
   --s-letter-space: 0.2px;
 
@@ -80,5 +83,6 @@ main {
   --border-radius-30: 30px;
   --border-radius-15: 15px;
   --border-radius-10: 10px;
+  --border-radius-8: 8px;
   --border-radius-5: 5px;
 }

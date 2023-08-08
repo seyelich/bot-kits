@@ -2,15 +2,27 @@ import RegisterForm from '../../components/register-form/RegisterForm';
 import Logo from '../../components/Logo/Logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/LoginForm';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
-import sendEmail from '../../images/sendEmail.png';
-import sendForgotPass from '../../images/sendForgotPass.png';
 import CloseIcon from '../../icons/others/Close';
+import { Context } from '../../App';
 
 export default function Auth() {
+  const { logIn } = useContext(Context);
   const [state, setState] = useState({ authState: 'Login' });
   const [banner, setBanner] = useState({ bannerState: 'none' });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleRegisterClick = () => {
     setState({ authState: 'Register' });
@@ -36,6 +48,20 @@ export default function Auth() {
     setState({ authState: 'Login' });
   };
 
+  const chooseLogoSize = () => {
+    if (windowWidth >= 1000 && state.authState === 'Register') {
+      return { width: 148.75, height: 35 };
+    } else if (windowWidth >= 1000) {
+      return { width: 161.5, height: 38 };
+    } else if (windowWidth >= 700 && windowWidth <= 999) {
+      return { width: 148.75, height: 35 };
+    } else {
+      return { width: 127.5, height: 30 };
+    }
+  };
+
+  const logoSize = chooseLogoSize();
+
   return (
     <>
       {banner.bannerState === 'registerOnEmail' && (
@@ -46,17 +72,17 @@ export default function Auth() {
           >
             <CloseIcon color="#22FFAA" width={32} height={32} />
           </div>
-          <div className={styles.noticePage__titleContainer}>
-            <h1 className={styles.noticePage__titleText}>
-              Письмо с подтверждением отправлено тебе на
-              <span className={styles.noticePage__titleIcon}>/email</span>!
-            </h1>
+          <div className={styles.noticePage__wrapper}>
+            <div className={styles.noticePage__titleContainer}>
+              <h1 className={styles.noticePage__titleText}>
+                Письмо с подтверждением отправлено тебе на
+                <span className={styles.noticePage__titleIcon}>/email</span>!
+              </h1>
+            </div>
+            <div
+              className={`${styles.noticePage__titleImage} ${styles.noticePage__registerOrEmailImg}`}
+            />
           </div>
-          <img
-            className={styles.noticePage__titleImage}
-            src={sendEmail}
-            alt="image"
-          />
         </div>
       )}
       {banner.bannerState === 'forgotPassOnEmail' && (
@@ -67,17 +93,19 @@ export default function Auth() {
           >
             <CloseIcon color="#22FFAA" width={32} height={32} />
           </div>
-          <div className={styles.noticePage__titleContainer}>
-            <h1 className={styles.noticePage__titleText}>
-              Ссылка для сброса пароля отправлена тебе на
-              <span className={styles.noticePage__titleIcon}>/email</span>!
-            </h1>
+          <div className={styles.noticePage__wrapper}>
+            <div className={styles.noticePage__titleContainer}>
+              <h1
+                className={`${styles.noticePage__titleText} ${styles.noticePage__forgotPassOnEmailText}`}
+              >
+                Ссылка для сброса пароля отправлена тебе на
+                <span className={styles.noticePage__titleIcon}>/email</span>!
+              </h1>
+            </div>
+            <div
+              className={`${styles.noticePage__titleImage} ${styles.noticePage__forgotPassOnEmailImg}`}
+            />
           </div>
-          <img
-            className={styles.noticePage__titleImage}
-            src={sendForgotPass}
-            alt="image"
-          />
         </div>
       )}
       {banner.bannerState === 'none' && (
@@ -87,11 +115,7 @@ export default function Auth() {
           }`}
         >
           <div className={styles.headerContainer}>
-            {state.authState === 'Register' ? (
-              <Logo width={149} height={35} />
-            ) : (
-              <Logo width={161.5} height={38} />
-            )}
+            <Logo width={logoSize.width} height={logoSize.height} />
             <h1
               className={`${styles.title} ${
                 state.authState !== 'Register' && styles.title_login
@@ -106,16 +130,22 @@ export default function Auth() {
             <RegisterForm
               logIn={handleLoginClick}
               handleRegister={handleRegisterBannerClick}
+              windowWidth={windowWidth}
             />
           )}
           {state.authState === 'Login' && (
             <LoginForm
               signIn={handleRegisterClick}
               forgotPass={handleForgotPassClick}
+              windowWidth={windowWidth}
+              logIn={logIn}
             />
           )}
           {state.authState === 'ForgotPass' && (
-            <ForgotPassForm handleForgotPass={handleForgotPassBannerClick} />
+            <ForgotPassForm
+              handleForgotPass={handleForgotPassBannerClick}
+              windowWidth={windowWidth}
+            />
           )}
         </div>
       )}

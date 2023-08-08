@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import SelectedPages from './selected-pages';
+import fakeData from './selected-pages.fakedata';
 
 const meta = {
   title: 'UI/SelectedPages',
@@ -16,10 +17,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    pages: fakeData,
+    setPages: () => {},
+    count: 0,
+    setCount: () => {},
+  },
+};
 
 export const Disable: Story = {
   args: {
     isDisabled: true,
+    pages: fakeData,
+    setPages: () => {},
+    count: 0,
+    setCount: () => {},
   },
 };

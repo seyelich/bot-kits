@@ -38,12 +38,12 @@ export default function PopupTarif({ onClose }: TPopupProps) {
       <h2 className={styles.title}>ПОДПИСАТЬСЯ</h2>
       <div className={styles.menu_container}>
         <div className={styles.menu}>
-          <h3 className={styles.menu_title}>
+          <h4 className={styles.menu_title}>
             Выбери тариф
             <span className={styles.check_container}>
               <CheckIcon color="#00E98F" />
             </span>
-          </h3>
+          </h4>
           <div className={styles.buttons_container}>
             {tariffs.map((tarif) => (
               <ButtonTarif
@@ -54,10 +54,10 @@ export default function PopupTarif({ onClose }: TPopupProps) {
               />
             ))}
           </div>
-          <p className={styles.text}>
+          <p className={`${styles.text} ${styles.text_m_size}`}>
             Цены на тарифы указаны за 1 месяц пользования.
           </p>
-          <p className={styles.comment}>
+          <p className={`${styles.comment} ${styles.text_m_size}`}>
             Оплата будет автоматически взиматься каждый месяц до тех пор, пока
             вы не отмените подписку.
           </p>

@@ -5,15 +5,19 @@ import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './RegisterForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
-import { items } from '../../utils/itemsForRegister';
-import robot from '../../images/registerRobot.png';
+import items from '../../utils/itemsForRegister';
 
 interface RegisterFormProps {
   logIn: () => void;
   handleRegister: () => void;
+  windowWidth: number;
 }
 
-const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
+const RegisterForm: FC<RegisterFormProps> = ({
+  logIn,
+  handleRegister,
+  windowWidth,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handlePasswordVisibility = () => {
@@ -30,17 +34,24 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
         <p className={styles.registerForm__socialContainer__title}>
           Создай аккаунт с помощью
         </p>
-        <NavLinkBar />
+        <div className={styles.registerForm__socialContainer__navBar}>
+          <NavLinkBar windowWidth={windowWidth} />
+        </div>
         <p className={styles.registerForm__socialContainer__footerText}>или</p>
       </div>
       <div className={styles.registerForm__wrapper}>
         <form className={styles.registerForm__form} onSubmit={handleSubmit}>
           <div className={styles.registerForm__inputContainer}>
-            <AuthInput type="text" placeholder="Имя" width={325} height={60} />
+            <AuthInput
+              type="text"
+              placeholder="Имя"
+              width={windowWidth <= 790 ? 300 : 325}
+              height={60}
+            />
             <AuthInput
               type="email"
               placeholder="E-mail"
-              width={325}
+              width={windowWidth <= 790 ? 300 : 325}
               height={60}
               error
               textError="Ошибка"
@@ -49,7 +60,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
               <AuthInput
                 type={showPassword ? 'text' : 'password'}
                 placeholder="Пароль"
-                width={325}
+                width={windowWidth <= 790 ? 300 : 325}
                 height={60}
               />
               <button
@@ -63,18 +74,20 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
 
             <div className={styles.registerForm__phoneContainer}>
               <SelectCodeNumber items={items} />
-              <AuthInput
-                type="text"
-                placeholder="Телефон"
-                width={200}
-                height={60}
-              />
+              <div className={styles.registerForm__phoneInput}>
+                <AuthInput
+                  type="text"
+                  placeholder="Телефон"
+                  width={windowWidth <= 790 ? 175 : 200}
+                  height={60}
+                />
+              </div>
             </div>
           </div>
           <Button
             type="green"
             text="создать аккаунт"
-            width={260}
+            width={windowWidth <= 660 ? 320 : 260}
             height={64}
             isAuth
             onClick={handleRegister}
@@ -89,11 +102,7 @@ const RegisterForm: FC<RegisterFormProps> = ({ logIn, handleRegister }) => {
             Войти
           </span>
         </div>
-        <img
-          className={styles.registerForm__authImage}
-          src={robot}
-          alt="register-robot"
-        />
+        <div className={styles.registerForm__authImage} />
       </div>
     </div>
   );

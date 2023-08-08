@@ -1,3 +1,4 @@
+/* eslint-disable no-unneeded-ternary */
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
@@ -11,11 +12,19 @@ interface ITutorialButton {
   onClick?: VoidFunction;
   disabled?: boolean;
   type: 'instruction' | 'video';
+  extraClass?: string;
 }
 
-const TutorialButton: FC<ITutorialButton> = ({ onClick, disabled, type }) => (
+const TutorialButton: FC<ITutorialButton> = ({
+  onClick,
+  disabled,
+  type,
+  extraClass,
+}) => (
   <button
-    className={`${styles.button} ${disabled ? styles.button_disabled : ''}`}
+    className={`${styles.button} ${disabled ? styles.button_disabled : ''} ${
+      extraClass ? extraClass : ''
+    }`}
     onClick={onClick}
     disabled={disabled}
     type="button"

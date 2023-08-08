@@ -1,5 +1,6 @@
+/* eslint-disable import/no-cycle */
 import { NavLink, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import dashboardIcon from './icons/dashboard-icon';
 import mailingIcon from './icons/mailing-icon';
@@ -12,6 +13,7 @@ import menuExpandIcon from './icons/menu-expand';
 
 import styles from './sidebar.module.css';
 import menuCollapseIcon from './icons/menu-collapse';
+import { Context } from '../../App';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
   isActive
@@ -21,12 +23,14 @@ const linkStyle = ({ isActive }: { isActive: boolean }) =>
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
   const { pathname } = useLocation();
-
+  const { sidebarOpen, setSidebarOpen } = useContext(Context);
   useEffect(() => {
+    setSidebarOpen(false);
     setExpanded(false);
   }, [pathname]);
 
   function menuExpandHandler() {
+    setSidebarOpen(!sidebarOpen);
     setExpanded((value) => !value);
   }
 

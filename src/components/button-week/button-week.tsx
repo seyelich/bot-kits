@@ -19,17 +19,16 @@ const ButtonWeek: FC<IButtonWeek> = ({ week, setWeekChosen }) => {
   const ref = useRef<HTMLButtonElement>(null);
   const handleClick = () => {
     setIsActive(!isActive);
-    console.log(ref?.current?.innerText);
     setWeekChosen(ref?.current?.innerText);
   };
 
   const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 512px)').matches
+    window.matchMedia('(max-width: 767px)').matches
   );
 
   useEffect(() => {
     window
-      .matchMedia('(max-width: 512px)')
+      .matchMedia('(max-width: 767px)')
       .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
 

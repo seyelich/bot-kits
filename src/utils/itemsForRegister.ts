@@ -4,7 +4,7 @@ import rus from '../images/rus.png';
 import armenia from '../images/belarus.png';
 import ukr from '../images/ukr.png';
 
-export const items = [
+const items = [
   {
     id: 1,
     image: azer,
@@ -72,27 +72,29 @@ export const items = [
     code: '+375',
   },
   {
-    id: 11,
+    id: 12,
     image: belarus,
     country: 'Беларусь',
     code: '+375',
   },
   {
-    id: 11,
+    id: 13,
     image: belarus,
     country: 'Беларусь',
     code: '+375',
   },
   {
-    id: 11,
+    id: 14,
     image: belarus,
     country: 'Беларусь',
     code: '+375',
   },
   {
-    id: 11,
+    id: 15,
     image: belarus,
     country: 'Беларусь',
     code: '+375',
   },
 ];
+
+export default items;

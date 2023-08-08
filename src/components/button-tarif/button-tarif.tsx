@@ -37,7 +37,7 @@ export default function ButtonTarif({
       {/* <p style={{ opacity: disabled && type === 'green' ? '.4' : undefined, margin: "0" }}>
         {tarif}
       </p> */}
-      <p className={styles.tarif_name}>{tarif}</p>
+      <h4 className={styles.tarif_name}>{tarif}</h4>
       <div className={styles.price_container}>
         <p className={styles.tarif_price}>{price}</p>
         <p className={styles.tarif_currency}>руб</p>

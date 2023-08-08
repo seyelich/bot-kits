@@ -37,12 +37,12 @@ export default function MailingForm() {
   const [month, setMonth] = useState<string | undefined>('');
 
   const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 512px)').matches
+    window.matchMedia('(max-width: 767px)').matches
   );
 
   useEffect(() => {
     window
-      .matchMedia('(max-width: 512px)')
+      .matchMedia('(max-width: 767px)')
       .addEventListener('change', (e) => setMatches(e.matches));
   }, []);
 
@@ -253,8 +253,8 @@ export default function MailingForm() {
                   <InputSlider
                     options={days}
                     setSelected={setDay}
-                    width={matches ? '91px' : '174px'}
-                    slideWidth={matches ? '91px' : '174px'}
+                    width={matches ? '80px' : '174px'}
+                    slideWidth={matches ? '80px' : '174px'}
                   />
                   <InputSelect
                     width="174px"
@@ -342,8 +342,8 @@ export default function MailingForm() {
                   <InputSlider
                     options={days}
                     setSelected={setDay}
-                    width={matches ? '91px' : '174px'}
-                    slideWidth={matches ? '91px' : '174px'}
+                    width={matches ? '80px' : '174px'}
+                    slideWidth={matches ? '80px' : '174px'}
                   />
                   <InputSelect
                     width="174px"

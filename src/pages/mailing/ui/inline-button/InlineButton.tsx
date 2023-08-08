@@ -27,7 +27,11 @@ const InlineButtons: FC = () => {
           <HorizontalIcon />
           <p>Горизонтальный инлайн</p>
         </div>
-        {horizontal && <CheckIcon color="#243CBB" width={16} height={16} />}
+        {horizontal && (
+          <div className={styles.block__icon}>
+            <CheckIcon color="#243CBB" width={16} height={16} />
+          </div>
+        )}
       </div>
       {horizontal && (
         <input
@@ -51,7 +55,11 @@ const InlineButtons: FC = () => {
           <VerticalIcon />
           <p>Вертикальный инлайн</p>
         </div>
-        {vertical && <CheckIcon color="#243CBB" width={16} height={16} />}
+        {vertical && (
+          <div className={styles.block__icon}>
+            <CheckIcon color="#243CBB" width={16} height={16} />
+          </div>
+        )}
       </div>
       {vertical && (
         <input

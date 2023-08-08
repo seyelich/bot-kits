@@ -1,25 +1,34 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import Button from '../Button/Button';
-import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe';
-import SubscriptionStatusSubscribe from './subscription-status-subscribe';
+import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe/subscription-status-not-subscribe';
+import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscription-status-subscribe';
 import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
 import Modal from '../modal/modal';
-import PopupTarif from '../popup-tarif/popup-tarif';
 
 type TProps = {
-  status: string;
+  subcriription: {
+    tarif?: string;
+    status: string;
+    next_payment?: string;
+    payment_source?: string;
+    reason?: string;
+    balance?: string;
+  };
+  setOpenTarif: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function SubscriptionStatus({ status }: TProps) {
+export default function SubscriptionStatus({
+  subcriription,
+  setOpenTarif,
+}: TProps) {
+  const { status } = subcriription;
   const [openPromo, setOpenPromo] = useState(false);
-  const [openTarif, setOpenTarif] = useState(false);
   const openPopupPromocode = () => {
     setOpenPromo(true);
   };
   const closePopup = () => {
     setOpenPromo(false);
-    setOpenTarif(false);
   };
 
   return (
@@ -28,14 +37,14 @@ export default function SubscriptionStatus({ status }: TProps) {
         <SubscriptionStatusNotSubscribe setOpenPopup={setOpenTarif} />
       ) : (
         <SubscriptionStatusSubscribe
-          status={status}
+          subcriription={subcriription}
           setOpenPopup={setOpenTarif}
         />
       )}
       <div className={styles.promo}>
         <div className={styles.balans}>
           <p className={styles.comment__line}>Баланс</p>
-          <p className={styles.title}>0&#8381;</p>
+          <h3 className={styles.title}>{subcriription.balance}&#8381;</h3>
         </div>
         <Button
           type="grey"
@@ -48,11 +57,6 @@ export default function SubscriptionStatus({ status }: TProps) {
       {openPromo && (
         <Modal onClose={closePopup}>
           <PopupPromocode onClose={closePopup} />
-        </Modal>
-      )}
-      {openTarif && (
-        <Modal onClose={closePopup}>
-          <PopupTarif onClose={closePopup} />
         </Modal>
       )}
     </div>
