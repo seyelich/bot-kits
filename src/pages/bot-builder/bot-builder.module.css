@@ -3,7 +3,7 @@
   max-width: 1268px;
   height: 100vh;
   background-image: url('../../../src/icons/background/bg-plus.svg');
-  stroke: red;
+  /* stroke: red; */
 
   background-color: #f8f9fb;
 }
@@ -13,4 +13,105 @@
   border-radius: 50%;
   bottom: 24px;
   right: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  padding: 12px 16px 12px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 281px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #fff;
+  @media (max-width: 767px) {
+    width: 255px;
+    padding: 12px 12px 12px 10px;
+  }
+}
+
+.header__titleText {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #060c23;
+  margin: 0 52px 0 16px;
+  @media (max-width: 767px) {
+    margin: 0 36px 0 12px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__icon {
+  width: 60px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__panel {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.buttons__mobile {
+  display: none;
+  @media (max-width: 767px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 20px 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 8px;
+    background-color: #fff;
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .header {
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    /* Убрать надо, просто чтобы показать как располагается на мобиле */
+    padding-top: 100px;
+    justify-content: center;
+    column-gap: 4px;
+    flex-direction: row;
+    align-items: center;
+  }
 }
