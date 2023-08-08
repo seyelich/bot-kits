@@ -16,7 +16,6 @@ import PopupTarif from '../../components/popup-tarif/popup-tarif';
 export default function Subscription() {
   const subcriription = subscribeActive;
   const { status } = subcriription;
-  // const payments = paymentsEmpty;
   const [openTarif, setOpenTarif] = useState(false);
   const closePopup = () => {
     setOpenTarif(false);
