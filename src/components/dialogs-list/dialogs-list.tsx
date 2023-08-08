@@ -15,23 +15,16 @@ const DialogsList = memo(
     <section className={Styles.section}>
       <h2 className={Styles.heading}>Диалоги</h2>
       <SearchInput placeholder="Поиск..." onChange={() => {}} hasFilter />
-      <li className={Styles.list}>
+      <ul className={Styles.list}>
         {data.map((item) => (
           <DialogsListDialog
             data={item}
-            // id={item.id}
-            // name={item.name}
-            // avatar={item.avatar}
-            // isOnline={item.isOnline}
-            // lastAction={item.lastAction}
-            // lastMessage={item.lastMessage}
             isChecked={item.id === current.id}
-            // quantityNew={item.quantityNew}
             currentHandler={currentHandler}
             key={item.name}
           />
         ))}
-      </li>
+      </ul>
     </section>
   )
 );

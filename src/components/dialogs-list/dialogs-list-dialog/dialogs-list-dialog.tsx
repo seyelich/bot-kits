@@ -16,7 +16,7 @@ const DialogsListDialog = memo(
     };
 
     return (
-      <ul>
+      <li className={Styles.listItem}>
         <div className={Styles.dialog} onClick={onClickHandler}>
           <ChatAvatar img={data.avatar} isOnline={data.isOnline} />
           <div className={Styles.info}>
@@ -33,7 +33,7 @@ const DialogsListDialog = memo(
           </div>
           {isChecked && <div className={Styles.checkLine} />}
         </div>
-      </ul>
+      </li>
     );
   }
 );
