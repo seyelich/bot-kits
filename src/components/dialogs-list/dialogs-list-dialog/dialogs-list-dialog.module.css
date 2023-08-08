@@ -1,19 +1,22 @@
+.listItem {
+  border-bottom: 0.8px solid #D7DEEA;
+}
+
+.listItem:last-of-type {
+  border: none;
+}
+
 .dialog {
   width: 100%;
   padding: 20px 0;
   display: flex;
   gap: 16px;
-  border-bottom: 0.8px solid #D7DEEA;
   position: relative;
   cursor: pointer;
 }
 
 .dialog:hover {
   opacity: .7;
-}
-
-.dialog:last-of-type {
-  border: none;
 }
 
 .info {
