@@ -29,6 +29,8 @@
   line-height: 19px;
   letter-spacing: 1px;
   text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .button__mobile {
