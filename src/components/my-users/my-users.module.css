@@ -10,6 +10,9 @@
   font-family: 'IBM Plex Mono', sans-serif;
   font-size: 24px;
   font-weight: 600;
+  @media (max-width: 670px) {
+    font-size: 18px;
+  }
 }
 
 .table-head {
@@ -18,6 +21,9 @@
   align-items: center;
   height: 60px;
   border-bottom: 2px solid #d7deea;
+  @media (max-width: 670px) {
+    display: none;
+  }
 }
 
 .table-head__text {
