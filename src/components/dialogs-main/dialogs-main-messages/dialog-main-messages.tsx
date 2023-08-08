@@ -13,13 +13,14 @@ const DialogMainMessages = memo(
 
     return (
       <ul className={Styles.cnt}>
-        {messages.map((item) => (
+        {messages.map((item, index) => (
           <Message
             message={item}
             interlocutor={name}
             avatar={avatar}
             isOnline={item.isOwnMe ? false : isOnline}
-            key={item.text + item.sendTime}
+            key={index}
+
           />
         ))}
       </ul>

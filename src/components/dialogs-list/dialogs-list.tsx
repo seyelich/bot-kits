@@ -16,7 +16,7 @@ const DialogsList = memo(
 
     // FIXME Временное решение, чтобы линтер не ругался на неиспользуемую переменную
     // console.log можно удалить
-    console.log(currentFilter);
+    // console.log(currentFilter);
 
     return (
       <section className={Styles.section}>
