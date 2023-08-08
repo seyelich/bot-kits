@@ -95,15 +95,24 @@ export default function Share() {
           <IconButton width={24} height={24} icon={MoreIcon() as ReactNode} />
         </div>
       </div>
-      <MyUsers users={users} checked={checked} setChecked={setChecked} />
+      <MyUsers
+        users={users}
+        checked={checked}
+        setChecked={setChecked}
+        setModalOpened={setModalOpened}
+      />
       <div className={styles['page-control']}>
         <PageControl
           page={current}
           count={Math.ceil(total / perPage)}
           setCurrent={setCurrent}
         />
-        <p className={styles['page-selector-label']}>Отображать по строкам:</p>
-        <PerPageSelector perPage={perPage} setPerPage={setPerPage} />
+        <div className={styles['row-number']}>
+          <p className={styles['page-selector-label']}>
+            Отображать по строкам:
+          </p>
+          <PerPageSelector perPage={perPage} setPerPage={setPerPage} />
+        </div>
       </div>
       {modalOpened && (
         <Modal onClose={() => setModalOpened(false)}>

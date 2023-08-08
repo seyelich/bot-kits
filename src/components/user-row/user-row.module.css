@@ -3,9 +3,15 @@
   grid-template-columns: [check] 71px [avatar] max-content [name] 1.06fr [surname] 1.25fr [username] 1.28fr [messengerid] 1fr [phone] 1fr;
   align-items: center;
   height: 60px;
+  text-align: left;
   border-bottom: 2px solid #d7deea;
   @media (max-width: 670px) {
-    grid-template-columns: max-content 60px max-content 1fr max-content;
+    box-sizing: border-box;
+    /* padding: 35px 0; */
+    height: 67px;
+    border-bottom: 1px solid #d7deea;
+    grid-template-columns: max-content max-content max-content 1fr max-content;
+    /* grid-template-rows: max-content max-content; */
     grid-template-areas:
       "check avatar name surname edit"
       "check avatar messengerid messengerid edit";
@@ -16,6 +22,26 @@
   grid-area: check;
   grid-row: 1;
   @media (max-width: 670px) {
+    position: relative;
+    bottom: 2px;
+    margin-right: 10px;
+    zoom: .8;
+    grid-row: 1 / -1;
+  }
+}
+
+.check_mobile-invisible {
+  @media (max-width: 670px) {
+    display: none;
+  }
+}
+
+.avatar {
+  display: none;
+  margin: 0 12px 0 7px;
+  grid-area: avatar;
+  @media (max-width: 670px) {
+    display: unset;
     grid-row: 1 / -1;
   }
 }
@@ -23,19 +49,32 @@
 .name {
   grid-area: name;
   grid-row: 1;
+  font-family: "Open Sans", sans-serif;
   @media (max-width: 670px) {
-    margin-right: 5px;
+    margin-right: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    align-self: flex-end;
   }
 }
 
 .surname {
   grid-area: surname;
   grid-row: 1;
+  font-family: "Open Sans", sans-serif;
+  @media (max-width: 670px) {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    align-self: flex-end;
+  }
 }
 
 .username {
   grid-area: username;
   grid-row: 1;
+  font-family: "Open Sans", sans-serif;
   @media (max-width: 670px) {
     display: none;
   }
@@ -48,8 +87,15 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-family: "Open Sans", sans-serif;
   @media (max-width: 670px) {
+    margin-top: 2px;
     grid-row: 2;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    color: var(--default-dark-grey-color);
+    align-self: flex-start;
   }
 }
 
@@ -57,6 +103,7 @@
   grid-area: phone;
   grid-row: 1;
   justify-self: flex-end;
+  font-family: "Open Sans", sans-serif;
   @media (max-width: 670px) {
     display: none;
   }

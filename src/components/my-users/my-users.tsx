@@ -1,19 +1,27 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/jsx-props-no-spreading */
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { TUser } from '../../utils/types';
 import UserRow from '../user-row/user-row';
 
 import styles from './my-users.module.css';
 import UserCheckbox from '../user-checkbox/user-checkbox';
+import Button from '../Button/Button';
 
 type TMyUsersProps = {
   users: Array<TUser>;
   checked: Set<string>;
   setChecked: Dispatch<SetStateAction<Set<string>>>;
+  setModalOpened: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function MyUsers({ users, checked, setChecked }: TMyUsersProps) {
+export default function MyUsers({
+  users,
+  checked,
+  setChecked,
+  setModalOpened,
+}: TMyUsersProps) {
+  const [checking, setChecking] = useState<boolean>(false);
   function handleCheckAll() {
     if (users.length === checked.size) {
       setChecked(new Set());
@@ -24,17 +32,31 @@ export default function MyUsers({ users, checked, setChecked }: TMyUsersProps) {
     }
   }
 
+  useEffect(() => {
+    setChecked(new Set());
+  }, [checking]);
+
   const elements = users.map((user) => (
     <UserRow
       {...user}
       checked={checked.has(user._id)}
       setChecked={setChecked}
       key={user._id}
+      checking={checking}
     />
   ));
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Мои пользователи</h2>
+      <div className={styles['title-container']}>
+        <h2 className={styles.title}>Мои пользователи</h2>
+        <button
+          type="button"
+          className={styles['check-button']}
+          onClick={() => setChecking(!checking)}
+        >
+          {checking ? 'Отменить' : 'Выбрать'}
+        </button>
+      </div>
       <div className={styles['table-head']}>
         <UserCheckbox
           check={checked.size > 0 && users.length === checked.size}
@@ -49,6 +71,14 @@ export default function MyUsers({ users, checked, setChecked }: TMyUsersProps) {
         </p>
       </div>
       {elements}
+      <Button
+        type="green"
+        text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ"
+        width={272}
+        height={56}
+        extraClass={styles.greenbutton}
+        onClick={() => setModalOpened(true)}
+      />
     </div>
   );
 }

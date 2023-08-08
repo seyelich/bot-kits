@@ -5,6 +5,11 @@
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+  @media (max-width: 728px) {
+    min-width: unset;
+    max-width: 90vw;
+    padding: 24px;
+  }
 }
 
 .title {
@@ -26,6 +31,12 @@
   display: grid;
   gap: 0 41px;
   grid-template-columns: 1fr 1fr;
+  @media (max-width: 728px) {
+    width: 100%;
+    grid-template-columns: 46% 46%;
+    gap: 0 8%;
+    overflow: hidden;
+  }
 }
 
 .label {
@@ -42,10 +53,13 @@
 }
 
 .input {
+  width: 100%;
   height: 45px;
   font-size: 16px;
   font-weight: 600;
   border-bottom: 1px var(--focus-grey-color) solid;
+  @media (max-width: 728px) {
+  }
 }
 
 .input::placeholder {
@@ -62,6 +76,10 @@
   align-items: center;
   gap: 12px;
   justify-content: stretch;
+  @media (max-width: 728px) {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
 }
 
 .clear-button {

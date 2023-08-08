@@ -12,6 +12,24 @@ type TUserRowProps = TUser & {
 
 export default function UserRow({
   _id,
+  avatar = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+      <rect width="32" height="32" fill="#D8E8F3" rx="16" />
+      <g clip-path="url(#a)">
+        <path
+          fill="#222A54"
+          fill-rule="evenodd"
+          d="M16.031 15.348A8 8 0 0 0 8.057 8a8 8 0 0 0 7.291 7.969A8 8 0 0 0 8 23.943a8 8 0 0 0 7.969-7.291A8 8 0 0 0 23.943 24a8 8 0 0 0-7.291-7.969A8 8 0 0 0 24 8.057a8 8 0 0 0-7.969 7.291ZM16 16Z"
+          clip-rule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M8 8h16v16H8z" />
+        </clipPath>
+      </defs>
+    </svg>
+  ),
   name,
   surname,
   username = '-',
@@ -24,23 +42,26 @@ export default function UserRow({
 }: TUserRowProps) {
   return (
     <div className={`${styles.user} ${extraClass}`}>
-      {checking && (
-        <UserCheckbox
-          check={checked}
-          extraClass={styles.check}
-          onClick={() =>
-            setChecked((set) => {
-              const newSet: Set<string> = new Set(set.values());
-              if (newSet.has(_id)) {
-                newSet.delete(_id);
-              } else {
-                newSet.add(_id);
-              }
-              return newSet;
-            })
-          }
-        />
-      )}
+      <UserCheckbox
+        check={checked}
+        extraClass={
+          checking
+            ? styles.check
+            : `${styles.check} ${styles['check_mobile-invisible']}`
+        }
+        onClick={() =>
+          setChecked((set) => {
+            const newSet: Set<string> = new Set(set.values());
+            if (newSet.has(_id)) {
+              newSet.delete(_id);
+            } else {
+              newSet.add(_id);
+            }
+            return newSet;
+          })
+        }
+      />
+      <div className={styles.avatar}>{avatar}</div>
       <p className={styles.name}>{name}</p>
       <p className={styles.surname}>{surname}</p>
       <p className={styles.username}>{username || '-'}</p>

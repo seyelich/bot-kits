@@ -3,12 +3,23 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  @media (max-width: 670px) {
+    width: 80%;
+    justify-content: space-between;
+  }
+}
+
+.pages {
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .page {
   width: 20px;
   height: 20px;
   border-radius: 2px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 13px;
   border: none;

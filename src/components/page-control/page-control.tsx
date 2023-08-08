@@ -34,7 +34,7 @@ export default function PageControl({
   }, [count, page]);
   return (
     <div className={styles.container}>
-      {pages}
+      <div className={styles.pages}>{pages}</div>
       <div className={styles.navbuttons}>
         <button
           type="button"

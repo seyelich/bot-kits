@@ -4,12 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 670px) {
+    margin-left: 20px;
+  }
 }
 
 .title-text {
   font-family: "IBM Plex Mono", sans-serif;
   color: var(--primary-text-color);
   letter-spacing: -.2px;
+  @media (max-width: 670px) {
+    font-size: 24px;
+  }
 }
 
 .greenbutton {
@@ -63,6 +69,16 @@
   display: flex;
   margin-bottom: 100px;
   justify-content: space-between;
+  align-items: center;
+  @media (max-width: 670px) {
+    flex: 2;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+}
+
+.row-number {
+  display: flex;
   align-items: center;
 }
 

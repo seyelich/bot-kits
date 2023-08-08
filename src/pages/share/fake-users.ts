@@ -1,18 +1,18 @@
 const users = [
   {
     _id: '3',
-    name: '3Joe',
-    surname: 'Doe',
+    name: 'Сергей',
+    surname: 'Надеин',
     username: 'JoeDoe1824',
-    messengerId: '12345678',
+    messengerId: '199873594',
     phone: '+71231234567',
   },
   {
     _id: '11',
-    name: '10Joe',
-    surname: 'Doe',
+    name: 'Диана',
+    surname: 'Иванова',
     username: 'JoeDoe1824',
-    messengerId: '12345678',
+    messengerId: '231006280',
     phone: '+71231234567',
   },
   {
