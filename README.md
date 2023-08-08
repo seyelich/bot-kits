@@ -136,7 +136,7 @@ https://shadowed-pencil-6fd.notion.site/BotKits-11-2f6ea7e8409349108278d17f475fa
 - 👨‍💻 [Елизавета Чепурина](https://github.com/seyelich)
 - 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
 - 👨‍💻 [Катерина Кузнецова](https://github.com/Kartinkartin)
-- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
-- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
-- 👨‍💻 [Лидия Косинова](https://github.com/kglidiya)
+- 👨‍💻 [Александр Гончаров](https://github.com/way-samurai)
+- 👨‍💻 [Андрей Чебанов](https://github.com/Feelcover)
+- 👨‍💻 [Савелий Зазнобин](https://github.com/p298vytp0waer9hgq0n)
 
