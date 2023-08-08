@@ -9,6 +9,7 @@
   align-items: center;
   gap: 8px;
   background-color: var(--default-grey-color);
+  flex-shrink: 0;
   overflow: hidden;
   box-sizing: border-box;
 }
