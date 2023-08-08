@@ -11,7 +11,7 @@ import BotBuilder from './pages/bot-builder/bot-builder';
 import Chat from './pages/chat';
 import Mailing from './pages/mailing/mailing';
 import Partnership from './pages/partnership/partnership';
-import Share from './pages/share';
+import Share from './pages/share/share';
 import NotFound from './pages/not-found';
 import Layout from './components/Layout/Layout';
 import FirstMailing from './pages/mailing/ui/first-mailing/FirstMailing';
