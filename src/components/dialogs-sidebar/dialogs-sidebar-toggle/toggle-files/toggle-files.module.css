@@ -39,7 +39,7 @@
 
 .imagesList {
   flex-direction: row;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .file {
