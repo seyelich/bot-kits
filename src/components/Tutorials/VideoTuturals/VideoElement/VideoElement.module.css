@@ -24,12 +24,9 @@
 }
 
 .videothumb {
-  width: 100%;
+  width: inherit;
   height: auto;
   z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .button {
@@ -45,11 +42,7 @@
     top: -35%;
   }
 }
-.video {
-  width: inherit;
-  height: inherit;
-  border-radius: 10px;
-}
+
 
 .text {
   font-family: 'Open sans', sans-serif;
