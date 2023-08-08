@@ -8,6 +8,8 @@ interface IButton {
   onClick?: VoidFunction;
   disabled?: boolean;
   text?: string;
+  fontFamily?: string;
+  fontWeight?:number
   width: number;
   height: number;
   extraClass?: string;
@@ -25,6 +27,8 @@ const Button: FC<IButton> = ({
   extraClass,
   isAuth,
   children,
+  fontFamily,
+  fontWeight
 }) => (
   <button
     className={`${styles.button} ${
@@ -52,6 +56,8 @@ const Button: FC<IButton> = ({
         style={{
           opacity: disabled && type === 'green' ? '.4' : undefined,
           margin: '0',
+          fontFamily: fontFamily ? fontFamily : "'Roboto', sans-serif",
+          fontWeight: fontWeight ? fontWeight : 600,
         }}
       >
         {text}
