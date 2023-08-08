@@ -1,5 +1,9 @@
 import Button from '../../components/Button/Button';
 import DoneIcon from '../../icons/others/Done';
+import FitIcon from '../../icons/others/Fit';
+import MinusIcon from '../../icons/others/Minus';
+import PageIcon from '../../icons/others/Page';
+import PlusIcon from '../../icons/others/Plus';
 import TagIcon from '../../icons/others/Tag';
 import FacebookIcon from '../../icons/social/facebook';
 import styles from './bot-builder.module.css';
@@ -12,7 +16,9 @@ export default function BotBuilder() {
         width={60}
         height={60}
         extraClass={styles.plusButton}
-      />
+      >
+        <PlusIcon />
+      </Button>
       <div className={styles.header}>
         <div className={styles.header__title}>
           <FacebookIcon type="common" width={24} height={24} />
@@ -30,8 +36,46 @@ export default function BotBuilder() {
         </div>
       </div>
       <div className={styles.buttons__mobile}>
-            <Button text="ОСТАНОВИТЬ" type="grey" width={155} height={48} />
-            <Button text="ТЕСТИРОВАТЬ" type="green" width={155} height={48} />
+        <Button text="ОСТАНОВИТЬ" type="grey" width={155} height={48} />
+        <Button text="ТЕСТИРОВАТЬ" type="green" width={155} height={48} />
+      </div>
+
+      <div className={styles.scaleControlPanel}>
+        <p className={styles.scaleControlPanel_text}>100%</p>
+        <Button
+          width={24}
+          height={24}
+          type="grey"
+          extraClass={styles.scaleControlPanel_button}
+        >
+          <PlusIcon />
+        </Button>
+        <Button
+          width={24}
+          height={24}
+          type="grey"
+          extraClass={styles.scaleControlPanel_button}
+        >
+          <MinusIcon />
+        </Button>
+
+        <Button
+          width={24}
+          height={24}
+          type="grey"
+          extraClass={styles.scaleControlPanel_button}
+        >
+          <FitIcon />
+        </Button>
+
+        <Button
+          width={24}
+          height={24}
+          type="grey"
+          extraClass={styles.scaleControlPanel_button}
+        >
+          <PageIcon />
+        </Button>
       </div>
     </div>
   );

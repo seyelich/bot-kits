@@ -15,8 +15,38 @@
   right: 24px;
 }
 
+.scaleControlPanel {
+  position: absolute;
+  left: 5px;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 235px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.scaleControlPanel_text {
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+}
+
+.scaleControlPanel_button {
+  border-radius: 0;
+  background-color: #fff;
+}
+
 .header {
   display: flex;
+  padding-top: 16.14px;
+  padding-right: 14px;
+  padding-left: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -114,4 +144,10 @@
     flex-direction: row;
     align-items: center;
   }
+
+  .plusButton {
+    bottom: 112px;
+
+  }
+
 }
