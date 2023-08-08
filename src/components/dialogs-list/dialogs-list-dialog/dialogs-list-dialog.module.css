@@ -23,7 +23,7 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: repeat(2, 24px);
   align-content: center;
 }
 
@@ -59,6 +59,7 @@
   height: fit-content;
   min-width: 18px;
   min-height: 18px;
+  align-self: center;
   justify-self: end;
   color: #fff;
   background-color: var(--default-blue-color);
