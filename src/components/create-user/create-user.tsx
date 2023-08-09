@@ -4,7 +4,7 @@ import styles from './create-user.module.css';
 import CountrySelector from '../country-selector/country-selector';
 import useForm from '../../hooks/useForm';
 import { TUser } from '../../utils/types';
-import CloseIcon from '../../icons/others/Close';
+// import CloseIcon from '../../icons/others/Close';
 
 type TCreateUserProps = {
   callback: (arg0: Omit<TUser, '_id'>) => void;
@@ -38,13 +38,13 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Добавить пользователя</h2>
-      <button
+      {/* <button
         type="button"
         className={styles['close-button']}
         onClick={onClose}
       >
         <CloseIcon />
-      </button>
+      </button> */}
       <form className={styles.form} ref={formRef}>
         <label className={styles.label} htmlFor="name">
           <span className={styles.required}>Имя</span>

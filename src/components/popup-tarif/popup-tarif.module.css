@@ -1,13 +1,3 @@
-.button_close {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  padding: 0;
-  cursor: pointer;
-}
-
 .container {
   width: 970px;
   border-radius: var(--border-radius-8);
@@ -16,7 +6,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
 }
 
 .title {

@@ -46,7 +46,7 @@ export default function Subscription() {
       </section>
       {openTarif && (
         <Modal onClose={closePopup}>
-          <PopupTarif onClose={closePopup} />
+          <PopupTarif />
         </Modal>
       )}
     </main>
