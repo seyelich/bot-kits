@@ -14,7 +14,6 @@ const Mailing: FC = () => {
         window.location.pathname === '/mailing/start' ? (
           <Button
             type="green"
-            buttonHtmlType='button'
             text="СОЗДАТЬ РАССЫЛКУ"
             width={188}
             height={46}
@@ -34,7 +33,6 @@ const Mailing: FC = () => {
         <div className={styles.button__mobile}>
           <Button
             type="green"
-            buttonHtmlType='button'
             text="СОЗДАТЬ РАССЫЛКУ"
             width={272}
             height={56}

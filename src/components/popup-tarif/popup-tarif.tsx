@@ -74,7 +74,6 @@ export default function PopupTarif({ onClose }: TPopupProps) {
           <div className={styles.payment_buttons}>
             <Button
               type="blue"
-              buttonHtmlType="button"
               text="ОПЛАТИТЬ ЧЕРЕЗ"
               width={301}
               height={64}
@@ -88,7 +87,6 @@ export default function PopupTarif({ onClose }: TPopupProps) {
             </Button>
             <Button
               text="ЗАПРОСИТЬ СЧЕТ"
-              buttonHtmlType="button"
               type="grey"
               width={201}
               height={64}

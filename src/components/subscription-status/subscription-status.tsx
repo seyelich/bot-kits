@@ -48,7 +48,6 @@ export default function SubscriptionStatus({
         </div>
         <Button
           type="grey"
-          buttonHtmlType='button'
           text="АКТИВИРОВАТЬ ПРОМОКОД"
           width={229}
           height={60}

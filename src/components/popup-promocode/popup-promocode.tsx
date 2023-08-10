@@ -26,7 +26,6 @@ export default function PopupPromocode({ onClose }: TPopupProps) {
         />
         <Button
           type="blue"
-          buttonHtmlType='button'
           text="АКТИВИРОВАТЬ"
           width={320}
           height={46}

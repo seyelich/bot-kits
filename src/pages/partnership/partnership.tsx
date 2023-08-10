@@ -23,7 +23,6 @@ export default function Partnership() {
         <h1 className={styles.title}>Партнерская программа</h1>
         <Button
           type="green"
-          buttonHtmlType="button"
           text="ЗАПРОСИТЬ ВЫПЛАТУ"
           fontFamily="IBM Plex Mono"
           fontWeight={700}
@@ -224,7 +223,6 @@ export default function Partnership() {
           <div className={styles.button__mobile}>
             <Button
               type="green"
-              buttonHtmlType="button"
               text="ЗАПРОСИТЬ ВЫПЛАТУ"
               width={272}
               height={56}

@@ -158,7 +158,6 @@ export default function AddBotForm({
           {window.innerWidth >= 768 ? (
             <Button
               type="green"
-              buttonHtmlType="button"
               onClick={handleClick}
               width={272}
               height={65}
@@ -176,7 +175,6 @@ export default function AddBotForm({
           ) : (
             <Button
               type="green"
-              buttonHtmlType="button"
               onClick={handleClick}
               width={256}
               height={65}

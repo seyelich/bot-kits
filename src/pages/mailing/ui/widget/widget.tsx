@@ -129,7 +129,6 @@ const Widget: FC<IWidget> = ({
             <div className={styles.button__container}>
               <Button
                 type="green"
-                buttonHtmlType="button"
                 text="Отправить себе"
                 width={149}
                 height={32}

@@ -179,7 +179,6 @@ const MyMailing: FC = () => {
           <div className={styles.button__mobile}>
             <Button
               type="green"
-              buttonHtmlType="button"
               text="СОЗДАТЬ РАССЫЛКУ"
               width={272}
               height={56}

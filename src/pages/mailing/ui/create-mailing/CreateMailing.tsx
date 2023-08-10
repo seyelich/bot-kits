@@ -369,7 +369,6 @@ const CreateMailing: FC = () => {
             <div className={styles.next}>
               <Button
                 type="green"
-                buttonHtmlType="button"
                 text="ДАЛЕЕ"
                 width={188}
                 height={65}
@@ -380,7 +379,6 @@ const CreateMailing: FC = () => {
             <div className={styles.next__mobile}>
               <Button
                 type="green"
-                buttonHtmlType="button"
                 text="ДАЛЕЕ"
                 width={130}
                 height={48}

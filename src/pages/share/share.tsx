@@ -59,7 +59,6 @@ export default function Share() {
         <h1 className={styles['title-text']}>Пользователи</h1>
         <Button
           type="green"
-          buttonHtmlType="button"
           text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ"
           width={237}
           height={46}

@@ -22,7 +22,6 @@ export default function SubscriptionDetailNotActive({
       </div>
       <Button
         type="green"
-        buttonHtmlType='button'
         text="АКТИВИРОВАТЬ ПОДПИСКУ"
         width={340}
         height={56}

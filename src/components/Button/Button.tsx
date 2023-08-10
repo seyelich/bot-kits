@@ -6,7 +6,7 @@ import styles from './index.module.css';
 
 interface IButton {
   type: 'blue' | 'green' | 'grey';
-  buttonHtmlType: 'button' | 'submit' | 'reset';
+  buttonHtmlType?: 'button' | 'submit' | 'reset';
   onClick?: VoidFunction;
   disabled?: boolean;
   text?: string;
