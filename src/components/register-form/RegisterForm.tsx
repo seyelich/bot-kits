@@ -26,6 +26,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    handleRegister();
   };
 
   return (
@@ -90,7 +91,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
             width={windowWidth <= 660 ? 320 : 260}
             height={64}
             isAuth
-            onClick={handleRegister}
+            buttonHtmlType="submit"
           />
         </form>
 

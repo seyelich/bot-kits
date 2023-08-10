@@ -14,6 +14,7 @@ const ForgotPassForm: FC<ForgotPassFormProps> = ({
 }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    handleForgotPass();
   };
 
   return (
@@ -34,7 +35,7 @@ const ForgotPassForm: FC<ForgotPassFormProps> = ({
           width={windowWidth <= 730 ? 320 : 260}
           height={64}
           isAuth
-          onClick={handleForgotPass}
+          buttonHtmlType="submit"
         />
       </form>
       <div className={styles.forgotPassForm__footer}>
