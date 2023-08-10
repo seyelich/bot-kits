@@ -23,31 +23,32 @@ import Auth from './pages/auth/auth';
 interface IContext {
   sidebarOpen: boolean;
   setSidebarOpen: (arg: boolean) => void;
-  settingsOpen: boolean;
-  setSettingOpen: (arg: boolean) => void;
   logIn: () => void;
   logOut: () => void;
-  accountSettingsOpen: boolean;
-  setAccountSettingsOpen: Dispatch<SetStateAction<boolean>>;
+  myBotsSettingsOpen: boolean;
+  setMyBotsSettingsOpen: Dispatch<SetStateAction<boolean>>;
   dropdownMenuOpen: boolean;
   setDropdownMenuOpen: Dispatch<SetStateAction<boolean>>;
+  topOffset: number | undefined;
+  setTopOffset: Dispatch<SetStateAction<number | undefined>>;
+  leftOffset: number | undefined;
+  setLeftOffset: Dispatch<SetStateAction<number | undefined>>;
 }
 
 export const Context = createContext({} as IContext);
 
 export function App() {
   const [dropdownMenuOpen, setDropdownMenuOpen] = useState(false);
-  const [accountSettingsOpen, setAccountSettingsOpen] = useState(false);
+  const [myBotsSettingsOpen, setMyBotsSettingsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [settingsOpen, setSettingOpen] = useState(false);
   // Установить false при демонстрации визуала авторизации
   const [authenticated, setAuthenticated] = useState(true);
-
+  const [topOffset, setTopOffset] = useState<number | undefined>(0);
+  const [leftOffset, setLeftOffset] = useState<number | undefined>(0);
   const logIn = () => {
     // Тут должна быть логика по авторизации(получение/проверка/запись токена и тд)
     setAuthenticated(true);
   };
-
   const logOut = () => {
     // Тут должна быть логика по удалению токена и закрытию сессии
     setAuthenticated(false);
@@ -58,14 +59,16 @@ export function App() {
       value={{
         sidebarOpen,
         setSidebarOpen,
-        settingsOpen,
-        setSettingOpen,
         logIn,
         logOut,
-        accountSettingsOpen,
-        setAccountSettingsOpen,
+        myBotsSettingsOpen,
+        setMyBotsSettingsOpen,
         dropdownMenuOpen,
         setDropdownMenuOpen,
+        topOffset,
+        setTopOffset,
+        leftOffset,
+        setLeftOffset,
       }}
     >
       <BrowserRouter>
@@ -74,8 +77,8 @@ export function App() {
           <div
             className={styles.content}
             onClick={() => {
-              if (accountSettingsOpen) {
-                setAccountSettingsOpen(false);
+              if (myBotsSettingsOpen) {
+                setMyBotsSettingsOpen(false);
               }
               if (dropdownMenuOpen) {
                 setDropdownMenuOpen(false);

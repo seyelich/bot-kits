@@ -12,11 +12,13 @@ import Button from '../../Button/Button';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupRenameFile {
+  botName: string | undefined;
   isOpen: boolean;
   setIsRenamePopup: Dispatch<SetStateAction<boolean>>;
 }
 
 const PopupRenameFile: FC<IPopupRenameFile> = ({
+  botName,
   isOpen,
   setIsRenamePopup,
 }) => {
@@ -40,10 +42,11 @@ const PopupRenameFile: FC<IPopupRenameFile> = ({
       <div className={styles.container}>
         <p className={styles.title}>Переименуйте файл</p>
         <PopupInput
+          placeHolderType={matches ? 'blue' : 'white'}
           onChange={handleInputChange}
           name="fileName"
           value={inputValue}
-          placeholder={matches ? 'Салон красоты NEW' : 'Салон красоты'}
+          placeholder={botName}
         />
         <div className={styles.btn_container}>
           <button className={styles.btn_cancel} type="button">

@@ -46,6 +46,7 @@ const PopupCopyLink: FC<IPopupCopyLink> = ({
       <div className={styles.container}>
         <p className={styles.title}>Скопируйте ссылку</p>
         <PopupInput
+          placeHolderType="blue"
           onChange={handleInputChange}
           name="fileName"
           value={inputValue}

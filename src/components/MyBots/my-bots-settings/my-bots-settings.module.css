@@ -1,7 +1,5 @@
 .container {
   position: absolute;
-  top: 70px;
-  right: 0;
   width: 244px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -66,7 +64,6 @@
 @media (max-width: 414px) {
   .container {
     width: 100%;
-    top: calc(100vh - 416px);
     padding: 35px 10px 12px 10px;
   }
 

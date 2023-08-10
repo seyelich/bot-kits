@@ -11,6 +11,9 @@
   letter-spacing: var(--m-letter-space);
   line-height: var(--m-line-height);
   color: var(--primary-text-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .input:focus {
