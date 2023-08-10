@@ -1,37 +1,49 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import ModalOverlay from '../modal-overlay/modal-overlay';
 import styles from './modal.module.css';
+import CloseIcon from '../../icons/others/Close';
+import IconButton from '../icon-button/IconButton';
 
 type TModalProps = {
   children?: JSX.Element;
   onClose: () => void;
+  needCloseBtn?: boolean;
 };
 
-export default function Modal({ children, onClose }: TModalProps) {
-  const [isOpen, setIsOpen] = useState(true);
-
+export default function Modal({
+  children,
+  onClose,
+  needCloseBtn = true,
+}: TModalProps) {
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === 'Escape') {
-        setIsOpen(false);
         onClose();
       }
     }
-    if (isOpen) {
-      document.addEventListener('keydown', onKey);
-      return () => {
-        document.removeEventListener('keydown', onKey);
-      };
-    }
+    document.addEventListener('keydown', onKey);
     return () => {
       document.removeEventListener('keydown', onKey);
     };
-  }, [isOpen, onClose]);
+  }, [onClose]);
   return ReactDOM.createPortal(
     <section className={styles.popup}>
       <ModalOverlay onClick={onClose} />
-      {children}
+      <div className={styles.container}>
+        {needCloseBtn && (
+          <div className={styles.button_close}>
+            <IconButton
+              width={24}
+              height={24}
+              icon={CloseIcon({ color: '#060C23' })}
+              onClick={onClose}
+            />
+          </div>
+        )}
+        {children}
+      </div>
+      {/* {children} */}
     </section>,
     document.getElementById('modals')!
   );

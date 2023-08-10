@@ -1,6 +1,5 @@
 import { MouseEvent, useState } from 'react';
 import CheckIcon from '../../icons/others/Check';
-import CloseIcon from '../../icons/others/Close';
 import Button from '../Button/Button';
 import ButtonTarif from '../button-tarif/button-tarif';
 import launch from '../../images/launch.svg';
@@ -8,11 +7,7 @@ import styles from './popup-tarif.module.css';
 import LogoUkassa from '../../icons/others/LogoUkassa';
 import { tariffs } from '../../services/subcriription-fake-data';
 
-type TPopupProps = {
-  onClose: () => void;
-};
-
-export default function PopupTarif({ onClose }: TPopupProps) {
+export default function PopupTarif() {
   const [bill, setBill] = useState(0);
   const [chosenTarif, setChosenTarif] = useState<string | null>(null);
 
@@ -31,9 +26,6 @@ export default function PopupTarif({ onClose }: TPopupProps) {
       <div className={styles.launch_container}>
         <img src={launch} alt="launch" />
       </div>
-      <button type="button" className={styles.button_close} onClick={onClose}>
-        <CloseIcon />
-      </button>
       <h2 className={styles.title}>ПОДПИСАТЬСЯ</h2>
       <div className={styles.menu_container}>
         <div className={styles.menu}>

@@ -31,7 +31,7 @@ const DialogMainInput = memo(() => {
       <button className={Styles.button} type="submit" aria-label="Отправить" />
 
       {isOpenFileModal && (
-        <Modal onClose={fileModalHandler}>
+        <Modal onClose={fileModalHandler} needCloseBtn={false}>
           <FileModal modalHandler={fileModalHandler} />
         </Modal>
       )}
