@@ -35,6 +35,7 @@ const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
   const [isVideo1Running, setIsVideo1Running] = useState(false);
   const [isVideo2Running, setIsVideo2Running] = useState(false);
   const [isVideo3Running, setIsVideo3Running] = useState(false);
+
   const play = () => {
     if (ref.current?.innerText === video[0].text) {
       setIsVideo1Running(true);

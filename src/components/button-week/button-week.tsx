@@ -1,13 +1,7 @@
-import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { Dispatch, FC, SetStateAction, useRef, useState } from 'react';
 import styles from './button-week.module.css';
 import CheckIcon from '../../icons/others/Check';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 interface IButtonWeek {
   week: string;
@@ -22,15 +16,7 @@ const ButtonWeek: FC<IButtonWeek> = ({ week, setWeekChosen }) => {
     setWeekChosen(ref?.current?.innerText);
   };
 
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 767px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 767px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.wrapper}>

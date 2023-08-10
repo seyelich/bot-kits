@@ -1,13 +1,6 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './dropdown-menu.module.css';
 import SettingsIcon from '../../../icons/others/Settings';
@@ -16,6 +9,7 @@ import ExitIcon from '../../../icons/others/Exit';
 import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
 import InfoIcon from '../../../icons/others/Info';
 import { Context } from '../../../App';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IDropdownMenu {
   state: boolean;
@@ -31,15 +25,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
   setIsPopupMessagesOpened,
 }) => {
   const { logOut } = useContext(Context);
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 414px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 414px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 414px)');
 
   const navigate = useNavigate();
   return (

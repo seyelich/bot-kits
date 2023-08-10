@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable import/no-cycle */
 /* eslint-disable no-dupe-else-if */
-import React, { FC, useContext, useEffect, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 
 import styles from './widget.module.css';
 
@@ -11,6 +11,7 @@ import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import Button from '../../../../components/Button/Button';
 import CloseIcon from '../../../../icons/others/Close';
 import { Context } from '../../../../App';
+import useMediaQuery from '../../../../hooks/useMediaQuery';
 
 interface IWidget {
   italicText?: boolean;
@@ -43,16 +44,7 @@ const Widget: FC<IWidget> = ({
   }
   const messageTime = `${hours}:${minutes}`;
 
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 767px)').matches
-  );
-
-  useEffect(() => {
-    window.matchMedia('(max-width: 767px)').addEventListener('change', (e) => {
-      setMatches(e.matches);
-      setShowWidget(true);
-    });
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <div

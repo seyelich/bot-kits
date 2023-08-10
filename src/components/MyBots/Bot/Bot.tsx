@@ -1,9 +1,10 @@
 /* eslint-disable import/no-cycle */
-import { FC, useContext, useEffect, useState } from 'react';
+import { FC, useContext } from 'react';
 import styles from './Bot.module.css';
 import Dots from '../../icons/Dots/Dots';
 import TelegramIcon from '../../../icons/social/telegram';
 import { Context } from '../../../App';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IBot {
   text: string;
@@ -12,15 +13,7 @@ interface IBot {
 const Bot: FC<IBot> = ({ text }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { settingsOpen, setSettingOpen } = useContext(Context);
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 768px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 768px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.wrapper}>

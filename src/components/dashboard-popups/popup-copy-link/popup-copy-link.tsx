@@ -3,13 +3,13 @@ import {
   FC,
   FormEventHandler,
   SetStateAction,
-  useEffect,
   useState,
 } from 'react';
 import styles from './popup-copy-link.module.css';
 import CloseIcon from '../../../icons/others/Close';
 import PopupInput from '../../popup_input/popup-input';
 import Button from '../../Button/Button';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupCopyLink {
   isOpen?: boolean;
@@ -33,14 +33,7 @@ const PopupCopyLink: FC<IPopupCopyLink> = ({
     setIsActive(!isActive);
   };
 
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 414px)').matches
-  );
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 414px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 414px)');
   return (
     <div
       className={isOpen ? styles.popup : styles.popup_hidden}

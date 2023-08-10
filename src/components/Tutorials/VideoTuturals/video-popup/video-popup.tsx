@@ -24,7 +24,7 @@ const VideoPopup: FC<IVideoPopup> = ({
   >
     <iframe
       className={styles.container}
-      src={src}
+      src={isOpen ? src : ''}
       title={title}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     />

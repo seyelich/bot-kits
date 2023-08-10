@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import styles from './BotTemplates.module.css';
 import BotTemplateElement from './BotTemplateElement/BotTemplateElement';
 import AnsweringMachine from '../icons/bot-templates/AnsweringMachine/AnsweringMachine';
@@ -15,21 +15,14 @@ import ECommerce from '../icons/bot-templates/ECommerce/ECommerce';
 import ELearning from '../icons/bot-templates/ELearning/ELearning';
 import Questions from '../icons/bot-templates/Questions/Questions';
 import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const BotTemplates: FC = () => {
   const [isActive, setIsActive] = useState(false);
   const toggle = () => {
     setIsActive(!isActive);
   };
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 768px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 768px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.container}>
@@ -104,7 +97,7 @@ const BotTemplates: FC = () => {
         />
       </div>
       <button className={styles.text_mobile} onClick={toggle} type="button">
-        Все
+        {!isActive ? 'Все' : 'Свернуть'}
       </button>
     </div>
   );
