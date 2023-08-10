@@ -41,9 +41,6 @@ export default function AddBotForm({
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-  };
-
-  const handleClick = () => {
     setValues({ name: '', key: '', uri: '' });
     setPages([]);
     setCount(0);
@@ -157,8 +154,8 @@ export default function AddBotForm({
           )}
           {window.innerWidth >= 768 ? (
             <Button
+              buttonHtmlType="submit"
               type="green"
-              onClick={handleClick}
               width={272}
               height={65}
               extraClass={`${styles.btn} ${
@@ -174,8 +171,8 @@ export default function AddBotForm({
             </Button>
           ) : (
             <Button
+              buttonHtmlType="submit"
               type="green"
-              onClick={handleClick}
               width={256}
               height={65}
               extraClass={`${styles.btn} ${
