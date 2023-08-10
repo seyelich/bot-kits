@@ -13,6 +13,7 @@ export default function BotBuilder() {
     <div className={styles.main}>
       <Button
         type="green"
+        buttonHtmlType="button"
         width={60}
         height={60}
         extraClass={styles.plusButton}
@@ -27,8 +28,20 @@ export default function BotBuilder() {
         </div>
         <div className={styles.header__panel}>
           <div className={styles.header__buttons}>
-            <Button text="ОСТАНОВИТЬ" type="grey" width={151} height={48} />
-            <Button text="ТЕСТИРОВАТЬ" type="green" width={151} height={48} />
+            <Button
+              buttonHtmlType="button"
+              text="ОСТАНОВИТЬ"
+              type="grey"
+              width={151}
+              height={48}
+            />
+            <Button
+              buttonHtmlType="button"
+              text="ТЕСТИРОВАТЬ"
+              type="green"
+              width={151}
+              height={48}
+            />
           </div>
           <div className={styles.header__icon}>
             <TagIcon />
@@ -36,13 +49,26 @@ export default function BotBuilder() {
         </div>
       </div>
       <div className={styles.buttons__mobile}>
-        <Button text="ОСТАНОВИТЬ" type="grey" width={155} height={48} />
-        <Button text="ТЕСТИРОВАТЬ" type="green" width={155} height={48} />
+        <Button
+          buttonHtmlType="button"
+          text="ОСТАНОВИТЬ"
+          type="grey"
+          width={155}
+          height={48}
+        />
+        <Button
+          buttonHtmlType="button"
+          text="ТЕСТИРОВАТЬ"
+          type="green"
+          width={155}
+          height={48}
+        />
       </div>
 
       <div className={styles.scaleControlPanel}>
         <p className={styles.scaleControlPanel_text}>100%</p>
         <Button
+          buttonHtmlType="button"
           width={24}
           height={24}
           type="grey"
@@ -51,6 +77,7 @@ export default function BotBuilder() {
           <PlusIcon />
         </Button>
         <Button
+          buttonHtmlType="button"
           width={24}
           height={24}
           type="grey"
@@ -60,6 +87,7 @@ export default function BotBuilder() {
         </Button>
 
         <Button
+          buttonHtmlType="button"
           width={24}
           height={24}
           type="grey"
@@ -69,6 +97,7 @@ export default function BotBuilder() {
         </Button>
 
         <Button
+          buttonHtmlType="button"
           width={24}
           height={24}
           type="grey"

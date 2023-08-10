@@ -34,7 +34,7 @@ import FacebookIcon from '../../../../icons/social/facebook';
 import TelegramIcon from '../../../../icons/social/telegram';
 import OdnoklassnikiIcon from '../../../../icons/social/odnoklassniki';
 import VKIcon from '../../../../icons/social/vk';
-import WhatsappIcon from '../../../../icons/social/whatsapp';
+import ViberIcon from '../../../../icons/social/viber';
 
 const funnels = ['Воронка 1', 'Воронка 2', 'Воронка 3'];
 const list = ['Все пользователи', 'Список 1', 'Список 2', 'Список 3'];
@@ -55,26 +55,24 @@ const CreateMailing: FC = () => {
   const [showEmojis, setShowEmojis] = useState(false);
 
   const [socialIconSelectedType, setSocialIconSelectedType] = useState<
-    | 'Facebook'
-    | 'Telegram'
-    | 'Odnoklassniki'
-    | 'VK'
-    | 'Whatsapp'
-    | 'Viber'
-    | undefined
+    'Facebook' | 'Telegram' | 'Odnoklassniki' | 'VK' | 'Viber' | undefined
   >(undefined);
   const [iconSelectedType, setIconSelectedType] = useState<
     'Photo' | 'Video' | 'Music' | 'Button' | undefined
   >(undefined);
-  const [textareaTextLength, setTextareaTextLength] = useState(4096);
+  const [textareaTextLength, setTextareaTextLength] = useState(600);
 
   useEffect(() => {
-    if (socialIconSelectedType === 'Facebook') {
-      setTextareaTextLength(600);
+    if (
+      socialIconSelectedType === 'Telegram' ||
+      socialIconSelectedType === 'Odnoklassniki' ||
+      socialIconSelectedType === 'VK'
+    ) {
+      setTextareaTextLength(4096);
     } else if (socialIconSelectedType === 'Viber') {
       setTextareaTextLength(7000);
     } else {
-      setTextareaTextLength(4096);
+      setTextareaTextLength(600);
     }
   }, [socialIconSelectedType]);
 
@@ -131,7 +129,7 @@ const CreateMailing: FC = () => {
               </div>
             </div>
             <div className={styles.block}>
-              <h5 className={styles.block__title}>Выберите мессемессенджер</h5>
+              <h5 className={styles.block__title}>Выберите мессенджер</h5>
               <div className={styles.block__social}>
                 <div
                   onClick={() => setSocialIconSelectedType('Facebook')}
@@ -188,16 +186,14 @@ const CreateMailing: FC = () => {
                   />
                 </div>
                 <div
-                  onClick={() => setSocialIconSelectedType('Whatsapp')}
+                  onClick={() => setSocialIconSelectedType('Viber')}
                   className={styles.social}
                 >
-                  <WhatsappIcon
+                  <ViberIcon
                     width={52}
                     height={52}
                     type={
-                      socialIconSelectedType === 'Whatsapp'
-                        ? 'common'
-                        : 'disabled'
+                      socialIconSelectedType === 'Viber' ? 'common' : 'disabled'
                     }
                   />
                 </div>
@@ -373,6 +369,7 @@ const CreateMailing: FC = () => {
             <div className={styles.next}>
               <Button
                 type="green"
+                buttonHtmlType="button"
                 text="ДАЛЕЕ"
                 width={188}
                 height={65}
@@ -383,6 +380,7 @@ const CreateMailing: FC = () => {
             <div className={styles.next__mobile}>
               <Button
                 type="green"
+                buttonHtmlType="button"
                 text="ДАЛЕЕ"
                 width={130}
                 height={48}

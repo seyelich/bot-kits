@@ -65,6 +65,7 @@ const PopupCopyLink: FC<IPopupCopyLink> = ({
         <div className={styles.btn_container}>
           <Button
             type="grey"
+            buttonHtmlType='button'
             width={matches ? 272 : 384}
             height={matches ? 56 : 46}
             text={!isActive ? 'СКОПИРОВАТЬ ССЫЛКУ' : 'ССЫЛКА СКОПИРОВАНА'}

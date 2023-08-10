@@ -64,6 +64,7 @@ const MailingConditions: FC = () => {
               </button>
               <Button
                 type="green"
+                buttonHtmlType="button"
                 text="ОТПРАВИТЬ"
                 width={matches ? 130 : 188}
                 height={matches ? 48 : 65}

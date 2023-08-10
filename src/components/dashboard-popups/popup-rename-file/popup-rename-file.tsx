@@ -59,6 +59,7 @@ const PopupRenameFile: FC<IPopupRenameFile> = ({
           </button>
           <Button
             type="blue"
+            buttonHtmlType='button'
             width={matches ? 142 : 222}
             height={matches ? 56 : 46}
             text={matches ? 'OK' : 'ПЕРЕИМЕНОВАТЬ'}

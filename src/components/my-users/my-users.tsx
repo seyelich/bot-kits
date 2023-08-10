@@ -73,6 +73,7 @@ export default function MyUsers({
       {elements}
       <Button
         type="green"
+        buttonHtmlType='button'
         text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ"
         width={272}
         height={56}

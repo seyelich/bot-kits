@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable no-unneeded-ternary */
 import React, { FC } from 'react';
 
@@ -5,6 +6,7 @@ import styles from './index.module.css';
 
 interface IButton {
   type: 'blue' | 'green' | 'grey';
+  buttonHtmlType: 'button' | 'submit' | 'reset';
   onClick?: VoidFunction;
   disabled?: boolean;
   text?: string;
@@ -19,6 +21,7 @@ interface IButton {
 
 const Button: FC<IButton> = ({
   type,
+  buttonHtmlType = 'button',
   onClick,
   disabled,
   text,
@@ -41,7 +44,7 @@ const Button: FC<IButton> = ({
           }`
     } ${isAuth && `${styles.regiser_button}`} ${extraClass}`}
     onClick={onClick}
-    type="button"
+    type={buttonHtmlType}
     style={{
       width,
       height,

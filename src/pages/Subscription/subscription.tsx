@@ -28,6 +28,7 @@ export default function Subscription() {
         <div className={styles.button_container}>
           <Button
             type="green"
+            buttonHtmlType='button'
             text="СМЕНИТЬ ТАРИФ"
             width={188}
             height={46}

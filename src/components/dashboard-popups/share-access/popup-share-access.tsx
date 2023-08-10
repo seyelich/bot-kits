@@ -59,6 +59,7 @@ const PopupShareAccess: FC<IPopupShareAccess> = ({
           </button>
           <Button
             type="blue"
+            buttonHtmlType='button'
             width={!matches ? 222 : 142}
             height={!matches ? 46 : 56}
             text={matches ? 'OK' : 'Поделиться'}

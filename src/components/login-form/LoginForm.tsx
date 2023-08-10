@@ -52,6 +52,7 @@ const LoginForm: FC<LoginFormProps> = ({
         <Button
           onClick={logIn}
           type="green"
+          buttonHtmlType='button'
           text="войти"
           width={windowWidth <= 730 ? 320 : 260}
           height={64}

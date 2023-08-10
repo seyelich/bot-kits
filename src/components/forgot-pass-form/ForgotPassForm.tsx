@@ -30,6 +30,7 @@ const ForgotPassForm: FC<ForgotPassFormProps> = ({
         </div>
         <Button
           type="green"
+          buttonHtmlType='button'
           text="сбросить пароль"
           width={windowWidth <= 730 ? 320 : 260}
           height={64}

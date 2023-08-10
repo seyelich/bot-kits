@@ -113,6 +113,7 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
         <div className={styles.buttons}>
           <Button
             type="grey"
+            buttonHtmlType='button'
             width={118}
             height={46}
             extraClass={styles['clear-button']}
@@ -125,6 +126,7 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
           </Button>
           <Button
             type="blue"
+            buttonHtmlType='button'
             width={150}
             height={46}
             extraClass={styles['add-button']}

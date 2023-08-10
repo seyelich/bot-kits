@@ -22,6 +22,7 @@ export default function SubscriptionStatusNotSubscribe({
       </div>
       <Button
         type="green"
+        buttonHtmlType='button'
         text="ВЫБРАТЬ ТАРИФ"
         width={340}
         height={56}

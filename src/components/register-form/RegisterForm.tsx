@@ -86,6 +86,7 @@ const RegisterForm: FC<RegisterFormProps> = ({
           </div>
           <Button
             type="green"
+            buttonHtmlType='button'
             text="создать аккаунт"
             width={windowWidth <= 660 ? 320 : 260}
             height={64}
