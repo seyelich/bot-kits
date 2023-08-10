@@ -5,6 +5,7 @@ import placeholderWhite from './placeholder-white.module.css';
 
 interface IPopupInput {
   placeholder?: string;
+  placeHolderType: 'default' | 'blue' | 'white';
   disabled?: boolean;
   name: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -21,15 +22,15 @@ const PopupInput: FC<IPopupInput> = ({
   value,
   errorMessage,
   isInvalid,
+  placeHolderType,
 }) => (
   <>
     <input
       placeholder={placeholder}
       className={
-        placeholder === 'Салон красоты' || placeholder === 'Салон красоты NEW'
+        placeHolderType === 'white'
           ? `${styles.input} ${placeholderWhite.input}`
-          : `${styles.input}` &&
-            placeholder === 'https://t.me/botname?start=777'
+          : `${styles.input}` && placeHolderType === 'blue'
           ? `${styles.input} ${placeholderBlue.input}`
           : `${styles.input}`
       }

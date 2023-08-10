@@ -1,14 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import {
-  Dispatch,
-  FC,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import { useNavigate } from 'react-router';
-import styles from './account-settings.module.css';
+import styles from './my-bots-settings.module.css';
 
 import CopyBotIcon from '../../../icons/others/CopyBot';
 
@@ -19,13 +12,13 @@ import InfoIcon from '../../../icons/others/Info';
 import NotificationSettingsIcon from '../../../icons/others/NotificationSettings';
 import TrashIcon from '../../../icons/others/Trash';
 import CloseIcon from '../../../icons/others/Close';
-// eslint-disable-next-line import/no-cycle
-import { Context } from '../../../App';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
-interface IAccountSettings {
+interface IMyBotsSettings {
   isOpen: boolean;
-  setAccountSettingsOpen: Dispatch<SetStateAction<boolean>>;
+  topOffset: number | undefined;
+  leftOffset: number | undefined;
+  setMyBotsSettingsOpen: Dispatch<SetStateAction<boolean>>;
   setIsRenamePopupOpened?: Dispatch<SetStateAction<boolean>>;
   setIsShareAccessPopupOpened?: Dispatch<SetStateAction<boolean>>;
   setIsCopyLinkPopupOpened?: Dispatch<SetStateAction<boolean>>;
@@ -33,9 +26,11 @@ interface IAccountSettings {
   setIsNotificationsSettingsPopupOpened?: Dispatch<SetStateAction<boolean>>;
 }
 
-const AccountSettings: FC<IAccountSettings> = ({
+const MyBotsSettings: FC<IMyBotsSettings> = ({
   isOpen,
-  setAccountSettingsOpen,
+  topOffset,
+  leftOffset,
+  setMyBotsSettingsOpen,
   setIsRenamePopupOpened,
   setIsShareAccessPopupOpened,
   setIsCopyLinkPopupOpened,
@@ -43,25 +38,22 @@ const AccountSettings: FC<IAccountSettings> = ({
   setIsNotificationsSettingsPopupOpened,
 }) => {
   const navigate = useNavigate();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { settingsOpen, setSettingOpen } = useContext(Context);
   const matches = useMediaQuery('(max-width: 414px)');
-
   return (
     <div
       className={
-        !isOpen && !settingsOpen
+        !isOpen
           ? `${styles.container} ${styles.container_default}`
           : `${styles.container} ${styles.container_active}`
       }
+      style={{ top: topOffset, left: leftOffset }}
     >
       <ul className={styles.list}>
         <li
           className={styles.item}
           onClick={() => {
             navigate('/add-bot');
-            setAccountSettingsOpen(false);
-            setSettingOpen(false);
+            setMyBotsSettingsOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -75,8 +67,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           className={styles.item}
           onClick={() => {
             setIsShareAccessPopupOpened?.(true);
-            setAccountSettingsOpen(false);
-            setSettingOpen(false);
+            setMyBotsSettingsOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -88,8 +79,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           className={styles.item}
           onClick={() => {
             setIsRenamePopupOpened?.(true);
-            setAccountSettingsOpen(false);
-            setSettingOpen(false);
+            setMyBotsSettingsOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -103,8 +93,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsCopyLinkPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -116,8 +105,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsConnectionInfoPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -129,8 +117,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsNotificationsSettingsPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -148,8 +135,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsConnectionInfoPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -161,8 +147,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsNotificationsSettingsPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -176,8 +161,7 @@ const AccountSettings: FC<IAccountSettings> = ({
               className={styles.item}
               onClick={() => {
                 setIsCopyLinkPopupOpened?.(true);
-                setAccountSettingsOpen(false);
-                setSettingOpen(false);
+                setMyBotsSettingsOpen(false);
               }}
             >
               <div className={styles.option}>
@@ -191,8 +175,7 @@ const AccountSettings: FC<IAccountSettings> = ({
         <li
           className={styles.item}
           onClick={() => {
-            setAccountSettingsOpen(false);
-            setSettingOpen(false);
+            setMyBotsSettingsOpen(false);
           }}
         >
           <div className={styles.option}>
@@ -204,8 +187,7 @@ const AccountSettings: FC<IAccountSettings> = ({
           <li
             className={styles.item}
             onClick={() => {
-              setAccountSettingsOpen(false);
-              setSettingOpen(false);
+              setMyBotsSettingsOpen(false);
             }}
           >
             <div className={styles.option}>
@@ -219,4 +201,4 @@ const AccountSettings: FC<IAccountSettings> = ({
   );
 };
 
-export default AccountSettings;
+export default MyBotsSettings;

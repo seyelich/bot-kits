@@ -13,14 +13,12 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IDropdownMenu {
   state: boolean;
-  setAccountSettingsOpen: Dispatch<SetStateAction<boolean>>;
   setDropdownMenuOpen: Dispatch<SetStateAction<boolean>>;
   setIsPopupMessagesOpened: Dispatch<SetStateAction<boolean>>;
 }
 
 const DropdownMenu: FC<IDropdownMenu> = ({
   state,
-  setAccountSettingsOpen,
   setDropdownMenuOpen,
   setIsPopupMessagesOpened,
 }) => {
@@ -50,7 +48,6 @@ const DropdownMenu: FC<IDropdownMenu> = ({
         <li
           className={styles.item}
           onClick={() => {
-            setAccountSettingsOpen((prevCheck) => !prevCheck);
             setDropdownMenuOpen(false);
           }}
         >
@@ -105,12 +102,7 @@ const DropdownMenu: FC<IDropdownMenu> = ({
                 <p className={styles.text}>Уведомления</p>
               </div>
             </li>
-            <li
-              className={styles.item}
-              onClick={() => {
-                setDropdownMenuOpen(false);
-              }}
-            >
+            <li className={styles.item}>
               <div className={styles.option}>
                 <InfoIcon
                   color={!matches ? '#d7deea' : '#a6b3c9'}

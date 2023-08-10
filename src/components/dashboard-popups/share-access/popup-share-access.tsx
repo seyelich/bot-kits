@@ -41,6 +41,7 @@ const PopupShareAccess: FC<IPopupShareAccess> = ({
       <div className={styles.container}>
         <p className={styles.title}>Поделитесь доступом к боту</p>
         <PopupInput
+          placeHolderType="default"
           onChange={handleInputChange}
           name="fileName"
           value={inputValue}
