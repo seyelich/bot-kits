@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import styles from './Header.module.css';
 import Menu24px from '../icons/Menu24px/Menu24px';
 import Help from '../icons/Help/Help';
@@ -19,6 +19,7 @@ import PopupConnectionInfo from '../dashboard-popups/popup-connection-info/popup
 import PopupNotificationsSettings from '../dashboard-popups/popup-notifications-settings/popup-notifications-settings';
 import PopupMessages from '../dashboard-popups/popup-messages/popup-messages';
 import { Context } from '../../App';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 export default function Header() {
   const { accountSettingsOpen, setAccountSettingsOpen } = useContext(Context);
@@ -38,20 +39,8 @@ export default function Header() {
     setDropdownMenuOpen(!dropdownMenuOpen);
   };
 
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 768px)').matches
-  );
-  const [matchesMobile, setMatchesMobile] = useState(
-    window.matchMedia('(max-width: 414px)').matches
-  );
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 768px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-    window
-      .matchMedia('(max-width: 414px)')
-      .addEventListener('change', (e) => setMatchesMobile(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 414px)');
+  const matchesMobile = useMediaQuery('(max-width: 414px)');
 
   return (
     <header className={styles.header}>

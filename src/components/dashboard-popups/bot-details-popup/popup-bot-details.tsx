@@ -1,6 +1,7 @@
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, FC, SetStateAction } from 'react';
 import styles from './popup-bot-details.module.css';
 import CloseIcon from '../../../icons/others/Close';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupBotDetails {
   icon: React.ReactNode;
@@ -15,15 +16,7 @@ const PopupBotDetails: FC<IPopupBotDetails> = ({
   isOpen,
   setIsBotDetailsPopupOpened,
 }) => {
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 414px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 414px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 414px)');
   return (
     <div
       className={isOpen ? styles.popup : styles.popup_hidden}

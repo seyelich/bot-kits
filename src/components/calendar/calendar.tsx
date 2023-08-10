@@ -1,5 +1,5 @@
 import ru from 'date-fns/locale/ru';
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import getYear from 'date-fns/getYear';
 import getMonth from 'date-fns/getMonth';
@@ -13,6 +13,7 @@ import Arrow from '../../icons/others/arrow';
 import { formatDate, months, timeZoneUTC } from '../../utils/calendar';
 import InputSelect from '../input-select/input-select';
 import CustomInput from './custom-inpu';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Calendar: FC = () => {
   registerLocale('ru', ru);
@@ -21,15 +22,7 @@ const Calendar: FC = () => {
   const [startMonth, setStartMonth] = useState(new Date());
   const [endMonth, setEndMonth] = useState(new Date());
   const [resetDate, setDateReset] = useState(false);
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 768px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 768px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
   return (
     <DatePicker
       popperPlacement="bottom-end"

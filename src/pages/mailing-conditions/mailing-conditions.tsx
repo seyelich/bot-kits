@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import styles from './mailing-conditions.module.css';
@@ -9,6 +9,7 @@ import MailingForm from '../../components/mailing-form/mailing-form';
 import Button from '../../components/Button/Button';
 import Widget from '../mailing/ui/widget/widget';
 import WidgetMobileIcon from '../mailing/ui/widget/widget-mobile-icon/WidgetMobileIcon';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const MailingConditions: FC = () => {
   const navigate = useNavigate();
@@ -19,15 +20,7 @@ const MailingConditions: FC = () => {
 
   const [hideSection, setHideSection] = useState(true);
 
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 767px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 767px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <section className={styles.container}>

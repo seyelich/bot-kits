@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react';
+import { Dispatch, FC, SetStateAction, useState } from 'react';
 import styles from './popup-messages.module.css';
 import CloseIcon from '../../../icons/others/Close';
 
 import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupMessages {
   isOpen: boolean;
@@ -21,15 +22,7 @@ const PopupMessages: FC<IPopupMessages> = ({
   const handleTab2 = () => {
     setActiveTab('tab2');
   };
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 414px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 414px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 414px)');
   return (
     <div
       className={isOpen ? styles.popup : styles.popup_hidden}

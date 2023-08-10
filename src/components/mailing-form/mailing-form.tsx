@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './mailing-form.module.css';
 import InputSelect from '../input-select/input-select';
 import Calendar from '../calendar/calendar';
@@ -10,6 +10,7 @@ import ButtonWeek from '../button-week/button-week';
 import InputSlider from '../input-slider/input-slider';
 import ButtonMailing from '../button-mailing/button-mailing';
 import { days, weekDays, months } from '../../utils/calendar';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 const timeOptions = ['Сейчас', 'Дата/Время'];
 const repeatOptions = [
@@ -35,16 +36,7 @@ export default function MailingForm() {
   const [date, setDate] = useState<string | undefined>('');
   const [day, setDay] = useState<string | undefined>('');
   const [month, setMonth] = useState<string | undefined>('');
-
-  const [matches, setMatches] = useState(
-    window.matchMedia('(max-width: 767px)').matches
-  );
-
-  useEffect(() => {
-    window
-      .matchMedia('(max-width: 767px)')
-      .addEventListener('change', (e) => setMatches(e.matches));
-  }, []);
+  const matches = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.wrapper}>
