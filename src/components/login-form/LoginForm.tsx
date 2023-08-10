@@ -19,6 +19,7 @@ const LoginForm: FC<LoginFormProps> = ({
 }) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    logIn();
   };
 
   return (
@@ -50,12 +51,12 @@ const LoginForm: FC<LoginFormProps> = ({
           </span>
         </nav>
         <Button
-          onClick={logIn}
           type="green"
           text="войти"
           width={windowWidth <= 730 ? 320 : 260}
           height={64}
           isAuth
+          buttonHtmlType="submit"
         />
       </form>
       <div className={styles.loginForm__footer}>
