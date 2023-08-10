@@ -64,7 +64,12 @@ export default function PopupTarif() {
             </p>
           </div>
           <div className={styles.payment_buttons}>
-            <Button type="blue" text="ОПЛАТИТЬ ЧЕРЕЗ" width={301} height={64}>
+            <Button
+              type="blue"
+              text="ОПЛАТИТЬ ЧЕРЕЗ"
+              width={301}
+              height={64}
+            >
               <p className={styles.button_kassa_text}>
                 ОПЛАТИТЬ ЧЕРЕЗ
                 <span className={styles.logo_kassa}>
