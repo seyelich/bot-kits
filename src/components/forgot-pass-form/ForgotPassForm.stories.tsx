@@ -1,9 +1,8 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import ForgotPassForm, { ForgotPassFormProps } from './ForgotPassForm';
 
 export default {
-  title: 'UI/ForgotPassForm',
+  title: 'UI/AuthForms/ForgotPassForm',
   component: ForgotPassForm,
 } as Meta<ForgotPassFormProps>;
 

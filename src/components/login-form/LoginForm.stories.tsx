@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import LoginForm, { LoginFormProps } from './LoginForm';
 
 export default {
-  title: 'UI/LoginForm',
+  title: 'UI/AuthForms/LoginForm',
   component: LoginForm,
 } as Meta<LoginFormProps>;
 
