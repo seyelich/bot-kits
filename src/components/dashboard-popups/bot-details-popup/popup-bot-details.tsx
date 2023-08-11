@@ -7,7 +7,7 @@ interface IPopupBotDetails {
   icon: React.ReactNode;
   title: string | null | undefined;
   isOpen: boolean;
-  setIsBotDetailsPopupOpened: Dispatch<SetStateAction<boolean>>;
+  setIsBotDetailsPopupOpened?: Dispatch<SetStateAction<boolean>>;
 }
 
 const PopupBotDetails: FC<IPopupBotDetails> = ({
@@ -22,7 +22,7 @@ const PopupBotDetails: FC<IPopupBotDetails> = ({
       className={isOpen ? styles.popup : styles.popup_hidden}
       onClick={(e) => {
         if (e.target === e.currentTarget) {
-          setIsBotDetailsPopupOpened(false);
+          setIsBotDetailsPopupOpened?.(false);
         }
       }}
     >
@@ -69,7 +69,7 @@ const PopupBotDetails: FC<IPopupBotDetails> = ({
           type="button"
           className={styles.close_btn}
           onClick={() => {
-            setIsBotDetailsPopupOpened(false);
+            setIsBotDetailsPopupOpened?.(false);
           }}
         >
           <CloseIcon />

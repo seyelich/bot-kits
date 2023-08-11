@@ -8,7 +8,7 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IBot {
   text: string;
-  onClick: (e: any) => void;
+  onClick?: (e: any) => void;
 }
 
 const Bot = forwardRef<HTMLDivElement | null, IBot>(

@@ -8,7 +8,7 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupMessages {
   isOpen: boolean;
-  setIsPopupMessagesOpened: Dispatch<SetStateAction<boolean>>;
+  setIsPopupMessagesOpened?: Dispatch<SetStateAction<boolean>>;
 }
 
 const PopupMessages: FC<IPopupMessages> = ({
@@ -28,7 +28,7 @@ const PopupMessages: FC<IPopupMessages> = ({
       className={isOpen ? styles.popup : styles.popup_hidden}
       onClick={(e) => {
         if (e.target === e.currentTarget) {
-          setIsPopupMessagesOpened(false);
+          setIsPopupMessagesOpened?.(false);
         }
       }}
     >
@@ -47,7 +47,7 @@ const PopupMessages: FC<IPopupMessages> = ({
             <button
               type="button"
               className={styles.close_btn}
-              onClick={() => setIsPopupMessagesOpened(false)}
+              onClick={() => setIsPopupMessagesOpened?.(false)}
             >
               <CloseIcon color="#d7deea" width={24} height={24} />
             </button>
