@@ -21,7 +21,7 @@ const ChevronBigIcon: FC<IChevronBigIcon> = ({
     <path
       d="M19 9.42017L12 16.4202L5 9.42017"
       stroke={color || 'currentColor'}
-      strokeWidth="3"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
