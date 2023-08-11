@@ -1,3 +1,4 @@
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import Button from '../../Button/Button';
 import styles from './subscription-detail-not-active.module.css';
 
@@ -12,6 +13,8 @@ export default function SubscriptionDetailNotActive({
   reason,
   openTariffs,
 }: TDetailProps) {
+  const mobile = useMediaQuery('(max-width: 415px)');
+
   return (
     <div className={styles.container}>
       <div className={styles.comment}>
@@ -23,7 +26,7 @@ export default function SubscriptionDetailNotActive({
       <Button
         type="green"
         text="АКТИВИРОВАТЬ ПОДПИСКУ"
-        width={340}
+        width={mobile ? 272 : 340}
         height={56}
         onClick={openTariffs}
       />

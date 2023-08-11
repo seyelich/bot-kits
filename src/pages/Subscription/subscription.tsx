@@ -6,17 +6,19 @@ import {
   // paymentsEmpty,
   payments,
   // notSubscribe,
-  // subscribeActive,
-  subscribeNotActive,
+  subscribeActive,
+  // subscribeNotActive,
 } from '../../services/subcriription-fake-data';
 import Modal from '../../components/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';
 import useModal from '../../hooks/useModal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 export default function Subscription() {
-  const subcriription = subscribeNotActive;
+  const subcriription = subscribeActive;
   const { status } = subcriription;
   const { isModalOpen, openModal, closeModal } = useModal();
+  const tablet = useMediaQuery('(max-width: 768px)');
 
   return (
     <main className={styles.container}>
@@ -26,8 +28,8 @@ export default function Subscription() {
           <Button
             type="green"
             text="СМЕНИТЬ ТАРИФ"
-            width={188}
-            height={46}
+            width={tablet ? 320 : 188}
+            height={tablet ? 56 : 46}
             onClick={openModal}
           />
         </div>

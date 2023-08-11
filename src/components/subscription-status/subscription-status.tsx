@@ -5,6 +5,7 @@ import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
 import Modal from '../modal/modal';
 import useModal from '../../hooks/useModal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 type TProps = {
   subcriription: {
@@ -28,6 +29,8 @@ export default function SubscriptionStatus({
     openModal: openModalPromo,
     closeModal: closeModalPromo,
   } = useModal();
+  const mobile = useMediaQuery('(max-width: 415px)');
+  const tablet = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.container}>
@@ -47,8 +50,8 @@ export default function SubscriptionStatus({
         <Button
           type="grey"
           text="АКТИВИРОВАТЬ ПРОМОКОД"
-          width={229}
-          height={60}
+          width={mobile ? 272 : tablet ? 340 : 229}
+          height={tablet ? 56 : 60}
           onClick={openModalPromo}
         />
       </div>
