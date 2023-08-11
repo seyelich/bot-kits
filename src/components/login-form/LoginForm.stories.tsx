@@ -20,4 +20,3 @@ Default.args = {
   windowWidth: 1440,
   logIn: () => {},
 };
-

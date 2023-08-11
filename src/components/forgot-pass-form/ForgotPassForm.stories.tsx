@@ -6,7 +6,9 @@ export default {
   component: ForgotPassForm,
 } as Meta<ForgotPassFormProps>;
 
-const Template: Story<ForgotPassFormProps> = (args) => <ForgotPassForm {...args} />;
+const Template: Story<ForgotPassFormProps> = (args) => (
+  <ForgotPassForm {...args} />
+);
 
 export const Default = Template.bind({});
 Default.args = {

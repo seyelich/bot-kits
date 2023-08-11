@@ -9,7 +9,7 @@ export default {
 
 const Template: Story<RegisterFormProps> = (args) => (
   <BrowserRouter>
-   <RegisterForm {...args} />
+    <RegisterForm {...args} />
   </BrowserRouter>
 );
 

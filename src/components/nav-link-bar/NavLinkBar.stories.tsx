@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Meta, Story } from '@storybook/react';
-import  NavLinkBar, { NavLinkBarProps } from './NavLinkBar';
+import NavLinkBar, { NavLinkBarProps } from './NavLinkBar';
 
 export default {
   title: 'UI/NavLinkBar',

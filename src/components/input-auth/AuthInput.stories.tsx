@@ -14,16 +14,16 @@ export default {
   },
 } as Meta<IAuthInput>;
 
-const Template: Story<IAuthInput> = (args:any) => (
-<div style={{
+const Template: Story<IAuthInput> = (args: any) => (
+  <div
+    style={{
       backgroundColor: '#243cbb',
-      maxWidth:501,
-      maxHeight:70
-    }}>
-<AuthInput
-    {...args}
-  />
-</div>
+      maxWidth: 501,
+      maxHeight: 70,
+    }}
+  >
+    <AuthInput {...args} />
+  </div>
 );
 
 export const Default = Template.bind({});
