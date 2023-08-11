@@ -1,9 +1,8 @@
-
 import { Meta, Story } from '@storybook/react';
 import AuthInput, { IAuthInput } from './AuthInput';
 
 export default {
-  title: 'UI/AuthInput',
+  title: 'UI/Inputs/AuthInput',
   component: AuthInput,
   argTypes: {
     onChange: { action: 'changed' },
@@ -27,16 +26,16 @@ const Template: Story<IAuthInput> = (args:any) => (
 </div>
 );
 
-export const Обычный = Template.bind({});
-Обычный.args = {
+export const Default = Template.bind({});
+Default.args = {
   type: 'text',
   placeholder: 'Введите текст',
   width: 500,
   height: 60,
 };
 
-export const СОшибкой = Template.bind({});
-СОшибкой.args = {
+export const Error = Template.bind({});
+Error.args = {
   type: 'text',
   placeholder: 'Введите текст',
   width: 500,
@@ -45,8 +44,8 @@ export const СОшибкой = Template.bind({});
   textError: 'Это сообщение об ошибке',
 };
 
-export const СЗначениемИОбработчиком = Template.bind({});
-СЗначениемИОбработчиком.args = {
+export const WithValue = Template.bind({});
+WithValue.args = {
   type: 'text',
   placeholder: 'Введите текст',
   width: 500,
@@ -55,8 +54,8 @@ export const СЗначениемИОбработчиком = Template.bind({});
   onChange: (e) => console.log('Изменение ввода:', e.target.value),
 };
 
-export const Пароль = Template.bind({});
-Пароль.args = {
+export const Password = Template.bind({});
+Password.args = {
   type: 'password',
   placeholder: 'Введите пароль',
   width: 500,
