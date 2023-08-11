@@ -5,8 +5,14 @@
   flex-direction: column;
 }
 
-.heading {
+.headingCnt {
+  display: flex;
   margin-bottom: 26px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
   font-family: 'IBM Plex Mono';
   font-size: var(--h2-font-size);
   font-weight: var(--bold);
@@ -14,9 +20,39 @@
   letter-spacing: var(--h2-letter-space);
 }
 
+.buttonsCnt {
+  display: flex;
+  gap: 12px;
+}
+
 .list {
   display: flex;
   flex-direction: column;
   margin-top: 13px;
   flex-grow: 1;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 360px) {
+  .section {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .headingCnt {
+    margin-bottom: 16px;
+  }
+
+  .heading {
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+  }
+
+  .list {
+    margin-top: 8px;
+  }
+
+  .searchInputMargin {
+    margin-top: 8px;
+  }
 }

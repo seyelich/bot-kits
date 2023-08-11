@@ -2,6 +2,7 @@ import { memo, Dispatch } from 'react';
 import Styles from './dialogs-list-dialog.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
 import { IFakeDialog } from '../../../pages/chat/fakeData/fakeDataTypes';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface DialogsListDialogProps {
   data: IFakeDialog;
@@ -11,6 +12,8 @@ interface DialogsListDialogProps {
 
 const DialogsListDialog = memo(
   ({ data, isChecked, currentHandler }: DialogsListDialogProps) => {
+    const isMobile = useMediaQuery('(max-width: 360px)');
+
     const onClickHandler = () => {
       currentHandler(data);
     };
@@ -31,7 +34,7 @@ const DialogsListDialog = memo(
               </div>
             )}
           </div>
-          {isChecked && <div className={Styles.checkLine} />}
+          {isChecked && !isMobile && <div className={Styles.checkLine} />}
         </div>
       </li>
     );
