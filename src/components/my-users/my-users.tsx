@@ -12,14 +12,14 @@ type TMyUsersProps = {
   users: Array<TUser>;
   checked: Set<string>;
   setChecked: Dispatch<SetStateAction<Set<string>>>;
-  setModalOpened: Dispatch<SetStateAction<boolean>>;
+  openModal: () => void;
 };
 
 export default function MyUsers({
   users,
   checked,
   setChecked,
-  setModalOpened,
+  openModal,
 }: TMyUsersProps) {
   const [checking, setChecking] = useState<boolean>(false);
   function handleCheckAll() {
@@ -77,7 +77,7 @@ export default function MyUsers({
         width={272}
         height={56}
         extraClass={styles.greenbutton}
-        onClick={() => setModalOpened(true)}
+        onClick={openModal}
       />
     </div>
   );

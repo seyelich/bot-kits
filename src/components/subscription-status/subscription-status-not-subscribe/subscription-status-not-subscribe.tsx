@@ -1,17 +1,11 @@
-import { Dispatch, SetStateAction } from 'react';
 import Button from '../../Button/Button';
 import styles from './subscription-status-not-subscribe.module.css';
 
 type TProps = {
-  setOpenPopup: Dispatch<SetStateAction<boolean>>;
+  openModal: () => void;
 };
 
-export default function SubscriptionStatusNotSubscribe({
-  setOpenPopup,
-}: TProps) {
-  const openPopupTarif = () => {
-    setOpenPopup(true);
-  };
+export default function SubscriptionStatusNotSubscribe({ openModal }: TProps) {
   return (
     <div className={styles.subscription}>
       <h4 className={styles.text}>У вас нет активных подписок</h4>
@@ -25,7 +19,7 @@ export default function SubscriptionStatusNotSubscribe({
         text="ВЫБРАТЬ ТАРИФ"
         width={340}
         height={56}
-        onClick={openPopupTarif}
+        onClick={openModal}
       />
     </div>
   );

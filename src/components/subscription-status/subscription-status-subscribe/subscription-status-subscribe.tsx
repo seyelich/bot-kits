@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
 import styles from './subscription-status-subscribe.module.css';
 import SubscriptionDetailNotActive from '../../subscription-detail/subscription-detail-not-active/subscription-detail-not-active';
 import SubscriptionDetailActive from '../../subscription-detail/subscription-detail-active/subscription-detail-active';
@@ -11,17 +10,13 @@ type TProps = {
     payment_source?: string;
     reason?: string;
   };
-  setOpenPopup: Dispatch<SetStateAction<boolean>>;
+  openModal: () => void;
 };
 
 export default function SubscriptionStatusSubscribe({
   subcriription,
-  setOpenPopup,
+  openModal,
 }: TProps) {
-  const openPopupTarif = () => {
-    setOpenPopup(true);
-  };
-
   const {
     tarif,
     status,
@@ -50,7 +45,7 @@ export default function SubscriptionStatusSubscribe({
         <SubscriptionDetailNotActive
           payment={nextPayment!}
           reason={reason!}
-          openTariffs={openPopupTarif}
+          openTariffs={openModal}
         />
       )}
       {status === 'active' && (

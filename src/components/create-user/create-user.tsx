@@ -38,13 +38,6 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Добавить пользователя</h2>
-      {/* <button
-        type="button"
-        className={styles['close-button']}
-        onClick={onClose}
-      >
-        <CloseIcon />
-      </button> */}
       <form className={styles.form} ref={formRef}>
         <label className={styles.label} htmlFor="name">
           <span className={styles.required}>Имя</span>
