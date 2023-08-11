@@ -4,10 +4,10 @@
   margin: 16px;
   margin-right: 24px;
   width: 70px;
-  height: 100%;
+  height: calc(100vh - 32px);
   background-color: var(--default-grey-color);
   border-radius: 10px;
-  transition: .2s;
+  transition: 0.2s;
   z-index: 10;
   @media (max-width: 670px) {
     position: absolute;
@@ -22,7 +22,7 @@
 }
 
 .sidebar-expanded {
-  width: max-content;
+  width: 240px;
   margin-right: 16px;
   @media (max-width: 670px) {
     height: max-content;
@@ -79,7 +79,7 @@
   gap: 12px;
   width: max-content;
   overflow-x: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
   @media (max-width: 670px) {
     margin-top: 7px;
     margin-left: 65px;
@@ -96,8 +96,8 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  fill: #D7DEEA;
-  stroke: #D7DEEA;
+  fill: #d7deea;
+  stroke: #d7deea;
   @media (max-width: 670px) {
     right: unset;
     margin-top: 18px;
@@ -132,7 +132,7 @@
   background-image: url('./icons/plus.svg');
   background-repeat: no-repeat;
   background-position: center;
-  transition: all .3s;
+  transition: all 0.3s;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
@@ -150,8 +150,8 @@
   opacity: 0;
   visibility: hidden;
   white-space: nowrap;
-  transition: all .4s;
-  font-family: "IBM Plex Mono", sans-serif;
+  transition: all 0.4s;
+  font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 600;
   letter-spacing: var(--m-letter-space);
   color: #fff;
@@ -161,7 +161,7 @@
     right: -134px;
     color: var(--primary-text-color);
     text-transform: none;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -199,9 +199,9 @@
 
 .navtext {
   opacity: 0;
+  max-width: 140px;
   visibility: hidden;
-  transition: all .2s;
-  white-space: nowrap;
+  transition: all 0.2s;
   overflow: hidden;
   @media (max-width: 670px) {
     opacity: 1;
