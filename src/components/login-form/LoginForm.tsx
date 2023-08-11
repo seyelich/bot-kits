@@ -4,7 +4,7 @@ import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';
 import styles from './LoginForm.module.css';
 
-interface LoginFormProps {
+export interface LoginFormProps {
   signIn: () => void;
   forgotPass: () => void;
   windowWidth: number;
