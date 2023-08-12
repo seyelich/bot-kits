@@ -9,7 +9,8 @@ type TPopupProps = {
 
 export default function PopupPromocode({ onClose }: TPopupProps) {
   const { values, handleChange } = useForm({ promoInput: '' });
-  const onSubmit = () => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     onClose();
   };
 
@@ -28,7 +29,7 @@ export default function PopupPromocode({ onClose }: TPopupProps) {
           text="АКТИВИРОВАТЬ"
           width={320}
           height={46}
-          onClick={onSubmit}
+          buttonHtmlType="submit"
         />
       </form>
     </div>
