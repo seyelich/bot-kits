@@ -4,7 +4,7 @@ import styles from './bot.module.css';
 import Dots from '../../icons/dots/dots';
 import TelegramIcon from '../../../icons/social/telegram';
 import { Context } from '../../../app';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IBot {
   text: string;

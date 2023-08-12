@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router';
 
 import styles from './index.module.css';
 
-import ChevronBigIcon from '../../../../icons/others/ChevronBig';
-import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
+import ChevronBigIcon from '../../../../icons/others/chevron-big';
+import TutorialButton from '../../../../components/tutorial-button/tutorial-button';
 import Button from '../../../../components/button/button';
-import IconWithPercents from '../icon-with-percents/IconWithPercents';
+import IconWithPercents from '../icon-with-percents/icon-with-percents';
 
 interface IData {
   id: number;

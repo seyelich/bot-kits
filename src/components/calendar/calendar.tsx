@@ -13,7 +13,7 @@ import Arrow from '../../icons/others/arrow';
 import { formatDate, months, timeZoneUTC } from '../../utils/calendar';
 import InputSelect from '../input-select/input-select';
 import CustomInput from './custom-inpu';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 
 const Calendar: FC = () => {
   registerLocale('ru', ru);

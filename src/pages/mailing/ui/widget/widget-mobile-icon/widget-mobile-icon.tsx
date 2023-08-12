@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import styles from './index.module.css';
 
-import BotLogoIcon from '../../../../../icons/others/BotLogo';
+import BotLogoIcon from '../../../../../icons/others/bot-logo';
 
 interface IWidgetMobileIcon {
   setHideSection: (arg: boolean) => void;

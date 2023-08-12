@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import ArrowRegister from '../icons/arrow-register/arrow-register';
-import styles from './SelectCodeNumber.module.css';
+import styles from './select-code-number.module.css';
 
 interface Item {
   id: number;

@@ -3,9 +3,9 @@ import Button from '../button/button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/input-auth';
 import NavLinkBar from '../nav-link-bar/nav-link-bar';
-import styles from './RegisterForm.module.css';
-import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
-import items from '../../utils/itemsForRegister';
+import styles from './register-form.module.css';
+import SelectCodeNumber from '../select-code-number/select-code-number';
+import items from '../../utils/items-for-register';
 
 export interface RegisterFormProps {
   logIn: () => void;

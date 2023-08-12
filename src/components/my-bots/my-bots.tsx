@@ -4,7 +4,7 @@ import styles from './my-bots.module.css';
 import Bot from './bot/bot';
 import AddBot from './add-bot/add-bot';
 import { Context } from '../../app';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 import MyBotsSettings from './my-bots-settings/my-bots-settings';
 import PopupRenameFile from '../dashboard-popups/popup-rename-file/popup-rename-file';
 import PopupShareAccess from '../dashboard-popups/share-access/popup-share-access';

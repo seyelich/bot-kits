@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './popup-bot-details.module.css';
-import CloseIcon from '../../../icons/others/Close';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import CloseIcon from '../../../icons/others/close';
+import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IPopupBotDetails {
   icon: React.ReactNode;

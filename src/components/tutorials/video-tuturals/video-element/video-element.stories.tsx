@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import VideoElement from './VideoElement';
+import VideoElement from './video-element';
 import preview from '../../../../images/video1.svg';
 
 const meta = {

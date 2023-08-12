@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import styles from './Tutorials.module.css';
-import VideoTutorials from './VideoTuturals/VideoTuturals';
-import ServiceBasics from './ServiceBasics/ServiceBasics';
+import styles from './tutorials.module.css';
+import VideoTutorials from './video-tuturals/video-tuturals';
+import ServiceBasics from './service-basics/service-basics';
 
 const Tutorials: FC = () => (
   <div className={styles.wrapper}>

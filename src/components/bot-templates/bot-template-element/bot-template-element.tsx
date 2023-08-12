@@ -2,7 +2,7 @@ import { FC, useRef, useState } from 'react';
 import styles from './bot-template-element.module.css';
 import Plus from '../../icons/plus/plus';
 import PopupBotDetails from '../../dashboard-popups/bot-details-popup/popup-bot-details';
-import useModal from '../../../hooks/useModal';
+import useModal from '../../../hooks/use-modal';
 
 interface IBotTemplate {
   icon: JSX.Element;

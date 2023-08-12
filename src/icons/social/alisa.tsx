@@ -1,4 +1,4 @@
-import SocialIcon from '../../components/social-icon/SocialIcon';
+import SocialIcon from '../../components/social-icon/social-icon';
 
 interface IAlisaIcon {
   width?: number;

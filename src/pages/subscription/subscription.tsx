@@ -11,8 +11,8 @@ import {
 } from '../../services/subcriription-fake-data';
 import Modal from '../../components/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';
-import useModal from '../../hooks/useModal';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useModal from '../../hooks/use-modal';
+import useMediaQuery from '../../hooks/use-media-query';
 
 export default function Subscription() {
   const subcriription = subscribeActive;

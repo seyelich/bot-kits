@@ -3,8 +3,8 @@
 import { Dispatch, SetStateAction, createContext, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sidebar';
-import Dashboard from './pages/Dashboard/dashboard';
-import Subscription from './pages/Subscription/subscription';
+import Dashboard from './pages/dashboard/dashboard';
+import Subscription from './pages/subscription/subscription';
 import AddBot from './pages/add-bot/add-bot';
 import styles from './app.module.css';
 import BotBuilder from './pages/bot-builder/bot-builder';
@@ -14,9 +14,9 @@ import Partnership from './pages/partnership/partnership';
 import Share from './pages/share/share';
 import NotFound from './pages/not-found';
 import Layout from './components/layout/layout';
-import FirstMailing from './pages/mailing/ui/first-mailing/FirstMailing';
-import MyMailing from './pages/mailing/ui/my-mailing/MyMailing';
-import CreateMailing from './pages/mailing/ui/create-mailing/CreateMailing';
+import FirstMailing from './pages/mailing/ui/first-mailing/first-mailing';
+import MyMailing from './pages/mailing/ui/my-mailing/my-mailing';
+import CreateMailing from './pages/mailing/ui/create-mailing/create-mailing';
 import MailingConditions from './pages/mailing-conditions/mailing-conditions';
 import Auth from './pages/auth/auth';
 

@@ -15,7 +15,7 @@ import ECommerce from '../icons/bot-templates/e-commerce/e-commerce';
 import ELearning from '../icons/bot-templates/e-learning/e-learning';
 import Questions from '../icons/bot-templates/questions/questions';
 import Arrow24x24 from '../icons/arrow-24x24/arrow-24x24';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 
 const BotTemplates: FC = () => {
   const [isActive, setIsActive] = useState(false);

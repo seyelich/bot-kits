@@ -2,8 +2,8 @@
 import { memo } from 'react';
 import Styles from './file-modal.module.css';
 import IconButton from '../../../icon-button/icon-button';
-import CloseIcon from '../../../../icons/others/Close';
-import LogOut from '../../../../icons/others/LogOut';
+import CloseIcon from '../../../../icons/others/close';
+import LogOut from '../../../../icons/others/logout';
 import File from '../../../file/file';
 
 interface FileModalProps {

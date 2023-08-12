@@ -4,8 +4,8 @@ import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscri
 import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
 import Modal from '../modal/modal';
-import useModal from '../../hooks/useModal';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useModal from '../../hooks/use-modal';
+import useMediaQuery from '../../hooks/use-media-query';
 
 type TProps = {
   subcriription: {

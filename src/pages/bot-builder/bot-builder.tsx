@@ -1,10 +1,10 @@
 import Button from '../../components/button/button';
-import DoneIcon from '../../icons/others/Done';
-import FitIcon from '../../icons/others/Fit';
-import MinusIcon from '../../icons/others/Minus';
-import PageIcon from '../../icons/others/Page';
-import PlusIcon from '../../icons/others/Plus';
-import TagIcon from '../../icons/others/Tag';
+import DoneIcon from '../../icons/others/done';
+import FitIcon from '../../icons/others/fit';
+import MinusIcon from '../../icons/others/minus';
+import PageIcon from '../../icons/others/page';
+import PlusIcon from '../../icons/others/plus';
+import TagIcon from '../../icons/others/tag';
 import FacebookIcon from '../../icons/social/facebook';
 import styles from './bot-builder.module.css';
 

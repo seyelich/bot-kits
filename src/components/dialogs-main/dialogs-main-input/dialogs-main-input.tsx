@@ -3,7 +3,7 @@ import Styles from './dialogs-main-input.module.css';
 import MessageInput from '../../message-input/message-input';
 import Modal from '../../modal/modal';
 import FileModal from './file-modal/file-modal';
-import useModal from '../../../hooks/useModal';
+import useModal from '../../../hooks/use-modal';
 
 const DialogMainInput = memo(() => {
   // const [isOpenFileModal, setFileModal] = useState(false);

@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import styles from './add-bot.module.css';
-import useForm from '../../hooks/useForm';
+import useForm from '../../hooks/use-form';
 import fakeData from '../../components/selected-pages/selected-pages.fakedata';
 import icons from './icons';
 import AddBotForm, { TMessenger } from './ui/add-bot-form/add-bot-form';

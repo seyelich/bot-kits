@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './create-user.module.css';
 import CountrySelector from '../country-selector/country-selector';
-import useForm from '../../hooks/useForm';
+import useForm from '../../hooks/use-form';
 import { TUser } from '../../utils/types';
 
 type TCreateUserProps = {

@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction, useRef, useState } from 'react';
 import styles from './button-week.module.css';
-import CheckIcon from '../../icons/others/Check';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import CheckIcon from '../../icons/others/check';
+import useMediaQuery from '../../hooks/use-media-query';
 
 interface IButtonWeek {
   week: string;

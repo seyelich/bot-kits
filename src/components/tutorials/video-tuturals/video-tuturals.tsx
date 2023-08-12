@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import styles from './VideoTutorials.module.css';
+import styles from './video-tuturals.module.css';
 import preview1 from '../../../images/video1.svg';
 import preview2 from '../../../images/video2.svg';
 import preview3 from '../../../images/video3.svg';
-import VideoElement from './VideoElement/VideoElement';
+import VideoElement from './video-element/video-element';
 
 const VideoTutorials: FC = () => (
   <div className={styles.video}>

@@ -6,10 +6,10 @@ import {
   useState,
 } from 'react';
 import styles from './popup-copy-link.module.css';
-import CloseIcon from '../../../icons/others/Close';
+import CloseIcon from '../../../icons/others/close';
 import PopupInput from '../../popup_input/popup-input';
 import Button from '../../button/button';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IPopupCopyLink {
   isOpen?: boolean;

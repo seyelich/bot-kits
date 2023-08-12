@@ -3,15 +3,15 @@ import { memo, useState, Dispatch } from 'react';
 import Styles from './dialogs-main-header.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
 import IconButton from '../../icon-button/icon-button';
-import SearchIcon from '../../../icons/others/Search';
-import CloseIcon from '../../../icons/others/Close';
-import PlayIcon from '../../../icons/others/Play';
-import TrashIcon from '../../../icons/others/Trash';
+import SearchIcon from '../../../icons/others/search';
+import CloseIcon from '../../../icons/others/close';
+import PlayIcon from '../../../icons/others/play';
+import TrashIcon from '../../../icons/others/trash';
 import SearchInput from '../../search-input/search-input';
 import { IFakeDialog } from '../../../pages/chat/fakeData/fakeDataTypes';
-import ChevronBigIcon from '../../../icons/others/ChevronBig';
-import MoreButtonIcon from '../../../icons/others/MoreButton';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import ChevronBigIcon from '../../../icons/others/chevron-big';
+import MoreButtonIcon from '../../../icons/others/more-button';
+import useMediaQuery from '../../../hooks/use-media-query';
 import DialogsSidebarToggle from '../../dialogs-sidebar/dialogs-sidebar-toggle/dialogs-sidebar-toggle';
 
 interface DialogsMainHeaderProps {

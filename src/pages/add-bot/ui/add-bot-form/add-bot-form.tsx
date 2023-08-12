@@ -4,7 +4,7 @@ import Button from '../../../../components/button/button';
 import TextInput from '../../../../components/input/input';
 import SelectedPages from '../../../../components/selected-pages/selected-pages';
 import styles from './add-bot-form.module.css';
-import useForm from '../../../../hooks/useForm';
+import useForm from '../../../../hooks/use-form';
 import fakeData from '../../../../components/selected-pages/selected-pages.fakedata';
 import pageStyles from '../../add-bot.module.css';
 import AddBotTutorials from '../add-bot-tutorials/add-bot-tutorials';

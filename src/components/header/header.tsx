@@ -13,7 +13,7 @@ import DropdownMenu from './dropdown-menu/dropdown-menu';
 
 import PopupMessages from '../dashboard-popups/popup-messages/popup-messages';
 import { Context } from '../../app';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 
 export default function Header() {
   const { dropdownMenuOpen, setDropdownMenuOpen } = useContext(Context);

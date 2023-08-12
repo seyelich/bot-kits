@@ -3,13 +3,13 @@
 import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './dropdown-menu.module.css';
-import SettingsIcon from '../../../icons/others/Settings';
-import PaymentIcon from '../../../icons/others/Payment';
-import ExitIcon from '../../../icons/others/Exit';
+import SettingsIcon from '../../../icons/others/settings';
+import PaymentIcon from '../../../icons/others/payment';
+import ExitIcon from '../../../icons/others/exit';
 import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
-import InfoIcon from '../../../icons/others/Info';
+import InfoIcon from '../../../icons/others/info';
 import { Context } from '../../../app';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IDropdownMenu {
   state: boolean;

@@ -1,4 +1,4 @@
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../hooks/use-media-query';
 import Button from '../../button/button';
 import styles from './subscription-detail-not-active.module.css';
 

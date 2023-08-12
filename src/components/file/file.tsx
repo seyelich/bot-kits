@@ -1,9 +1,9 @@
 import { memo } from 'react';
 import Styles from './file.module.css';
 import DocCircleIcon from '../../icons/others/doc-circle';
-import CheckIcon from '../../icons/others/Check';
+import CheckIcon from '../../icons/others/check';
 import IconButton from '../icon-button/icon-button';
-import CloseIcon from '../../icons/others/Close';
+import CloseIcon from '../../icons/others/close';
 
 interface FileProps {
   name: string;

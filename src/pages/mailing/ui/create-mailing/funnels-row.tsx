@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 
 import styles from './index.module.css';
 
-import CheckIcon from '../../../../icons/others/Check';
+import CheckIcon from '../../../../icons/others/check';
 
 interface IFunnelsRow {
   el: string;

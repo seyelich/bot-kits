@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import RegisterForm, { RegisterFormProps } from './RegisterForm';
+import RegisterForm, { RegisterFormProps } from './register-form';
 
 export default {
   title: 'UI/AuthForms/RegisterForm',

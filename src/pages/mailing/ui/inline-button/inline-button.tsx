@@ -2,9 +2,9 @@ import React, { FC, useState } from 'react';
 
 import styles from './index.module.css';
 
-import HorizontalIcon from '../../../../icons/others/Horizontal';
-import VerticalIcon from '../../../../icons/others/Vertical';
-import CheckIcon from '../../../../icons/others/Check';
+import HorizontalIcon from '../../../../icons/others/horizontal';
+import VerticalIcon from '../../../../icons/others/vertical';
+import CheckIcon from '../../../../icons/others/check';
 
 const InlineButtons: FC = () => {
   const [horizontal, setHorizontal] = useState(false);

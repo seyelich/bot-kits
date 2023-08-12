@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './add-bot-tutorials.module.css';
-import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
+import TutorialButton from '../../../../components/tutorial-button/tutorial-button';
 import Arrow24x24 from '../../../../components/icons/arrow-24x24/arrow-24x24';
 
 export default function AddBotTutorials() {

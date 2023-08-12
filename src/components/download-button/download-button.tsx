@@ -2,7 +2,7 @@
 import React, { FC, useRef, useState } from 'react';
 
 import styles from './index.module.css';
-import UploadIcon from '../../icons/others/Upload';
+import UploadIcon from '../../icons/others/upload';
 
 interface IDownloadButtons {
   size: 'large' | 'medium' | 'small';
