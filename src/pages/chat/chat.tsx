@@ -1,34 +1,41 @@
 import { useState, useEffect } from 'react';
-import Styles from './chat.module.css';
-import DialogsList from '../../components/dialogs-list/dialogs-list';
-import DialogsMain from '../../components/dialogs-main/dialogs-main';
-import DialogsSidebar from '../../components/dialogs-sidebar/dialogs-sidebar';
+import ChatDesktop from './chat-desktop/chat-desktop';
+import ChatMobile from './chat-mobile/chat-mobile';
 import { FAKE_DIALOGS } from './fakeData/fakeData';
 import { IFakeDialog } from './fakeData/fakeDataTypes';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 function Chat() {
   const [data, setData] = useState<IFakeDialog[] | null>(null);
   const [currentDialog, setCurrentDialog] = useState<IFakeDialog | null>(null);
+  const isMobile = useMediaQuery('(max-width: 360px)');
 
   useEffect(() => {
     setData(FAKE_DIALOGS);
-    setCurrentDialog(FAKE_DIALOGS[0]);
-  }, []);
+
+    if (isMobile) {
+      setCurrentDialog(null);
+    } else {
+      setCurrentDialog(FAKE_DIALOGS[0]);
+    }
+  }, [isMobile]);
+
+  if (isMobile) {
+    return (
+      <ChatMobile
+        data={data}
+        currentDialog={currentDialog}
+        setCurrentDialog={setCurrentDialog}
+      />
+    );
+  }
 
   return (
-    <div className={Styles.page}>
-      {data && currentDialog && (
-        <>
-          <DialogsList
-            data={data}
-            current={currentDialog}
-            currentHandler={setCurrentDialog}
-          />
-          <DialogsMain currentDialog={currentDialog} />
-          <DialogsSidebar currentDialog={currentDialog} />
-        </>
-      )}
-    </div>
+    <ChatDesktop
+      data={data}
+      currentDialog={currentDialog}
+      setCurrentDialog={setCurrentDialog}
+    />
   );
 }
 

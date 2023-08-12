@@ -10,7 +10,7 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 
 interface DialogsListProps {
   data: IFakeDialog[];
-  current: IFakeDialog;
+  current?: IFakeDialog | null;
   currentHandler: Dispatch<React.SetStateAction<IFakeDialog | null>>;
 }
 
@@ -68,7 +68,7 @@ const DialogsList = memo(
           {data.map((item) => (
             <DialogsListDialog
               data={item}
-              isChecked={item.id === current.id}
+              isChecked={item.id === current?.id}
               currentHandler={currentHandler}
               key={item.name}
             />
