@@ -4,6 +4,7 @@ import Styles from './file-modal.module.css';
 import IconButton from '../../../icon-button/IconButton';
 import CloseIcon from '../../../../icons/others/Close';
 import LogOut from '../../../../icons/others/LogOut';
+import File from '../../../file/file';
 
 interface FileModalProps {
   modalHandler: VoidFunction;
@@ -33,8 +34,16 @@ const FileModal = memo(({ modalHandler }: FileModalProps) => (
     </div>
     <div className={Styles.uploadedFiles}>
       {/* TODO доделать!! */}
-      <ul>
-        <li />
+      <ul className={Styles.list}>
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
+        <File name="Инфо.pdf" status="1.2 MB / 1.2 MB" isUploaded={false} />
       </ul>
     </div>
   </div>
