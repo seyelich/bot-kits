@@ -1,6 +1,6 @@
 .modalWindow {
-  width: 50%;
-  height: 40vh;
+  width: 526px;
+  height: 427px;
   min-height: 427px;
   box-sizing: border-box;
   border-radius: 30px;
@@ -8,8 +8,8 @@
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: auto;
-  position: fixed;
+  grid-template-rows: 100%;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px 0 20px 20px;
+  padding: 20px;
 }
 
 .inputFileLabel {
@@ -58,10 +58,29 @@
 }
 
 .uploadedFiles {
-  padding: 20px 20px 20px 0;
+  padding: 80px 20px;
   background-color: var(--default-grey-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
+}
+
+.list {
+  width: 100%;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 3px;
+}
+.list::-webkit-scrollbar-track {
+  background-color: #E8EBEF;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--default-dark-grey-color);
 }

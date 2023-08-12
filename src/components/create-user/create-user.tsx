@@ -4,7 +4,6 @@ import styles from './create-user.module.css';
 import CountrySelector from '../country-selector/country-selector';
 import useForm from '../../hooks/useForm';
 import { TUser } from '../../utils/types';
-// import CloseIcon from '../../icons/others/Close';
 
 type TCreateUserProps = {
   callback: (arg0: Omit<TUser, '_id'>) => void;
@@ -23,7 +22,8 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
   const { values, handleChange, setValues } = useForm(initialValues);
   const formRef = useRef<HTMLFormElement>(null);
 
-  function handleAdd() {
+  function handleAdd(evt: React.FormEvent) {
+    evt.preventDefault();
     callback({
       name: values.name,
       surname: values.surname,
@@ -38,7 +38,7 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Добавить пользователя</h2>
-      <form className={styles.form} ref={formRef}>
+      <form className={styles.form} ref={formRef} onSubmit={handleAdd}>
         <label className={styles.label} htmlFor="name">
           <span className={styles.required}>Имя</span>
           <input
@@ -120,10 +120,9 @@ export default function CreateUser({ callback, onClose }: TCreateUserProps) {
             type="blue"
             width={150}
             height={46}
+            buttonHtmlType="submit"
             extraClass={styles['add-button']}
-            // disabled={!formRef.current?.checkValidity()}
             disabled={!values.name || !values.surname || !values.messengerId}
-            onClick={() => handleAdd()}
           >
             ДОБАВИТЬ
           </Button>

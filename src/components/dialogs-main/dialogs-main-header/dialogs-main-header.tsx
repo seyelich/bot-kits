@@ -1,4 +1,5 @@
-import { memo, useState } from 'react';
+// TODO В компоненте много хардкода, нужно отрефакторить
+import { memo, useState, Dispatch } from 'react';
 import Styles from './dialogs-main-header.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
 import IconButton from '../../icon-button/IconButton';
@@ -8,58 +9,136 @@ import PlayIcon from '../../../icons/others/Play';
 import TrashIcon from '../../../icons/others/Trash';
 import SearchInput from '../../search-input/search-input';
 import { IFakeDialog } from '../../../pages/chat/fakeData/fakeDataTypes';
+import ChevronBigIcon from '../../../icons/others/ChevronBig';
+import MoreButtonIcon from '../../../icons/others/MoreButton';
+import useMediaQuery from '../../../hooks/useMediaQuery';
+import DialogsSidebarToggle from '../../dialogs-sidebar/dialogs-sidebar-toggle/dialogs-sidebar-toggle';
 
 interface DialogsMainHeaderProps {
   data: IFakeDialog;
+  currentHandler?: Dispatch<React.SetStateAction<IFakeDialog | null>>;
 }
 
-const DialogsMainHeader = memo(({ data }: DialogsMainHeaderProps) => {
-  const [showSearchInput, setSearchInput] = useState(false);
+const DialogsMainHeader = memo(
+  ({ data, currentHandler }: DialogsMainHeaderProps) => {
+    const [showSearchInput, setSearchInput] = useState(false);
+    const [isOpen, setOpen] = useState(false);
+    const isMobile = useMediaQuery('(max-width: 360px)');
 
-  const iconSize = 24;
+    const { avatar, name, role, lastAction, firstAction, files, images } = data;
+    const iconSize = 24;
 
-  const searchInputHandle = () => {
-    setSearchInput(!showSearchInput);
-  };
+    const mock = () => {};
 
-  return (
-    <div className={Styles.header}>
-      <div className={Styles.userInfo}>
-        <ChatAvatar img={data.avatar} isOnline={data.isOnline} />
-        <p className={Styles.name}>{data.name}</p>
-      </div>
-      <div className={Styles.actions}>
-        {showSearchInput && (
-          <SearchInput
-            placeholder="Поиск..."
-            onChange={() => {}}
-            size="small"
-            width="183px"
-          />
+    const searchInputHandle = () => {
+      setSearchInput(!showSearchInput);
+    };
+
+    const chevronButtonHandler = () => {
+      if (currentHandler) {
+        currentHandler(null);
+      }
+    };
+
+    const openHeaderHandler = () => {
+      if (isMobile) {
+        setOpen(!isOpen);
+      }
+    };
+
+    return (
+      <div className={`${Styles.header} ${isOpen && Styles.headerOpened}`}>
+        {isOpen ? (
+          <div className={`${Styles.sidebar} ${isOpen && Styles.sidebarO}`}>
+            <ChatAvatar img={avatar} isOnline={false} size="large" />
+            <p className={`${Styles.name} ${Styles.nameOpenedHeader}`}>
+              {name}
+            </p>
+            <p className={Styles.role}>{role === 'user' && 'Пользователь'}</p>
+            <DialogsSidebarToggle
+              lastAction={lastAction}
+              firstAction={firstAction}
+              files={files}
+              images={images}
+            />
+            <IconButton
+              width={iconSize}
+              height={iconSize}
+              icon={ChevronBigIcon({})}
+              onClick={openHeaderHandler}
+              extraClass={`${Styles.chevronButton} ${Styles.chevronButtonOpenedHeader}`}
+            />
+            <IconButton
+              width={iconSize}
+              height={iconSize}
+              icon={MoreButtonIcon({})}
+              onClick={mock}
+              extraClass={Styles.moreButtonOpenedHeader}
+            />
+          </div>
+        ) : (
+          <>
+            <IconButton
+              width={iconSize}
+              height={iconSize}
+              icon={ChevronBigIcon({})}
+              onClick={chevronButtonHandler}
+              extraClass={Styles.chevronButton}
+            />
+            <div className={Styles.userInfo} onClick={openHeaderHandler}>
+              <ChatAvatar
+                img={data.avatar}
+                isOnline={data.isOnline}
+                extraClass={Styles.avatar}
+              />
+              <p className={Styles.name}>{data.name}</p>
+              <p className={Styles.status}>В работе</p>
+            </div>
+            <div className={Styles.actions}>
+              {showSearchInput && (
+                <SearchInput
+                  placeholder="Поиск..."
+                  onChange={mock}
+                  size="small"
+                  width="183px"
+                />
+              )}
+              <div className={Styles.buttons}>
+                <IconButton
+                  width={iconSize}
+                  height={iconSize}
+                  icon={showSearchInput ? CloseIcon({}) : SearchIcon({})}
+                  onClick={searchInputHandle}
+                  extraClass={Styles.searchButton}
+                />
+                <IconButton
+                  width={iconSize}
+                  height={iconSize}
+                  icon={PlayIcon({})}
+                  onClick={mock}
+                  extraClass={isOpen ? Styles.playButtonHide : undefined}
+                />
+                <IconButton
+                  width={iconSize}
+                  height={iconSize}
+                  icon={MoreButtonIcon({})}
+                  onClick={mock}
+                  extraClass={Styles.moreButton}
+                />
+                <IconButton
+                  width={iconSize}
+                  height={iconSize}
+                  icon={TrashIcon({})}
+                  onClick={mock}
+                  extraClass={Styles.trashButton}
+                />
+              </div>
+            </div>
+          </>
         )}
-        <div className={Styles.buttons}>
-          <IconButton
-            width={iconSize}
-            height={iconSize}
-            icon={showSearchInput ? CloseIcon({}) : SearchIcon({})}
-            onClick={searchInputHandle}
-          />
-          <IconButton
-            width={iconSize}
-            height={iconSize}
-            icon={PlayIcon({})}
-            onClick={() => {}}
-          />
-          <IconButton
-            width={iconSize}
-            height={iconSize}
-            icon={TrashIcon({})}
-            onClick={() => {}}
-          />
-        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 export default DialogsMainHeader;
