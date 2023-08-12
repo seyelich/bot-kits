@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './ServiceBasics.module.css';
+import styles from './service-basics.module.css';
 import Arrow24x24 from '../../icons/arrow-24x24/arrow-24x24';
 
 const ServiceBasics: FC = () => (
