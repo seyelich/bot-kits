@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import styles from './header.module.css';
 import Menu24px from '../icons/menu-24px/menu-24px';
 import Help from '../icons/help/help';
-import NotificationsIcon from '../../icons/others/Notifications/Notifications';
+import NotificationsIcon from '../../icons/others/notifications/notifications';
 import avatar from '../../images/avatar.svg';
 import ArrowSmall from '../icons/arrow-small/arrow-small';
 import Logo from '../logo/logo';

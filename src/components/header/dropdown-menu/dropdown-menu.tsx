@@ -6,7 +6,7 @@ import styles from './dropdown-menu.module.css';
 import SettingsIcon from '../../../icons/others/settings';
 import PaymentIcon from '../../../icons/others/payment';
 import ExitIcon from '../../../icons/others/exit';
-import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
+import NotificationsIcon from '../../../icons/others/notifications/notifications';
 import InfoIcon from '../../../icons/others/info';
 import { Context } from '../../../app';
 import useMediaQuery from '../../../hooks/use-media-query';

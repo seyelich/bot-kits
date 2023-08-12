@@ -3,7 +3,7 @@ import { Dispatch, FC, SetStateAction, useState } from 'react';
 import styles from './popup-messages.module.css';
 import CloseIcon from '../../../icons/others/close';
 
-import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
+import NotificationsIcon from '../../../icons/others/notifications/notifications';
 import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IPopupMessages {
