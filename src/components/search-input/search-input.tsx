@@ -1,8 +1,8 @@
 import { ChangeEventHandler, useState, Dispatch } from 'react';
 import Styles from './search-input.module.css';
-import SearchIcon from '../../icons/others/Search';
-import IconButton from '../icon-button/IconButton';
-import FilterIcon from '../../icons/others/Filter';
+import SearchIcon from '../../icons/others/search';
+import IconButton from '../icon-button/icon-button';
+import FilterIcon from '../../icons/others/filter';
 
 interface SearchInputProps {
   placeholder: string;

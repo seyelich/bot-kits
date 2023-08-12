@@ -2,7 +2,7 @@ import { memo, Dispatch } from 'react';
 import Styles from './dialogs-list-dialog.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
 import { IFakeDialog } from '../../../pages/chat/fakeData/fakeDataTypes';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../hooks/use-media-query';
 
 interface DialogsListDialogProps {
   data: IFakeDialog;

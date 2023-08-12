@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './add-bot-tutorials.module.css';
-import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
-import Arrow24x24 from '../../../../components/icons/Arrow24x24/Arrow24x24';
+import TutorialButton from '../../../../components/tutorial-button/tutorial-button';
+import Arrow24x24 from '../../../../components/icons/arrow-24x24/arrow-24x24';
 
 export default function AddBotTutorials() {
   const [isActive, setIsActive] = useState(true);

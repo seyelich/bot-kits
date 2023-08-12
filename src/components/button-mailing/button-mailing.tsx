@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-console */
 import { Dispatch, FC, SetStateAction, useState } from 'react';
-import CheckIcon from '../../icons/others/Check';
+import CheckIcon from '../../icons/others/check';
 import styles from './button.mailing.module.css';
 
 interface IButtonMailing {

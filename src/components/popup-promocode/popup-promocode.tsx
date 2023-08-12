@@ -1,7 +1,7 @@
-import Button from '../Button/Button';
+import Button from '../button/button';
 import styles from './popup-promocode.module.css';
 import TextInput from '../input/input';
-import useForm from '../../hooks/useForm';
+import useForm from '../../hooks/use-form';
 
 type TPopupProps = {
   onClose: () => void;

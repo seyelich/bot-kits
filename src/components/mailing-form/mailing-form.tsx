@@ -10,7 +10,7 @@ import ButtonWeek from '../button-week/button-week';
 import InputSlider from '../input-slider/input-slider';
 import ButtonMailing from '../button-mailing/button-mailing';
 import { days, weekDays, months } from '../../utils/calendar';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 
 const timeOptions = ['Сейчас', 'Дата/Время'];
 const repeatOptions = [

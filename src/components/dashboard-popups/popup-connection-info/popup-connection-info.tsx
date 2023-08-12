@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from 'react';
 import styles from './popup-connection-info.module.css';
-import CloseIcon from '../../../icons/others/Close';
+import CloseIcon from '../../../icons/others/close';
 import CopyAccountSettingsIcon from '../icon/copy-account-settings-icon';
 
 interface IPopupConnectionInfo {

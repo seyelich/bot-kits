@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Outlet, useNavigate } from 'react-router';
 
 import styles from './index.module.css';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 
 const Mailing: FC = () => {
   const navigate = useNavigate();

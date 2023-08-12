@@ -3,7 +3,7 @@ import ChatDesktop from './chat-desktop/chat-desktop';
 import ChatMobile from './chat-mobile/chat-mobile';
 import { FAKE_DIALOGS } from './fakeData/fakeData';
 import { IFakeDialog } from './fakeData/fakeDataTypes';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import useMediaQuery from '../../hooks/use-media-query';
 
 function Chat() {
   const [data, setData] = useState<IFakeDialog[] | null>(null);

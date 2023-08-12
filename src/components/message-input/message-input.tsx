@@ -1,12 +1,12 @@
 import { useState, ChangeEventHandler } from 'react';
 import Styles from './message-input.module.css';
-import IconButton from '../icon-button/IconButton';
-import EmojiIcon from '../../icons/others/Emoji';
-import XCircleIcon from '../../icons/others/XCircle';
-import FileIcon from '../../icons/others/File';
-import SlashIcon from '../../icons/others/Slash';
-import ZapIcon from '../../icons/others/Zap';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import IconButton from '../icon-button/icon-button';
+import EmojiIcon from '../../icons/others/emoji';
+import XCircleIcon from '../../icons/others/x-circle';
+import FileIcon from '../../icons/others/file';
+import SlashIcon from '../../icons/others/slash';
+import ZapIcon from '../../icons/others/zap';
+import useMediaQuery from '../../hooks/use-media-query';
 
 interface MessageInputProps {
   placeholder: string;

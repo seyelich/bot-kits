@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import DeepLinkIcon from '../../icons/others/DeepLink';
+import DeepLinkIcon from '../../icons/others/deep-link';
 import styles from './link-with-copy-btn.module.css';
 
 interface LinkWithCopyButtonProps {

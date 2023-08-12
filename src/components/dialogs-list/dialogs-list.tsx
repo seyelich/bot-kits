@@ -3,10 +3,10 @@ import Styles from './dialogs-list.module.css';
 import SearchInput from '../search-input/search-input';
 import DialogsListDialog from './dialogs-list-dialog/dialogs-list-dialog';
 import { IFakeDialog } from '../../pages/chat/fakeData/fakeDataTypes';
-import IconButton from '../icon-button/IconButton';
-import SearchIcon from '../../icons/others/Search';
-import MoreButtonIcon from '../../icons/others/MoreButton';
-import useMediaQuery from '../../hooks/useMediaQuery';
+import IconButton from '../icon-button/icon-button';
+import SearchIcon from '../../icons/others/search';
+import MoreButtonIcon from '../../icons/others/more-button';
+import useMediaQuery from '../../hooks/use-media-query';
 
 interface DialogsListProps {
   data: IFakeDialog[];

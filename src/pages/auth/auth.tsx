@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
-import RegisterForm from '../../components/register-form/RegisterForm';
-import Logo from '../../components/Logo/Logo';
+import RegisterForm from '../../components/register-form/register-form';
+import Logo from '../../components/logo/logo';
 import styles from './auth.module.css';
-import LoginForm from '../../components/login-form/LoginForm';
-import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
-import CloseIcon from '../../icons/others/Close';
+import LoginForm from '../../components/login-form/login-form';
+import ForgotPassForm from '../../components/forgot-pass-form/forgot-pass-form';
+import CloseIcon from '../../icons/others/close';
 // eslint-disable-next-line import/no-cycle
-import { Context } from '../../App';
+import { Context } from '../../app';
 
 export default function Auth() {
   const { logIn } = useContext(Context);

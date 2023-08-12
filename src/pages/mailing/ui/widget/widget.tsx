@@ -5,13 +5,13 @@ import { FC, useContext, useState } from 'react';
 
 import styles from './widget.module.css';
 
-import BotLogoIcon from '../../../../icons/others/BotLogo';
-import RobotIcon from '../../../../icons/others/Robot';
-import ChevronBigIcon from '../../../../icons/others/ChevronBig';
-import Button from '../../../../components/Button/Button';
-import CloseIcon from '../../../../icons/others/Close';
-import { Context } from '../../../../App';
-import useMediaQuery from '../../../../hooks/useMediaQuery';
+import BotLogoIcon from '../../../../icons/others/bot-logo';
+import RobotIcon from '../../../../icons/others/robot';
+import ChevronBigIcon from '../../../../icons/others/chevron-big';
+import Button from '../../../../components/button/button';
+import CloseIcon from '../../../../icons/others/close';
+import { Context } from '../../../../app';
+import useMediaQuery from '../../../../hooks/use-media-query';
 
 interface IWidget {
   italicText?: boolean;

@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactNode, useEffect, useState } from 'react';
 import SearchInput from '../../components/search-input/search-input';
-import IconButton from '../../components/icon-button/IconButton';
+import IconButton from '../../components/icon-button/icon-button';
 
 import moreIcon from './icons/more';
 import styles from './share.module.css';
-import TrashIcon from '../../icons/others/Trash';
-import UploadIcon from '../../icons/others/Upload';
-import DownloadIcon from '../../icons/others/Download';
-import Button from '../../components/Button/Button';
+import TrashIcon from '../../icons/others/trash';
+import UploadIcon from '../../icons/others/upload';
+import DownloadIcon from '../../icons/others/download';
+import Button from '../../components/button/button';
 import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
@@ -16,7 +16,7 @@ import PerPageSelector from '../../components/per-page-selector/per-page-selecto
 import useFakeUsers from './use-fake-users';
 import Modal from '../../components/modal/modal';
 import CreateUser from '../../components/create-user/create-user';
-import useModal from '../../hooks/useModal';
+import useModal from '../../hooks/use-modal';
 
 function MoreIcon() {
   return (
