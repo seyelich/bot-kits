@@ -2,6 +2,7 @@ import { FC, useRef, useState } from 'react';
 import styles from './BotTemplateElement.module.css';
 import Plus from '../../icons/Plus/Plus';
 import PopupBotDetails from '../../dashboard-popups/bot-details-popup/popup-bot-details';
+import useModal from '../../../hooks/useModal';
 
 interface IBotTemplate {
   icon: JSX.Element;
@@ -10,7 +11,7 @@ interface IBotTemplate {
 
 const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
-  const [isBotDetailsPopupOpened, setIsBotDetailsPopupOpened] = useState(false);
+  const { isModalOpen, openModal, closeModal } = useModal();
   const MouseOver = () => setIsMouseOver(true);
   const MouseOut = () => setIsMouseOver(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -21,9 +22,7 @@ const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
         className={styles.button}
         onMouseEnter={MouseOver}
         onMouseLeave={MouseOut}
-        onClick={() => {
-          setIsBotDetailsPopupOpened(true);
-        }}
+        onClick={openModal}
       >
         {icon}
         <span className={styles.button_add}>
@@ -39,8 +38,8 @@ const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
       <PopupBotDetails
         icon={icon}
         title={title}
-        isOpen={isBotDetailsPopupOpened}
-        setIsBotDetailsPopupOpened={setIsBotDetailsPopupOpened}
+        isOpen={isModalOpen}
+        closeModal={closeModal}
       />
     </div>
   );

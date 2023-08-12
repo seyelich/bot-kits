@@ -16,6 +16,7 @@ import PerPageSelector from '../../components/per-page-selector/per-page-selecto
 import useFakeUsers from './use-fake-users';
 import Modal from '../../components/modal/modal';
 import CreateUser from '../../components/create-user/create-user';
+import useModal from '../../hooks/useModal';
 
 function MoreIcon() {
   return (
@@ -35,6 +36,7 @@ export default function Share() {
   const [users, setUsers] = useState<Array<TUser>>([]);
   const [modalOpened, setModalOpened] = useState<boolean>(false);
   const { getUsers, removeUsers, addUser } = useFakeUsers();
+  const { isModalOpen, openModal, closeModal } = useModal();
 
   function refreshUsers() {
     const res = getUsers(perPage, (current - 1) * perPage);
@@ -63,7 +65,7 @@ export default function Share() {
           width={237}
           height={46}
           extraClass={styles.greenbutton}
-          onClick={() => setModalOpened(true)}
+          onClick={openModal}
         />
       </div>
       <div className={styles.filter}>
@@ -99,7 +101,7 @@ export default function Share() {
         users={users}
         checked={checked}
         setChecked={setChecked}
-        setModalOpened={setModalOpened}
+        openModal={openModal}
       />
       <div className={styles['page-control']}>
         <PageControl
@@ -114,12 +116,9 @@ export default function Share() {
           <PerPageSelector perPage={perPage} setPerPage={setPerPage} />
         </div>
       </div>
-      {modalOpened && (
-        <Modal onClose={() => setModalOpened(false)}>
-          <CreateUser
-            callback={addUser}
-            onClose={() => setModalOpened(false)}
-          />
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
+          <CreateUser callback={addUser} onClose={closeModal} />
         </Modal>
       )}
     </>

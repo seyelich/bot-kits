@@ -1,17 +1,14 @@
-import { Dispatch, SetStateAction } from 'react';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import Button from '../../Button/Button';
 import styles from './subscription-status-not-subscribe.module.css';
 
 type TProps = {
-  setOpenPopup: Dispatch<SetStateAction<boolean>>;
+  openModal: () => void;
 };
 
-export default function SubscriptionStatusNotSubscribe({
-  setOpenPopup,
-}: TProps) {
-  const openPopupTarif = () => {
-    setOpenPopup(true);
-  };
+export default function SubscriptionStatusNotSubscribe({ openModal }: TProps) {
+  const mobile = useMediaQuery('(max-width: 415px)');
+
   return (
     <div className={styles.subscription}>
       <h4 className={styles.text}>У вас нет активных подписок</h4>
@@ -23,9 +20,9 @@ export default function SubscriptionStatusNotSubscribe({
       <Button
         type="green"
         text="ВЫБРАТЬ ТАРИФ"
-        width={340}
+        width={mobile ? 272 : 340}
         height={56}
-        onClick={openPopupTarif}
+        onClick={openModal}
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from 'react';
+import { FC } from 'react';
 import styles from './popup-bot-details.module.css';
 import CloseIcon from '../../../icons/others/Close';
 import useMediaQuery from '../../../hooks/useMediaQuery';
@@ -7,22 +7,22 @@ interface IPopupBotDetails {
   icon: React.ReactNode;
   title: string | null | undefined;
   isOpen: boolean;
-  setIsBotDetailsPopupOpened?: Dispatch<SetStateAction<boolean>>;
+  closeModal?: () => void;
 }
 
 const PopupBotDetails: FC<IPopupBotDetails> = ({
   icon,
   title,
   isOpen,
-  setIsBotDetailsPopupOpened,
+  closeModal,
 }) => {
   const matches = useMediaQuery('(max-width: 414px)');
   return (
     <div
       className={isOpen ? styles.popup : styles.popup_hidden}
       onClick={(e) => {
-        if (e.target === e.currentTarget) {
-          setIsBotDetailsPopupOpened?.(false);
+        if (e.target === e.currentTarget && closeModal) {
+          closeModal();
         }
       }}
     >
@@ -65,13 +65,7 @@ const PopupBotDetails: FC<IPopupBotDetails> = ({
             ДОБАВИТЬ БОТА
           </button>
         </div>
-        <button
-          type="button"
-          className={styles.close_btn}
-          onClick={() => {
-            setIsBotDetailsPopupOpened?.(false);
-          }}
-        >
+        <button type="button" className={styles.close_btn} onClick={closeModal}>
           <CloseIcon />
         </button>
       </div>

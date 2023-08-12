@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import SubscriptionStatus from '../../components/subscription-status/subscription-status';
 import Button from '../../components/Button/Button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
@@ -12,14 +11,14 @@ import {
 } from '../../services/subcriription-fake-data';
 import Modal from '../../components/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';
+import useModal from '../../hooks/useModal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 export default function Subscription() {
   const subcriription = subscribeActive;
   const { status } = subcriription;
-  const [openTarif, setOpenTarif] = useState(false);
-  const closePopup = () => {
-    setOpenTarif(false);
-  };
+  const { isModalOpen, openModal, closeModal } = useModal();
+  const tablet = useMediaQuery('(max-width: 768px)');
 
   return (
     <main className={styles.container}>
@@ -29,23 +28,21 @@ export default function Subscription() {
           <Button
             type="green"
             text="СМЕНИТЬ ТАРИФ"
-            width={188}
-            height={46}
-            onClick={() => {
-              setOpenTarif(true);
-            }}
+            width={tablet ? 320 : 188}
+            height={tablet ? 56 : 46}
+            onClick={openModal}
           />
         </div>
       )}
       <section className={styles.subscription}>
         <SubscriptionStatus
           subcriription={subcriription}
-          setOpenTarif={setOpenTarif}
+          openModalTarif={openModal}
         />
         <SubscriptionTable payments={payments} />
       </section>
-      {openTarif && (
-        <Modal onClose={closePopup}>
+      {isModalOpen && (
+        <Modal onClose={closeModal}>
           <PopupTarif />
         </Modal>
       )}

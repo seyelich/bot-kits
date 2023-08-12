@@ -1,10 +1,11 @@
-import { Dispatch, SetStateAction, useState } from 'react';
 import Button from '../Button/Button';
 import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe/subscription-status-not-subscribe';
 import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscription-status-subscribe';
 import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
 import Modal from '../modal/modal';
+import useModal from '../../hooks/useModal';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 type TProps = {
   subcriription: {
@@ -15,30 +16,30 @@ type TProps = {
     reason?: string;
     balance?: string;
   };
-  setOpenTarif: Dispatch<SetStateAction<boolean>>;
+  openModalTarif: () => void;
 };
 
 export default function SubscriptionStatus({
   subcriription,
-  setOpenTarif,
+  openModalTarif,
 }: TProps) {
   const { status } = subcriription;
-  const [openPromo, setOpenPromo] = useState(false);
-  const openPopupPromocode = () => {
-    setOpenPromo(true);
-  };
-  const closePopup = () => {
-    setOpenPromo(false);
-  };
+  const {
+    isModalOpen,
+    openModal: openModalPromo,
+    closeModal: closeModalPromo,
+  } = useModal();
+  const mobile = useMediaQuery('(max-width: 415px)');
+  const tablet = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className={styles.container}>
       {status === 'notSubscribe' ? (
-        <SubscriptionStatusNotSubscribe setOpenPopup={setOpenTarif} />
+        <SubscriptionStatusNotSubscribe openModal={openModalTarif} />
       ) : (
         <SubscriptionStatusSubscribe
           subcriription={subcriription}
-          setOpenPopup={setOpenTarif}
+          openModal={openModalTarif}
         />
       )}
       <div className={styles.promo}>
@@ -49,14 +50,14 @@ export default function SubscriptionStatus({
         <Button
           type="grey"
           text="АКТИВИРОВАТЬ ПРОМОКОД"
-          width={229}
-          height={60}
-          onClick={openPopupPromocode}
+          width={mobile ? 272 : tablet ? 340 : 229}
+          height={tablet ? 56 : 60}
+          onClick={openModalPromo}
         />
       </div>
-      {openPromo && (
-        <Modal onClose={closePopup}>
-          <PopupPromocode onClose={closePopup} />
+      {isModalOpen && (
+        <Modal onClose={closeModalPromo}>
+          <PopupPromocode onClose={closeModalPromo} />
         </Modal>
       )}
     </div>
