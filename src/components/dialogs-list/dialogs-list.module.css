@@ -21,7 +21,7 @@
 }
 
 .buttonsCnt {
-  display: flex;
+  display: none;
   gap: 12px;
 }
 
@@ -46,6 +46,10 @@
   .heading {
     font-size: var(--h3-font-size);
     line-height: var(--h3-line-height);
+  }
+
+  .buttonsCnt {
+    display: flex;
   }
 
   .list {
