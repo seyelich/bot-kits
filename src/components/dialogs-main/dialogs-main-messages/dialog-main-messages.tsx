@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Styles from './dialog-main-messages.module.css';
 import Message from './message/message';
 
-import { IFakeDialog } from '../../../pages/chat/fakeData/fakeDataTypes';
+import { IFakeDialog } from '../../../pages/chat/fake-data/fake-data-types';
 
 interface DialogMainMessagesProps {
   currentDialog: IFakeDialog;

@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import Styles from './dialogs-sidebar.module.css';
 import ChatAvatar from '../chat-avatar/chat-avatar';
-import { IFakeDialog } from '../../pages/chat/fakeData/fakeDataTypes';
+import { IFakeDialog } from '../../pages/chat/fake-data/fake-data-types';
 import DialogsSidebarToggle from './dialogs-sidebar-toggle/dialogs-sidebar-toggle';
 
 interface DialogsSidebarProps {

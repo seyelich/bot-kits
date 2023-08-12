@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import avatar from './img/defaultAvatar.png';
-import { IFakeDialog } from './fakeDataTypes';
+import { IFakeDialog } from './fake-data-types';
 import img1 from './img/imageFromDialog.png';
 import img2 from './img/imageFromDialog2.png';
 

@@ -1,6 +1,6 @@
 import { memo, Dispatch } from 'react';
 import Styles from '../chat.module.css';
-import { IFakeDialog } from '../fakeData/fakeDataTypes';
+import { IFakeDialog } from '../fake-data/fake-data-types';
 import DialogsList from '../../../components/dialogs-list/dialogs-list';
 import DialogsMain from '../../../components/dialogs-main/dialogs-main';
 import DialogsSidebar from '../../../components/dialogs-sidebar/dialogs-sidebar';
