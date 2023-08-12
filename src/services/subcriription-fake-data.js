@@ -34,6 +34,7 @@ export const subscribeNotActive = {
 
 export const notSubscribe = {
   status: 'notSubscribe',
+  balance: '0',
 };
 
 export const paymentsEmpty = [];
