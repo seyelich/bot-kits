@@ -20,7 +20,7 @@
 }
 
 .title {
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono';
   font-weight: 500;
   font-size: 48px;
   line-height: 52.8px;
@@ -78,7 +78,7 @@ font-family: "IBM Plex Mono", sans-serif;
 
 .noticePage__titleText {
   color: #fff;
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono';
   font-size: 64px;
   font-weight: 500;
   line-height: 110%;
@@ -92,7 +92,7 @@ font-family: "IBM Plex Mono", sans-serif;
   border-radius: 14px;
   background: #435cdb;
   color: #2fa;
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono';
   font-size: 32px;
   font-weight: 600;
   line-height: 130%;
@@ -183,7 +183,7 @@ font-family: "IBM Plex Mono", sans-serif;
     border-radius: 14px;
     background: #435cdb;
     color: #2fa;
-  font-family: "IBM Plex Mono", sans-serif;
+    font-family: 'IBM Plex Mono';
     font-size: 24px;
     font-weight: 600;
     line-height: 130%;
@@ -270,7 +270,7 @@ font-family: "IBM Plex Mono", sans-serif;
   }
 
   .noticePage__titleText {
-  font-family: "IBM Plex Mono", sans-serif;
+    font-family: 'IBM Plex Mono';
     font-size: 32px;
     font-weight: 500;
     line-height: 130%;

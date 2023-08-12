@@ -80,7 +80,7 @@
 .filterOption {
   padding: 9px 16px 8px;
   color: #2E293D;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);

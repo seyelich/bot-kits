@@ -17,7 +17,7 @@
 }
 
 .title {
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: "IBM Plex Mono";
   font-size: var(--h3-font-size);
   font-style: normal;
   font-weight: var(--bold);
@@ -27,7 +27,7 @@
 
 .comment__line {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans";
   font-size: var(--s-font-size);
   font-style: normal;
   font-weight: var(--normal);

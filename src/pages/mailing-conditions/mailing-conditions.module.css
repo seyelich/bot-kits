@@ -25,7 +25,7 @@
 
 .mailing__title {
   margin-top: 20px;
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: IBM Plex Mono;
   font-size: 24px;
   font-weight: 600;
   line-height: 31px;
@@ -87,7 +87,7 @@ font-family: "IBM Plex Mono", sans-serif;
   display: flex;
   flex-direction: row;
   column-gap: 32px;
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: IBM Plex Mono;
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
@@ -109,7 +109,7 @@ font-family: "IBM Plex Mono", sans-serif;
 }
 
 .navigation__exit {
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: IBM Plex Mono;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -128,7 +128,7 @@ font-family: "IBM Plex Mono", sans-serif;
 }
 
 .button__text {
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: IBM Plex Mono;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;

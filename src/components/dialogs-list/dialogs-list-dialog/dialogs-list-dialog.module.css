@@ -29,7 +29,7 @@
 
 .name {
   color: var(--primary-text-color);
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono';
   font-size: var(--l-font-size);
   font-weight: var(--semi-bold);
   line-height: var(--m-line-height);
@@ -40,7 +40,7 @@ font-family: "IBM Plex Mono", sans-serif;
 
 .last {
   color: var(--default-dark-grey-color);
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open sans';
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);
@@ -67,7 +67,7 @@ font-family: 'Open Sans', sans-serif;
   border-radius: 100%;
   align-items: center;
   justify-content: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Open Sans;
   font-size: 10px;
   font-style: normal;
   font-weight: 600;

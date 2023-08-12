@@ -3,8 +3,11 @@ import Button from '../../components/button/button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
 import {
+  // paymentsEmpty,
   payments,
+  // notSubscribe,
   subscribeActive,
+  // subscribeNotActive,
 } from '../../services/subcriription-fake-data';
 import Modal from '../../components/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';

@@ -14,7 +14,7 @@
 
 .name {
   color: var(--primary-text-color);
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: var(--xs-font-size);
   font-weight: var(--normal);
   line-height: 150%;
@@ -27,7 +27,7 @@ font-family: 'Open Sans', sans-serif;
 .status {
   color: var(--default-dark-grey-color);
   font-feature-settings: 'clig' off, 'liga' off;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 8px;
   font-weight: var(--normal);
   line-height: 150%;

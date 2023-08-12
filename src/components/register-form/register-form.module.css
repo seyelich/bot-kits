@@ -22,7 +22,7 @@
 .registerForm__socialContainer__title {
   color: #fff;
   text-align: center;
-font-family: "IBM Plex Mono", sans-serif;
+  font-family: 'IBM Plex Mono';
   font-size: 20px;
   font-weight: 500;
   line-height: 130%;
@@ -40,7 +40,7 @@ font-family: "IBM Plex Mono", sans-serif;
   align-items: center;
   justify-content: center;
   margin: 0;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -115,7 +115,7 @@ font-family: 'Open Sans', sans-serif;
   border: none;
   border-radius: 4px;
   color: #fff;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
@@ -144,7 +144,7 @@ font-family: 'Open Sans', sans-serif;
 .registerForm__footer__text {
   color: #fff;
   text-align: center;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
@@ -154,7 +154,7 @@ font-family: 'Open Sans', sans-serif;
   cursor: pointer;
   margin-left: 10px;
   color: #fff;
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
   font-size: 14px;
   font-weight: 600;
   line-height: 150%;
@@ -262,7 +262,7 @@ font-family: 'Open Sans', sans-serif;
 
 @media screen and (max-width: 400px) {
   .registerForm__socialContainer__title {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
     max-width: 320px;
     font-size: 15px;
     font-weight: 700;
@@ -271,6 +271,8 @@ font-family: 'Open Sans', sans-serif;
     margin: 25px 0 0;
   }
 
+  .registerForm__socialContainer__navBar {
+  }
   .registerForm__socialContainer__footerText {
     position: relative;
     top: 10px;

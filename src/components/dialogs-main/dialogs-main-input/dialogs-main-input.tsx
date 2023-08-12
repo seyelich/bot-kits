@@ -6,12 +6,14 @@ import FileModal from './file-modal/file-modal';
 import useModal from '../../../hooks/use-modal';
 
 const DialogMainInput = memo(() => {
+  // const [isOpenFileModal, setFileModal] = useState(false);
   const { isModalOpen: isOpenFileModal, openModal, closeModal } = useModal();
 
   // TODO Заглушка. Потом убрать
   const mock = () => {};
 
   const fileModalHandler = () => {
+    // setFileModal(!isOpenFileModal);
     if (isOpenFileModal) {
       closeModal();
     } else {
@@ -21,8 +23,7 @@ const DialogMainInput = memo(() => {
 
   const submitForm: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    // eslint-disable-next-line no-console
-    console.log('Сообщение отправлено');
+    // console.log('Сообщение отправлено');
   };
 
   return (
