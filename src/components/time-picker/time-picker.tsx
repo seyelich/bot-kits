@@ -8,8 +8,6 @@ import Arrow from '../../icons/others/arrow';
 
 export default function TimePickerInput() {
   const [value, setValue] = useState('04:00');
-  // const ref = useRef<HTMLInputElement>(null);
-  // const rect = ref?.current?.getBoundingClientRect();
 
   const onChange = (timeValue: string) => {
     setValue(timeValue);

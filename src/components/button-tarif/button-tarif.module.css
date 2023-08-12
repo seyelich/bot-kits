@@ -80,7 +80,7 @@
 }
 
 .tarif_name {
-  font-family: "Century Gothic";
+  font-family: 'Century Gothic', sans-serif;
   font-size: var(--h4-font-size);
   font-style: normal;
   font-weight: 700;
@@ -90,7 +90,7 @@
 }
 
 .tarif_price {
-  font-family: "Century Gothic";
+  font-family: 'Century Gothic', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -101,7 +101,7 @@
 }
 
 .tarif_currency {
-  font-family: "Helvetica Neue";
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 100;

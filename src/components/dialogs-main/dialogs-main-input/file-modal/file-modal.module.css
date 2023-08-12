@@ -2,7 +2,6 @@
   width: 526px;
   height: 427px;
   min-height: 427px;
-  box-sizing: border-box;
   border-radius: 30px;
   background-color: #fff;
   box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
@@ -33,7 +32,7 @@
   color: var(--default-blue-color);
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: 'IBM Plex Mono';
+font-family: "IBM Plex Mono", sans-serif;
   font-size: var(--h4-font-size);
   font-weight: var(--semi-bold);
   line-height: var(--h4-line-height);

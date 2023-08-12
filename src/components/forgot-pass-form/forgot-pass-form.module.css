@@ -4,7 +4,6 @@
   min-height: 590px;
   height: 100%;
   border-radius: 30px;
-  border-radius: 30px;
   background: #2743ce;
   display: flex;
   flex-direction: column;
@@ -28,7 +27,7 @@
 .forgotPassForm__formTitle {
   color: #fff;
   text-align: center;
-  font-family: 'IBM Plex Mono';
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 130%;

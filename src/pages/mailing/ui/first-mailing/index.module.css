@@ -13,7 +13,7 @@
 }
 
 .content__title {
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 24px;
   line-height: 31px;
   letter-spacing: 0px;
@@ -22,7 +22,7 @@
 }
 
 .content__subtitle {
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.30000001192092896px;

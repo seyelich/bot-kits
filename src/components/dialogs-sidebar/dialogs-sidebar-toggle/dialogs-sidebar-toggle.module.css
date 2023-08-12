@@ -20,7 +20,7 @@
 
 .optionName {
   text-align: center;
-  font-family: 'Open Sans';
+font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--bold);
   line-height: var(--s-line-height);

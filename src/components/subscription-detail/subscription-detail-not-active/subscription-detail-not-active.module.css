@@ -13,7 +13,7 @@
 
 .comment__line {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-style: normal;
   font-weight: var(--normal);

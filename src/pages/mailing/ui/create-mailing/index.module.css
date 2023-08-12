@@ -38,7 +38,7 @@
   flex-direction: row;
   column-gap: 32px;
   margin-bottom: 16px;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
@@ -55,7 +55,7 @@
 
 .block__title {
   margin: 0;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -100,7 +100,7 @@
   border: none;
   border-radius: 5px;
   background-color: #f8f9fb;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -163,7 +163,7 @@
   padding: 9px 16px 8px;
   background-color: #fff;
   border: none;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -200,7 +200,7 @@
   border: none;
   border-radius: 10px;
   background-color: #f8f9fb;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -220,7 +220,7 @@
 }
 
 .textarea__input_italic {
-  font-family: IBM Plex Sans;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .textarea__input::placeholder {
@@ -239,7 +239,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -311,7 +311,7 @@
 }
 
 .navigation__exit {
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -341,7 +341,7 @@
 
 .select__text {
   margin: 0;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -385,7 +385,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 20px;
@@ -405,7 +405,7 @@
 }
 
 .button__text {
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -460,6 +460,7 @@
   .block__icons {
     flex-wrap: nowrap;
     overflow-x: scroll;
+    padding: 24px;
   }
 
   .block__icons::-webkit-scrollbar {
@@ -501,9 +502,5 @@
 
   .block {
     position: relative;
-  }
-
-  .block__icons {
-    padding: 24px;
   }
 }

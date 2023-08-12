@@ -12,7 +12,7 @@
   line-height: var(--h2-line-height);
   letter-spacing: var(--h2-letter-space);
   margin: 0;
-  font-family: 'IBM Plex Mono';
+font-family: "IBM Plex Mono", sans-serif;
 }
 
 .iconContainer {
@@ -71,7 +71,7 @@
   font-size: var(--h3-font-size);
   font-weight: var(--bold);
   line-height: var(--h3-line-height);
-  font-family: 'IBM Plex Mono';
+font-family: "IBM Plex Mono", sans-serif;
 }
 
 .par {

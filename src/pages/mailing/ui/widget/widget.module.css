@@ -56,7 +56,7 @@
 
 .widget__type {
   margin: 0 0;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -67,7 +67,7 @@
 
 .widget__name {
   margin: 0;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -93,13 +93,12 @@
 .widget__chatText_container {
   max-width: 220px;
   max-height: 400px;
-  height: 400px;
   overflow-y: auto;
   border-radius: 10px;
   background-color: #f8f9fb;
   height: fit-content;
   margin: 0;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 15px;
@@ -118,7 +117,7 @@
   height: fit-content;
   padding: 12px 12px 24px;
   margin: 0;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 15px;
@@ -132,7 +131,7 @@
   bottom: 5px;
   right: 10px;
   margin: 0;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-size: 8px;
   font-weight: 400;
   line-height: 12px;
@@ -146,7 +145,7 @@
 }
 
 .widget__chatText_italic {
-  font-family: IBM Plex Sans;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .widget__chatText_title {
@@ -176,7 +175,7 @@
 
 .widget__footerText {
   margin: 0 4px 0 0;
-  font-family: IBM Plex Mono;
+font-family: "IBM Plex Mono", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;

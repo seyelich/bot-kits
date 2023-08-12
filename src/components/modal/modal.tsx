@@ -43,7 +43,6 @@ export default function Modal({
         )}
         {children}
       </div>
-      {/* {children} */}
     </section>,
     document.getElementById('modals')!
   );
