@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import styles from './mailing-conditions.module.css';
 
 import MailingForm from '../../components/mailing-form/mailing-form';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 import Widget from '../mailing/ui/widget/widget';
 import WidgetMobileIcon from '../mailing/ui/widget/widget-mobile-icon/WidgetMobileIcon';
 import useMediaQuery from '../../hooks/useMediaQuery';

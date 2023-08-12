@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC, useState } from 'react';
-import styles from './BotTemplates.module.css';
-import BotTemplateElement from './BotTemplateElement/BotTemplateElement';
+import styles from './bot-templates.module.css';
+import BotTemplateElement from './bot-template-element/bot-template-element';
 import AnsweringMachine from '../icons/bot-templates/AnsweringMachine/AnsweringMachine';
 import FoodDelivery from '../icons/bot-templates/FoodDelivery/FoodDelivery';
 import DemoBot from '../icons/bot-templates/DemoBot/DemoBot';

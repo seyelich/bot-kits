@@ -8,7 +8,7 @@ import styles from './widget.module.css';
 import BotLogoIcon from '../../../../icons/others/BotLogo';
 import RobotIcon from '../../../../icons/others/Robot';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
-import Button from '../../../../components/Button/Button';
+import Button from '../../../../components/button/button';
 import CloseIcon from '../../../../icons/others/Close';
 import { Context } from '../../../../app';
 import useMediaQuery from '../../../../hooks/useMediaQuery';

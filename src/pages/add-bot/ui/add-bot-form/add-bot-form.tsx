@@ -1,6 +1,6 @@
 import { Dispatch, FormEvent, SetStateAction, useState } from 'react';
 import { useNavigate } from 'react-router';
-import Button from '../../../../components/Button/Button';
+import Button from '../../../../components/button/button';
 import TextInput from '../../../../components/input/input';
 import SelectedPages from '../../../../components/selected-pages/selected-pages';
 import styles from './add-bot-form.module.css';

@@ -1,5 +1,5 @@
 import useMediaQuery from '../../../hooks/useMediaQuery';
-import Button from '../../Button/Button';
+import Button from '../../button/button';
 import styles from './subscription-status-not-subscribe.module.css';
 
 type TProps = {

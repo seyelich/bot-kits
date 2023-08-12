@@ -8,7 +8,7 @@ import {
 import styles from './popup-rename-file.module.css';
 import CloseIcon from '../../../icons/others/Close';
 import PopupInput from '../../popup_input/popup-input';
-import Button from '../../Button/Button';
+import Button from '../../button/button';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IPopupRenameFile {

@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router';
 import EmojiPicker from 'emoji-picker-react';
 import styles from './index.module.css';
 
-import Button from '../../../../components/Button/Button';
+import Button from '../../../../components/button/button';
 import TextInput from '../../../../components/input/input';
 import CheckIcon from '../../../../icons/others/Check';
 import BracketIcon from '../../../../icons/others/Bracket';

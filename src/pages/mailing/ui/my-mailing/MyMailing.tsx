@@ -7,7 +7,7 @@ import styles from './index.module.css';
 
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import TutorialButton from '../../../../components/tutorial-button/TutorialButton';
-import Button from '../../../../components/Button/Button';
+import Button from '../../../../components/button/button';
 import IconWithPercents from '../icon-with-percents/IconWithPercents';
 
 interface IData {

@@ -1,4 +1,4 @@
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 import DoneIcon from '../../icons/others/Done';
 import FitIcon from '../../icons/others/Fit';
 import MinusIcon from '../../icons/others/Minus';

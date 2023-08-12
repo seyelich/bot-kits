@@ -1,5 +1,5 @@
 import SubscriptionStatus from '../../components/subscription-status/subscription-status';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
 import {

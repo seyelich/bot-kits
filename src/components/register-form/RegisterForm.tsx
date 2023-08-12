@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import Button from '../Button/Button';
+import Button from '../button/button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
 import AuthInput from '../input-auth/AuthInput';
 import NavLinkBar from '../nav-link-bar/NavLinkBar';

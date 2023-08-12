@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 import ChevronBigIcon from '../../icons/others/ChevronBig';
 import styles from './partnership.module.css';
 import { fakeDataPayments, fakeDataStats } from './fakeDatafromApi';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Button from '../Button/Button';
+import Button from '../button/button';
 import AuthInput from '../input-auth/AuthInput';
 import styles from './ForgotPassForm.module.css';
 

@@ -1,5 +1,5 @@
 import useMediaQuery from '../../../hooks/useMediaQuery';
-import Button from '../../Button/Button';
+import Button from '../../button/button';
 import styles from './subscription-detail-not-active.module.css';
 
 type TDetailProps = {

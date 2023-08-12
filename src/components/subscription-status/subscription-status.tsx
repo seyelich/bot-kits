@@ -1,4 +1,4 @@
-import Button from '../Button/Button';
+import Button from '../button/button';
 import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe/subscription-status-not-subscribe';
 import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscription-status-subscribe';
 import styles from './subscription-status.module.css';

@@ -1,6 +1,6 @@
 import { MouseEvent, useState } from 'react';
 import CheckIcon from '../../icons/others/Check';
-import Button from '../Button/Button';
+import Button from '../button/button';
 import ButtonTarif from '../button-tarif/button-tarif';
 import launch from '../../images/launch.svg';
 import styles from './popup-tarif.module.css';

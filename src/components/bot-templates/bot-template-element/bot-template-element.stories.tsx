@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import BotTemplateElement from './BotTemplateElement';
+import BotTemplateElement from './bot-template-element';
 import Beauty from '../../icons/bot-templates/Beauty/Beauty';
 
 const meta = {

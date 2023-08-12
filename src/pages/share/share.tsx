@@ -8,7 +8,7 @@ import styles from './share.module.css';
 import TrashIcon from '../../icons/others/Trash';
 import UploadIcon from '../../icons/others/Upload';
 import DownloadIcon from '../../icons/others/Download';
-import Button from '../../components/Button/Button';
+import Button from '../../components/button/button';
 import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
