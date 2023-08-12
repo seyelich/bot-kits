@@ -6,7 +6,7 @@ import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/Dashboard/dashboard';
 import Subscription from './pages/Subscription/subscription';
 import AddBot from './pages/add-bot/add-bot';
-import styles from './App.module.css';
+import styles from './app.module.css';
 import BotBuilder from './pages/bot-builder/bot-builder';
 import Chat from './pages/chat/chat';
 import Mailing from './pages/mailing/mailing';

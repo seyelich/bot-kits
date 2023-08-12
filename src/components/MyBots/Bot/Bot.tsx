@@ -3,7 +3,7 @@ import { forwardRef, useContext } from 'react';
 import styles from './Bot.module.css';
 import Dots from '../../icons/Dots/Dots';
 import TelegramIcon from '../../../icons/social/telegram';
-import { Context } from '../../../App';
+import { Context } from '../../../app';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IBot {

@@ -8,7 +8,7 @@ import PaymentIcon from '../../../icons/others/Payment';
 import ExitIcon from '../../../icons/others/Exit';
 import NotificationsIcon from '../../../icons/others/Notifications/Notifications';
 import InfoIcon from '../../../icons/others/Info';
-import { Context } from '../../../App';
+import { Context } from '../../../app';
 import useMediaQuery from '../../../hooks/useMediaQuery';
 
 interface IDropdownMenu {

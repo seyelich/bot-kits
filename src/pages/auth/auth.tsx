@@ -6,7 +6,7 @@ import LoginForm from '../../components/login-form/LoginForm';
 import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
 import CloseIcon from '../../icons/others/Close';
 // eslint-disable-next-line import/no-cycle
-import { Context } from '../../App';
+import { Context } from '../../app';
 
 export default function Auth() {
   const { logIn } = useContext(Context);

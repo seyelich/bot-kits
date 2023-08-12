@@ -12,7 +12,7 @@ import DropdownMenu from './dropdown-menu/dropdown-menu';
 // eslint-disable-next-line import/no-cycle
 
 import PopupMessages from '../dashboard-popups/popup-messages/popup-messages';
-import { Context } from '../../App';
+import { Context } from '../../app';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
 export default function Header() {

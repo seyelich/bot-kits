@@ -18,7 +18,7 @@ import minilandingIcon from './icons/minilanding-icon';
 import crmIcon from './icons/crm-icon';
 import menuCollapseIcon from './icons/menu-collapse';
 
-import { Context } from '../../App';
+import { Context } from '../../app';
 
 const linkStyle = ({ isActive }: { isActive: boolean }) =>
   isActive

@@ -3,7 +3,7 @@ import styles from './MyBots.module.css';
 // eslint-disable-next-line import/no-cycle
 import Bot from './Bot/Bot';
 import AddBot from './AddBot/AddBot';
-import { Context } from '../../App';
+import { Context } from '../../app';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import MyBotsSettings from './my-bots-settings/my-bots-settings';
 import PopupRenameFile from '../dashboard-popups/popup-rename-file/popup-rename-file';

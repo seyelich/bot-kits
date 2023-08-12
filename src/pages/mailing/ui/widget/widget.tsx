@@ -10,7 +10,7 @@ import RobotIcon from '../../../../icons/others/Robot';
 import ChevronBigIcon from '../../../../icons/others/ChevronBig';
 import Button from '../../../../components/Button/Button';
 import CloseIcon from '../../../../icons/others/Close';
-import { Context } from '../../../../App';
+import { Context } from '../../../../app';
 import useMediaQuery from '../../../../hooks/useMediaQuery';
 
 interface IWidget {
