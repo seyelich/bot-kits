@@ -1,5 +1,4 @@
 .page {
-  /* временное решение, надеюсь на добавление flex-grow 1 в родительский компонент page */
   height: calc(100vh - 186.8px);
   padding-top: 32px;
   display: flex;

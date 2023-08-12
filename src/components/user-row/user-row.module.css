@@ -7,11 +7,9 @@
   border-bottom: 2px solid #d7deea;
   @media (max-width: 670px) {
     box-sizing: border-box;
-    /* padding: 35px 0; */
     height: 67px;
     border-bottom: 1px solid #d7deea;
     grid-template-columns: max-content max-content max-content 1fr max-content;
-    /* grid-template-rows: max-content max-content; */
     grid-template-areas:
       "check avatar name surname edit"
       "check avatar messengerid messengerid edit";

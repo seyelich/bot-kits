@@ -3,7 +3,6 @@
   max-width: 1268px;
   height: 100vh;
   background-image: url('../../../src/icons/background/bg-plus.svg');
-  /* stroke: red; */
 
   background-color: #f8f9fb;
 }
@@ -137,7 +136,6 @@
 
 @media screen and (max-width: 767px) {
   .header {
-    /* Убрать надо, просто чтобы показать как располагается на мобиле */
     padding-top: 100px;
     justify-content: center;
     column-gap: 4px;

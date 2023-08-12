@@ -25,7 +25,6 @@
 }
 
 .container {
-  /* Временный костыль, надо разобраться с кнопкой. */
   display: none;
   flex-direction: row;
   align-items: center;

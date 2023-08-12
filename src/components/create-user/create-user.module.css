@@ -1,5 +1,4 @@
 .container {
-  /* position: fixed; */
   min-width: min(728px, 100%);
   padding: 40px;
   background-color: #fff;

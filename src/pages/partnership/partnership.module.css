@@ -261,7 +261,6 @@ table {
   border-bottom: 1px rgba(204, 212, 224, 1) solid;
 }
 
-/* Устанавливаем отступ между строками на 8px */
 table.table_item_mobile {
   box-sizing: border-box;
   padding: 16px 0 16px;
@@ -270,18 +269,15 @@ table.table_item_mobile {
 
 @media screen and (max-width: 1024px) {
 
-  /* Измененный стиль для таблицы в мобильной версии */
   table {
     width: 100%;
     border-spacing: 0 28px;
   }
 
-  /* Скрытая таблица в десктопной версии */
   .table_desktop {
     display: none;
   }
 
-  /* Отображаемая таблица в мобильной версии */
   .table__mobile {
     display: flex;
     flex-direction: column;

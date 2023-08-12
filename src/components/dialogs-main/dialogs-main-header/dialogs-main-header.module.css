@@ -50,8 +50,6 @@
   display: none;
 }
 
-/* Почти все стили из компонента dialogs-sidebar. Можно выделить в отдельный компонент */
-
 .sidebar {
   width: 100%;
   height: 100%;
