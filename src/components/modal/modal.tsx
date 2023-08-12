@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ModalOverlay from '../modal-overlay/modal-overlay';
 import styles from './modal.module.css';
 import CloseIcon from '../../icons/others/Close';
-import IconButton from '../icon-button/IconButton';
+import IconButton from '../icon-button/icon-button';
 
 type TModalProps = {
   children?: JSX.Element;

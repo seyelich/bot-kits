@@ -3,10 +3,10 @@ import React, { FC } from 'react';
 
 import styles from './index.module.css';
 
-import TutorialIcon from '../icons/tutorial-video-button/TutorialIcon';
-import { TutorialVideoCircleIcon } from '../icons/tutorial-video-button/Circle';
-import TutorialVideoEllipseIcon from '../icons/tutorial-video-button/Ellipse';
-import VideoIcon from '../icons/tutorial-video-button/Video';
+import TutorialIcon from '../icons/tutorial-video-button/tutorial-icon';
+import { TutorialVideoCircleIcon } from '../icons/tutorial-video-button/circle';
+import TutorialVideoEllipseIcon from '../icons/tutorial-video-button/ellipse';
+import VideoIcon from '../icons/tutorial-video-button/video';
 
 interface ITutorialButton {
   onClick?: VoidFunction;

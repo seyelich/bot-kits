@@ -2,7 +2,7 @@
 import { memo, useState, Dispatch } from 'react';
 import Styles from './dialogs-main-header.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
-import IconButton from '../../icon-button/IconButton';
+import IconButton from '../../icon-button/icon-button';
 import SearchIcon from '../../../icons/others/Search';
 import CloseIcon from '../../../icons/others/Close';
 import PlayIcon from '../../../icons/others/Play';

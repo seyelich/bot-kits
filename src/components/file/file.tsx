@@ -2,7 +2,7 @@ import { memo } from 'react';
 import Styles from './file.module.css';
 import DocCircleIcon from '../../icons/others/doc-circle';
 import CheckIcon from '../../icons/others/Check';
-import IconButton from '../icon-button/IconButton';
+import IconButton from '../icon-button/icon-button';
 import CloseIcon from '../../icons/others/Close';
 
 interface FileProps {

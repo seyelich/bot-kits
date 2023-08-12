@@ -1,6 +1,6 @@
 import { FC, useRef, useState } from 'react';
 
-import Play from '../../../icons/Play/Play';
+import Play from '../../../icons/play/play';
 import styles from './VideoElement.module.css';
 
 import VideoPopup from '../video-popup/video-popup';

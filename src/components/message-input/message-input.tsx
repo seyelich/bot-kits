@@ -1,6 +1,6 @@
 import { useState, ChangeEventHandler } from 'react';
 import Styles from './message-input.module.css';
-import IconButton from '../icon-button/IconButton';
+import IconButton from '../icon-button/icon-button';
 import EmojiIcon from '../../icons/others/Emoji';
 import XCircleIcon from '../../icons/others/XCircle';
 import FileIcon from '../../icons/others/File';

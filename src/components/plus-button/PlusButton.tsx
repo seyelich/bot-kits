@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
-import Plus from '../icons/Plus/Plus';
-import BlackPlus from '../icons/black-plus/BlackPlus';
+import Plus from '../icons/plus/plus';
+import BlackPlus from '../icons/black-plus/black-plus';
 
 interface IPlusButton {
   onClick?: VoidFunction;

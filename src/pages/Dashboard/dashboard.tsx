@@ -1,6 +1,6 @@
 import BotTemplates from '../../components/bot-templates/bot-templates';
 // eslint-disable-next-line import/no-cycle
-import MyBots from '../../components/MyBots/MyBots';
+import MyBots from '../../components/my-bots/my-bots';
 import Tutorials from '../../components/Tutorials/Tutorials';
 import styles from './dashboard.module.css';
 

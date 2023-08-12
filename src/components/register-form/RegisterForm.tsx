@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import Button from '../button/button';
 import HidePasswordIcon from '../icons/hide-password/hide-password';
-import AuthInput from '../input-auth/AuthInput';
-import NavLinkBar from '../nav-link-bar/NavLinkBar';
+import AuthInput from '../input-auth/input-auth';
+import NavLinkBar from '../nav-link-bar/nav-link-bar';
 import styles from './RegisterForm.module.css';
 import SelectCodeNumber from '../select-code-number/SelectCodeNumber';
 import items from '../../utils/itemsForRegister';

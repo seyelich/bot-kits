@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
-import ArrowRegister from '../icons/arrow-register/ArrowRegister';
+import ArrowRegister from '../icons/arrow-register/arrow-register';
 import styles from './SelectCodeNumber.module.css';
 
 interface Item {

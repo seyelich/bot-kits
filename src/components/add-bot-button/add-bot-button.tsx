@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import styles from './index.module.css';
-import AddBotIcon from '../icons/add-bot/AddBotIcon';
+import AddBotIcon from '../icons/add-bot/add-bot-icon';
 
 interface IAddBotButton {
   onClick?: VoidFunction;

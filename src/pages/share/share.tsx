@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactNode, useEffect, useState } from 'react';
 import SearchInput from '../../components/search-input/search-input';
-import IconButton from '../../components/icon-button/IconButton';
+import IconButton from '../../components/icon-button/icon-button';
 
 import moreIcon from './icons/more';
 import styles from './share.module.css';

@@ -2,19 +2,19 @@
 import { FC, useState } from 'react';
 import styles from './bot-templates.module.css';
 import BotTemplateElement from './bot-template-element/bot-template-element';
-import AnsweringMachine from '../icons/bot-templates/AnsweringMachine/AnsweringMachine';
-import FoodDelivery from '../icons/bot-templates/FoodDelivery/FoodDelivery';
-import DemoBot from '../icons/bot-templates/DemoBot/DemoBot';
-import Poll from '../icons/bot-templates/Poll/Poll';
-import LeadGeneration from '../icons/bot-templates/LeadGeneration/LeadGeneration';
-import PrivateClub from '../icons/bot-templates/PrivateClub/PrivateClub';
-import RealEstate from '../icons/bot-templates/RealEstate/RealEstate';
-import Entertainment from '../icons/bot-templates/Entertainment/Entertainment';
-import Beauty from '../icons/bot-templates/Beauty/Beauty';
-import ECommerce from '../icons/bot-templates/ECommerce/ECommerce';
-import ELearning from '../icons/bot-templates/ELearning/ELearning';
-import Questions from '../icons/bot-templates/Questions/Questions';
-import Arrow24x24 from '../icons/Arrow24x24/Arrow24x24';
+import AnsweringMachine from '../icons/bot-templates/answering-machine/answering-machine';
+import FoodDelivery from '../icons/bot-templates/food-delivery/food-delivery';
+import DemoBot from '../icons/bot-templates/demo-bot/demo-bot';
+import Poll from '../icons/bot-templates/poll/poll';
+import LeadGeneration from '../icons/bot-templates/lead-generation/lead-generation';
+import PrivateClub from '../icons/bot-templates/private-club/private-club';
+import RealEstate from '../icons/bot-templates/real-estate/real-estate';
+import Entertainment from '../icons/bot-templates/entertainment/entertainment';
+import Beauty from '../icons/bot-templates/beauty/beauty';
+import ECommerce from '../icons/bot-templates/e-commerce/e-commerce';
+import ELearning from '../icons/bot-templates/e-learning/e-learning';
+import Questions from '../icons/bot-templates/questions/questions';
+import Arrow24x24 from '../icons/arrow-24x24/arrow-24x24';
 import useMediaQuery from '../../hooks/useMediaQuery';
 
 const BotTemplates: FC = () => {

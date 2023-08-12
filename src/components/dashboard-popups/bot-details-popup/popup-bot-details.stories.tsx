@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import PopupBotDetails from './popup-bot-details';
-import Beauty from '../../icons/bot-templates/Beauty/Beauty';
+import Beauty from '../../icons/bot-templates/beauty/beauty';
 
 const meta = {
   title: 'UI/Popups/PopupBotDetails',

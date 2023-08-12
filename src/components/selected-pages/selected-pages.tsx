@@ -1,6 +1,6 @@
 import { SetStateAction, Dispatch } from 'react';
 import Styles from './selected-pages.module.css';
-import PageOption from '../PageOption/PageOption';
+import PageOption from '../page-option/page-option';
 import fakeData from './selected-pages.fakedata';
 
 interface SelectedPagesProps {

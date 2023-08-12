@@ -23,7 +23,7 @@ import ImageIcon from '../../../../icons/others/Image';
 import VideoIcon from '../../../../icons/others/Video';
 import MusicIcon from '../../../../icons/others/Music';
 import ButtonIcon from '../../../../icons/others/Button';
-import DownloadButtons from '../../../../components/download-button/DownloadButtons';
+import DownloadButtons from '../../../../components/download-button/download-button';
 import InlineButtons from '../inline-button/InlineButton';
 import Widget from '../widget/widget';
 import DownIcon from '../../../../icons/others/Down';

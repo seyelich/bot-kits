@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import RegisterForm from '../../components/register-form/RegisterForm';
-import Logo from '../../components/Logo/Logo';
+import Logo from '../../components/logo/logo';
 import styles from './auth.module.css';
-import LoginForm from '../../components/login-form/LoginForm';
-import ForgotPassForm from '../../components/forgot-pass-form/ForgotPassForm';
+import LoginForm from '../../components/login-form/login-form';
+import ForgotPassForm from '../../components/forgot-pass-form/forgot-pass-form';
 import CloseIcon from '../../icons/others/Close';
 // eslint-disable-next-line import/no-cycle
 import { Context } from '../../app';
