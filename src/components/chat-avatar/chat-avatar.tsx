@@ -7,10 +7,11 @@ interface ChatAvatarProps {
   isOnline: boolean;
   role?: boolean;
   size?: 'default' | 'large';
+  extraClass?: string;
 }
 
 const ChatAvatar = memo(
-  ({ img, isOnline, role = false, size }: ChatAvatarProps) => {
+  ({ img, isOnline, role = false, size, extraClass }: ChatAvatarProps) => {
     const style: CSSProperties = {
       width: '40px',
       height: '40px',
@@ -31,7 +32,7 @@ const ChatAvatar = memo(
     }
 
     return (
-      <div className={Styles.avatar} style={style}>
+      <div className={`${Styles.avatar} ${extraClass}`} style={style}>
         {role && <div className={Styles.role} />}
         {isOnline && <div className={Styles.online} />}
       </div>

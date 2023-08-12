@@ -11,6 +11,7 @@ interface SearchInputProps {
   hasFilter?: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
   filterHandler?: Dispatch<React.SetStateAction<string>>;
+  extraClass?: string;
 }
 
 function SearchInput({
@@ -20,6 +21,7 @@ function SearchInput({
   hasFilter = false,
   onChange,
   filterHandler,
+  extraClass,
 }: SearchInputProps) {
   const [hasFocus, setFocus] = useState(false);
   const [hasOpenedFilter, setOpenedFilter] = useState(false);
@@ -65,7 +67,9 @@ function SearchInput({
 
   return (
     <div
-      className={`${Styles.inputFrame} ${hasFocus && Styles.inputFrameFocus}`}
+      className={`${Styles.inputFrame} ${
+        hasFocus && Styles.inputFrameFocus
+      } ${extraClass}`}
       style={propsStyle}
     >
       {!hasFocus && (

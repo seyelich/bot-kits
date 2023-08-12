@@ -6,6 +6,7 @@ import XCircleIcon from '../../icons/others/XCircle';
 import FileIcon from '../../icons/others/File';
 import SlashIcon from '../../icons/others/Slash';
 import ZapIcon from '../../icons/others/Zap';
+import useMediaQuery from '../../hooks/useMediaQuery';
 
 interface MessageInputProps {
   placeholder: string;
@@ -26,6 +27,10 @@ function MessageInput({
 }: MessageInputProps) {
   const [isShowSmiles, setShowSmiles] = useState(false);
   const [isShowOtherButtons, setShowOtherButtons] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 360px)');
+
+  const iconColor = '#A6B3C9';
+  const iconSize = isMobile ? 16 : 24;
 
   const smilesHandle = () => {
     setShowSmiles(!isShowSmiles);
@@ -35,12 +40,6 @@ function MessageInput({
     setShowOtherButtons(!isShowOtherButtons);
   };
 
-  const iconColor = '#A6B3C9';
-  // TODO Пока что так. Размеры экрана считаются в JS так как их надо передать в стороний компонент
-  // Но можно изменить стили IconButton
-  const screenWidth = window.screen.width;
-  const iconSize = screenWidth <= 320 ? 16 : 24;
-
   return (
     <div className={Styles.inputFrame} style={{ width: `${width}` }}>
       <input
@@ -49,64 +48,66 @@ function MessageInput({
         placeholder={placeholder}
         onChange={onChange}
       />
-      <IconButton
-        width={iconSize}
-        height={iconSize}
-        icon={FileIcon({ color: iconColor })}
-        onClick={onFileClick}
-      />
-      <div className={isShowSmiles ? Styles.smilesButton : undefined}>
+      <div className={Styles.buttons}>
         <IconButton
           width={iconSize}
           height={iconSize}
-          icon={EmojiIcon({ color: iconColor })}
-          onClick={smilesHandle}
+          icon={FileIcon({ color: iconColor })}
+          onClick={onFileClick}
         />
-      </div>
-      {isShowOtherButtons && (
-        <>
-          <div className={Styles.slashCnt}>
-            <IconButton
-              width={iconSize}
-              height={iconSize}
-              icon={SlashIcon({ color: iconColor })}
-              onClick={onSlashClick}
-            />
-          </div>
+        <div className={isShowSmiles ? Styles.smilesButton : undefined}>
           <IconButton
             width={iconSize}
             height={iconSize}
-            icon={ZapIcon({ color: iconColor })}
-            onClick={onZapClick}
+            icon={EmojiIcon({ color: iconColor })}
+            onClick={smilesHandle}
           />
-        </>
-      )}
-      {/* TODO Иконка крестика сделана из компонента XCircle, что, может быть, не совсем правильно.
+        </div>
+        {isShowOtherButtons && (
+          <>
+            <div className={Styles.slashCnt}>
+              <IconButton
+                width={iconSize}
+                height={iconSize}
+                icon={SlashIcon({ color: iconColor })}
+                onClick={onSlashClick}
+              />
+            </div>
+            <IconButton
+              width={iconSize}
+              height={iconSize}
+              icon={ZapIcon({ color: iconColor })}
+              onClick={onZapClick}
+            />
+          </>
+        )}
+        {/* TODO Иконка крестика сделана из компонента XCircle, что, может быть, не совсем правильно.
           Визуально разницы нет */}
-      <div
-        className={`
+        <div
+          className={`
           ${Styles.xCircleCnt}
           ${isShowOtherButtons && Styles.xCircleCntOpened}`}
-      >
-        <IconButton
-          width={iconSize}
-          height={iconSize}
-          icon={XCircleIcon({ color: iconColor })}
-          onClick={otherButtonsHandle}
-        />
-      </div>
-      {isShowSmiles && (
-        <div className={Styles.smiles}>
-          {/* TODO Смайлы пока сделаны так. В будущем надо доработать либо переделать */}
-          <span className={Styles.smile}>&#128524;</span>
-          <span className={Styles.smile}>&#128077;</span>
-          <span className={Styles.smile}>&#128516;</span>
-          <span className={Styles.smile}>&#128525;</span>
-          <span className={Styles.smile}>&#129505;</span>
-
-          <div className={Styles.square} />
+        >
+          <IconButton
+            width={iconSize}
+            height={iconSize}
+            icon={XCircleIcon({ color: iconColor })}
+            onClick={otherButtonsHandle}
+          />
         </div>
-      )}
+        {isShowSmiles && (
+          <div className={Styles.smiles}>
+            {/* TODO Смайлы пока сделаны так. В будущем надо доработать либо переделать */}
+            <span className={Styles.smile}>&#128524;</span>
+            <span className={Styles.smile}>&#128077;</span>
+            <span className={Styles.smile}>&#128516;</span>
+            <span className={Styles.smile}>&#128525;</span>
+            <span className={Styles.smile}>&#129505;</span>
+
+            <div className={Styles.square} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

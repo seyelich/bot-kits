@@ -13,6 +13,7 @@
 .input {
   border: none;
   flex-grow: 1;
+  flex-shrink: 2;
   font-family: 'Open Sans', sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--normal);
@@ -41,6 +42,12 @@
   font-weight: var(--normal);
   line-height: var(--s-line-height);
   letter-spacing: var(--m-letter-space);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .smiles {
@@ -104,8 +111,16 @@
 
 @media screen and (max-width: 360px) {
   .inputFrame {
+    max-width: 272px;
     height: 40px;
     border-radius: 8px;
     gap: 4px;
+  }
+
+  .buttons {
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 4px;
+    justify-content: end;
   }
 }

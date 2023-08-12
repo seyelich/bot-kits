@@ -8,6 +8,7 @@ interface IIconButton {
   width: number;
   height: number;
   icon: React.ReactNode;
+  extraClass?: string;
 }
 const IconButton: FC<IIconButton> = ({
   onClick,
@@ -15,9 +16,12 @@ const IconButton: FC<IIconButton> = ({
   width,
   height,
   icon,
+  extraClass,
 }) => (
   <button
-    className={`${styles.button} ${disabled && styles.button_disabled}`}
+    className={`${styles.button} ${
+      disabled && styles.button_disabled
+    } ${extraClass}`}
     onClick={onClick}
     disabled={disabled}
     style={{ width, height }}
