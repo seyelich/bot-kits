@@ -1,0 +1,47 @@
+.container {
+  width: 188px;
+
+
+  @media (max-width: 768px) {
+    width: 134px;
+  }
+}
+
+.button {
+  display: flex;
+  background-color: rgba(242, 244, 248, 1);
+  width: 100%;
+  height: 88px;
+  border-radius: 185px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    height: 80px;
+  }
+}
+
+.button_add {
+  padding-right: 44px;
+
+  @media (max-width: 768px) {
+    padding-right: 14px;
+  }
+}
+
+.button_text {
+  color: rgba(6, 12, 35, 1);
+  font-size: 14px;
+  line-height: 21px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 15px;
+  margin-top: 18px;
+  transition: all 0.5s linear;
+
+  @media (max-width: 414px) {
+    margin-top: 21px;
+  }
+}

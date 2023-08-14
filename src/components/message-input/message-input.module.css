@@ -1,0 +1,126 @@
+.inputFrame {
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--default-grey-color);
+}
+
+.input {
+  border: none;
+  flex-grow: 1;
+  flex-shrink: 2;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+  background-color: inherit;
+  cursor: text;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+.input:-moz-placeholder {
+  color: var(--default-dark-grey-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.smiles {
+  padding: 8px 12px;
+  position: absolute;
+  top: -32px;
+  right: 18px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 16px 0px rgba(21, 18, 51, 0.08);
+  display: flex;
+  gap: 12px;
+  background-color: #fff;
+  font-size: var(--h4-font-size);
+}
+
+.smile {
+  cursor: pointer;
+}
+
+.smilesButton {
+  position: relative;
+}
+
+.smilesButton:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: -11px;
+  left: 30%;
+  background-color: #fff;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+.slashCnt {
+  position: relative;
+}
+
+.slashCnt:hover::before {
+  content: '';
+  position: absolute;
+  width: 132px;
+  height: 27.2px;
+  top: -30.2px;
+  left: -55px;
+  z-index: 2;
+  background-image: url(./img/slash-helper.svg);
+  background-position: center;
+  background-size: 100%;
+}
+
+.xCircleCnt {
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.xCircleCntOpened {
+  transform: rotate(0deg);
+}
+
+@media screen and (max-width: 360px) {
+  .inputFrame {
+    max-width: 272px;
+    height: 40px;
+    border-radius: 8px;
+    gap: 4px;
+  }
+
+  .buttons {
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 4px;
+    justify-content: end;
+  }
+}

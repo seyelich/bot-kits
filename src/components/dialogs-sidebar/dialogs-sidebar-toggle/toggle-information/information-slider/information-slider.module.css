@@ -1,0 +1,44 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sliderButton {
+  width: 100%;
+  padding: 10px 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  background-color: var(--default-grey-color);
+  border-radius: 5px;
+}
+
+.sliderButtonName {
+  color: var(--primary-text-color);
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--normal);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+.arrowOpened {
+  transform: rotate(180deg);
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--primary-text-color);
+  font-family: 'Open Sans';
+  font-size: var(--s-font-size);
+  font-weight: var(--bold);
+  line-height: var(--s-line-height);
+  letter-spacing: var(--m-letter-space);
+}

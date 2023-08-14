@@ -1,0 +1,29 @@
+.input {
+  box-sizing: border-box;
+  border: none;
+  border-radius: var(--border-radius-10);
+  width: 100%;
+  height: 65px;
+  background-color: var(--default-grey-color);
+  padding: 0 0 0 24px;
+  font-weight: var(--bold);
+  font-size: var(--m-font-size);
+  letter-spacing: var(--m-letter-space);
+  line-height: var(--m-line-height);
+  color: rgba(36, 60, 187, 1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(36, 60, 187, 1);
+}
+
+.input:hover::placeholder {
+  color: rgba(36, 60, 187, 1);
+}

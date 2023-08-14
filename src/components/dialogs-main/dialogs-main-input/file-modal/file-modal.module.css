@@ -1,0 +1,86 @@
+.modalWindow {
+  width: 526px;
+  height: 427px;
+  min-height: 427px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 12px 24px 0px rgba(21, 18, 51, 0.13);
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.closeIcon {
+  height: fit-content;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dropArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.inputFileLabel {
+  margin-top: 8px;
+  color: var(--default-blue-color);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: 'IBM Plex Mono';
+  font-size: var(--h4-font-size);
+  font-weight: var(--semi-bold);
+  line-height: var(--h4-line-height);
+  cursor: pointer;
+}
+
+.dropHint {
+  margin-top: 16px;
+  color: var(--primary-text-color);
+}
+
+.inputFile {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.upload {
+  text-decoration-line: underline;
+}
+
+.uploadedFiles {
+  padding: 80px 20px;
+  background-color: var(--default-grey-color);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.list {
+  width: 100%;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.list::-webkit-scrollbar {
+  width: 3px;
+}
+.list::-webkit-scrollbar-track {
+  background-color: #E8EBEF;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--default-dark-grey-color);
+}

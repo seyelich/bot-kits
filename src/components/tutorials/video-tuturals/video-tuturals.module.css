@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+  padding-top: 6px;
+
+  @media (max-width: 768px) {
+    padding-left: 25px;
+  }
+}
+
+.title {
+  font-family: 'IMX Flex mono', sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: rgba(6, 12, 35, 1);
+  padding-bottom: 20px;
+  padding-top:25px;
+
+  @media (max-width: 768px) {
+    margin-top: 2px;
+    margin-bottom: -3px;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+

@@ -1,0 +1,145 @@
+.weeks_container {
+  display: flex;
+}
+
+.weeks {
+  display: flex;
+  flex-direction: row;
+  width: 260px;
+  list-style: none;
+  padding-left: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  gap: 30px;
+  font-size: 20px;
+  color: rgba(6, 12, 35, 1);
+  font-size: 13px;
+  line-height: 19.5px;
+  margin-bottom: 0;
+}
+
+.current_date {
+  margin-left: 5px;
+  padding-left: 15px;
+  border: none;
+  width: 264px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(248, 249, 251, 1);
+}
+
+.text {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px 0 20px 15px;
+
+}
+
+.container_months_years {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.container_input {
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+  align-items: flex-end;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  gap: 13px;
+}
+
+.calendar_icon {
+  padding-bottom: 4px;
+}
+.date {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  color: rgba(166, 179, 201, 1);
+  margin: 0;
+}
+
+.custom_input {
+  border: none;
+  width: 144px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(248, 249, 251, 1);
+  outline: none;
+  cursor: pointer;
+  padding-left: 10px;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 1);
+}
+
+.input_wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+}
+
+.timeZone {
+  position: absolute;
+  top: 370px;
+  right: 25px;
+}
+
+.button {
+  position: absolute;
+  top: 434px;
+  left: 15px;
+  background-color: white;
+  border: white;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.btn_prev {
+  display: block;
+  rotate: 90deg;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  right: 38px;
+}
+
+.btn_next {
+  display: block;
+  rotate: -90deg;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}

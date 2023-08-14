@@ -1,0 +1,99 @@
+.button {
+  width: 180px;
+  height: 46px;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: "IBM Plex Mono", sans-serif;
+  transition: background-color 0.1s linear;
+}
+
+.regiser_button {
+  color: #060C23;
+  font-size: 18px;
+  line-height: 134%;
+  text-transform: uppercase;
+}
+
+.button_blue {
+  color: #fff;
+  background-color: #243cbb;
+}
+
+.button_blue:hover {
+  background-color: #435cdb;
+}
+
+.button_blue:active {
+  background-color: #2743ce;
+}
+
+.button_blue_disabled {
+  background-color: #ecefff;
+}
+
+.button_blue_disabled:hover {
+  background-color: #ecefff;
+}
+
+.button_blue_disabled:active {
+  background-color: #ecefff;
+}
+
+.button_green {
+  color: #060c23;
+  background-color: #22ffaa;
+}
+
+.button_green:hover {
+  background-color: #70ffc8;
+}
+
+.button_green:active {
+  background-color: #22ffaa;
+}
+
+.button_green_disabled {
+  background-color: #85ffd0;
+}
+
+.button_green_disabled:hover {
+  background-color: #85ffd0;
+}
+
+.button_green_disabled:active {
+  background-color: #85ffd0;
+}
+
+.button_grey {
+  color: #060c23;
+  background-color: #e4e9f1;
+}
+
+.button_grey:hover {
+  color: #243cbb;
+}
+
+.button_grey:active {
+  background-color: #ecefff;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.button_grey_disabled {
+  background-color: #e4e9f1;
+  color: #a6b3c9;
+}
+
+.button_grey_disabled:hover {
+  color: #a6b3c9;
+}
+
+.button_grey_disabled:active {
+  background-color: #e4e9f1;
+  box-shadow: none;
+}

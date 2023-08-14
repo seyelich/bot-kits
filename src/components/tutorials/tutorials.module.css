@@ -1,0 +1,32 @@
+.wrapper {
+  max-width: 1268px;
+  height: 283px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(242, 244, 248, 1);
+  border-radius: 30px;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    margin-bottom: 90px;
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 414px) {
+  .wrapper {
+    width: 320px;
+  }
+}

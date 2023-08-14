@@ -1,0 +1,21 @@
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .icon {
+    position: absolute;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    background-color: #243cbb;
+    box-shadow: -1px 2px 12px 0px #060c234d;
+    cursor: pointer;
+  }
+}

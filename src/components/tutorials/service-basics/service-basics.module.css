@@ -1,0 +1,151 @@
+.wrapper {
+  width: 620px;
+  height: 283px;
+  border-radius: 30px;
+  background-color: rgba(228, 233, 241, 1);
+  padding-top: 27px;
+
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    height: 350px;
+    width: 100%;
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: 409px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+.header {
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
+}
+
+.title {
+  font-family: 'IMX Flex mono', sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: rgba(6, 12, 35, 1);
+  font-weight: 600;
+  padding-bottom: 25px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 15px;
+  }
+}
+
+.subtitle {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 1);
+  padding-left: 30px;
+  margin-top: 0;
+  padding-bottom: 25px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.icon {
+  rotate: 180deg;
+  padding-top: 7px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 30px;
+}
+
+
+@media (max-width: 768px) {
+  .list {
+    padding-left: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.marker {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  width: 9px;
+  color: rgba(166, 179, 201, 1);
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 20px;
+  padding-bottom: 15px;
+
+  @media (max-width: 1200px) {
+    padding-bottom: 0px;
+  }
+}
+
+.text {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+  color: rgba(6, 12, 35, 1);
+  margin-bottom: 7px;
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    margin-bottom: 18px;
+  }
+}
+
+.text:hover {
+  color: #243cbb;
+}

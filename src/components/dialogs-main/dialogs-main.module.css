@@ -1,0 +1,17 @@
+.section {
+  border: 1px solid #D7DEEA;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 360px) {
+  .section {
+    border: none;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,59 @@
+.wrapper {
+  height: 151px;
+  width: 172px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    gap: 15px;
+    height: 72px;
+    width: 90%;
+  }
+}
+
+.container {
+  width: 172px;
+  height: 96px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 130px;
+    height: 72px;
+  }
+}
+
+.videothumb {
+  width: inherit;
+  height: auto;
+  z-index: 1;
+}
+
+.button {
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  top: -15%;
+  right: 70%;
+  z-index: 2;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    top: -35%;
+  }
+}
+
+
+.text {
+  font-family: 'Open sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  left: 0.3px;
+  color: rgba(6, 12, 35, 1);
+  margin-top: 15px;
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
+}

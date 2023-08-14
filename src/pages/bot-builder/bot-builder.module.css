@@ -1,0 +1,151 @@
+.main {
+  position: relative;
+  max-width: 1268px;
+  height: 100vh;
+  background-image: url('../../../src/icons/background/bg-plus.svg');
+
+  background-color: #f8f9fb;
+}
+
+.plusButton {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 24px;
+  right: 24px;
+}
+
+.scaleControlPanel {
+  position: absolute;
+  left: 5px;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 235px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.scaleControlPanel_text {
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+}
+
+.scaleControlPanel_button {
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  padding-top: 16.14px;
+  padding-right: 14px;
+  padding-left: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  padding: 12px 16px 12px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 281px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #fff;
+  @media (max-width: 767px) {
+    width: 255px;
+    padding: 12px 12px 12px 10px;
+  }
+}
+
+.header__titleText {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #060c23;
+  margin: 0 52px 0 16px;
+  @media (max-width: 767px) {
+    margin: 0 36px 0 12px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__icon {
+  width: 60px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__panel {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.buttons__mobile {
+  display: none;
+  @media (max-width: 767px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 20px 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 8px;
+    background-color: #fff;
+    z-index: 99;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .header {
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 100px;
+    justify-content: center;
+    column-gap: 4px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .plusButton {
+    bottom: 112px;
+
+  }
+
+}

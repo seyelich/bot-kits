@@ -1,0 +1,144 @@
+.section {
+  position: relative;
+  background-color: #f2f4f8;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 924px;
+  height: 50%;
+  width: 100%;
+}
+
+.container {
+  max-width: 1250px;
+  margin-bottom: 175px;
+
+  @media (max-width: 767px) {
+    max-width: 320px;
+  }
+}
+
+.mailing__header {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mailing__title {
+  margin-top: 20px;
+  font-family: IBM Plex Mono;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #060c23;
+
+  @media (max-width: 767px) {
+    margin-top: 9px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.creation {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #fff;
+  padding: 32px 40px 53px 40px;
+  border-radius: 30px;
+  box-shadow: 0px 6px 16px 0px #15123314;
+
+  @media (max-width: 767px) {
+    padding: 24px 24px 60px;
+    row-gap: 23px;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  column-gap: 55px;
+  justify-content: end;
+  padding: 32px 40px;
+
+  @media (max-width: 767px) {
+    padding: 32px 24px;
+  }
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.firstStep {
+  display: flex;
+  flex-direction: row;
+  column-gap: 32px;
+  font-family: IBM Plex Mono;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  vertical-align: middle;
+  color: #060c23;
+
+
+  @media (max-width: 767px) {
+    column-gap: 12px;
+  }
+}
+.firstStep:first-of-type {
+  color: #ccd4e0;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navigation__exit {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #8392ab;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 1px;
+  }
+}
+
+.button__text {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1130px) {
+  .button_container {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}

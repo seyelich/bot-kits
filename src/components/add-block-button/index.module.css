@@ -1,0 +1,63 @@
+.button {
+  width: 196px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 16px;
+  column-gap: 16px;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.30000001192092896px;
+  text-align: left;
+  border: none;
+  color: #060c23;
+  background-color: #FFFFFF;
+  transition:
+  background-color 0.1s linear,
+  color 0.1s linear;
+}
+
+.button > svg {
+  color: #bfc9d9;
+  transition: color 0.1s linear;
+  display: block;
+  flex-shrink: 0;
+}
+
+.button:hover > svg {
+  color: #243cbb;
+}
+
+.button:hover {
+  background-color: #f2f4f8;
+  color: #243cbb;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #ecefff;
+}
+
+.button_disabled {
+  color: #BFC9D9;
+}
+
+.button_disabled:hover {
+  color: #BFC9D9;
+  background-color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+.button_disabled:hover>svg {
+  color: #BFC9D9;
+}
+
+.button_disabled:active {
+  color: #BFC9D9;
+  background-color: transparent;
+}
+

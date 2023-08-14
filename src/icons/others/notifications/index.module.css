@@ -1,0 +1,22 @@
+.notification {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border-radius: 99px;
+  background-color: #ff5555;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}

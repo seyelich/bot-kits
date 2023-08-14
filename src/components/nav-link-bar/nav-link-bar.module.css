@@ -1,0 +1,57 @@
+
+  .navLinkBar{
+    display: flex;
+  }
+
+  .navLinkBar_menu{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    background:#314DD8;
+    max-width: 300px;
+    max-height: 60px;
+    height: 100%;
+    margin: 0 20px 0 0;
+  }
+  .navLinkBar_menu:last-child {
+    margin-right: 0px;
+  }
+
+  .navLinkBar_menuItem{
+    margin: 10px 30px 10px 10px ;
+    transition: all 0.2s ease-in-out;
+  }
+  .navLinkBar_menuItem:last-child {
+    margin-right: 10px;
+  }
+
+
+  @media screen and (max-width: 660px){
+
+    .navLinkBar_menu{
+      margin: 0 20px 0 0;
+      max-height: 50px;
+    }
+
+    .navLinkBar_menuItem{
+      margin: 8px 2px 8px 8px;
+    }
+    .navLinkBar_menuItem:last-child {
+      margin-right: 8px;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+
+    .navLinkBar_menu{
+      margin: 15px 0 0;
+    }
+
+    .navLinkBar_menuItem{
+      margin: 8px 2px 8px 8px;
+    }
+    .navLinkBar_menuItem:last-child {
+      margin-right: 8px;
+    }
+  }
+

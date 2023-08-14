@@ -1,0 +1,153 @@
+.loginForm {
+  max-width: 770px;
+  width: 100%;
+  min-height: 590px;
+  height: 100%;
+  border-radius: 30px;
+  background: #2743ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginForm__form {
+  max-height: 415px;
+  height: 100%;
+  padding: 60px 0 55px 0;
+  text-align: center;
+  border-radius: 30px;
+  background: #243cbb;
+  max-width: 770px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginForm__formContainer {
+  max-width: 570px;
+  min-height: 144px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 25px;
+}
+
+.loginForm__form__menu {
+  max-width: 570px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 46px;
+}
+.loginForm__form__menuItems {
+  margin-right: 30px;
+  color: #fff;
+  text-align: right;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.4ms ease-in-out;
+}
+.loginForm__form__menuItems:hover {
+  opacity: 0.9;
+}
+
+.loginForm__form__menuItems:last-child {
+  margin-right: 0;
+}
+
+.loginForm__footer {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 78px;
+}
+
+.loginForm__footerTitle {
+  border-radius: 15px;
+  background: #243cbb;
+  color: #fff;
+  max-width: 172px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  position: relative;
+  top: -40px;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 790px) {
+  .loginForm {
+    max-width: 700px;
+    min-height: 590px;
+  }
+
+  .loginForm__form {
+    min-height: 420px;
+    padding: 60px 0 60px 0;
+    max-width: 700px;
+  }
+
+  .loginForm__formContainer {
+    max-width: 500px;
+    max-height: 140px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .loginForm {
+    min-height: 520px;
+    max-height: 520px;
+    max-width: 500px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .loginForm__form {
+    min-height: 300px;
+    padding: 40px 0 30px 0;
+  }
+
+  .loginForm__formContainer {
+    max-width: 320px;
+    max-height: 140px;
+  }
+
+  .loginForm__form__menu {
+    margin: 0 auto 41px;
+  }
+
+  .loginForm__footerTitle {
+    width: 100%;
+    height: 23px;
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .loginForm__footer {
+    position: relative;
+    min-height: 78px;
+  }
+}
