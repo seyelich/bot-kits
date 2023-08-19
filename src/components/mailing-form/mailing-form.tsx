@@ -5,7 +5,7 @@ import InputSelect from '../input-select/input-select';
 import Calendar from '../calendar/calendar';
 import TimePickerInput from '../time-picker/time-picker';
 
-import InputTextMailingPage from '../text-input-mailing-page.ts/text-input-mailing-page';
+import InputTextMailingPage from '../text-input-mailing-page/text-input-mailing-page';
 import ButtonWeek from '../button-week/button-week';
 import InputSlider from '../input-slider/input-slider';
 import ButtonMailing from '../button-mailing/button-mailing';
