@@ -2,6 +2,7 @@
   "name": "bot-kits-team-3",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@storybook/react": "^7.1.1",
     "@types/react-datepicker": "^4.15.0",
