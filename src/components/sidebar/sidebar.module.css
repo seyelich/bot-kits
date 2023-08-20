@@ -1,8 +1,8 @@
 .sidebar {
   box-sizing: border-box;
-  position: relative;
-  margin: 16px;
-  margin-right: 24px;
+  position: absolute;
+  left: 16px;
+  top:16px;
   width: 70px;
   height: calc(100vh - 32px);
   background-color: var(--default-grey-color);
@@ -10,7 +10,6 @@
   transition: 0.2s;
   z-index: 10;
   @media (max-width: 670px) {
-    position: absolute;
     top: 0;
     left: 0;
     margin: 0;

@@ -1,6 +1,7 @@
 .container {
-  max-width: 1245px;
   display: grid;
+  width: 100%;
+  padding-right: 40px;
   padding-top: 32px;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 28px;
