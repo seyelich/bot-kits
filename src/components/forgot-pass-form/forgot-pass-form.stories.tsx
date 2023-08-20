@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import ForgotPassForm, { ForgotPassFormProps } from './forgot-pass-form';
-
+/* eslint-disable react/jsx-props-no-spreading */
 export default {
   title: 'UI/AuthForms/ForgotPassForm',
   component: ForgotPassForm,

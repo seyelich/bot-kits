@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { Meta, Story } from '@storybook/react';
 import NavLinkBar, { NavLinkBarProps } from './nav-link-bar';
-
+/* eslint-disable react/jsx-props-no-spreading */
 export default {
   title: 'UI/NavLinkBar',
   component: NavLinkBar,

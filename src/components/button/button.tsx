@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 
 import styles from './index.module.css';
 
-interface IButton {
+export interface IButton {
   type: 'blue' | 'green' | 'grey';
   buttonHtmlType?: 'button' | 'submit' | 'reset';
   onClick?: VoidFunction;

@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import LoginForm, { LoginFormProps } from './login-form';
-
+/* eslint-disable react/jsx-props-no-spreading */
 export default {
   title: 'UI/AuthForms/LoginForm',
   component: LoginForm,

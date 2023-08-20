@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import AuthInput, { IAuthInput } from './input-auth';
-
+/* eslint-disable react/jsx-props-no-spreading */
 export default {
   title: 'UI/Inputs/AuthInput',
   component: AuthInput,
