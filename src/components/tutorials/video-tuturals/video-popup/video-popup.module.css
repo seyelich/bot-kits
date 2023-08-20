@@ -1,7 +1,6 @@
 .popup {
   opacity: 1;
   visibility: visible;
-  transition: all 0.2s linear;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -22,7 +21,6 @@
   top: 50%;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s linear;
 }
 
 .container {

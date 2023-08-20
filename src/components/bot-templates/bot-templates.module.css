@@ -1,12 +1,12 @@
 .container {
   box-sizing: border-box;
   max-width: 1268px;
-  padding-bottom: 60px;
+  padding-bottom: 58px;
   padding-top: 38px;
 
   @media (max-width: 414px) {
-    margin-top: 15px;
-    margin-bottom: 55px;
+    padding-top: 18px;
+    padding-bottom: 55px;
   }
 }
 
@@ -48,7 +48,7 @@
     line-height: 19.5px;
     letter-spacing: 0.3px;
     color: rgba(131, 146, 171, 1);
-    padding-right: 20px;
+    padding-right: 30px;
     margin-top: 60px;
   }
 }
@@ -98,7 +98,7 @@
   display: grid;
   grid-template-columns: repeat(6, 188px);
   column-gap: 28px;
-  row-gap: 20px;
+  row-gap: 18px;
   overflow: hidden;
   transition: all 0.5s linear;
 
