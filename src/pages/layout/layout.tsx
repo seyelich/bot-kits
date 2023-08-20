@@ -19,7 +19,7 @@ export default function Layout() {
     <div
       className={`${styles.layout} ${
         sidebarOpen ? styles.layout__sidebar : ''
-      } ${!isVisible ? styles.layout__foolScreen : ''}`}
+      } ${!isVisible ? styles.layout__fullScreen : ''}`}
     >
       <Sidebar />
       {isVisible && <Header />}

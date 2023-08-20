@@ -27,11 +27,13 @@ const linkStyle = ({ isActive }: { isActive: boolean }) =>
 
 export default function Sidebar() {
   const [expanded, setExpanded] = useState(false);
+  const [isBotBuilder, setIsBotBuilder] = useState(false);
   const { pathname } = useLocation();
   const { sidebarOpen, setSidebarOpen } = useContext(Context);
   useEffect(() => {
     setSidebarOpen(false);
     setExpanded(false);
+    setIsBotBuilder(pathname.endsWith('bot-builder'));
   }, [pathname]);
 
   function menuExpandHandler() {
@@ -41,19 +43,20 @@ export default function Sidebar() {
 
   return (
     <div
-      className={
-        expanded
-          ? `${styles.sidebar} ${styles['sidebar-expanded']}`
-          : styles.sidebar
-      }
+      className={`${styles.sidebar} ${
+        expanded ? styles['sidebar-expanded'] : ''
+      } ${isBotBuilder ? styles.sidebar_white : ''}`}
     >
-      <button
-        type="button"
-        onClick={menuExpandHandler}
-        className={styles['expand-button']}
-      >
-        {expanded ? menuCollapseIcon : menuExpandIcon}
-      </button>
+      {!isBotBuilder && (
+        <button
+          type="button"
+          onClick={menuExpandHandler}
+          className={styles['expand-button']}
+        >
+          {expanded ? menuCollapseIcon : menuExpandIcon}
+        </button>
+      )}
+
       <div className={styles.content}>
         <div className={styles.title}>
           {botKitsLogo}

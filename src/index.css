@@ -8,6 +8,10 @@ body {
 }
 
 :root {
+  /* Переменные ограничивают ширину контента */
+  --max-content-width: 1440px;
+  --min-content-width: 320px;
+
   --default-grey-color: #f8f9fb;
   --hover-grey-color: #f2f4f8;
   --focus-grey-color: #e4e9f1;
