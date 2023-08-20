@@ -10,10 +10,10 @@
   display: flex;
   flex-direction: row;
   gap: 25px;
+  overflow-x: auto;
+  overflow-y: hidden;
 
   @media (max-width: 768px) {
-    overflow-x: auto;
-    overflow-y: hidden;
     padding-bottom: 20px;
   }
 }

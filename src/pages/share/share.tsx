@@ -56,7 +56,7 @@ export default function Share() {
   }, [current, perPage, modalOpened]);
 
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.title}>
         <h1 className={styles['title-text']}>Пользователи</h1>
         <Button
@@ -121,6 +121,6 @@ export default function Share() {
           <CreateUser callback={addUser} onClose={closeModal} />
         </Modal>
       )}
-    </>
+    </div>
   );
 }

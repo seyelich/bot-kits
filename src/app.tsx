@@ -2,18 +2,16 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Dispatch, SetStateAction, createContext, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/sidebar/sidebar';
 import Dashboard from './pages/dashboard/dashboard';
 import Subscription from './pages/subscription/subscription';
 import AddBot from './pages/add-bot/add-bot';
-import styles from './app.module.css';
 import BotBuilder from './pages/bot-builder/bot-builder';
 import Chat from './pages/chat/chat';
 import Mailing from './pages/mailing/mailing';
 import Partnership from './pages/partnership/partnership';
 import Share from './pages/share/share';
 import NotFound from './pages/not-found';
-import Layout from './components/layout/layout';
+import Layout from './pages/layout/layout';
 import FirstMailing from './pages/mailing/ui/first-mailing/first-mailing';
 import MyMailing from './pages/mailing/ui/my-mailing/my-mailing';
 import CreateMailing from './pages/mailing/ui/create-mailing/create-mailing';
@@ -54,6 +52,15 @@ export function App() {
     setAuthenticated(false);
   };
 
+  const closeAllOpened = () => {
+    if (myBotsSettingsOpen) {
+      setMyBotsSettingsOpen(false);
+    }
+    if (dropdownMenuOpen) {
+      setDropdownMenuOpen(false);
+    }
+  };
+
   return (
     <Context.Provider
       value={{
@@ -74,38 +81,25 @@ export function App() {
       <BrowserRouter>
         {!authenticated && <Auth />}
         {authenticated && (
-          <div
-            className={styles.content}
-            onClick={() => {
-              if (myBotsSettingsOpen) {
-                setMyBotsSettingsOpen(false);
-              }
-              if (dropdownMenuOpen) {
-                setDropdownMenuOpen(false);
-              }
-            }}
-          >
-            <Sidebar />
-            <main>
-              <Routes>
-                <Route path="/" element={<Layout />}>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="add-bot" element={<AddBot />} />
-                  <Route path="bot-builder" element={<BotBuilder />} />
-                  <Route path="chat" element={<Chat />} />
-                  <Route path="mailing" element={<Mailing />}>
-                    <Route path="" element={<FirstMailing />} />
-                    <Route path="start" element={<MyMailing />} />
-                    <Route path="add" element={<CreateMailing />} />
-                    <Route path="conditions" element={<MailingConditions />} />
-                  </Route>
-                  <Route path="partnership" element={<Partnership />} />
-                  <Route path="share" element={<Share />} />
-                  <Route path="subscription" element={<Subscription />} />
-                  <Route path="*" element={<NotFound />} />
+          <div onClick={closeAllOpened}>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="add-bot" element={<AddBot />} />
+                <Route path="bot-builder" element={<BotBuilder />} />
+                <Route path="chat" element={<Chat />} />
+                <Route path="mailing" element={<Mailing />}>
+                  <Route path="" element={<FirstMailing />} />
+                  <Route path="start" element={<MyMailing />} />
+                  <Route path="add" element={<CreateMailing />} />
+                  <Route path="conditions" element={<MailingConditions />} />
                 </Route>
-              </Routes>
-            </main>
+                <Route path="partnership" element={<Partnership />} />
+                <Route path="share" element={<Share />} />
+                <Route path="subscription" element={<Subscription />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
           </div>
         )}
       </BrowserRouter>
