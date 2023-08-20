@@ -9,12 +9,13 @@
 .track {
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 27px;
   overflow-x: auto;
   overflow-y: hidden;
+  padding-bottom: 40px;
 
-  @media (max-width: 768px) {
-    padding-bottom: 20px;
+  @media (max-width: 414px) {
+    gap: 20px;
   }
 }
 
