@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import styles from './input-time.module.css';
 
-import Arrow from '../../../ui/icons/others/arrow';
-import Clock from '../../../ui/icons/others/clock';
+import Arrow from '../../icons/others/arrow';
+import Clock from '../../icons/others/clock';
 
 interface IInputTimeProps {
   inputName?: string;
