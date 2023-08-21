@@ -1,6 +1,6 @@
-import Button from '../button/button';
+import Button from '../../ui/buttons/button/button';
 import styles from './popup-promocode.module.css';
-import TextInput from '../input/input';
+import TextInput from '../../ui/inputs/input/input';
 import useForm from '../../hooks/use-form';
 
 type TPopupProps = {

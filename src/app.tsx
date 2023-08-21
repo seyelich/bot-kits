@@ -12,9 +12,9 @@ import Partnership from './pages/partnership/partnership';
 import Share from './pages/share/share';
 import NotFound from './pages/not-found';
 import Layout from './pages/layout/layout';
-import FirstMailing from './pages/mailing/ui/first-mailing/first-mailing';
-import MyMailing from './pages/mailing/ui/my-mailing/my-mailing';
-import CreateMailing from './pages/mailing/ui/create-mailing/create-mailing';
+import FirstMailing from './components/first-mailing/first-mailing';
+import MyMailing from './components/my-mailing/my-mailing';
+import CreateMailing from './components/create-mailing/create-mailing';
 import MailingConditions from './pages/mailing-conditions/mailing-conditions';
 import Auth from './pages/auth/auth';
 

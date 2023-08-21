@@ -1,11 +1,11 @@
-import Button from '../../components/button/button';
-import DoneIcon from '../../icons/others/done';
-import FitIcon from '../../icons/others/fit';
-import MinusIcon from '../../icons/others/minus';
-import PageIcon from '../../icons/others/page';
-import PlusIcon from '../../icons/others/plus';
-import TagIcon from '../../icons/others/tag';
-import FacebookIcon from '../../icons/social/facebook';
+import Button from '../../ui/buttons/button/button';
+import DoneIcon from '../../ui/icons/others/done';
+import FitIcon from '../../ui/icons/others/fit';
+import MinusIcon from '../../ui/icons/others/minus';
+import PageIcon from '../../ui/icons/others/page';
+import PlusIcon from '../../ui/icons/others/plus';
+import TagIcon from '../../ui/icons/others/tag';
+import FacebookIcon from '../../ui/icons/social/facebook';
 import styles from './bot-builder.module.css';
 
 export default function BotBuilder() {

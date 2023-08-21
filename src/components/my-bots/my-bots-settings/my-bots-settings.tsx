@@ -3,15 +3,15 @@ import { Dispatch, FC, SetStateAction } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './my-bots-settings.module.css';
 
-import CopyBotIcon from '../../../icons/others/copy-bot';
+import CopyBotIcon from '../../../ui/icons/others/copy-bot';
 
-import ShareIcon from '../../../icons/others/share';
-import EditIcon from '../../../icons/others/edit';
-import LinkIcon from '../../../icons/others/link';
-import InfoIcon from '../../../icons/others/info';
-import NotificationSettingsIcon from '../../../icons/others/notification-settings';
-import TrashIcon from '../../../icons/others/trash';
-import CloseIcon from '../../../icons/others/close';
+import ShareIcon from '../../../ui/icons/others/share';
+import EditIcon from '../../../ui/icons/others/edit';
+import LinkIcon from '../../../ui/icons/others/link';
+import InfoIcon from '../../../ui/icons/others/info';
+import NotificationSettingsIcon from '../../../ui/icons/others/notification-settings';
+import TrashIcon from '../../../ui/icons/others/trash';
+import CloseIcon from '../../../ui/icons/others/close';
 import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IMyBotsSettings {

@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import FacebookIcon from '../../icons/social/facebook';
-import GoogleIcon from '../../icons/social/google';
-import MailruIcon from '../../icons/social/mailru';
-import OdnoklassnikiIcon from '../../icons/social/odnoklassniki';
-import TelegramIcon from '../../icons/social/telegram';
-import VKIcon from '../../icons/social/vk';
-import YandexIcon from '../../icons/social/yandex';
+import FacebookIcon from '../../ui/icons/social/facebook';
+import GoogleIcon from '../../ui/icons/social/google';
+import MailruIcon from '../../ui/icons/social/mailru';
+import OdnoklassnikiIcon from '../../ui/icons/social/odnoklassniki';
+import TelegramIcon from '../../ui/icons/social/telegram';
+import VKIcon from '../../ui/icons/social/vk';
+import YandexIcon from '../../ui/icons/social/yandex';
 import styles from './nav-link-bar.module.css';
 
 export interface NavLinkBarProps {

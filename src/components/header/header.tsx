@@ -1,12 +1,10 @@
 import { useContext, useState } from 'react';
 import styles from './header.module.css';
-import Menu24px from '../icons/menu-24px/menu-24px';
-import Help from '../icons/help/help';
-import NotificationsIcon from '../../icons/others/notifications/notifications';
+import HelpIcon from '../../ui/icons/others/help';
+import NotificationsIcon from '../../ui/icons/others/notifications/notifications';
 import avatar from '../../images/avatar.svg';
-import ArrowSmall from '../icons/arrow-small/arrow-small';
+import ArrowSmall from '../../ui/icons/others/arrow-small';
 import Logo from '../logo/logo';
-import MenuMobile from '../icons/menu-mobile/menu-mobile';
 // eslint-disable-next-line import/no-cycle
 import DropdownMenu from './dropdown-menu/dropdown-menu';
 // eslint-disable-next-line import/no-cycle
@@ -14,6 +12,7 @@ import DropdownMenu from './dropdown-menu/dropdown-menu';
 import PopupMessages from '../dashboard-popups/popup-messages/popup-messages';
 import { Context } from '../../app';
 import useMediaQuery from '../../hooks/use-media-query';
+import MenuIcon from '../../ui/icons/others/menu';
 
 export default function Header() {
   const { dropdownMenuOpen, setDropdownMenuOpen } = useContext(Context);
@@ -29,7 +28,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {matches ? <MenuMobile /> : <Menu24px />}
+        <MenuIcon color={matches ? '#060C23' : '#D7DEEA'} />
         <span className={styles.logo}>
           <Logo />
         </span>
@@ -38,7 +37,7 @@ export default function Header() {
         <p className={styles.text}>Тариф</p>
         <p className={styles.text}>Демо</p>
         <div className={styles.icons}>
-          <Help />
+          <HelpIcon color="#CCD4E0" />
           <button onClick={() => setIsPopupMessagesOpened(true)} type="button">
             {' '}
             <NotificationsIcon counter={2} color="#ccd4e0" />

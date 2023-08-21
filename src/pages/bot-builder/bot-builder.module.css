@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('../../../src/icons/background/bg-plus.svg');
+  background-image: url('../../../src/images/bg-plus.svg');
 
   background-color: #f8f9fb;
 }

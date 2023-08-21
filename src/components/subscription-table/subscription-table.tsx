@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ChevronBigIcon from '../../icons/others/chevron-big';
+import ChevronBigIcon from '../../ui/icons/others/chevron-big';
 import styles from './subscription-table.module.css';
 
 type TPayment = {

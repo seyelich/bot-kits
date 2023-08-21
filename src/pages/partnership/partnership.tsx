@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useState } from 'react';
-import Button from '../../components/button/button';
-import ChevronBigIcon from '../../icons/others/chevron-big';
+import Button from '../../ui/buttons/button/button';
+import ChevronBigIcon from '../../ui/icons/others/chevron-big';
 import styles from './partnership.module.css';
 import { fakeDataPayments, fakeDataStats } from './fake-data-from-api';
-import LinkWithCopyButton from '../../components/link-with-copy-btn/link-with-copy-btn';
+import LinkWithCopyButton from '../../ui/buttons/link-with-copy-btn/link-with-copy-btn';
 
 export default function Partnership() {
   const statistics = fakeDataStats;

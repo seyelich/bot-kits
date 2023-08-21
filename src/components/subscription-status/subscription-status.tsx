@@ -1,9 +1,9 @@
-import Button from '../button/button';
+import Button from '../../ui/buttons/button/button';
 import SubscriptionStatusNotSubscribe from './subscription-status-not-subscribe/subscription-status-not-subscribe';
 import SubscriptionStatusSubscribe from './subscription-status-subscribe/subscription-status-subscribe';
 import styles from './subscription-status.module.css';
 import PopupPromocode from '../popup-promocode/popup-promocode';
-import Modal from '../modal/modal';
+import Modal from '../../ui/modal/modal';
 import useModal from '../../hooks/use-modal';
 import useMediaQuery from '../../hooks/use-media-query';
 
