@@ -49,6 +49,40 @@ export default {
         type: 'radio',
       },
     },
+    onClick: {
+      action: 'clicked',
+      description: 'Callback функция, вызываемая при клике',
+    },
+    fontFamily: {
+      type: 'string',
+      name: 'fontFamily',
+      description: 'Название шрифта',
+      defaultValue: 'IBM Plex Sans',
+      options: ['IBM PlexSans', 'PT Sans', 'IBM Plex Mono', 'Open Sans'],
+      control: {
+        type: 'radio',
+      },
+    },
+    fontWeight: {
+      type: 'number',
+      name: 'fontWeight',
+      description: 'Размер шрифта',
+      defaultValue: 500,
+      options: [400, 500, 600, 700],
+      control: {
+        type: 'radio',
+      },
+    },
+    extraClass: {
+      type: 'string',
+      name: 'extraClass',
+      description: 'Класс css',
+    },
+    isAuth: {
+      type: 'boolean',
+      name: 'isAuth',
+      description: 'Авторизаиция',
+    },
   },
   parameters: {
     layout: 'centered',
@@ -67,4 +101,5 @@ Default.args = {
   text: 'Button',
   width: 200,
   height: 70,
+  fontWeight: 20,
 };

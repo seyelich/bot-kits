@@ -9,7 +9,7 @@ export interface IButton {
   buttonHtmlType?: 'button' | 'submit' | 'reset';
   onClick?: VoidFunction;
   disabled?: boolean;
-  text?: string;
+  text?: string | any;
   fontFamily?: string;
   fontWeight?: number;
   width: number;
