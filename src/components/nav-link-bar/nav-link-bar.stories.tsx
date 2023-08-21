@@ -1,29 +1,28 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import { Meta } from '@storybook/react';
-import NavLinkBar, { NavLinkBarProps } from './nav-link-bar';
+import NavLinkBar from './nav-link-bar';
 
-export default {
+const meta: Meta<typeof NavLinkBar> = {
   title: 'UI/NavLinkBar',
   component: NavLinkBar,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} as Meta<NavLinkBarProps>;
-
-const Template: any = (args:any) => (
-  <BrowserRouter>
-    <NavLinkBar {...args} />
-  </BrowserRouter>
-);
-
-export const MaxSize = Template.bind({});
-MaxSize.args = {
-  windowWidth: 1440,
 };
+export default meta;
 
-export const Tablet = Template.bind({});
-Tablet.args = {
-  windowWidth: 720,
+type Story = StoryObj<typeof NavLinkBar>;
+
+export const Default: Story = {
+  args: {
+    windowWidth: 1440,
+  },
+  render: () => (
+    <BrowserRouter>
+      <div style={{ width: 750 }}>
+        <NavLinkBar windowWidth={1440} />
+      </div>
+    </BrowserRouter>
+  ),
 };
-

@@ -7,7 +7,7 @@ import styles from './register-form.module.css';
 import SelectCodeNumber from '../select-code-number/select-code-number';
 import items from '../../utils/items-for-register';
 
-export interface RegisterFormProps {
+interface RegisterFormProps {
   logIn: () => void;
   handleRegister: () => void;
   windowWidth: number;

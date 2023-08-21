@@ -1,25 +1,34 @@
-import { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import RegisterForm, { RegisterFormProps } from './register-form';
+import RegisterForm from './register-form';
 
-export default {
+const meta: Meta<typeof RegisterForm> = {
   title: 'UI/AuthForms/RegisterForm',
   component: RegisterForm,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} as Meta<RegisterFormProps>;
+};
+export default meta;
 
-const Template: any = (args: any) => (
-  <BrowserRouter>
-    <RegisterForm {...args} />
-  </BrowserRouter>
-);
+type Story = StoryObj<typeof RegisterForm>;
 
-export const Default = Template.bind({});
-Default.args = {
-  logIn: () => {},
-  handleRegister: () => {},
-  windowWidth: 1440,
+export const Default: Story = {
+  args: {
+    logIn: () => {},
+    handleRegister: () => {},
+    windowWidth: 1440,
+  },
+  render: () => (
+    <BrowserRouter>
+      <div style={{ width: 750 }}>
+        <RegisterForm
+          logIn={() => {}}
+          handleRegister={() => {}}
+          windowWidth={1440}
+        />
+      </div>
+    </BrowserRouter>
+  ),
 };
