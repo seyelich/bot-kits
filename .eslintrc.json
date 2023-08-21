@@ -21,7 +21,7 @@
       "react",
       "prettier"
   ],
-  "ignorePatterns": ["src/stories/*", "*.stories.tsx"],
+  // "ignorePatterns": ["src/stories/*", "*.stories.tsx"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "prettier/prettier": ["error"],

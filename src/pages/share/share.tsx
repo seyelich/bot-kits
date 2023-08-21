@@ -1,31 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ReactNode, useEffect, useState } from 'react';
-import SearchInput from '../../components/search-input/search-input';
-import IconButton from '../../components/icon-button/icon-button';
-
-import moreIcon from './icons/more';
+import { useEffect, useState } from 'react';
+import SearchInput from '../../ui/inputs/search-input/search-input';
+import IconButton from '../../ui/buttons/icon-button/icon-button';
 import styles from './share.module.css';
-import TrashIcon from '../../icons/others/trash';
-import UploadIcon from '../../icons/others/upload';
-import DownloadIcon from '../../icons/others/download';
-import Button from '../../components/button/button';
+import TrashIcon from '../../ui/icons/others/trash';
+import UploadIcon from '../../ui/icons/others/upload';
+import DownloadIcon from '../../ui/icons/others/download';
+import Button from '../../ui/buttons/button/button';
 import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
 import PerPageSelector from '../../components/per-page-selector/per-page-selector';
 import useFakeUsers from './use-fake-users';
-import Modal from '../../components/modal/modal';
+import Modal from '../../ui/modal/modal';
 import CreateUser from '../../components/create-user/create-user';
 import useModal from '../../hooks/use-modal';
-
-function MoreIcon() {
-  return (
-    <>
-      {moreIcon}
-      {}
-    </>
-  );
-}
+import MoreButtonIcon from '../../ui/icons/others/more-button';
 
 export default function Share() {
   const [filter, setFilter] = useState<string>();
@@ -56,7 +46,7 @@ export default function Share() {
   }, [current, perPage, modalOpened]);
 
   return (
-    <>
+    <div className={styles.main}>
       <div className={styles.title}>
         <h1 className={styles['title-text']}>Пользователи</h1>
         <Button
@@ -94,7 +84,11 @@ export default function Share() {
             {TrashIcon({ color: 'currentColor' })}
             Удалить
           </button>
-          <IconButton width={24} height={24} icon={MoreIcon() as ReactNode} />
+          <IconButton
+            width={24}
+            height={24}
+            icon={<MoreButtonIcon color="#A6B3C9" />}
+          />
         </div>
       </div>
       <MyUsers
@@ -121,6 +115,6 @@ export default function Share() {
           <CreateUser callback={addUser} onClose={closeModal} />
         </Modal>
       )}
-    </>
+    </div>
   );
 }

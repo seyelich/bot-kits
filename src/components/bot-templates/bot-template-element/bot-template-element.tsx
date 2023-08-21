@@ -1,6 +1,6 @@
 import { FC, useRef, useState } from 'react';
 import styles from './bot-template-element.module.css';
-import Plus from '../../icons/plus/plus';
+import PlusIcon from '../../../ui/icons/others/plus';
 import PopupBotDetails from '../../dashboard-popups/bot-details-popup/popup-bot-details';
 import useModal from '../../../hooks/use-modal';
 
@@ -26,7 +26,7 @@ const BotTemplateElement: FC<IBotTemplate> = ({ icon, text }) => {
       >
         {icon}
         <span className={styles.button_add}>
-          <Plus color={isMouseOver ? '#243cbb' : '#CCD4E0'} />
+          <PlusIcon color={isMouseOver ? '#243cbb' : '#CCD4E0'} />
         </span>
       </div>
       <p

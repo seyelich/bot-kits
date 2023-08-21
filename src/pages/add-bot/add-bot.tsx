@@ -3,8 +3,10 @@ import styles from './add-bot.module.css';
 import useForm from '../../hooks/use-form';
 import fakeData from '../../components/selected-pages/selected-pages.fakedata';
 import icons from './icons';
-import AddBotForm, { TMessenger } from './ui/add-bot-form/add-bot-form';
-import AddBotDraggable from './ui/add-bot-draggable/add-bot-draggable';
+import AddBotForm, {
+  TMessenger,
+} from '../../components/add-bot-form/add-bot-form';
+import AddBotDraggable from '../../components/add-bot-draggable/add-bot-draggable';
 
 export default function AddBot() {
   const [messenger, setMessenger] = useState<TMessenger | null>(null);

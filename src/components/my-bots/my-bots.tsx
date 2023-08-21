@@ -48,8 +48,8 @@ const MyBots: FC = () => {
       setLeftOffset(0);
       setTopOffset(document.documentElement.clientHeight - 416);
     } else {
-      setLeftOffset(target.offsetLeft + 25);
-      setTopOffset(target.offsetTop + target.clientHeight);
+      setLeftOffset(target.offsetLeft + 250);
+      setTopOffset(target.offsetTop + target.clientHeight - 110);
     }
   };
 

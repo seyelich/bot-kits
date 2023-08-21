@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './add-bot.module.css';
-import Plus from '../../icons/plus/plus';
+import PlusIcon from '../../../ui/icons/others/plus';
 
 export default function AddBot() {
   const [onHover, setOnHover] = useState(false);
@@ -28,7 +28,7 @@ export default function AddBot() {
         }`}
         onClick={addBot}
       >
-        <Plus
+        <PlusIcon
           color={(isClicked && onHover) || onHover ? '#243cbb' : '#a6b3c9'}
         />
       </span>

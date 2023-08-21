@@ -4,7 +4,7 @@ import Logo from '../../components/logo/logo';
 import styles from './auth.module.css';
 import LoginForm from '../../components/login-form/login-form';
 import ForgotPassForm from '../../components/forgot-pass-form/forgot-pass-form';
-import CloseIcon from '../../icons/others/close';
+import CloseIcon from '../../ui/icons/others/close';
 // eslint-disable-next-line import/no-cycle
 import { Context } from '../../app';
 

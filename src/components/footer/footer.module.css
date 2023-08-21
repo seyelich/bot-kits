@@ -1,17 +1,12 @@
 .footer {
-  position: fixed;
-  margin-left: 25px;
-  bottom: 0;
-  width: 100%;
   display: flex;
-  max-width: 1268px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 14px;
   padding-left: 40px;
   padding-right: 40px;
-  width: 100%;
-  border-top: 1px solid #D7DEEA;
-  background-color: #FFF;
+  border-top: 1px solid #d7deea;
+  background-color: #fff;
   z-index: 3;
   @media (max-width: 768px) {
     justify-content: center;
@@ -24,11 +19,5 @@
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
-}
-
-@media screen and (max-width: 360px) {
-  .footer {
-    margin-left: 0;
-  }
+  width: fit-content;
 }

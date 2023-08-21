@@ -9,7 +9,6 @@
   background-color: white;
   box-shadow: 0 6px 16px 0 rgba(21, 18, 51, 0.08);
   border-radius: 0 0 10px 10px;
-  transition: all 0.3s linear;
 }
 
 .container_active {

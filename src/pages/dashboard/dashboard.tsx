@@ -6,13 +6,13 @@ import styles from './dashboard.module.css';
 
 export default function Dashboard() {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <BotTemplates />
       <MyBots />
       <div className={styles.wrapper}>
         {' '}
         <Tutorials />
       </div>
-    </main>
+    </div>
   );
 }

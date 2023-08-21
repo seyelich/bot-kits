@@ -42,6 +42,6 @@
   transition: all 0.5s linear;
 
   @media (max-width: 414px) {
-    margin-top: 21px;
+    margin-top: 18px;
   }
 }

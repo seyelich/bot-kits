@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Button from '../button/button';
-import AuthInput from '../input-auth/input-auth';
+import Button from '../../ui/buttons/button/button';
+import AuthInput from '../../ui/inputs/input-auth/input-auth';
 import NavLinkBar from '../nav-link-bar/nav-link-bar';
 import styles from './login-form.module.css';
 
