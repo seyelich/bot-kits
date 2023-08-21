@@ -1,24 +1,26 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import AuthInput, { IAuthInput } from './input-auth';
 
 export default {
   title: 'UI/Inputs/AuthInput',
   component: AuthInput,
+  tags: ['autodocs'],
   argTypes: {
     onChange: { action: 'changed' },
   },
   parameters: {
+    layout: 'centered',
     backgrounds: {
       default: 'light',
     },
   },
 } as Meta<IAuthInput>;
 
-const Template: Story<IAuthInput> = (args: any) => (
+const Template: any = (args: any) => (
   <div
     style={{
       backgroundColor: '#243cbb',
-      maxWidth: 501,
+      maxWidth: 510,
       maxHeight: 70,
     }}
   >
@@ -51,7 +53,7 @@ WithValue.args = {
   width: 500,
   height: 60,
   value: 'Привет, мир!',
-  onChange: (e) => console.log('Изменение ввода:', e.target.value),
+  onChange: (e: any) => console.log('Изменение ввода:', e.target.value),
 };
 
 export const Password = Template.bind({});
