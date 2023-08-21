@@ -3,7 +3,7 @@ import Button from '../../ui/buttons/button/button';
 import AuthInput from '../../ui/inputs/input-auth/input-auth';
 import styles from './forgot-pass-form.module.css';
 
-export interface ForgotPassFormProps {
+interface ForgotPassFormProps {
   handleForgotPass: () => void;
   windowWidth: number;
 }
