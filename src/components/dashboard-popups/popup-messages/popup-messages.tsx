@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { Dispatch, FC, SetStateAction, useState } from 'react';
 import styles from './popup-messages.module.css';
-import CloseIcon from '../../../icons/others/close';
+import CloseIcon from '../../../ui/icons/others/close';
 
-import NotificationsIcon from '../../../icons/others/notifications/notifications';
+import NotificationsIcon from '../../../ui/icons/others/notifications/notifications';
 import useMediaQuery from '../../../hooks/use-media-query';
 
 interface IPopupMessages {

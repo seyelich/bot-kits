@@ -1,12 +1,12 @@
-import AlisaIcon from '../../icons/social/alisa';
-import FacebookIcon from '../../icons/social/facebook';
-import InstagramIcon from '../../icons/social/instagram';
-import OdnoklassnikiIcon from '../../icons/social/odnoklassniki';
-import TelegramIcon from '../../icons/social/telegram';
-import ViberIcon from '../../icons/social/viber';
-import VKIcon from '../../icons/social/vk';
-import WebIcon from '../../icons/social/web';
-import WhatsappIcon from '../../icons/social/whatsapp';
+import AlisaIcon from '../../ui/icons/social/alisa';
+import FacebookIcon from '../../ui/icons/social/facebook';
+import InstagramIcon from '../../ui/icons/social/instagram';
+import OdnoklassnikiIcon from '../../ui/icons/social/odnoklassniki';
+import TelegramIcon from '../../ui/icons/social/telegram';
+import ViberIcon from '../../ui/icons/social/viber';
+import VKIcon from '../../ui/icons/social/vk';
+import WebIcon from '../../ui/icons/social/web';
+import WhatsappIcon from '../../ui/icons/social/whatsapp';
 
 const icons = [
   {

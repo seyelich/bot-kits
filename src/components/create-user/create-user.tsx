@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import Button from '../button/button';
+import Button from '../../ui/buttons/button/button';
 import styles from './create-user.module.css';
 import CountrySelector from '../country-selector/country-selector';
 import useForm from '../../hooks/use-form';
