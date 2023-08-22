@@ -1,22 +1,36 @@
-import { Meta, Story } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import LoginForm, { LoginFormProps } from './login-form';
-/* eslint-disable react/jsx-props-no-spreading */
-export default {
+import LoginForm from './login-form';
+
+const meta: Meta<typeof LoginForm> = {
   title: 'UI/AuthForms/LoginForm',
   component: LoginForm,
-} as Meta<LoginFormProps>;
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+};
+export default meta;
 
-const Template: Story<LoginFormProps> = (args) => (
-  <BrowserRouter>
-    <LoginForm {...args} />
-  </BrowserRouter>
-);
+type Story = StoryObj<typeof LoginForm>;
 
-export const Default = Template.bind({});
-Default.args = {
-  signIn: () => {},
-  forgotPass: () => {},
-  windowWidth: 1440,
-  logIn: () => {},
+export const Default: Story = {
+  args: {
+    signIn: () => {},
+    forgotPass: () => {},
+    windowWidth: 1440,
+    logIn: () => {},
+  },
+  render: () => (
+    <BrowserRouter>
+      <div style={{ width: 750 }}>
+        <LoginForm
+          signIn={() => {}}
+          forgotPass={() => {}}
+          windowWidth={1440}
+          logIn={() => {}}
+        />
+      </div>
+    </BrowserRouter>
+  ),
 };

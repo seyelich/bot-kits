@@ -2,15 +2,15 @@
 import { memo, useState, Dispatch } from 'react';
 import Styles from './dialogs-main-header.module.css';
 import ChatAvatar from '../../chat-avatar/chat-avatar';
-import IconButton from '../../icon-button/icon-button';
-import SearchIcon from '../../../icons/others/search';
-import CloseIcon from '../../../icons/others/close';
-import PlayIcon from '../../../icons/others/play';
-import TrashIcon from '../../../icons/others/trash';
-import SearchInput from '../../search-input/search-input';
+import IconButton from '../../../ui/buttons/icon-button/icon-button';
+import SearchIcon from '../../../ui/icons/others/search';
+import CloseIcon from '../../../ui/icons/others/close';
+import PlayIcon from '../../../ui/icons/others/play';
+import TrashIcon from '../../../ui/icons/others/trash';
+import SearchInput from '../../../ui/inputs/search-input/search-input';
 import { IFakeDialog } from '../../../pages/chat/fake-data/fake-data-types';
-import ChevronBigIcon from '../../../icons/others/chevron-big';
-import MoreButtonIcon from '../../../icons/others/more-button';
+import ChevronBigIcon from '../../../ui/icons/others/chevron-big';
+import MoreButtonIcon from '../../../ui/icons/others/more-button';
 import useMediaQuery from '../../../hooks/use-media-query';
 import DialogsSidebarToggle from '../../dialogs-sidebar/dialogs-sidebar-toggle/dialogs-sidebar-toggle';
 

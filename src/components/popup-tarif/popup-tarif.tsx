@@ -1,10 +1,10 @@
 import { MouseEvent, useState } from 'react';
-import CheckIcon from '../../icons/others/check';
-import Button from '../button/button';
-import ButtonTarif from '../button-tarif/button-tarif';
+import CheckIcon from '../../ui/icons/others/check';
+import Button from '../../ui/buttons/button/button';
+import ButtonTarif from '../../ui/buttons/button-tarif/button-tarif';
 import launch from '../../images/launch.svg';
 import styles from './popup-tarif.module.css';
-import LogoUkassa from '../../icons/others/logo-ukassa';
+import LogoUkassa from '../../ui/icons/others/logo-ukassa';
 import { tariffs } from '../../services/subcriription-fake-data';
 
 export default function PopupTarif() {

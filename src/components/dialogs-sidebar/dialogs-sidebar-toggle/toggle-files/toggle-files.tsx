@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import Styles from './toggle-files.module.css';
-import DocCircleIcon from '../../../../icons/others/doc-circle';
+import DocCircleIcon from '../../../../ui/icons/others/doc-circle';
 
 interface ToggleFilesProps {
   files: string[];

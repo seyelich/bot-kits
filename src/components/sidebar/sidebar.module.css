@@ -2,9 +2,9 @@
   box-sizing: border-box;
   position: absolute;
   left: 16px;
-  top:16px;
+  top: 16px;
   width: 70px;
-  height: calc(100vh - 32px);
+  min-height: calc(100vh - 32px);
   background-color: var(--default-grey-color);
   border-radius: 10px;
   transition: 0.2s;
@@ -18,6 +18,10 @@
     height: 64px;
     background-color: #fff;
   }
+}
+
+.sidebar_white {
+  background-color: #fff;
 }
 
 .sidebar-expanded {
@@ -90,7 +94,7 @@
 .expand-button {
   position: absolute;
   zoom: 1.05;
-  right: -85px;
+  right: -65px;
   top: 5px;
   border: none;
   background-color: transparent;

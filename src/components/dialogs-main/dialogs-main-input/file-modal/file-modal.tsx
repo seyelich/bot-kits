@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { memo } from 'react';
 import Styles from './file-modal.module.css';
-import IconButton from '../../../icon-button/icon-button';
-import CloseIcon from '../../../../icons/others/close';
-import LogOut from '../../../../icons/others/logout';
+import IconButton from '../../../../ui/buttons/icon-button/icon-button';
+import CloseIcon from '../../../../ui/icons/others/close';
+import LogOut from '../../../../ui/icons/others/logout';
 import File from '../../../file/file';
 
 interface FileModalProps {

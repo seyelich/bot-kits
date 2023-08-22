@@ -3,11 +3,11 @@
 import { Dispatch, FC, SetStateAction, useContext } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './dropdown-menu.module.css';
-import SettingsIcon from '../../../icons/others/settings';
-import PaymentIcon from '../../../icons/others/payment';
-import ExitIcon from '../../../icons/others/exit';
-import NotificationsIcon from '../../../icons/others/notifications/notifications';
-import InfoIcon from '../../../icons/others/info';
+import SettingsIcon from '../../../ui/icons/others/settings';
+import PaymentIcon from '../../../ui/icons/others/payment';
+import ExitIcon from '../../../ui/icons/others/exit';
+import NotificationsIcon from '../../../ui/icons/others/notifications/notifications';
+import InfoIcon from '../../../ui/icons/others/info';
 import { Context } from '../../../app';
 import useMediaQuery from '../../../hooks/use-media-query';
 

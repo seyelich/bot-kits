@@ -7,10 +7,12 @@
   border-radius: 30px;
   justify-content: space-between;
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1200px) {
   .wrapper {
+    margin-bottom: 37px;
     height: 350px;
   }
 }

@@ -1,6 +1,6 @@
 import { memo, useState, ReactNode } from 'react';
 import Styles from './information-slider.module.css';
-import ChevronBigIcon from '../../../../../icons/others/chevron-big';
+import ChevronBigIcon from '../../../../../ui/icons/others/chevron-big';
 
 interface ToggleSliderProps {
   heading: string;

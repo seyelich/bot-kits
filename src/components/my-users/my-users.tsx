@@ -6,7 +6,7 @@ import UserRow from '../user-row/user-row';
 
 import styles from './my-users.module.css';
 import UserCheckbox from '../user-checkbox/user-checkbox';
-import Button from '../button/button';
+import Button from '../../ui/buttons/button/button';
 
 type TMyUsersProps = {
   users: Array<TUser>;

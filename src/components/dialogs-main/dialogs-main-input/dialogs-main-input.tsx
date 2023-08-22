@@ -1,7 +1,7 @@
 import { memo, FormEventHandler } from 'react';
 import Styles from './dialogs-main-input.module.css';
-import MessageInput from '../../message-input/message-input';
-import Modal from '../../modal/modal';
+import MessageInput from '../../../ui/inputs/message-input/message-input';
+import Modal from '../../../ui/modal/modal';
 import FileModal from './file-modal/file-modal';
 import useModal from '../../../hooks/use-modal';
 

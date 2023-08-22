@@ -1,12 +1,12 @@
 import SubscriptionStatus from '../../components/subscription-status/subscription-status';
-import Button from '../../components/button/button';
+import Button from '../../ui/buttons/button/button';
 import SubscriptionTable from '../../components/subscription-table/subscription-table';
 import styles from './subscription.module.css';
 import {
   payments,
   subscribeActive,
 } from '../../services/subcriription-fake-data';
-import Modal from '../../components/modal/modal';
+import Modal from '../../ui/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';
 import useModal from '../../hooks/use-modal';
 import useMediaQuery from '../../hooks/use-media-query';
