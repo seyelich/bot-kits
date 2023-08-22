@@ -108,7 +108,7 @@
 .arrow {
   width: 12px;
   height: 14px;
-  background-image: url(../../dialogs-sidebar/img/arrow.svg);
+  background-image: url(../../../images/arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

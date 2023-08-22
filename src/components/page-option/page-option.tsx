@@ -1,6 +1,6 @@
 import Styles from './page-option.module.css';
-import checkImg from './img/check.svg';
-import plusImg from './img/plus.svg';
+import checkImg from '../../images/check.svg';
+import plusImg from '../../images/plus.svg';
 
 interface PageOptionProps {
   id: string;

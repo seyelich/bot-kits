@@ -1,10 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import { useEffect } from 'react';
-import users from './fake-users';
-import { TUser } from '../../utils/types';
+import users from '../services/fake-users';
+import { TUser } from '../utils/types';
 
 export default function useFakeUsers() {
   useEffect(() => {
+    // @todo replace fake data
     sessionStorage.setItem('users', JSON.stringify(users));
   }, []);
 

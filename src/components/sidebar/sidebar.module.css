@@ -132,7 +132,7 @@
   padding: 13px;
   border-radius: 50%;
   background-color: var(--default-blue-color);
-  background-image: url('./icons/plus.svg');
+  background-image: url('../../images/plus.svg');
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s;

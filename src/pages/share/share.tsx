@@ -11,7 +11,7 @@ import MyUsers from '../../components/my-users/my-users';
 import { TUser } from '../../utils/types';
 import PageControl from '../../components/page-control/page-control';
 import PerPageSelector from '../../components/per-page-selector/per-page-selector';
-import useFakeUsers from './use-fake-users';
+import useFakeUsers from '../../hooks/use-fake-users';
 import Modal from '../../ui/modal/modal';
 import CreateUser from '../../components/create-user/create-user';
 import useModal from '../../hooks/use-modal';

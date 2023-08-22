@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import ChatDesktop from './chat-desktop/chat-desktop';
 import ChatMobile from './chat-mobile/chat-mobile';
-import { FAKE_DIALOGS } from './fake-data/fake-data';
-import { IFakeDialog } from './fake-data/fake-data-types';
+import { FAKE_DIALOGS } from '../../services/chat-fake-data';
+import { IFakeDialog } from '../../services/types/chat-types';
 import useMediaQuery from '../../hooks/use-media-query';
 
 function Chat() {
@@ -11,11 +11,13 @@ function Chat() {
   const isMobile = useMediaQuery('(max-width: 360px)');
 
   useEffect(() => {
+    // @todo replace fake data
     setData(FAKE_DIALOGS);
 
     if (isMobile) {
       setCurrentDialog(null);
     } else {
+      // @todo replace fake data
       setCurrentDialog(FAKE_DIALOGS[0]);
     }
   }, [isMobile]);
