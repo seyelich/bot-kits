@@ -57,8 +57,6 @@
   font-size: 16px;
   font-weight: 600;
   border-bottom: 1px var(--focus-grey-color) solid;
-  @media (max-width: 728px) {
-  }
 }
 
 .input::placeholder {

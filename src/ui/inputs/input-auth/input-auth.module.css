@@ -9,7 +9,7 @@
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -58,7 +58,7 @@
   bottom: -16px;
   left: 0px;
   color: #f55;
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 10px;
   font-weight: 400;
   line-height: 150%;
