@@ -9,7 +9,7 @@ import VKIcon from '../../ui/icons/social/vk';
 import YandexIcon from '../../ui/icons/social/yandex';
 import styles from './nav-link-bar.module.css';
 
-export interface NavLinkBarProps {
+interface NavLinkBarProps {
   windowWidth: number;
 }
 

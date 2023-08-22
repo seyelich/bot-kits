@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
-import avatar from './img/defaultAvatar.png';
-import { IFakeDialog } from './fake-data-types';
-import img1 from './img/imageFromDialog.png';
-import img2 from './img/imageFromDialog2.png';
+import avatar from '../images/defaultAvatar.png';
+import { IFakeDialog } from './types/chat-types';
+import img1 from '../images/imageFromDialog.png';
+import img2 from '../images/imageFromDialog2.png';
 
 export const FAKE_DIALOGS: IFakeDialog[] = [
   {

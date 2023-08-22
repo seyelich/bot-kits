@@ -36,6 +36,7 @@ export default function PopupTarif() {
             </span>
           </h4>
           <div className={styles.buttons_container}>
+            {/* @todo replace fake data */}
             {tariffs.map((tarif) => (
               <ButtonTarif
                 tarif={tarif.name}

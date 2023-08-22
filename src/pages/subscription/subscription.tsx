@@ -15,6 +15,7 @@ import useModal from '../../hooks/use-modal';
 import useMediaQuery from '../../hooks/use-media-query';
 
 export default function Subscription() {
+  // @todo replace fake data
   const subcriription = subscribeActive;
   const { status } = subcriription;
   const { isModalOpen, openModal, closeModal } = useModal();
@@ -39,6 +40,7 @@ export default function Subscription() {
           subcriription={subcriription}
           openModalTarif={openModal}
         />
+        {/* @todo replace fake data */}
         <SubscriptionTable payments={payments} />
       </section>
       {isModalOpen && (

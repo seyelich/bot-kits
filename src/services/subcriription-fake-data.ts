@@ -37,8 +37,6 @@ export const notSubscribe = {
   balance: '0',
 };
 
-export const paymentsEmpty = [];
-
 export const payments = [
   {
     id: 21,

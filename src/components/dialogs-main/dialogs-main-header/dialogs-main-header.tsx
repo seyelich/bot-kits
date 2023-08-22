@@ -8,7 +8,7 @@ import CloseIcon from '../../../ui/icons/others/close';
 import PlayIcon from '../../../ui/icons/others/play';
 import TrashIcon from '../../../ui/icons/others/trash';
 import SearchInput from '../../../ui/inputs/search-input/search-input';
-import { IFakeDialog } from '../../../pages/chat/fake-data/fake-data-types';
+import { IFakeDialog } from '../../../services/types/chat-types';
 import ChevronBigIcon from '../../../ui/icons/others/chevron-big';
 import MoreButtonIcon from '../../../ui/icons/others/more-button';
 import useMediaQuery from '../../../hooks/use-media-query';

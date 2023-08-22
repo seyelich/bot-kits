@@ -5,7 +5,7 @@ import TextInput from '../../ui/inputs/input/input';
 import SelectedPages from '../selected-pages/selected-pages';
 import styles from './add-bot-form.module.css';
 import useForm from '../../hooks/use-form';
-import fakeData from '../selected-pages/selected-pages.fakedata';
+import fakeData from '../../services/selected-pages-fake-data';
 import pageStyles from '../../pages/add-bot/add-bot.module.css';
 import AddBotTutorials from '../add-bot-tutorials/add-bot-tutorials';
 
@@ -20,6 +20,7 @@ export type TMessenger = {
 
 type TAddBotForm = {
   messenger: TMessenger;
+  // @todo replace fake data
   pages: typeof fakeData;
   setPages: Dispatch<SetStateAction<typeof fakeData>>;
 };

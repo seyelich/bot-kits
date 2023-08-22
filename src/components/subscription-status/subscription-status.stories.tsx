@@ -18,6 +18,7 @@ type Story = StoryObj<typeof SubscriptionStatus>;
 export const Default: Story = {
   name: 'active',
   args: {
+    // @todo replace fake data
     subcriription: subscribeActive,
     openModalTarif: () => {},
   },
@@ -25,6 +26,7 @@ export const Default: Story = {
     <>
       <div id="modals" />
       <SubscriptionStatus
+        // @todo replace fake data
         subcriription={subscribeActive}
         openModalTarif={() => {}}
       />
@@ -35,6 +37,7 @@ export const Default: Story = {
 export const NotActive: Story = {
   name: 'not active',
   args: {
+    // @todo replace fake data
     subcriription: subscribeNotActive,
     openModalTarif: () => {},
   },
@@ -43,6 +46,7 @@ export const NotActive: Story = {
 export const NotSubscribe: Story = {
   name: 'not subscribe',
   args: {
+    // @todo replace fake data
     subcriription: notSubscribe,
     openModalTarif: () => {},
   },

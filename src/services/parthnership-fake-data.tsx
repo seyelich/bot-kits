@@ -1,4 +1,4 @@
-import { IDataPayments, IDataStatistics } from './parthnership-types';
+import { IDataPayments, IDataStatistics } from './types/parthnership-types';
 
 export const fakeDataStats: IDataStatistics[] = [
   {

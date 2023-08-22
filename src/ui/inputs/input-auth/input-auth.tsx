@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styles from './input-auth.module.css';
 
-export interface IAuthInput {
+interface IAuthInput {
   type: string;
   placeholder: string;
   width: number;
