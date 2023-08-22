@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import styles from './btn-add-Bot.module.css';
+import styles from './button-add-bot.module.css';
 import PlusBtn from '../../../utils/plusBtn';
 import Button from '../button/button';
 
