@@ -16,7 +16,7 @@
 
 .comment__line {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: var(--s-font-size);
   font-style: normal;
   font-weight: var(--normal);
@@ -37,7 +37,7 @@
 }
 
 .text_size_l {
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: var(--l-font-size);
   font-style: normal;
   font-weight: var(--bold);
@@ -49,7 +49,7 @@
   grid-column: 1;
   grid-row: 4;
   display: flex;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: var(--m-font-size);
   font-style: normal;
   font-weight: var(--bold);

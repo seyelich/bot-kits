@@ -21,7 +21,7 @@
   font-size: var(--h3-font-size);
   font-weight: var(--bold);
   line-height: var(--h3-line-height);
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 
 .nameContainer {
@@ -84,7 +84,7 @@
   font-weight: var(--bold);
   line-height: var(--h5-line-height);
   letter-spacing: var(--h5-letter-space);
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 
 .span {

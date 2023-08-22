@@ -1,6 +1,8 @@
 .message {
   list-style-type: none;
   display: flex;
+  grid-area: message;
+  margin: 0;
 }
 
 .messageMy {
@@ -106,11 +108,6 @@
   grid-area: name;
   margin: 0;
   font-weight: var(--bold);
-}
-
-.message {
-  grid-area: message;
-  margin: 0;
 }
 
 .avatar {

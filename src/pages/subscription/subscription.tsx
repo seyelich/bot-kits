@@ -5,6 +5,9 @@ import styles from './subscription.module.css';
 import {
   payments,
   subscribeActive,
+  // subscribeNotActive,
+  // notSubscribe,
+  // не удаляйте импортированные статусы подписки, пожалуйста
 } from '../../services/subcriription-fake-data';
 import Modal from '../../ui/modal/modal';
 import PopupTarif from '../../components/popup-tarif/popup-tarif';

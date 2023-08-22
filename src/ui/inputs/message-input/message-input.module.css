@@ -87,7 +87,7 @@
   position: relative;
 }
 
-.slashCnt:hover::before {
+.slashCnt:hover:before {
   content: '';
   position: absolute;
   width: 132px;
