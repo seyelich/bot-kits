@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import styles from './btnAddBot.module.css';
-import PlusBtn from '../../../../utils/plusBtn';
-import Button from '../../../../components/button/button';
+import styles from './btn-add-Bot.module.css';
+import PlusBtn from '../../../utils/plusBtn';
+import Button from '../button/button';
 
 export interface IBtnAddBot {
   sizeSmall: boolean;
