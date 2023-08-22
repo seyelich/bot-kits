@@ -11,7 +11,7 @@
   height: 40px;
   border-radius: 100%;
   background-color: var(--default-blue-color);
-  background-image: url(./img/arrow-up.svg);
+  background-image: url(../../../images/arrow-up.svg);
   background-position: center;
   background-repeat: no-repeat;
   flex: 0 0 40px;

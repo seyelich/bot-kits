@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 import styles from './add-bot.module.css';
 import useForm from '../../hooks/use-form';
-import fakeData from '../../components/selected-pages/selected-pages.fakedata';
-import icons from './icons';
+import fakeData from '../../services/selected-pages-fake-data';
+import icons from '../../utils/icons';
 import AddBotForm, {
   TMessenger,
 } from '../../components/add-bot-form/add-bot-form';
@@ -15,6 +15,7 @@ export default function AddBot() {
     key: '',
     uri: '',
   });
+  // @todo replace fake data
   const [pages, setPages] = useState<typeof fakeData>([]);
 
   const handleIconClick = (el: TMessenger) => {

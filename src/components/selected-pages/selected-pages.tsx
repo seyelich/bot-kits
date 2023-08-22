@@ -1,10 +1,11 @@
 import { SetStateAction, Dispatch } from 'react';
 import Styles from './selected-pages.module.css';
 import PageOption from '../page-option/page-option';
-import fakeData from './selected-pages.fakedata';
+import fakeData from '../../services/selected-pages-fake-data';
 
 interface SelectedPagesProps {
   isDisabled?: boolean;
+  // @todo replace fake data
   pages: typeof fakeData;
   setPages: Dispatch<SetStateAction<typeof fakeData>>;
   count: number;
@@ -27,6 +28,7 @@ function SelectedPages({
   }
 
   const addPage = () => {
+    // @todo replace fake data
     setPages([...pages, fakeData[count]]);
     setCount(count + 1);
   };
