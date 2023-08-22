@@ -4,12 +4,12 @@ import React, { FC } from 'react';
 
 import styles from './index.module.css';
 
-interface IButton {
+export interface IButton {
   type: 'blue' | 'green' | 'grey';
   buttonHtmlType?: 'button' | 'submit' | 'reset';
   onClick?: VoidFunction;
   disabled?: boolean;
-  text?: string;
+  text?: string | any;
   fontFamily?: string;
   fontWeight?: number;
   width: number;
