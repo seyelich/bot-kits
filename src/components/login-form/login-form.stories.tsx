@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import LoginForm from './login-form';
 
 const meta: Meta<typeof LoginForm> = {
-  title: 'UI/AuthForms/LoginForm',
+  title: 'UI/Forms/LoginForm',
   component: LoginForm,
   parameters: {
     layout: 'centered',
