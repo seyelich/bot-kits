@@ -80,15 +80,15 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint",
+      "eslint --fix",
       "git add ."
     ],
     "src/**/*.module.css": [
-      "stylelint",
+      "stylelint --fix",
       "git add ."
     ],
     "src/**/*.module.scss": [
-      "stylelint",
+      "stylelint --fix",
       "git add ."
     ],
     "*": [
