@@ -1,7 +1,7 @@
 .wrapper {
   padding: 40px 0 104px 0;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: var(--max-content-width);
   max-height: 900px;
   height: 100%;
   width: 100%;
@@ -38,13 +38,15 @@
 }
 
 .noticePage {
-  max-width: 1440px;
+  max-width: var(--max-content-width);
+  min-width: var(--min-content-width);
   box-sizing: border-box;
   max-height: 900px;
   width: 100%;
   padding: 0 135px;
   background-color: #243cbb;
   display: flex;
+  margin: auto;
   align-items: center;
   justify-content: center;
   position: relative;
