@@ -3,7 +3,7 @@ import BotTemplateElement from './bot-template-element';
 import Beauty from '../../../ui/icons/others/bot-templates/beauty';
 
 const meta = {
-  title: 'UI/BotTemplateElement',
+  title: 'components/BotTemplateElement',
   component: BotTemplateElement,
   parameters: {
     layout: 'centered',

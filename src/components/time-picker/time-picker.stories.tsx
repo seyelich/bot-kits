@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import TimePickerInput from './time-picker';
 
 const meta = {
-  title: 'UI/TimePicker',
+  title: 'UI/inputs/TimePicker',
   component: TimePickerInput,
   parameters: {
     layout: 'centered',

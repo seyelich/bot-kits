@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ServiceBasics from './service-basics';
 
 export default {
-  title: 'block/ServiceBasics',
+  title: 'blocks/ServiceBasics',
   component: ServiceBasics,
 } as Meta<typeof ServiceBasics>;
 

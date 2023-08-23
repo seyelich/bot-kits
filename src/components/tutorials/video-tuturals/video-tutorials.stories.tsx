@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import VideoTutorials from './video-tuturals';
 
 const VideoTutorialsStory = {
-  title: 'block/VideoTutorials',
+  title: 'blocks/VideoTutorials',
   component: VideoTutorials,
   parameters: {
     layout: 'centered',

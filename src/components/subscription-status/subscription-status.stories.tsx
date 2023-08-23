@@ -9,7 +9,7 @@ import '../../index.css';
 import './subscription-status.module.css';
 
 const meta: Meta<typeof SubscriptionStatus> = {
-  title: 'block/SubscriptionStatus',
+  title: 'blocks/SubscriptionStatus',
   component: SubscriptionStatus,
 };
 export default meta;
