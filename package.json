@@ -8,6 +8,8 @@
     "@types/react-datepicker": "^4.15.0",
     "date-fns": "^2.30.0",
     "emoji-picker-react": "^4.4.10",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "react": "^18.2.0",
     "react-datepicker": "^4.16.0",
     "react-dom": "^18.2.0",
@@ -65,18 +67,33 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint": "npm run lint:eslint && npm run lint:stylelint",
-    "lint:fix": "npm run lint:eslint:fix && npm run lint:stylelint:fix",
-    "lint:eslint": "eslint src --ext .js,.jsx,.ts,.tsx",
-    "lint:eslint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix src",
-    "lint:stylelint": "stylelint 'src/**/*.{module.css,module.scss}'",
-    "lint:stylelint:fix": "stylelint --fix 'src/**/*.{module.css,module.scss}'"
+    "prepare": "husky install",
+    "lint:all_admin": "eslint src --ext .js,.jsx,.ts,.tsx --color && stylelint 'src/**/*.{module.css,module.scss}' --color",
+    "lint:fix:all_admin": "eslint --ext .js,.jsx,.ts,.tsx --fix src --color && stylelint --fix --color 'src/**/*.{module.css,module.scss}'"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
       "plugin:storybook/recommended"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "git add ."
+    ],
+    "src/**/*.module.css": [
+      "stylelint",
+      "git add ."
+    ],
+    "src/**/*.module.scss": [
+      "stylelint",
+      "git add ."
+    ],
+    "*": [
+      "prettier --write",
+      "git add ."
     ]
   },
   "browserslist": {
