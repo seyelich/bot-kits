@@ -4,7 +4,7 @@ import DialogsMain from '../dialogs-main';
 import { FAKE_DIALOGS } from '../../../services/chat-fake-data';
 
 export default {
-  title: 'Components/DialogsMain',
+  title: 'block/DialogsMain',
   component: DialogsMain,
 } as Meta<typeof DialogsMain>;
 

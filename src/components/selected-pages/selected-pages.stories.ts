@@ -4,7 +4,7 @@ import SelectedPages from './selected-pages';
 import fakeData from '../../services/selected-pages-fake-data';
 
 const meta = {
-  title: 'UI/SelectedPages',
+  title: 'block/SelectedPages',
   component: SelectedPages,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],

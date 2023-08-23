@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import MyMailing from './my-mailing';
 
 export default {
-  title: 'Components/MyMailing',
+  title: 'block/MyMailing',
   component: MyMailing,
   argTypes: {
     onChange: { action: 'changed' },
