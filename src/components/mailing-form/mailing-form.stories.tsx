@@ -1,13 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import TimePickerInput from './time-picker';
+import MailingForm from './mailing-form';
 
 const meta = {
-  title: 'UI/inputs/TimePicker',
-  component: TimePickerInput,
+  title: 'UI/Forms/MailingForm',
+  component: MailingForm,
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof TimePickerInput>;
+  tags: ['autodocs'],
+} satisfies Meta<typeof MailingForm>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

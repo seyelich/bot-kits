@@ -1,6 +1,5 @@
 import type { Meta, Story } from '@storybook/react';
 import Button, { IButton } from './button';
-/* eslint-disable react/jsx-props-no-spreading */
 
 export default {
   title: 'UI/Buttons/Button',
@@ -92,14 +91,54 @@ export default {
 
 const Template: Story<IButton> = (arg) => <Button {...arg} />;
 
-export const Default = Template.bind({});
+export const Default = {
+  args: {
+    type: 'blue',
+    buttonHtmlType: 'button',
+    disabled: false,
+    text: 'Button',
+    width: 200,
+    height: 70,
+    fontWeight: 20,
+  },
+  render: Template,
+};
 
-Default.args = {
-  type: 'blue',
-  buttonHtmlType: 'button',
-  disabled: false,
-  text: 'Button',
-  width: 200,
-  height: 70,
-  fontWeight: 20,
+export const Green = {
+  args: {
+    type: 'green',
+    buttonHtmlType: 'button',
+    disabled: false,
+    text: 'Button',
+    width: 200,
+    height: 70,
+    fontWeight: 20,
+  },
+  render: Template,
+};
+
+export const Grey = {
+  args: {
+    type: 'grey',
+    buttonHtmlType: 'button',
+    disabled: false,
+    text: 'Button',
+    width: 200,
+    height: 70,
+    fontWeight: 20,
+  },
+  render: Template,
+};
+
+export const Disabled = {
+  args: {
+    type: 'blue',
+    buttonHtmlType: 'button',
+    disabled: true,
+    text: 'Button',
+    width: 200,
+    height: 70,
+    fontWeight: 20,
+  },
+  render: Template,
 };

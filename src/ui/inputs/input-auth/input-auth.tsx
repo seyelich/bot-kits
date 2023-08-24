@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import styles from './input-auth.module.css';
 
-interface IAuthInput {
+export interface IAuthInput {
   type: string;
   placeholder: string;
   width: number;
   height: number;
   value?: string;
+  /** Колбек на изменение видимости меню */
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   error?: boolean;
   textError?: string;

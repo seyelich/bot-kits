@@ -3,12 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import NavLinkBar from './nav-link-bar';
 
 const meta: Meta<typeof NavLinkBar> = {
-  title: 'UI/NavLinkBar',
+  title: 'blocks/NavLinkBar',
   component: NavLinkBar,
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 };
 export default meta;
 

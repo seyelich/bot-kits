@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 import styles from './button-add-bot.module.css';
 import PlusBtn from '../../../utils/plusBtn';
@@ -10,7 +10,7 @@ export interface IBtnAddBot {
   onClick?: () => void;
 }
 
-const Btn: FC<IBtnAddBot> = ({ sizeSmall, disabled, onClick }) => {
+const BtnAddBot: FC<IBtnAddBot> = ({ sizeSmall, disabled, onClick }) => {
   return sizeSmall ? (
     <button
       className={styles.btn}
@@ -28,4 +28,4 @@ const Btn: FC<IBtnAddBot> = ({ sizeSmall, disabled, onClick }) => {
   );
 };
 
-export default Btn;
+export default BtnAddBot;

@@ -3,7 +3,7 @@ import ForgotPassForm from './forgot-pass-form';
 import '../../index.css';
 
 const meta: Meta<typeof ForgotPassForm> = {
-  title: 'UI/AuthForms/ForgotPassForm',
+  title: 'UI/Forms/ForgotPassForm',
   component: ForgotPassForm,
   parameters: {
     layout: 'centered',

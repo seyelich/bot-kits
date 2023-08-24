@@ -1,11 +1,11 @@
 import { ChangeEvent } from 'react';
 import styles from './input.module.css';
 
-type TTextInput = {
+export type TTextInput = {
   placeholder?: string;
   disabled?: boolean;
   name: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   value: string;
   errorMessage?: string;
   isInvalid?: boolean;

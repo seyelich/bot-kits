@@ -24,7 +24,8 @@ export const Primary: Story = {
           icon={CloseIcon({ color: '#060C23' })}
         />
       </div>
-      <PopupPromocode onClose={() => {}} />
+      <PopupPromocode onClose={() => console.log('close')} />
     </div>
   ),
 };
+
