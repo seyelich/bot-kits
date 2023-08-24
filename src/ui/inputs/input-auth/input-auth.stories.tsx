@@ -1,32 +1,67 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import AuthInput from './input-auth';
+import type { Meta, Story } from '@storybook/react';
+import '../../../index.css';
+import AuthInput, { IAuthInput } from './input-auth';
+/* eslint-disable react/jsx-props-no-spreading */
 
-const meta: Meta<typeof AuthInput> = {
+export default {
   title: 'UI/Inputs/AuthInput',
   component: AuthInput,
-  tags: ['autodocs'],
   argTypes: {
-    onChange: { action: 'changed' },
+    placeholder: {
+      type: 'string',
+      name: 'placeholder',
+      description: 'Placeholder инпута',
+      defaultValue: '',
+    },
+    value: {
+      type: 'string',
+      name: 'value',
+      description: 'value инпута',
+      defaultValue: '',
+    },
+    textError: {
+      type: 'string',
+      name: 'errorMessage',
+      description: 'Сообщение об ошибке валидации',
+      defaultValue: 'Сообщение об ошибке',
+    },
+    type: {
+      type: 'string',
+      name: 'type',
+      description: 'Тип вводимых данных',
+      defaultValue: 'string',
+    },
+    error: {
+      type: 'boolean',
+      name: 'isInvalid',
+      description: 'Ошибка валидиции',
+      defaultValue: false,
+    },
+    width: {
+      type: 'number',
+      description: 'Ширина инпута',
+      name: 'width',
+      defaultValue: 460,
+    },
+    height: {
+      type: 'number',
+      description: 'Высота инпута',
+      name: 'height',
+      defaultValue: 60,
+    },
+    onChange: {
+      action: 'clicked',
+      description: 'Callback функция, вызываемая при вводе данных',
+    },
   },
   parameters: {
     layout: 'centered',
-    backgrounds: {
-      default: 'light',
-    },
   },
-};
-export default meta;
+  tags: ['autodocs'],
+} as Meta<IAuthInput>;
 
-type Story = StoryObj<typeof AuthInput>;
-
-export const Default: Story = {
-  args: {
-    type: 'text',
-    placeholder: 'Введите текст',
-    width: 500,
-    height: 60,
-  },
-  render: () => (
+const Template: Story<IAuthInput> = (arg) => {
+  return (
     <div
       style={{
         backgroundColor: '#243cbb',
@@ -34,97 +69,17 @@ export const Default: Story = {
         maxHeight: 70,
       }}
     >
-      <AuthInput
-        type="text"
-        placeholder="Введите текст"
-        width={500}
-        height={60}
-      />
+      <AuthInput {...arg} />;
     </div>
-  ),
+  );
 };
 
-export const Error: Story = {
+export const Default = {
   args: {
-    type: 'text',
-    placeholder: 'Введите текст',
-    width: 500,
+    type: 'string',
+    width: 460,
     height: 60,
-    error: true,
-    textError: 'Это сообщение об ошибке',
+    placeholder: 'Введите сообщение',
   },
-  render: () => (
-    <div
-      style={{
-        backgroundColor: '#243cbb',
-        maxWidth: 510,
-        maxHeight: 70,
-      }}
-    >
-      <AuthInput
-        type="text"
-        placeholder="Введите текст"
-        width={500}
-        height={60}
-        error
-        textError="Это сообщение об ошибке"
-      />
-    </div>
-  ),
-};
-
-export const WithValue: Story = {
-  args: {
-    type: 'text',
-    placeholder: 'Введите текст',
-    width: 500,
-    height: 60,
-    value: 'Привет, мир!',
-    // eslint-disable-next-line no-console
-    onChange: (e: any) => console.log('Изменение ввода:', e.target.value),
-  },
-  render: () => (
-    <div
-      style={{
-        backgroundColor: '#243cbb',
-        maxWidth: 510,
-        maxHeight: 70,
-      }}
-    >
-      <AuthInput
-        type="text"
-        placeholder="Введите текст"
-        width={500}
-        height={60}
-        value="Привет, мир!"
-        // eslint-disable-next-line no-console
-        onChange={(e: any) => console.log('Изменение ввода:', e.target.value)}
-      />
-    </div>
-  ),
-};
-
-export const Password: Story = {
-  args: {
-    type: 'password',
-    placeholder: 'Введите пароль',
-    width: 500,
-    height: 60,
-  },
-  render: () => (
-    <div
-      style={{
-        backgroundColor: '#243cbb',
-        maxWidth: 510,
-        maxHeight: 70,
-      }}
-    >
-      <AuthInput
-        type="password"
-        placeholder="Введите пароль"
-        width={500}
-        height={60}
-      />
-    </div>
-  ),
+  render: Template,
 };

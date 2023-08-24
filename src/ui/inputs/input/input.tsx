@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
 import styles from './input.module.css';
 
-type TTextInput = {
+export type TTextInput = {
   placeholder?: string;
   disabled?: boolean;
   name: string;
