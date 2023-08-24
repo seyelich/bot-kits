@@ -1,10 +1,16 @@
-import type { Meta, Story } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import '../../../index.css';
-import AuthInput, { IAuthInput } from './input-auth';
+
+import TextInput from './input';
 
 export default {
-  title: 'UI/Inputs/AuthInput',
-  component: AuthInput,
+  title: 'UI/Inputs/TextInput',
+  component: TextInput,
+  docs: {
+    source: {
+      code: null,
+    },
+  },
   argTypes: {
     placeholder: {
       type: 'string',
@@ -18,35 +24,29 @@ export default {
       description: 'value инпута',
       defaultValue: '',
     },
-    textError: {
+    errorMessage: {
       type: 'string',
       name: 'errorMessage',
       description: 'Сообщение об ошибке валидации',
       defaultValue: 'Сообщение об ошибке',
     },
-    type: {
+    name: {
       type: 'string',
-      name: 'type',
-      description: 'Тип вводимых данных',
-      defaultValue: 'string',
+      name: 'name',
+      description: 'Уникальное имя элемента формы',
+      defaultValue: 'Input',
     },
-    error: {
+    disabled: {
+      type: 'boolean',
+      name: 'disabled',
+      description: 'Активность инпута',
+      defaultValue: false,
+    },
+    isInvalid: {
       type: 'boolean',
       name: 'isInvalid',
       description: 'Ошибка валидиции',
       defaultValue: false,
-    },
-    width: {
-      type: 'number',
-      description: 'Ширина инпута',
-      name: 'width',
-      defaultValue: 460,
-    },
-    height: {
-      type: 'number',
-      description: 'Высота инпута',
-      name: 'height',
-      defaultValue: 60,
     },
     onChange: {
       action: 'clicked',
@@ -57,40 +57,25 @@ export default {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} as Meta<IAuthInput>;
+} as Meta<typeof TextInput>;
 
-const Template: Story<IAuthInput> = (arg) => {
-  return (
-    <div
-      style={{
-        backgroundColor: '#243cbb',
-        maxWidth: 510,
-        maxHeight: 70,
-      }}
-    >
-      <AuthInput {...arg} />
-    </div>
-  );
-};
+const Template: StoryFn<typeof TextInput> = (args) => <TextInput {...args} />;
 
 export const Default = {
   args: {
-    type: 'string',
-    width: 460,
-    height: 60,
+    name: 'Input',
+    disabled: false,
+    value: '',
     placeholder: 'Введите сообщение',
   },
   render: Template,
 };
-
-export const Error = {
+export const Disabled = {
   args: {
-    type: 'string',
-    width: 460,
-    height: 60,
+    name: 'Input',
+    disabled: true,
+    value: '',
     placeholder: 'Введите сообщение',
-    error: true,
-    textError: 'Ошибка валидации',
   },
   render: Template,
 };

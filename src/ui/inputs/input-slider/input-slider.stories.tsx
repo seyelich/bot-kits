@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { Meta, Story } from '@storybook/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import InputSlider from './input-slider';
 import { months } from '../../../utils/calendar';
 
