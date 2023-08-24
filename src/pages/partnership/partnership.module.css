@@ -249,10 +249,6 @@ table {
   height: 48px;
 }
 
-.td_curr_mobile {
-  font-weight: 600;
-}
-
 .table_item_mobile:not(:last-child) {
   border-bottom: 1px rgba(242, 244, 248, 1) solid;
 }
@@ -325,10 +321,6 @@ table.table_item_mobile {
 .filter__listText:hover {
   background-color: #f8f9fb;
   cursor: pointer;
-}
-
-.button__mobile {
-  display: none;
 }
 
 .payPaidFor {

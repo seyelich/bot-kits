@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import RegisterForm from './register-form';
 
 const meta: Meta<typeof RegisterForm> = {
-  title: 'UI/AuthForms/RegisterForm',
+  title: 'UI/Forms/RegisterForm',
   component: RegisterForm,
   parameters: {
     layout: 'centered',

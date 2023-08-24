@@ -3,7 +3,7 @@ import Styles from './dialogs-main.module.css';
 import DialogsMainHeader from './dialogs-main-header/dialogs-main-header';
 import DialogMainMessages from './dialogs-main-messages/dialog-main-messages';
 import DialogMainInput from './dialogs-main-input/dialogs-main-input';
-import { IFakeDialog } from '../../pages/chat/fake-data/fake-data-types';
+import { IFakeDialog } from '../../services/types/chat-types';
 
 interface DialogMainProps {
   currentDialog: IFakeDialog;

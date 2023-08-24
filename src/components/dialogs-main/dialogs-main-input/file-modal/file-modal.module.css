@@ -9,7 +9,6 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 100%;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -33,7 +32,7 @@
   color: var(--default-blue-color);
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-size: var(--h4-font-size);
   font-weight: var(--semi-bold);
   line-height: var(--h4-line-height);

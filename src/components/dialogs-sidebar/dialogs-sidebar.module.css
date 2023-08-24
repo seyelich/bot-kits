@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: flex;
   transition: all 0.2s;
   overflow-y: auto;
 }
@@ -44,7 +43,7 @@
 .name {
   margin-top: 16px;
   color: var(--primary-text-color);
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-size: var(--l-font-size);
   font-weight: var(--semi-bold);
   line-height: var(--m-line-height);
@@ -53,7 +52,7 @@
 .role {
   margin-top: 4px;
   color: var(--default-dark-grey-color);
-  font-family: 'Open sans';
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--normal);
   line-height: var(--s-line-height);
@@ -76,7 +75,7 @@
 .arrow {
   width: 12px;
   height: 14px;
-  background-image: url(./img/arrow.svg);
+  background-image: url(../../images/arrow.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

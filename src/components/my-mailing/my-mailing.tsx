@@ -9,60 +9,12 @@ import ChevronBigIcon from '../../ui/icons/others/chevron-big';
 import TutorialButton from '../../ui/buttons/tutorial-button/tutorial-button';
 import Button from '../../ui/buttons/button/button';
 import IconWithPercents from '../icon-with-percents/icon-with-percents';
-
-interface IData {
-  id: number;
-  name: string;
-  messenger:
-    | 'Telegram'
-    | 'VK'
-    | 'Viber'
-    | 'Whatsapp'
-    | 'Alisa'
-    | 'Google'
-    | 'Facebook'
-    | 'Youtube'
-    | 'Instagram'
-    | 'Twitter'
-    | 'Web'
-    | 'Odnoklassniki'
-    | 'Mailru'
-    | 'Yandex';
-  messages: string;
-  conversion: string;
-  status: string;
-}
-
-const data: IData[] = [
-  {
-    id: 22496346,
-    name: '№1',
-    messenger: 'Telegram',
-    messages: '8 сообщений',
-    conversion: '60%',
-    status: 'Запущено',
-  },
-  {
-    id: 32284427,
-    name: '№2',
-    messenger: 'Viber',
-    messages: '1 сообщений',
-    conversion: '0%',
-    status: 'Отклонено',
-  },
-  {
-    id: 65390710,
-    name: '№3',
-    messenger: 'VK',
-    messages: '16 сообщений',
-    conversion: '82%',
-    status: 'Запущено',
-  },
-];
+import data from '../../services/mailings-fake-data';
 
 const MyMailing: FC = () => {
   const navigate = useNavigate();
   const [arrowRotate, setArrowRotate] = useState(false);
+  // @todo: replace fake data
   const [mailings, setMailings] = useState(data);
   const [showTutotialButtons, setShowtutorialButtons] = useState(true);
 
@@ -88,6 +40,7 @@ const MyMailing: FC = () => {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
+                    // @todo: replace fake data
                     setMailings(data);
                   }}
                 >
@@ -97,6 +50,7 @@ const MyMailing: FC = () => {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
+                    // @todo: replace fake data
                     setMailings(data.filter((el) => el.status === 'Запущено'));
                   }}
                 >
@@ -106,6 +60,7 @@ const MyMailing: FC = () => {
                   className={styles.filter__listText}
                   onClick={() => {
                     setArrowRotate(false);
+                    // @todo: replace fake data
                     setMailings(data.filter((el) => el.status === 'Отклонено'));
                   }}
                 >
