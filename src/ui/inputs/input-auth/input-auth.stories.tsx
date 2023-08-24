@@ -1,7 +1,6 @@
 import type { Meta, Story } from '@storybook/react';
 import '../../../index.css';
 import AuthInput, { IAuthInput } from './input-auth';
-/* eslint-disable react/jsx-props-no-spreading */
 
 export default {
   title: 'UI/Inputs/AuthInput',
@@ -69,7 +68,7 @@ const Template: Story<IAuthInput> = (arg) => {
         maxHeight: 70,
       }}
     >
-      <AuthInput {...arg} />;
+      <AuthInput {...arg} />
     </div>
   );
 };
@@ -80,6 +79,18 @@ export const Default = {
     width: 460,
     height: 60,
     placeholder: 'Введите сообщение',
+  },
+  render: Template,
+};
+
+export const Error = {
+  args: {
+    type: 'string',
+    width: 460,
+    height: 60,
+    placeholder: 'Введите сообщение',
+    error: true,
+    textError: 'Ошибка валидации',
   },
   render: Template,
 };

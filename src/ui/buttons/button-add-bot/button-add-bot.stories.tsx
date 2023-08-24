@@ -1,6 +1,5 @@
 import type { Meta, Story } from '@storybook/react';
 import Btn, { IBtnAddBot } from './button-add-bot';
-/* eslint-disable react/jsx-props-no-spreading */
 
 export default {
   title: 'UI/Buttons/BtnAddBot',

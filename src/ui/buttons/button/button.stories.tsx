@@ -1,6 +1,5 @@
 import type { Meta, Story } from '@storybook/react';
 import Button, { IButton } from './button';
-/* eslint-disable react/jsx-props-no-spreading */
 
 export default {
   title: 'UI/Buttons/Button',
