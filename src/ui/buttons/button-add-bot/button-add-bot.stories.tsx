@@ -1,9 +1,10 @@
+import React from 'react';
 import type { Meta, Story } from '@storybook/react';
-import Btn, { IBtnAddBot } from './button-add-bot';
+import BtnAddBot, { IBtnAddBot } from './button-add-bot';
 
 export default {
   title: 'UI/Buttons/BtnAddBot',
-  component: Btn,
+  component: BtnAddBot,
   argTypes: {
     disabled: {
       type: 'boolean',
@@ -28,11 +29,28 @@ export default {
   tags: ['autodocs'],
 } as Meta<IBtnAddBot>;
 
-const Template: Story<IBtnAddBot> = (arg) => <Btn {...arg} />;
+const Template: Story<IBtnAddBot> = (arg) => <BtnAddBot {...arg} />;
 
-export const Default = Template.bind({});
+export const Default = {
+  args: {
+    disabled: false,
+    sizeSmall: true,
+  },
+  render: Template,
+};
 
-Default.args = {
-  disabled: false,
-  sizeSmall: true,
+export const Disabled = {
+  args: {
+    disabled: true,
+    sizeSmall: true,
+  },
+  render: Template,
+};
+
+export const Large = {
+  args: {
+    disabled: false,
+    sizeSmall: false,
+  },
+  render: Template,
 };
