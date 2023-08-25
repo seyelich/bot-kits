@@ -1,0 +1,24 @@
+.iconList {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  gap: 10px 10px;
+}
+
+.iconCard {
+  display: flex;
+  min-width: 180px;
+  width: max-content;
+  align-items: center;
+  padding-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.iconCard p {
+  margin-left: 10px;
+}
+
+.iconContainer {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(189, 189, 189);
+}
