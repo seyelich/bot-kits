@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable react/jsx-props-no-spreading */
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { TUser } from '../../utils/types';
 import UserRow from '../user-row/user-row';

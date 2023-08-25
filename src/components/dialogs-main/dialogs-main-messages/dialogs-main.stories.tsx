@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import type { Meta, Story } from '@storybook/react';
 import DialogsMain from '../dialogs-main';
-import { FAKE_DIALOGS } from '../../../services/chat-fake-data';
+import FAKE_DIALOGS from '../../../services/chat-fake-data';
 
 export default {
   title: 'blocks/DialogsMain',

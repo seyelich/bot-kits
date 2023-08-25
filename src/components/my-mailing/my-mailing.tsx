@@ -1,6 +1,6 @@
-/* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { FC, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router';
 
 import styles from './index.module.css';
@@ -104,8 +104,8 @@ const MyMailing: FC = () => {
           </table>
         </div>
         <div className={styles.table__mobile}>
-          {mailings.map((el, i) => (
-            <div className={styles.row} key={i}>
+          {mailings.map((el) => (
+            <div className={styles.row} key={uuidv4()}>
               <div className={styles.row__iconBlock}>
                 <IconWithPercents
                   messenger={el.messenger}

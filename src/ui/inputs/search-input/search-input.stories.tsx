@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable react/jsx-props-no-spreading */
 import type { Meta, Story } from '@storybook/react';
 import { useState } from 'react';
 import SearchInput from './search-input';

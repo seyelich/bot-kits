@@ -1,9 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-cycle */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/no-array-index-key */
 import React, { FC, useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router';
 
 import EmojiPicker from 'emoji-picker-react';
@@ -120,8 +117,8 @@ const CreateMailing: FC = () => {
                   </div>
                   {listOpen && (
                     <div className={styles.select__list}>
-                      {list.map((el, i) => (
-                        <ListsRow el={el} key={i} />
+                      {list.map((el) => (
+                        <ListsRow el={el} key={uuidv4()} />
                       ))}
                     </div>
                   )}
@@ -331,8 +328,8 @@ const CreateMailing: FC = () => {
                   </button>
                   {activate && (
                     <div className={styles.funnels}>
-                      {funnels.map((el, i) => (
-                        <FunnelsRow el={el} key={i} />
+                      {funnels.map((el) => (
+                        <FunnelsRow el={el} key={uuidv4()} />
                       ))}
                     </div>
                   )}
