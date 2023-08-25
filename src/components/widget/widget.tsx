@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable import/no-cycle */
-/* eslint-disable no-dupe-else-if */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { FC, useContext, useState } from 'react';
 
 import styles from './widget.module.css';

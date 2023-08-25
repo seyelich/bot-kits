@@ -1,10 +1,9 @@
-/* eslint-disable import/prefer-default-export */
 import avatar from '../images/defaultAvatar.png';
 import { IFakeDialog } from './types/chat-types';
 import img1 from '../images/imageFromDialog.png';
 import img2 from '../images/imageFromDialog2.png';
 
-export const FAKE_DIALOGS: IFakeDialog[] = [
+const FAKE_DIALOGS: IFakeDialog[] = [
   {
     id: '214qqqqq213f3=232r413e312',
     name: 'Паша Яндексов',
@@ -220,3 +219,5 @@ export const FAKE_DIALOGS: IFakeDialog[] = [
     images: [img1, img2, img2],
   },
 ];
+
+export default FAKE_DIALOGS;

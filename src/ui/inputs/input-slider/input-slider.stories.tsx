@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import type { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
 import InputSlider from './input-slider';

@@ -1,4 +1,3 @@
-/* eslint-disable spaced-comment */
 import React, { FC, useRef, useState } from 'react';
 
 import styles from './index.module.css';
@@ -24,7 +23,7 @@ const DownloadButtons: FC<IDownloadButtons> = ({ size }) => {
     <div className={styles.block}>
       <button
         type="button"
-        //@ts-expect-error
+        // @ts-expect-error
         onClick={() => fileInputRef.current?.click()}
         className={`${styles.button} ${
           size === 'large'
@@ -40,7 +39,7 @@ const DownloadButtons: FC<IDownloadButtons> = ({ size }) => {
       <input
         onChange={handleChange}
         multiple={false}
-        //@ts-expect-error
+        // @ts-expect-error
         ref={fileInputRef}
         type="file"
         hidden
