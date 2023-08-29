@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
-import Arrow from '../../icons/others/arrow';
+import Arrow from '../../ui/icons/others/arrow';
 import styles from './calendar.module.css';
-import CalendarIcon from '../../icons/others/calendar-icon';
+import CalendarIcon from '../../ui/icons/others/calendar-icon';
 
 const CustomInput = forwardRef<
   unknown,

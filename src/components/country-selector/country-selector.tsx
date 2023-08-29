@@ -1,7 +1,6 @@
-/* eslint-disable arrow-body-style */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
-import countryList from './countries';
+import countryList from '../../utils/countries';
 
 import styles from './country-selector.module.css';
 

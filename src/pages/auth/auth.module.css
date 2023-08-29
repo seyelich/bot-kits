@@ -1,7 +1,7 @@
 .wrapper {
   padding: 40px 0 104px 0;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: var(--max-content-width);
   max-height: 900px;
   height: 100%;
   width: 100%;
@@ -20,7 +20,7 @@
 }
 
 .title {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-weight: 500;
   font-size: 48px;
   line-height: 52.8px;
@@ -38,13 +38,15 @@
 }
 
 .noticePage {
-  max-width: 1440px;
+  max-width: var(--max-content-width);
+  min-width: var(--min-content-width);
   box-sizing: border-box;
   max-height: 900px;
   width: 100%;
   padding: 0 135px;
   background-color: #243cbb;
   display: flex;
+  margin: auto;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -78,7 +80,7 @@
 
 .noticePage__titleText {
   color: #fff;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-size: 64px;
   font-weight: 500;
   line-height: 110%;
@@ -92,7 +94,7 @@
   border-radius: 14px;
   background: #435cdb;
   color: #2fa;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 130%;
@@ -183,7 +185,7 @@
     border-radius: 14px;
     background: #435cdb;
     color: #2fa;
-    font-family: 'IBM Plex Mono';
+    font-family: 'IBM Plex Mono', Arial, sans-serif;
     font-size: 24px;
     font-weight: 600;
     line-height: 130%;
@@ -237,10 +239,6 @@
     font-weight: 500;
     line-height: 35.2px;
     letter-spacing: -0.2px;
-    padding: 15px 0 15px 0;
-  }
-
-  .title {
     padding: 15px 0 20px 0;
   }
 
@@ -270,7 +268,7 @@
   }
 
   .noticePage__titleText {
-    font-family: 'IBM Plex Mono';
+    font-family: 'IBM Plex Mono', Arial, sans-serif;
     font-size: 32px;
     font-weight: 500;
     line-height: 130%;

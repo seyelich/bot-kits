@@ -9,9 +9,9 @@ import endOfMonth from 'date-fns/endOfMonth';
 import addMonths from 'date-fns/addMonths';
 import '../../vendor/stylesheets/datepicker.scss';
 import styles from './calendar.module.css';
-import Arrow from '../../icons/others/arrow';
+import Arrow from '../../ui/icons/others/arrow';
 import { formatDate, months, timeZoneUTC } from '../../utils/calendar';
-import InputSelect from '../input-select/input-select';
+import InputSelect from '../../ui/inputs/input-select/input-select';
 import CustomInput from './custom-inpu';
 import useMediaQuery from '../../hooks/use-media-query';
 

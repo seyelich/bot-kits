@@ -1,11 +1,11 @@
 import { memo, Dispatch, useState, useEffect } from 'react';
 import Styles from './dialogs-list.module.css';
-import SearchInput from '../search-input/search-input';
+import SearchInput from '../../ui/inputs/search-input/search-input';
 import DialogsListDialog from './dialogs-list-dialog/dialogs-list-dialog';
-import { IFakeDialog } from '../../pages/chat/fake-data/fake-data-types';
-import IconButton from '../icon-button/icon-button';
-import SearchIcon from '../../icons/others/search';
-import MoreButtonIcon from '../../icons/others/more-button';
+import { IFakeDialog } from '../../services/types/chat-types';
+import IconButton from '../../ui/buttons/icon-button/icon-button';
+import SearchIcon from '../../ui/icons/others/search';
+import MoreButtonIcon from '../../ui/icons/others/more-button';
 import useMediaQuery from '../../hooks/use-media-query';
 
 interface DialogsListProps {

@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router';
 import styles from './mailing-conditions.module.css';
 
 import MailingForm from '../../components/mailing-form/mailing-form';
-import Button from '../../components/button/button';
-import Widget from '../mailing/ui/widget/widget';
-import WidgetMobileIcon from '../mailing/ui/widget/widget-mobile-icon/widget-mobile-icon';
+import Button from '../../ui/buttons/button/button';
+import Widget from '../../components/widget/widget';
+import WidgetMobileIcon from '../../components/widget/widget-mobile-icon/widget-mobile-icon';
 import useMediaQuery from '../../hooks/use-media-query';
 
 const MailingConditions: FC = () => {

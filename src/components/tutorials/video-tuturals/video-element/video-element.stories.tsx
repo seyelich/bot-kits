@@ -3,7 +3,7 @@ import VideoElement from './video-element';
 import preview from '../../../../images/video1.svg';
 
 const meta = {
-  title: 'UI/VideoElement',
+  title: 'components/VideoElement',
   component: VideoElement,
   parameters: {
     layout: 'centered',

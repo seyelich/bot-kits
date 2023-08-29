@@ -1,0 +1,15 @@
+.container {
+  width: 480px;
+  position: relative;
+}
+
+.button_close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+}

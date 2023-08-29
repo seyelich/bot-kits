@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-plusplus */
 import { Dispatch, ReactNode, SetStateAction, useMemo } from 'react';
 import styles from './page-control.module.css';
 
@@ -16,7 +14,7 @@ export default function PageControl({
 }: TPageControlProps) {
   const pages = useMemo(() => {
     const res: ReactNode[] = [];
-    for (let i = 1; i <= count; i++) {
+    for (let i = 1; i <= count; i += 1) {
       const style =
         page === i ? `${styles.page} ${styles.page_active}` : styles.page;
       res.push(
@@ -39,7 +37,7 @@ export default function PageControl({
         <button
           type="button"
           disabled={page === 1}
-          onClick={() => setCurrent((current) => --current)}
+          onClick={() => setCurrent((current) => current - 1)}
           className={styles.navbutton}
         >
           <svg
@@ -59,7 +57,7 @@ export default function PageControl({
         <button
           type="button"
           disabled={count < 2 || page === count}
-          onClick={() => setCurrent((current) => ++current)}
+          onClick={() => setCurrent((current) => current + 1)}
           className={styles.navbutton}
         >
           <svg

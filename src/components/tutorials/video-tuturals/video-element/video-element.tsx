@@ -1,6 +1,6 @@
 import { FC, useRef, useState } from 'react';
 
-import Play from '../../../icons/play/play';
+import PlayCircle from '../../../../ui/icons/others/play-circle';
 import styles from './video-element.module.css';
 
 import VideoPopup from '../video-popup/video-popup';
@@ -52,7 +52,7 @@ const VideoElement: FC<IVideoElement> = ({ text, preview }) => {
       <div className={styles.container}>
         <img src={preview} className={styles.videothumb} alt="thumb" />
         <span onClick={play} className={styles.button}>
-          <Play />
+          <PlayCircle />
         </span>
       </div>
       <p className={styles.text} ref={ref}>

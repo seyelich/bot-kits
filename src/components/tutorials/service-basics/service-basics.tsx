@@ -1,15 +1,14 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './service-basics.module.css';
-import Arrow24x24 from '../../icons/arrow-24x24/arrow-24x24';
+import Arrow from '../../../ui/icons/others/arrow';
 
 const ServiceBasics: FC = () => (
   <div className={styles.wrapper}>
     <div className={styles.header}>
       <h4 className={styles.title}>База знаний</h4>
       <span className={styles.icon}>
-        <Arrow24x24 />
+        <Arrow type="common" color="lightGrey" width={24} height={24} />
       </span>
     </div>
     <p className={styles.subtitle}>

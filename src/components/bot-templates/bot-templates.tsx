@@ -1,20 +1,19 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { FC, useState } from 'react';
 import styles from './bot-templates.module.css';
 import BotTemplateElement from './bot-template-element/bot-template-element';
-import AnsweringMachine from '../icons/bot-templates/answering-machine/answering-machine';
-import FoodDelivery from '../icons/bot-templates/food-delivery/food-delivery';
-import DemoBot from '../icons/bot-templates/demo-bot/demo-bot';
-import Poll from '../icons/bot-templates/poll/poll';
-import LeadGeneration from '../icons/bot-templates/lead-generation/lead-generation';
-import PrivateClub from '../icons/bot-templates/private-club/private-club';
-import RealEstate from '../icons/bot-templates/real-estate/real-estate';
-import Entertainment from '../icons/bot-templates/entertainment/entertainment';
-import Beauty from '../icons/bot-templates/beauty/beauty';
-import ECommerce from '../icons/bot-templates/e-commerce/e-commerce';
-import ELearning from '../icons/bot-templates/e-learning/e-learning';
-import Questions from '../icons/bot-templates/questions/questions';
-import Arrow24x24 from '../icons/arrow-24x24/arrow-24x24';
+import AnsweringMachine from '../../ui/icons/others/bot-templates/answering-machine';
+import FoodDelivery from '../../ui/icons/others/bot-templates/food-delivery';
+import DemoBot from '../../ui/icons/others/bot-templates/demo-bot';
+import Poll from '../../ui/icons/others/bot-templates/poll';
+import LeadGeneration from '../../ui/icons/others/bot-templates/lead-generation';
+import PrivateClub from '../../ui/icons/others/bot-templates/private-club';
+import RealEstate from '../../ui/icons/others/bot-templates/real-estate';
+import Entertainment from '../../ui/icons/others/bot-templates/entertainment';
+import Beauty from '../../ui/icons/others/bot-templates/beauty';
+import ECommerce from '../../ui/icons/others/bot-templates/e-commerce';
+import ELearning from '../../ui/icons/others/bot-templates/e-learning';
+import Questions from '../../ui/icons/others/bot-templates/questions';
+import Arrow from '../../ui/icons/others/arrow';
 import useMediaQuery from '../../hooks/use-media-query';
 
 const BotTemplates: FC = () => {
@@ -38,7 +37,7 @@ const BotTemplates: FC = () => {
             }`}
             onClick={toggle}
           >
-            <Arrow24x24 />
+            <Arrow type="common" color="lightGrey" width={24} height={24} />
           </span>
         </div>
       </div>

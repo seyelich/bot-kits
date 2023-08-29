@@ -1,14 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import BotTemplateElement from './bot-template-element';
-import Beauty from '../../icons/bot-templates/beauty/beauty';
+import Beauty from '../../../ui/icons/others/bot-templates/beauty';
 
 const meta = {
-  title: 'UI/BotTemplateElement',
+  title: 'components/BotTemplateElement',
   component: BotTemplateElement,
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof BotTemplateElement>;
 
 export default meta;

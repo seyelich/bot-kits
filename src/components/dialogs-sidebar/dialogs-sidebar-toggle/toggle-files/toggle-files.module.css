@@ -19,7 +19,7 @@
 
 .blockHeading {
   color: var(--primary-text-color);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: var(--s-font-size);
   font-weight: var(--bold);
   line-height: var(--s-line-height);
@@ -50,7 +50,7 @@
 
 .fileName {
   color: var(--primary-text-color);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: var(--xs-font-size);
   font-weight: var(--normal);
   line-height: var(--xs-line-height);

@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react';
 import styles from './mailing-form.module.css';
-import InputSelect from '../input-select/input-select';
+import InputSelect from '../../ui/inputs/input-select/input-select';
 import Calendar from '../calendar/calendar';
 import TimePickerInput from '../time-picker/time-picker';
 
-import InputTextMailingPage from '../text-input-mailing-page.ts/text-input-mailing-page';
-import ButtonWeek from '../button-week/button-week';
-import InputSlider from '../input-slider/input-slider';
-import ButtonMailing from '../button-mailing/button-mailing';
+import InputTextMailingPage from '../../ui/inputs/text-input-mailing-page/text-input-mailing-page';
+import ButtonWeek from '../../ui/buttons/button-week/button-week';
+import InputSlider from '../../ui/inputs/input-slider/input-slider';
+import ButtonMailing from '../../ui/buttons/button-mailing/button-mailing';
 import { days, weekDays, months } from '../../utils/calendar';
 import useMediaQuery from '../../hooks/use-media-query';
 

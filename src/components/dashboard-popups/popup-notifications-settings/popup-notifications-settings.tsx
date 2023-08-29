@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from 'react';
 import styles from './popup-notifications-settings.module.css';
-import CloseIcon from '../../../icons/others/close';
+import CloseIcon from '../../../ui/icons/others/close';
 import CopyAccountSettingsIcon from '../icon/copy-account-settings-icon';
 
 interface IPopupNotificationsSettings {

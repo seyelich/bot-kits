@@ -1,0 +1,20 @@
+.btn {
+  width: 46px;
+  height: 46px;
+  background-color: #2743CE;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: all .3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #435CDB;
+}
+
+.btn:disabled {
+  background-color: #ECEFFF;
+}

@@ -1,17 +1,27 @@
-import { Meta, Story } from '@storybook/react';
-import ForgotPassForm, { ForgotPassFormProps } from './forgot-pass-form';
+import type { Meta, StoryObj } from '@storybook/react';
+import ForgotPassForm from './forgot-pass-form';
+import '../../index.css';
 
-export default {
-  title: 'UI/AuthForms/ForgotPassForm',
+const meta: Meta<typeof ForgotPassForm> = {
+  title: 'UI/Forms/ForgotPassForm',
   component: ForgotPassForm,
-} as Meta<ForgotPassFormProps>;
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+};
+export default meta;
 
-const Template: Story<ForgotPassFormProps> = (args) => (
-  <ForgotPassForm {...args} />
-);
+type Story = StoryObj<typeof ForgotPassForm>;
 
-export const Default = Template.bind({});
-Default.args = {
-  handleForgotPass: () => {},
-  windowWidth: 1440,
+export const Default: Story = {
+  args: {
+    handleForgotPass: () => {},
+    windowWidth: 1440,
+  },
+  render: () => (
+    <div style={{ width: 750 }}>
+      <ForgotPassForm handleForgotPass={() => {}} windowWidth={1440} />
+    </div>
+  ),
 };

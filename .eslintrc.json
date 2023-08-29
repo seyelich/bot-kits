@@ -21,7 +21,7 @@
       "react",
       "prettier"
   ],
-  "ignorePatterns": ["src/stories/*", "*.stories.tsx"],
+  // "ignorePatterns": ["src/stories/*", "*.stories.tsx"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "prettier/prettier": ["error"],
@@ -31,6 +31,8 @@
     "react/require-default-props": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "no-nested-ternary": "off",
-    "jsx-a11y/props-no-functions": "off"
+    "jsx-a11y/props-no-functions": "off",
+    "arrow-body-style": "off",
+    "react/jsx-props-no-spreading": "off"
   }
 }

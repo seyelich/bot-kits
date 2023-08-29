@@ -1,8 +1,9 @@
 /* eslint-disable import/no-cycle */
+
 import { forwardRef, useContext } from 'react';
 import styles from './bot.module.css';
-import Dots from '../../icons/dots/dots';
-import TelegramIcon from '../../../icons/social/telegram';
+import MoreButtonIcon from '../../../ui/icons/others/more-button';
+import TelegramIcon from '../../../ui/icons/social/telegram';
 import { Context } from '../../../app';
 import useMediaQuery from '../../../hooks/use-media-query';
 
@@ -30,7 +31,7 @@ const Bot = forwardRef<HTMLDivElement | null, IBot>(
             }}
             type="button"
           >
-            <Dots />
+            <MoreButtonIcon color="#A6B3C9" />
           </button>
         </div>
         <div className={styles.container}>

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import SelectedPages from './selected-pages';
-import fakeData from './selected-pages.fakedata';
+import fakeData from '../../services/selected-pages-fake-data';
 
 const meta = {
-  title: 'UI/SelectedPages',
+  title: 'blocks/SelectedPages',
   component: SelectedPages,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
@@ -19,6 +19,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    // @todo replace fake data
     pages: fakeData,
     setPages: () => {},
     count: 0,
@@ -29,6 +30,7 @@ export const Default: Story = {
 export const Disable: Story = {
   args: {
     isDisabled: true,
+    // @todo replace fake data
     pages: fakeData,
     setPages: () => {},
     count: 0,
