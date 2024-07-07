@@ -1,0 +1,20 @@
+{
+  "short_name": "BOTkit",
+  "name": "Bot Kits App",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "38x34",
+      "type": "image/png"
+    },
+    {
+      "src": "Logo.png",
+      "type": "image/png",
+      "sizes": "145x34"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "rgba(242, 244, 248, 1)"
+}
