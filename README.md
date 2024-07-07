@@ -1,5 +1,7 @@
 # bot-kits-team-3
 
+GitHub Pages: https://seyelich.github.io/bot-kits
+
 ### Установка проекта:
 - npm install
 - npm start

@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Dispatch, SetStateAction, createContext, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/dashboard/dashboard';
 import Subscription from './pages/subscription/subscription';
 import AddBot from './pages/add-bot/add-bot';
@@ -78,7 +78,7 @@ export function App() {
         setLeftOffset,
       }}
     >
-      <BrowserRouter>
+      <HashRouter>
         {!authenticated && <Auth />}
         {authenticated && (
           <div onClick={closeAllOpened}>
@@ -102,7 +102,7 @@ export function App() {
             </Routes>
           </div>
         )}
-      </BrowserRouter>
+      </HashRouter>
     </Context.Provider>
   );
 }

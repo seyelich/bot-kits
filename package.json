@@ -2,12 +2,13 @@
   "name": "bot-kits-team-3",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://seyelich.github.io/bot-kits",
   "dependencies": {
     "@storybook/react": "^7.1.1",
     "@types/react-datepicker": "^4.15.0",
     "date-fns": "^2.30.0",
     "emoji-picker-react": "^4.4.10",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "react": "^18.2.0",
@@ -69,7 +70,9 @@
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "lint:all_admin": "eslint src --ext .js,.jsx,.ts,.tsx --color && stylelint 'src/**/*.{module.css,module.scss}' --color",
-    "lint:fix:all_admin": "eslint --ext .js,.jsx,.ts,.tsx --fix src --color && stylelint --fix --color 'src/**/*.{module.css,module.scss}'"
+    "lint:fix:all_admin": "eslint --ext .js,.jsx,.ts,.tsx --fix src --color && stylelint --fix --color 'src/**/*.{module.css,module.scss}'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
