@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bot-kits/static/css/main.905ced16.css",
-    "main.js": "/bot-kits/static/js/main.2eb0247e.js",
+    "main.js": "/bot-kits/static/js/main.0bb482b3.js",
     "static/media/launch.svg": "/bot-kits/static/media/launch.e39798181cc4a083d6f53a8d8975c1f7.svg",
     "static/media/video2.svg": "/bot-kits/static/media/video2.32f774f77f65404e360e642057593412.svg",
     "static/media/video1.svg": "/bot-kits/static/media/video1.100a89f39dda6576b0779490fa38d25c.svg",
@@ -42,10 +42,10 @@
     "static/media/arrow.svg": "/bot-kits/static/media/arrow.399ea4d30c70b62c55a3.svg",
     "static/media/check.svg": "/bot-kits/static/media/check.1e92300447f729e661c9208dad676c41.svg",
     "main.905ced16.css.map": "/bot-kits/static/css/main.905ced16.css.map",
-    "main.2eb0247e.js.map": "/bot-kits/static/js/main.2eb0247e.js.map"
+    "main.0bb482b3.js.map": "/bot-kits/static/js/main.0bb482b3.js.map"
   },
   "entrypoints": [
     "static/css/main.905ced16.css",
-    "static/js/main.2eb0247e.js"
+    "static/js/main.0bb482b3.js"
   ]
 }
